@@ -1,11 +1,8 @@
 import {
-  Tag,
-  Users,
-  Settings,
-  Bookmark,
-  SquarePen,
-  LayoutGrid,
-  LucideIcon
+ Sprout,
+  LucideIcon,
+  LandPlot,
+  AlignHorizontalDistributeCenter
 } from "lucide-react";
 
 type Submenu = {
@@ -33,57 +30,47 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/dashboard",
-          label: "Dashboard",
-          icon: LayoutGrid,
+          href: "/strategy",
+          label: "Strategy",
+          icon: LandPlot,
           submenus: []
         }
       ]
     },
     {
-      groupLabel: "Contents",
+      groupLabel: "",
       menus: [
         {
           href: "",
-          label: "Posts",
-          icon: SquarePen,
+          label: "Trading Process",
+          icon: AlignHorizontalDistributeCenter,
           submenus: [
             {
-              href: "/posts",
-              label: "All Posts"
+              href: "/conditions-for-entering-a-trade",
+              label: "Conditions For Entering a Trade"
             },
             {
-              href: "/posts/new",
-              label: "New Post"
+              href: "/during-trade-execution",
+              label: "During Trade Execution"
+            },
+            {
+              href: "/after-trade-closes",
+              label: "After Trade Closes"
             }
           ]
-        },
-        {
-          href: "/categories",
-          label: "Categories",
-          icon: Bookmark
-        },
-        {
-          href: "/tags",
-          label: "Tags",
-          icon: Tag
         }
       ]
     },
     {
-      groupLabel: "Settings",
+      groupLabel: "",
       menus: [
         {
-          href: "/users",
-          label: "Users",
-          icon: Users
-        },
-        {
-          href: "/account",
-          label: "Account",
-          icon: Settings
+          href: "/psychological-mastery",
+          label: "Psychological Mastery in Trading",
+          icon: Sprout,
+          submenus: []
         }
       ]
-    }
+    },
   ];
 }
