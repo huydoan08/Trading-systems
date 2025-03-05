@@ -7,12 +7,12 @@ import { useStore } from "@/hooks/use-store";
 
 // Quản lý lệnh giao dịch sau khi vào
 const duringTradeExecution = [
-  "Quản lý lệnh giao dịch theo cấu trúc sóng hoặc theo fibo, không đặt SL quá sát.",
-  "Không để cảm xúc chi phối vào và chốt lời non, chỉ đóng lệnh khi đã đạt đủ target đặt ra trước đó hoặc chạm SL.",
-  "Không vội vàng dời Stoploss ngay sau khi giá vừa mới chạy một xíu.",
-  "Không cố gắng tìm cơ hội vào lệnh ngay sau khi chạm Stoploss.",
+  "Quản lý lệnh giao dịch theo cấu trúc sóng hoặc theo fibo, không đặt stoploss quá sát.",
+  "Không để cảm xúc chi phối vào và chốt lời non, chỉ đóng lệnh khi đã đạt đủ target đặt ra trước đó hoặc chạm stoploss.",
+  "Không vội vàng dời stoploss ngay sau khi giá vừa mới chạy một xíu.",
+  "Không cố gắng tìm cơ hội vào lệnh ngay sau khi chạm stoploss.",
   "Tuyệt đối không đóng lệnh bằng tay khi mà giá đang chạy.",
-  "Chỉ giao dịch 1 chiều thôi."
+  "Chỉ giao dịch 1 chiều theo xu hướng chính."
 ];  
 
 export default function DuringTradeExecutionPage() {
