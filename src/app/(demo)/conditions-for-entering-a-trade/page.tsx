@@ -9,10 +9,10 @@ import { useStore } from "@/hooks/use-store";
 const conditionForEnteringATrade = [
   "Các mẫu hình đúng tiêu chuẩn, mẫu hình đẹp.",
   "Các khung thời gian phải đồng thuận.",
+  "Xác định các đường trendline quan trọng và theo dõi phản ứng giá tại các vùng đó.",
   "Chờ xác nhận sóng hồi, để tối ưu điểm vào lệnh đẹp.",
   "Chờ dấu hiệu xác nhận Price Action.",
   "Không cố tình đoán đỉnh và đoán đáy.",
-  "Xác định trendline khi giá phá vỡ xu hướng trước đó.",
   "Mức rủi ro, mức thưởng và xác suất.",
   "Dùng fibo để xác định hiệu lực con sóng còn mạnh không.",
   "Tối ưu điểm vào lệnh đẹp ở khung thời gian nhỏ.",
