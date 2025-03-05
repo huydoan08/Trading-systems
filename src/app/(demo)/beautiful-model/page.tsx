@@ -28,7 +28,7 @@ export default function BeautifulModelPage() {
   };
 
   return (
-    <ContentLayout title="Mẫu hình đúng tiêu chuẩn">
+    <ContentLayout title="Mẫu hình đúng tiêu chuẩn.">
       <Card className="max-h-[67.5vh] overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
         <CardContent className="p-6 space-y-4">
           <div className="relative w-full h-[400px] overflow-hidden rounded-lg">
