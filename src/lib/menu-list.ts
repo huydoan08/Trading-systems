@@ -56,6 +56,10 @@ export function getMenuList(pathname: string): Group[] {
             {
               href: "/after-trade-closes",
               label: "After Trade Closes"
+            },
+            {
+              href: "/beautiful-model",
+              label: "Beautiful Model"
             }
           ]
         }
