@@ -4,18 +4,28 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  "/demo-dark-min.png",
-  "/demo-light-min.png",
-  "/demo-dark-min.png",
+  "/1.Xu hướng tăng.png",
+  "/2.Bắt đáy khi tạo đáy cao dần.png",
+  "/3.Bắt sóng hồi của sóng tăng trước đó.png",
+  "/4. Điểm vào lệnh phá trendline.png",
+  "/5.Điểm vào lệnh mô hình tam giác tăng.png"
 ];
 
 export default function BeautifulModelPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => setWindowHeight(window.innerHeight);
+    handleResize(); // Lấy ngay khi vào trang
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   if (!sidebar) return null;
 
@@ -29,15 +39,20 @@ export default function BeautifulModelPage() {
 
   return (
     <ContentLayout title="Mẫu hình đúng tiêu chuẩn.">
-      <Card className="max-h-[67.5vh] overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700">
-        <CardContent className="p-6 space-y-4">
-          <div className="relative w-full h-[400px] overflow-hidden rounded-lg">
+      <Card
+        className="w-full overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700"
+        style={{
+          height: `${windowHeight - 80}px`, // Trừ đi khoảng header nếu cần (80px là ví dụ, chỉnh theo layout thực tế của bạn)
+        }}
+      >
+        <CardContent className="p-6 space-y-4 h-full">
+          <div className="relative w-full h-full overflow-hidden rounded-lg">
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentIndex}
                 src={images[currentIndex]}
                 alt={`Mẫu ${currentIndex + 1}`}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-contain"
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
