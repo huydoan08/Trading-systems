@@ -2,7 +2,9 @@ import {
  Sprout,
   LucideIcon,
   LandPlot,
-  AlignHorizontalDistributeCenter
+  AlignHorizontalDistributeCenter,
+  Carrot
+  
 } from "lucide-react";
 
 type Submenu = {
@@ -72,6 +74,17 @@ export function getMenuList(pathname: string): Group[] {
           href: "/psychological-mastery",
           label: "Psychological Mastery in Trading",
           icon: Sprout,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/common-mistakes-in-trading",
+          label: "Common Mistakes In Trading",
+          icon: Carrot,
           submenus: []
         }
       ]
