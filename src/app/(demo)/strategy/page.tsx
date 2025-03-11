@@ -6,15 +6,15 @@ import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 
 const multiTime = [
-  "Khung M: Sideway, thiên về xu hướng giảm.",
-  "Khung W: Giảm, đã cắt xuống, mới đi được khoảng 10% hành trình.",
-  "Khung D: Siway biên độ rộng, thiên về xu hướng giảm.",
-  "Khung H4: Giảm, bắt đầu cắt xuống, mới đi đc 5% hành trình.",
-  "Khung H1: Giảm, đang mở rộng, đi được khoảng 40% hành trình."
+  "Khung M: Giảm, đã bắt đầu cắt xuống 2 đường TB.",
+  "Khung W: Giảm, đã đi được khoảng 15% hành trình.",
+  "Khung D: Giảm.",
+  "Khung H4: Giảm.",
+  "Khung H1: Sideway, thiên về xu hướng giảm."
 ];
 const planning = [
-  "Chiến lược ngắn hạn H4: Đã xác nhận xu hướng giảm, chiến lược sell và chờ sell.",
-  "Chiến lược dài hạn W: Chưa có vùng tích lũy đẹp, nên ngồi ngoài học tập."
+  "Chiến lược ngắn hạn H4: Vị thế sell đã không được đẹp nên ngồi ngoài.",
+  "Chiến lược dài hạn W: Tiếp tục chờ đợi về vùng tích lũy đẹp mới tham gia."
 ];
 
 export default function StrategyPage() {
