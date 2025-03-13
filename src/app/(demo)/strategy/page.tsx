@@ -6,14 +6,16 @@ import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 
 const multiTime = [
-  "Khung M: Sideway.",
-  "Khung W: Giảm.",
-  "Khung D: Sideway theo xu hướng giảm.",
-  "Khung H4: Sideway theo xu hướng giảm biên độ rộng, RSI previous tăng yếu."
+  "Khung M => Giảm | RSI bắt đầu bó sát vào 2 đường TB tại vùng 60.",
+  "Khung W => Giảm | RSI đang mở rộng, đang ở 40-60 .",
+  "Khung D => Sideway | RSI bó sát 2 đường TB tại vùng 40.",
+  "Khung H4 => Sideway | RSI đang bó hẹp lại quanh vùng 40-60."
 ];
-const planning = [
-  "Chiến lược ngắn hạn H4: Chờ giá quay về đường trendline dưới sẽ kích hoạt lệnh SPOT.",
-  "Chiến lược dài hạn W: Tiếp tục chờ đợi về vùng tích lũy đẹp mới tham gia."
+const planningH4 = [
+  "Chiến lược ngắn hạn H4 => Chờ đợi giá test lại vùng 76K rồi sẽ phân bổ vốn cho SPOT."
+];
+const planningW = [
+  "Chiến lược dài hạn W => Kiên nhẫn chờ giá về vùng tích lũy đẹp rồi dải vốn dần để gom hàng."
 ];
 
 export default function StrategyPage() {
@@ -24,8 +26,7 @@ export default function StrategyPage() {
       <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-gray-200 dark:border-gray-700">
         <CardContent className="p-6 space-y-4">
           <div className="font-bold text-xl text-gray-800 dark:text-white">
-            Nhìn về đa khung thời gian để thấy được bức tranh tổng thể của thị
-            trường:
+          Quan sát đa khung thời gian để nhìn thấy được bức tranh tổng thể của toàn bộ thị trường:
           </div>
           <div className="space-y-2">
             {multiTime.map((item, idx) => (
@@ -36,10 +37,22 @@ export default function StrategyPage() {
                 </Label>
               </div>
             ))}
-            {planning.map((item, idx) => (
+            {planningH4.map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2 ">
-                <span className="text-gray-600 text-blue-600 dark:text-green-400">-</span>
-                <Label className="text-gray-700 text-blue-600 font-semibold dark:text-green-400">
+                <span className="text-gray-600 text-green-600 dark:text-green-400">
+                  -
+                </span>
+                <Label className="text-gray-700 text-green-600 font-semibold dark:text-green-400">
+                  {item}
+                </Label>
+              </div>
+            ))}
+            {planningW.map((item, idx) => (
+              <div key={idx} className="flex items-start space-x-2 ">
+                <span className="text-gray-600 text-blue-600 dark:text-blue-400">
+                  -
+                </span>
+                <Label className="text-gray-700 text-blue-600 font-semibold dark:text-blue-400">
                   {item}
                 </Label>
               </div>
