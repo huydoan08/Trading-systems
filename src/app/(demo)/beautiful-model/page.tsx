@@ -11,8 +11,10 @@ const images = [
   "/1.Xu hướng tăng.png",
   "/2.Bắt đáy khi tạo đáy cao dần.png",
   "/3.Bắt sóng hồi của sóng tăng trước đó.png",
-  "/4. Điểm vào lệnh phá trendline.png",
-  "/5.Điểm vào lệnh mô hình tam giác tăng.png"
+  "/4.Điểm vào lệnh phá trendline.png",
+  "/5.Điểm vào lệnh mô hình tam giác tăng.png",
+  "/6.QLL giảm.png",
+  "/7.QLL tăng.png",
 ];
 
 export default function BeautifulModelPage() {
