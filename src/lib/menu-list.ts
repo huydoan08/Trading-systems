@@ -62,6 +62,10 @@ export function getMenuList(pathname: string): Group[] {
             {
               href: "/beautiful-model",
               label: "Beautiful Model"
+            },
+            {
+              href: "/transaction-journal",
+              label: "Transaction Journal"
             }
           ]
         }
