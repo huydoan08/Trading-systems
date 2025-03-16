@@ -8,11 +8,9 @@ import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  "/transaction-journal/01.png",
-  "/transaction-journal/02.png",
-  "/transaction-journal/03.png",
-  "/transaction-journal/04.png",
-  "/transaction-journal/05.png", 
+  "/transaction-journal/NKGD-01.png",
+  "/transaction-journal/NKGD-02.png",
+  "/transaction-journal/NKGD-03.png",
 ];
 
 export default function TransactionJournalPage() {
