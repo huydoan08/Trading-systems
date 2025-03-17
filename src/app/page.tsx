@@ -61,7 +61,7 @@ export default function HomePage() {
               Trade what you see not what you think
             </h1>
             <span className="max-w-[750px] text-center text-lg font-light text-foreground">
-              Kiên nhẫn, kỉ luật, dứt khoát
+              Kiên nhẫn, quyết đoán, kỉ luật,
             </span>
 
             <div className="flex w-full items-center justify-center gap-4 py-4 md:pb-6 flex-wrap">
