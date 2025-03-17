@@ -11,6 +11,7 @@ const images = [
   "/transaction-journal/NKGD-01.png",
   "/transaction-journal/NKGD-02.png",
   "/transaction-journal/NKGD-03.png",
+  "/transaction-journal/NKGD-04.png",
 ];
 
 export default function TransactionJournalPage() {

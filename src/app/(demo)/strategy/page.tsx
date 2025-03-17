@@ -6,16 +6,16 @@ import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 
 const multiTime = [
-  "Khung M => Giảm | RSI bắt đầu bó sát vào 2 đường TB tại vùng 60.",
-  "Khung W => Giảm | RSI đang mở rộng, đang ở 40-60 .",
-  "Khung D => Sideway | RSI bó sát 2 đường TB tại vùng 40.",
-  "Khung H4 => Sideway | RSI đang bó hẹp lại quanh vùng 40-60."
+  "Khung 1M: Lưỡng lự.",
+  "Khung 1W: => Giảm.",
+  "Khung D1 => Giảm.",
+  "Khung H4 => Sideway."
 ];
 const planningH4 = [
-  "Chiến lược ngắn hạn H4 => Chờ đợi giá test lại vùng 76K rồi sẽ phân bổ vốn cho SPOT."
+  "Chiến lược ngắn hạn => tập trung đánh SPOT sóng H4."
 ];
 const planningW = [
-  "Chiến lược dài hạn W => Kiên nhẫn chờ giá về vùng tích lũy đẹp rồi dải vốn dần để gom hàng."
+  "Chiến lược dài hạn => Chưa có plan phân bổ vốn cho dài hạn."
 ];
 
 export default function StrategyPage() {
