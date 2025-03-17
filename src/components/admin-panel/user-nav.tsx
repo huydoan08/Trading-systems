@@ -19,8 +19,21 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger
 } from "@/components/ui/dropdown-menu";
+import { useEffect, useState } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "@/firebaseConfig";
+import { log } from "console";
+import { logout } from "@/AuthService";
 
 export function UserNav() {
+  const [user, setUser] = useState<any>();
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+
+    return () => unsubscribe();
+  }, [user]);
   return (
     <DropdownMenu>
       <TooltipProvider disableHoverableContent>
@@ -47,12 +60,12 @@ export function UserNav() {
           <div className="flex flex-col space-y-1">Hugo Doan
             <p className="text-sm font-medium leading-none"></p>
             <p className="text-xs leading-none text-muted-foreground">
-              doanvanhuy268@gmail.com
+            {user &&user.email}
             </p>
           </div>
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem className="hover:cursor-pointer" onClick={() => {}}>
+        <DropdownMenuItem className="hover:cursor-pointer" onClick={logout}>
           <LogOut className="w-4 h-4 mr-3 text-muted-foreground" />
           Sign out
         </DropdownMenuItem>

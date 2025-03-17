@@ -6,6 +6,9 @@ import { useStore } from "@/hooks/use-store";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "@/firebaseConfig";
 
 const images = [
   "/1.Xu hướng tăng.png",
@@ -22,9 +25,20 @@ export default function BeautifulModelPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
 
+  const router = useRouter();
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (!currentUser) {
+        router.push("/");
+      }
+    });
+
+    return () => unsubscribe();
+  }, [router]);
+
   useEffect(() => {
     const handleResize = () => setWindowHeight(window.innerHeight);
-    handleResize(); // Lấy ngay khi vào trang
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);

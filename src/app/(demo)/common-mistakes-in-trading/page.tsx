@@ -2,8 +2,12 @@
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import { auth } from "@/firebaseConfig";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
+import { onAuthStateChanged } from "firebase/auth";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const psychologicalMastery = [
   "Hay mở tài khoản ra xem các khoản lời lỗ rồi bị áp lực tâm lý.",
@@ -15,6 +19,16 @@ const psychologicalMastery = [
 
 export default function CommonMistakesInTradingPage() {
   const sidebar = useStore(useSidebar, (x) => x);
+  const router = useRouter();
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      if (!currentUser) {
+        router.push("/");
+      }
+    });
+
+    return () => unsubscribe();
+  }, [router]);
   if (!sidebar) return null;
   return (
     <ContentLayout title="Các lỗi thường mắc phải trong giao dịch">

@@ -14,24 +14,29 @@ import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 
 export default function HomePage() {
-  const [user, setUser] = useState<any>(null);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const router = useRouter();
-  onAuthStateChanged(auth, (currentUser) => {
-    setUser(currentUser);
-  });
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
       if (currentUser) {
         router.push("/strategy");
+      } else {
+        router.push("/");
       }
     });
 
     return () => unsubscribe();
   }, [router]);
+
+  useEffect(() => {
+    const savedPassword = localStorage.getItem("password");
+    if (savedPassword) {
+      setPassword(savedPassword);
+    }
+  }, []);
   return (
     <div className="flex flex-col min-h-screen">
       <header className="z-[50] sticky top-0 w-full bg-background/95 border-b backdrop-blur-sm dark:bg-black/[0.6] border-border/40">
@@ -72,7 +77,10 @@ export default function HomePage() {
                 placeholder="Mật khẩu"
                 className="w-64 h-10"
                 value={password}
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                  localStorage.setItem("password", e.target.value);
+                }}
               />
               <Button variant="default" className="h-10 flex items-center px-4">
                 <div
