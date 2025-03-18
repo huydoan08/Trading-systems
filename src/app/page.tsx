@@ -12,12 +12,45 @@ import { auth } from "@/firebaseConfig";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
+import { Loader2 } from "lucide-react";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+
+// Import react-toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function HomePage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const router = useRouter();
+
+  const handleLogin = async () => {
+    setLoading(true);
+    try {
+      await login(email, password);
+    } catch (error) {
+      console.error("Login failed", error);
+      toast.error("Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin!", {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "colored",
+      });
+    }
+    setLoading(false);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      handleLogin();
+    }
+  };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -60,57 +93,66 @@ export default function HomePage() {
             <h1 className="text-center text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:leading-[1.1]">
               Trade what you see not what you think
             </h1>
-            <span className="max-w-[750px] text-center text-lg font-light text-foreground">
-              Kiên nhẫn, quyết đoán, kỉ luật,
-            </span>
-
-            <div className="flex w-full items-center justify-center gap-4 py-4 md:pb-6 flex-wrap">
-              <Input
-                type="email"
-                placeholder="Email"
-                className="w-64 h-10"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <Input
-                type="password"
-                placeholder="Mật khẩu"
-                className="w-64 h-10"
-                value={password}
-                onChange={(e) => {
-                  setPassword(e.target.value);
-                  localStorage.setItem("password", e.target.value);
+            <Card>
+              <CardContent className="space-y-2">
+                <div className="space-y-1 mt-4">
+                  <Label htmlFor="name">Email</Label>
+                  <Input
+                   type="email"
+                   placeholder="Email"
+                   className="w-64 h-10"
+                   value={email}
+                   onChange={(e) => {
+                  setEmail(e.target.value);
+                  localStorage.setItem("email", e.target.value);
                 }}
+                onKeyDown={handleKeyDown}
               />
-              <Button variant="default" className="h-10 flex items-center px-4">
-                <div
-                  onClick={() => login(email, password)}
-                  className="flex items-center"
-                >
-                  Login
-                  <ArrowRightIcon className="ml-2" />
                 </div>
-              </Button>
-              {/* <Button variant="outline" asChild>
-                <div
-                  onClick={() =>
-                    register("doanvanhuy268@gmail.com", "Ytilsdwilsel26+")
-                  }
-                >
-                  Sign up
+                <div className="space-y-1">
+                  <Label htmlFor="username">Password</Label>
+                  <Input
+                    type="password"
+                    placeholder="Mật khẩu"
+                    className="w-64 h-10"
+                    value={password}
+                    onChange={(e) => {
+                      setPassword(e.target.value);
+                      localStorage.setItem("password", e.target.value);
+                    }}
+                    onKeyDown={handleKeyDown}
+                  />
                 </div>
-              </Button> */}
-            </div>
+              </CardContent>
+              <CardFooter className="flex items-center px-4 justify-center">
+                <Button
+                  variant="default"
+                  className="h-10 flex items-center px-4 justify-center"
+                  onClick={handleLogin}
+                  disabled={loading}
+                >
+                  {loading ? (
+                    <Loader2 className="animate-spin w-5 h-5" />
+                  ) : (
+                    <div className="flex items-center">
+                      Login
+                      <ArrowRightIcon className="ml-2" />
+                    </div>
+                  )}
+                </Button>
+              </CardFooter>
+            </Card>
           </section>
         </div>
       </main>
       <footer className="py-6 md:py-0 border-t border-border/40">
         <div className="container flex flex-col items-center justify-center gap-4 md:h-24 md:flex-row">
           <p className="text-balance text-center text-sm leading-loose text-muted-foreground">
-            Hành trình tôi đi tìm tôi.
+            Tâm thức tôi trưởng thành từ nghề trading.
           </p>
         </div>
       </footer>
+      <ToastContainer />
     </div>
   );
 }
