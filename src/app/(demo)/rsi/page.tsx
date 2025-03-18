@@ -39,7 +39,7 @@ const faqs = [
 export default function RSIPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   const router = useRouter();
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
