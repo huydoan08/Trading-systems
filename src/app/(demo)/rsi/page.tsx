@@ -37,7 +37,7 @@ export default function RSIPage() {
   }, [router]);
   if (!sidebar) return null;
   return (
-    <ContentLayout title="Hoàn thiện tâm lý giao dịch">
+    <ContentLayout title="Hỏi đáp về phân tích kĩ thuật.">
       <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-gray-200 dark:border-gray-700">
         <CardContent className="p-6 space-y-4">
           <div className="font-bold text-xl text-gray-800 dark:text-white">
