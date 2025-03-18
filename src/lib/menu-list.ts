@@ -3,8 +3,8 @@ import {
   LucideIcon,
   LandPlot,
   AlignHorizontalDistributeCenter,
-  Carrot
-  
+  Carrot,
+  FileQuestionIcon
 } from "lucide-react";
 
 type Submenu = {
@@ -89,6 +89,17 @@ export function getMenuList(pathname: string): Group[] {
           href: "/common-mistakes-in-trading",
           label: "Common Mistakes In Trading",
           icon: Carrot,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/rsi",
+          label: "Q&A RSI",
+          icon: FileQuestionIcon,
           submenus: []
         }
       ]
