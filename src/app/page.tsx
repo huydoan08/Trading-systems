@@ -1,9 +1,7 @@
 "use client";
 import Link from "next/link";
-import Image from "next/image";
 import { PanelsTopLeft } from "lucide-react";
-import { ArrowRightIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
-
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
 import { login, logout, register } from "@/AuthService";
@@ -11,7 +9,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/firebaseConfig";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Input } from "@/components/ui/input";
+import { Input } from "@/components/ui/input"
 import { Loader2 } from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
@@ -46,7 +44,7 @@ export default function HomePage() {
     setLoading(false);
   };
 
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       handleLogin();
     }
