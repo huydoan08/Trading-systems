@@ -27,6 +27,7 @@ export default function TransactionJournalPage() {
 
   const auth = getAuth();
   const user = auth.currentUser;
+ 
   const isAdmin = user && user.uid === ALLOWED_UID;
   const router = useRouter();
   useEffect(() => {

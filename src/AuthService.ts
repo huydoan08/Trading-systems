@@ -28,13 +28,6 @@ export const login = async (email: string, password: string) => {
       email,
       password
     );
-    const user = userCredential.user;
-    console.log("user", user);
-    if (user.uid !== ALLOWED_UID) {
-      alert("Bạn không có quyền đăng nhập, vui lòng chờ admin chấp thuận!");
-      await signOut(auth);
-      return;
-    }
     return userCredential.user;
   } catch (error) {
     console.error("Đăng nhập thất bại", error);
