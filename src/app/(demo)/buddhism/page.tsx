@@ -57,7 +57,7 @@ export default function BuddhismPage() {
   if (!sidebar) return null;
 
   return (
-    <ContentLayout title="Hỏi đáp về phân tích kĩ thuật">
+    <ContentLayout title="Pháp đăng thiền tuệ">
       {buddhism.map((bud, index) => (
         <Card
           key={index}
