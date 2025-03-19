@@ -1,4 +1,3 @@
-// src/services/AuthService.ts
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
@@ -6,7 +5,8 @@ import {
 } from "firebase/auth";
 import { auth } from "./firebaseConfig";
 
-// Đăng ký tài khoản mới
+const ALLOWED_UID = "w1ulDrt8O0OXIr0TVdPTMi58oAn2";
+
 export const register = async (email: string, password: string) => {
   try {
     const userCredential = await createUserWithEmailAndPassword(
@@ -21,7 +21,6 @@ export const register = async (email: string, password: string) => {
   }
 };
 
-// Đăng nhập bằng email & password
 export const login = async (email: string, password: string) => {
   try {
     const userCredential = await signInWithEmailAndPassword(
@@ -29,6 +28,13 @@ export const login = async (email: string, password: string) => {
       email,
       password
     );
+    const user = userCredential.user;
+    console.log("user", user);
+    if (user.uid !== ALLOWED_UID) {
+      alert("Bạn không có quyền đăng nhập, vui lòng chờ admin chấp thuận!");
+      await signOut(auth);
+      return;
+    }
     return userCredential.user;
   } catch (error) {
     console.error("Đăng nhập thất bại", error);
@@ -36,7 +42,6 @@ export const login = async (email: string, password: string) => {
   }
 };
 
-// Đăng xuất
 export const logout = async () => {
   try {
     await signOut(auth);

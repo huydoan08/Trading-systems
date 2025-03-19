@@ -55,7 +55,7 @@ export default function TransactionJournalPage() {
   return (
     <ContentLayout title="Mẫu hình đúng tiêu chuẩn.">
       <Card
-        className="w-full overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700"
+        className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
         style={{
           height: `${windowHeight - 80}px` // Trừ đi khoảng header nếu cần (80px là ví dụ, chỉnh theo layout thực tế của bạn)
         }}
@@ -83,7 +83,7 @@ export default function TransactionJournalPage() {
             >
               <ChevronLeft
                 size={32}
-                className="text-gray-800 dark:text-gray-200"
+                className="text-black-800 dark:text-black-200"
               />
             </button>
 
@@ -95,7 +95,7 @@ export default function TransactionJournalPage() {
             >
               <ChevronRight
                 size={32}
-                className="text-gray-800 dark:text-gray-200"
+                className="text-black-800 dark:text-black-200"
               />
             </button>
 

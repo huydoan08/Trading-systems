@@ -20,7 +20,7 @@ const buddhism = [
       "Đừng tin tưởng điều gì dù thói quen từ lâu khiến ta nhận là điều ấy đúng.",
       "Đừng tin tưởng điều gì do ta tưởng tượng ra lại nghĩ rằng một vị tối linh đã khai thị cho ta.",
       "Đừng tin tưởng bất cứ một điều gì chỉ vin vào uy tín của các thầy dạy các người.",
-      "Nhưng chỉ tin tưởng cái gì mà chính các người đã từng trải, kinh nghiệm và nhận là đúng, có lợi cho mình và người khác. Chỉ có cái đó mới là đích tốihậu thăng hoa cho con người và cuộc đời. Các người hãy lấy đó làm chỉ chuẩn"
+      "Nhưng chỉ tin tưởng cái gì mà chính các người đã từng trải, kinh nghiệm và nhận là đúng, có lợi cho mình và người khác. Chỉ có cái đó mới là đích tối hậu thăng hoa cho con người và cuộc đời. Các người hãy lấy đó làm chỉ chuẩn."
     ]
   },
   {
@@ -61,11 +61,11 @@ export default function BuddhismPage() {
       {buddhism.map((bud, index) => (
         <Card
           key={index}
-          className="max-h-[67.5vh] overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 mt-4 cursor-pointer"
+          className="max-h-[67.5vh] overflow-hidden shadow-lg border border-black-200 dark:border-black-700 mt-4 cursor-pointer"
           onClick={() => setOpenIndex(openIndex === index ? null : index)}
         >
           <div className="flex justify-between items-center p-6">
-            <span className="font-bold text-xl text-gray-800 dark:text-white">{bud.title}</span>
+            <span className="font-bold text-lg text-black-800 dark:text-white">{bud.title}</span>
             {openIndex === index ? <ChevronUp /> : <ChevronDown />}
           </div>
           <motion.div
@@ -74,10 +74,10 @@ export default function BuddhismPage() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <CardContent className="p-6 space-y-2 border-t text-gray-600 dark:text-white">
+            <CardContent className="p-6 space-y-2 border-t text-black-700 dark:text-white">
               {bud.content.map((item, idx) => (
                 <div key={idx} className="flex items-start space-x-2">
-                  <Label className="text-gray-700 font-semibold dark:text-white">{item}</Label>
+                  <Label className="text-black-700 font-semibold dark:text-white">{item}</Label>
                 </div>
               ))}
             </CardContent>

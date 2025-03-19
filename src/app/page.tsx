@@ -11,8 +11,16 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+  CardDescription
+} from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 // Import react-toastify
 import { ToastContainer, toast } from "react-toastify";
@@ -21,6 +29,8 @@ import "react-toastify/dist/ReactToastify.css";
 export default function HomePage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [emailRegister, setEmailRegister] = useState("");
+  const [passwordRegister, setPasswordRegister] = useState("");
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
@@ -31,7 +41,24 @@ export default function HomePage() {
       await login(email, password);
     } catch (error) {
       console.error("Login failed", error);
-      toast.error("Đăng nhập thất bại. Vui lòng kiểm tra lại thông tin!", {
+      toast.error(`Đăng nhập thất bại. ${error}`, {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "colored"
+      });
+    }
+    setLoading(false);
+  };
+  const handleSignUp = async () => {
+    setLoading(true);
+    try {
+      await register(emailRegister, passwordRegister);
+    } catch (error) {
+      toast.error(`Đăng kí thất bại. ${error}`, {
         position: "top-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -91,58 +118,109 @@ export default function HomePage() {
             <h1 className="text-center text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:leading-[1.1]">
               Trade what you see not what you think
             </h1>
-            <h1 className="text-center text-xl font-light leading-tight md:text-2xl lg:leading-[1.1]">
+            <h1 className="text-center text-lg font-light leading-tight md:text-2xl lg:leading-[1.1]">
               Kiên nhẫn, trực giác, kỉ luật
             </h1>
-            <Card>
-              <CardContent className="space-y-2">
-                <div className="space-y-1 mt-4">
-                  <Label htmlFor="name">Email</Label>
-                  <Input
-                    type="email"
-                    placeholder="Email"
-                    className="w-64 h-10"
-                    value={email}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                      localStorage.setItem("email", e.target.value);
-                    }}
-                    onKeyDown={handleKeyDown}
-                  />
-                </div>
-                <div className="space-y-1">
-                  <Label htmlFor="username">Password</Label>
-                  <Input
-                    type="password"
-                    placeholder="Mật khẩu"
-                    className="w-64 h-10"
-                    value={password}
-                    onChange={(e) => {
-                      setPassword(e.target.value);
-                      localStorage.setItem("password", e.target.value);
-                    }}
-                    onKeyDown={handleKeyDown}
-                  />
-                </div>
-              </CardContent>
-              <CardFooter className="flex items-center px-4 justify-center">
-                <Button
-                  variant="default"
-                  className="h-10 flex items-center px-4 justify-center"
-                  onClick={handleLogin}
-                  disabled={loading}
-                >
-                  {loading ? (
-                    <Loader2 className="animate-spin w-5 h-5" />
-                  ) : (
-                    <div className="flex items-center">
-                      Login
-                      <ArrowRightIcon className="ml-2" />
+            <Tabs defaultValue="account" className="w-[400px]">
+              <TabsList className="grid w-full grid-cols-2">
+                <TabsTrigger value="account">Sign In</TabsTrigger>
+                <TabsTrigger value="password">Sign up</TabsTrigger>
+              </TabsList>
+              <TabsContent value="account">
+                <Card>
+                <CardHeader>
+                    <CardTitle>Login</CardTitle>
+                    <CardDescription>
+                      Type your email and password here to login
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-2">
+                    <div className="space-y-1">
+                      <Label htmlFor="name">Email</Label>
+                      <Input
+                        type="email"
+                        placeholder="Email"
+                        className="w-full h-10"
+                        value={email}
+                        onChange={(e) => {
+                          setEmail(e.target.value);
+                          localStorage.setItem("email", e.target.value);
+                        }}
+                        onKeyDown={handleKeyDown}
+                      />
                     </div>
-                  )}
-                </Button>
-              </CardFooter>
-            </Card>
+                    <div className="space-y-1">
+                      <Label htmlFor="username">Password</Label>
+                      <Input
+                        type="password"
+                        placeholder="Mật khẩu"
+                        className="w-full h-10"
+                        value={password}
+                        onChange={(e) => {
+                          setPassword(e.target.value);
+                          localStorage.setItem("password", e.target.value);
+                        }}
+                        onKeyDown={handleKeyDown}
+                      />
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button
+                      variant="default"
+                      onClick={handleLogin}
+                      disabled={loading}
+                    >
+                      {loading ? (
+                        <Loader2 className="animate-spin w-5 h-5" />
+                      ) : (
+                        <div>Login</div>
+                      )}
+                    </Button>
+                  </CardFooter>
+                </Card>
+              </TabsContent>
+              <TabsContent value="password">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Sign up</CardTitle>
+                    <CardDescription>
+                      Type your email and password here to sign up
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-2">
+                    <div className="space-y-1">
+                      <Label htmlFor="current">Email</Label>
+                      <Input
+                        type="email"
+                        placeholder="Email"
+                        className="w-full h-10"
+                        value={emailRegister}
+                        onChange={(e) => {
+                          setEmailRegister(e.target.value);
+                        }}
+                        onKeyDown={handleKeyDown}
+                      />
+                    </div>
+                    <div className="space-y-1">
+                      <Label htmlFor="new">Password</Label>
+                      <Input
+                        type="password"
+                        placeholder="Password"
+                        className="w-full h-10"
+                        value={passwordRegister}
+                        onChange={(e) => {
+                          setPasswordRegister(e.target.value);;
+                        }}
+                        onKeyDown={handleKeyDown}
+                      />
+                    </div>
+                  </CardContent>
+                  <CardFooter>
+                    <Button onClick={handleSignUp}>Sign Up</Button>
+                  </CardFooter>
+                </Card>
+              </TabsContent>
+            </Tabs>
           </section>
         </div>
       </main>

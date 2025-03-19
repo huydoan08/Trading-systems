@@ -56,7 +56,7 @@ export default function BeautifulModelPage() {
   return (
     <ContentLayout title="Mẫu hình đúng tiêu chuẩn.">
       <Card
-        className="w-full overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700"
+        className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
         style={{
           height: `${windowHeight - 80}px`, // Trừ đi khoảng header nếu cần (80px là ví dụ, chỉnh theo layout thực tế của bạn)
         }}
@@ -82,7 +82,7 @@ export default function BeautifulModelPage() {
               className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
               aria-label="Previous Image"
             >
-              <ChevronLeft size={32} className="text-gray-800 dark:text-gray-200" />
+              <ChevronLeft size={32} className="text-black-800 dark:text-black-200" />
             </button>
 
             {/* Nút Next */}
@@ -91,7 +91,7 @@ export default function BeautifulModelPage() {
               className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
               aria-label="Next Image"
             >
-              <ChevronRight size={32} className="text-gray-800 dark:text-gray-200" />
+              <ChevronRight size={32} className="text-black-800 dark:text-black-200" />
             </button>
 
             {/* Hiển thị số ảnh */}

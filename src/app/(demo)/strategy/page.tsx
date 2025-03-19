@@ -37,37 +37,37 @@ export default function StrategyPage() {
   if (!sidebar) return null;
   return (
     <ContentLayout title="Chiến lược giao dịch">
-      <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-gray-200 dark:border-gray-700">
+      <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
         <CardContent className="p-6 space-y-4">
-          <div className="font-bold text-xl text-gray-800 dark:text-white">
+          <div className="font-bold text-lg text-black-800 dark:text-white">
             Quan sát đa khung thời gian để nhìn thấy được bức tranh tổng thể của
             toàn bộ thị trường:
           </div>
           <div className="space-y-2">
             {multiTime.map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2 ">
-                <span className="text-gray-600 dark:text-white">-</span>
-                <Label className="text-gray-700 font-semibold dark:text-white">
+                <span className="text-black-600 dark:text-white">-</span>
+                <Label className="text-black-700 font-semibold dark:text-white">
                   {item}
                 </Label>
               </div>
             ))}
             {planningH4.map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2 ">
-                <span className="text-gray-600 text-green-600 dark:text-green-400">
+                <span className="text-black-600 text-green-600 dark:text-green-400">
                   -
                 </span>
-                <Label className="text-gray-700 text-green-600 font-semibold dark:text-green-400">
+                <Label className="text-black-700 text-green-600 font-semibold dark:text-green-400">
                   {item}
                 </Label>
               </div>
             ))}
             {planningW.map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2 ">
-                <span className="text-gray-600 text-blue-600 dark:text-blue-400">
+                <span className="text-black-600 text-blue-600 dark:text-blue-400">
                   -
                 </span>
-                <Label className="text-gray-700 text-blue-600 font-semibold dark:text-blue-400">
+                <Label className="text-black-700 text-blue-600 font-semibold dark:text-blue-400">
                   {item}
                 </Label>
               </div>

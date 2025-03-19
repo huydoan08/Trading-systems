@@ -57,11 +57,11 @@ export default function RSIPage() {
       {faqs.map((faq, index) => (
         <Card
           key={index}
-          className="max-h-[67.5vh] overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 mt-4 cursor-pointer"
+          className="max-h-[67.5vh] overflow-hidden shadow-lg border border-black-200 dark:border-black-700 mt-4 cursor-pointer"
           onClick={() => setOpenIndex(openIndex === index ? null : index)}
         >
           <div className="flex justify-between items-center p-6">
-            <span className="font-bold text-xl text-gray-800 dark:text-white">{faq.title}</span>
+            <span className="font-bold text-lg text-black-800 dark:text-white">{faq.title}</span>
             {openIndex === index ? <ChevronUp /> : <ChevronDown />}
           </div>
           <motion.div
@@ -70,11 +70,11 @@ export default function RSIPage() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <CardContent className="p-6 space-y-2 border-t text-gray-600 dark:text-white">
+            <CardContent className="p-6 space-y-2 border-t text-black-600 dark:text-white">
               {faq.content.map((item, idx) => (
                 <div key={idx} className="flex items-start space-x-2">
-                  <span className="text-gray-600 dark:text-white">-</span>
-                  <Label className="text-gray-700 font-semibold dark:text-white">{item}</Label>
+                  <span className="text-black-600 dark:text-white">-</span>
+                  <Label className="text-black-700 font-semibold dark:text-white">{item}</Label>
                 </div>
               ))}
             </CardContent>
