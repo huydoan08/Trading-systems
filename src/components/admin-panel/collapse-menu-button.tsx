@@ -113,7 +113,7 @@ export function CollapseMenuButton({
             className="w-full justify-start h-10 mb-1"
             asChild
           >
-            <Link href={href}>
+            {!active && <Link href={href}>
               <span className="mr-4 ml-2">
                 <Dot size={18} />
               </span>
@@ -127,7 +127,7 @@ export function CollapseMenuButton({
               >
                 {label}
               </p>
-            </Link>
+            </Link>}
           </Button>
         ))}
       </CollapsibleContent>
@@ -173,10 +173,9 @@ export function CollapseMenuButton({
         {submenus.map(({ href, label, active }, index) => (
           <DropdownMenuItem key={index} asChild>
             <Link
-              className={`cursor-pointer ${
-                ((active === undefined && pathname === href) || active) &&
+              className={`cursor-pointer ${((active === undefined && pathname === href) || active) &&
                 "bg-secondary"
-              }`}
+                }`}
               href={href}
             >
               <p className="max-w-[180px] truncate">{label}</p>
