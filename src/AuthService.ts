@@ -5,7 +5,7 @@ import {
 } from "firebase/auth";
 import { auth } from "./firebaseConfig";
 
-const ALLOWED_UID = "w1ulDrt8O0OXIr0TVdPTMi58oAn2";
+export const ALLOWED_UID = "w1ulDrt8O0OXIr0TVdPTMi58oAn2";
 
 export const register = async (email: string, password: string) => {
   try {
