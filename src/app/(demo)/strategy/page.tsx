@@ -12,11 +12,11 @@ import { auth } from "@/firebaseConfig";
 const multiTime = [
   "Khung 1M: Lưỡng lự.",
   "Khung 1W: => Giảm.",
-  "Khung D1 => Bắt đầu có dấu hiệu điều chỉnh tăng.",
+  "Khung D1 => Sideway.",
   "Khung H4 => Sideway."
 ];
 const planningH4 = [
-  "Chiến lược ngắn hạn => D1 bắt đầu điều chỉnh tăng nên đánh sóng D1."
+  "Chiến lược ngắn hạn => Đứng ngoài thị trường."
 ];
 const planningW = [
   "Chiến lược dài hạn => Chưa có plan phân bổ vốn cho dài hạn."

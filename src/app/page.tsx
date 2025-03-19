@@ -9,7 +9,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/firebaseConfig";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Input } from "@/components/ui/input"
+import { Input } from "@/components/ui/input";
 import { Loader2 } from "lucide-react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
@@ -38,7 +38,7 @@ export default function HomePage() {
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
-        theme: "colored",
+        theme: "colored"
       });
     }
     setLoading(false);
@@ -91,21 +91,24 @@ export default function HomePage() {
             <h1 className="text-center text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:leading-[1.1]">
               Trade what you see not what you think
             </h1>
+            <h1 className="text-center text-xl font-light leading-tight md:text-2xl lg:leading-[1.1]">
+              Kiên nhẫn, trực giác, kỉ luật
+            </h1>
             <Card>
               <CardContent className="space-y-2">
                 <div className="space-y-1 mt-4">
                   <Label htmlFor="name">Email</Label>
                   <Input
-                   type="email"
-                   placeholder="Email"
-                   className="w-64 h-10"
-                   value={email}
-                   onChange={(e) => {
-                  setEmail(e.target.value);
-                  localStorage.setItem("email", e.target.value);
-                }}
-                onKeyDown={handleKeyDown}
-              />
+                    type="email"
+                    placeholder="Email"
+                    className="w-64 h-10"
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                      localStorage.setItem("email", e.target.value);
+                    }}
+                    onKeyDown={handleKeyDown}
+                  />
                 </div>
                 <div className="space-y-1">
                   <Label htmlFor="username">Password</Label>

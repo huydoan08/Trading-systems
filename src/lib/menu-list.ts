@@ -4,7 +4,8 @@ import {
   LandPlot,
   AlignHorizontalDistributeCenter,
   Carrot,
-  FileQuestionIcon
+  FileQuestionIcon,
+  Book
 } from "lucide-react";
 
 type Submenu = {
@@ -100,6 +101,17 @@ export function getMenuList(pathname: string): Group[] {
           href: "/rsi",
           label: "Q&A RSI",
           icon: FileQuestionIcon,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/buddhism",
+          label: "The precepts in Buddhism",
+          icon: Book,
           submenus: []
         }
       ]
