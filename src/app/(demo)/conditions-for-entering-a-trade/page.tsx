@@ -8,6 +8,7 @@ import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import { Checkbox } from "@/components/ui/checkbox"
 
 // Các tiêu chí trước khi vào một lệnh giao dịch
 const conditionForEnteringATrade = [
@@ -47,7 +48,7 @@ export default function ConditionForEnteringATradePage() {
           <div className="space-y-2">
             {conditionForEnteringATrade.map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2 ">
-                <span className="text-black-600 dark:text-white">-</span>
+                <Checkbox/>
                 <Label className="text-black-700 font-semibold dark:text-white">
                   {item}
                 </Label>
