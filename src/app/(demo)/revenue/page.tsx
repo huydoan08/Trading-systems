@@ -10,7 +10,13 @@ import {
   Tooltip,
   ResponsiveContainer
 } from "recharts";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue
+} from "@/components/ui/select";
 
 interface DataPoint {
   name: string;
@@ -41,8 +47,12 @@ const allTimeData: DataPoint[] = [...allData["2024"], ...allData["2025"]];
 
 export default function RevenueChart() {
   const [selectedYear, setSelectedYear] = useState<string>("All time");
-  const data: DataPoint[] = selectedYear === "All time" ? allTimeData : allData[selectedYear] || [];
-  const totalRevenue: number = data.reduce((acc, item) => acc + item.revenue, 0);
+  const data: DataPoint[] =
+    selectedYear === "All time" ? allTimeData : allData[selectedYear] || [];
+  const totalRevenue: number = data.reduce(
+    (acc, item) => acc + item.revenue,
+    0
+  );
 
   return (
     <ContentLayout title="Chiến lược giao dịch">
@@ -61,8 +71,14 @@ export default function RevenueChart() {
               </SelectContent>
             </Select>
           </div>
-          <h2 className="text-2xl font-bold">{totalRevenue}$</h2>
-          <div className="w-full h-72"> 
+          <h2
+            className={`text-2xl font-bold ${
+              totalRevenue >= 0 ? "text-green-500" : "text-red-500"
+            }`}
+          >
+            {totalRevenue}$
+          </h2>
+          <div className="w-full h-72">
             <ResponsiveContainer width="100%" height="100%">
               <LineChart data={data}>
                 <XAxis dataKey="name" hide />
