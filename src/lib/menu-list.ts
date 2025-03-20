@@ -116,5 +116,16 @@ export function getMenuList(pathname: string): Group[] {
         }
       ]
     },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/personal-growth",
+          label: "Personal growth",
+          icon: Book,
+          submenus: []
+        }
+      ]
+    },
   ];
 }
