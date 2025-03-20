@@ -12,7 +12,16 @@ import {
 } from "recharts";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-const allData = {
+interface DataPoint {
+  name: string;
+  revenue: number;
+}
+
+type YearlyData = {
+  [key: string]: DataPoint[];
+};
+
+const allData: YearlyData = {
   "2024": [
     { name: "Start/2024", revenue: 0 },
     { name: "04-08/2024", revenue: 700 },
@@ -28,12 +37,12 @@ const allData = {
   ]
 };
 
-const allTimeData = [...allData["2024"], ...allData["2025"]];
+const allTimeData: DataPoint[] = [...allData["2024"], ...allData["2025"]];
 
 export default function RevenueChart() {
-  const [selectedYear, setSelectedYear] = useState("All time");
-  const data = selectedYear === "All time" ? allTimeData : allData[selectedYear];
-  const totalRevenue = data.reduce((acc, item) => acc + item.revenue, 0);
+  const [selectedYear, setSelectedYear] = useState<string>("All time");
+  const data: DataPoint[] = selectedYear === "All time" ? allTimeData : allData[selectedYear] || [];
+  const totalRevenue: number = data.reduce((acc, item) => acc + item.revenue, 0);
 
   return (
     <ContentLayout title="Chiến lược giao dịch">
