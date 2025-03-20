@@ -69,23 +69,27 @@ export function Menu({ isOpen }: MenuProps) {
                               className="w-full justify-start h-10 mb-1"
                               asChild
                             >
-                              <Link href={href}>
-                                <span
-                                  className={cn(isOpen === false ? "" : "mr-4")}
-                                >
-                                  <Icon size={18} />
-                                </span>
-                                <p
-                                  className={cn(
-                                    "max-w-[200px] truncate",
-                                    isOpen === false
-                                      ? "-translate-x-96 opacity-0"
-                                      : "translate-x-0 opacity-100"
-                                  )}
-                                >
-                                  {label}
-                                </p>
-                              </Link>
+                              {!active && (
+                                <Link href={href}>
+                                  <span
+                                    className={cn(
+                                      isOpen === false ? "" : "mr-4"
+                                    )}
+                                  >
+                                    <Icon size={18} />
+                                  </span>
+                                  <p
+                                    className={cn(
+                                      "max-w-[200px] truncate",
+                                      isOpen === false
+                                        ? "-translate-x-96 opacity-0"
+                                        : "translate-x-0 opacity-100"
+                                    )}
+                                  >
+                                    {label}
+                                  </p>
+                                </Link>
+                              )}
                             </Button>
                           </TooltipTrigger>
                           {isOpen === false && (

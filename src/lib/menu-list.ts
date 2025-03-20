@@ -5,8 +5,9 @@ import {
   AlignHorizontalDistributeCenter,
   Carrot,
   FileQuestionIcon,
-  Book,
-  PersonStandingIcon
+  PersonStandingIcon,
+  TreeDeciduous,
+  Leaf,
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 import { ALLOWED_UID } from "@/AuthService";
@@ -118,7 +119,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/buddhism",
           label: "The precepts in Buddhism",
-          icon: Book,
+          icon: TreeDeciduous,
           submenus: []
         }
       ]
@@ -131,6 +132,18 @@ export function getMenuList(pathname: string): Group[] {
           label: "Personal growth",
           icon: PersonStandingIcon,
           submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/revenue",
+          label: "Revenue",
+          icon: Leaf,
+          submenus: [],
+          active: !isAdmin
         }
       ]
     },
