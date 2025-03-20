@@ -73,7 +73,7 @@ export default function RevenueChart() {
           </div>
           <h2
             className={`text-2xl font-bold ${
-              totalRevenue >= 0 ? "text-green-500" : "text-red-500"
+              totalRevenue >= 0 ? "text-green-500" : "text-green-500"
             }`}
           >
             {totalRevenue}$
