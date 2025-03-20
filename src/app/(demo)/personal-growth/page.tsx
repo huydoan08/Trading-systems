@@ -56,8 +56,7 @@ export default function PersonalGrowthPage() {
 
   return (
     <>
-      {isAdmin && (
-        <ContentLayout title="Phát triển bản thân.">
+       <ContentLayout title="Phát triển bản thân.">
           <Card
             className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
             style={{
@@ -111,7 +110,6 @@ export default function PersonalGrowthPage() {
             </CardContent>
           </Card>
         </ContentLayout>
-      )}
     </>
   );
 }

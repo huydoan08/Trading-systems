@@ -5,7 +5,8 @@ import {
   AlignHorizontalDistributeCenter,
   Carrot,
   FileQuestionIcon,
-  Book
+  Book,
+  PersonStandingIcon
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 import { ALLOWED_UID } from "@/AuthService";
@@ -128,7 +129,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/personal-growth",
           label: "Personal growth",
-          icon: Book,
+          icon: PersonStandingIcon,
           submenus: []
         }
       ]
