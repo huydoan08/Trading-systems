@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -9,45 +10,64 @@ import {
   Tooltip,
   ResponsiveContainer
 } from "recharts";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-const data = [
-  { name: "Start/2024", revenue: 0 },
-  { name: "04-08/2024", revenue: 700 },
-  { name: "09/2024", revenue: -183 },
-  { name: "10/2024", revenue: -890 },
-  { name: "11/2024", revenue: 650 },
-  { name: "12/2024", revenue: -3124 },
-  { name: "01/2025", revenue: -1018 },
-  { name: "02/2025", revenue: -129 },
-  { name: "03/2025", revenue: -16 },
-];
+const allData = {
+  "2024": [
+    { name: "Start/2024", revenue: 0 },
+    { name: "04-08/2024", revenue: 700 },
+    { name: "09/2024", revenue: -183 },
+    { name: "10/2024", revenue: -890 },
+    { name: "11/2024", revenue: 650 },
+    { name: "12/2024", revenue: -3124 }
+  ],
+  "2025": [
+    { name: "01/2025", revenue: -1018 },
+    { name: "02/2025", revenue: -129 },
+    { name: "03/2025", revenue: -16 }
+  ]
+};
 
-const totalRevenue = data.reduce((acc, item) => acc + item.revenue, 0);
+const allTimeData = [...allData["2024"], ...allData["2025"]];
 
 export default function RevenueChart() {
+  const [selectedYear, setSelectedYear] = useState("All time");
+  const data = selectedYear === "All time" ? allTimeData : allData[selectedYear];
+  const totalRevenue = data.reduce((acc, item) => acc + item.revenue, 0);
+
   return (
     <ContentLayout title="Chiến lược giao dịch">
       <Card className="max-h-[100vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
         <CardContent className="p-6 space-y-4">
-          <Card className="w-full h-full max-w-sm p-4">
-            <h3 className="text-sm font-medium text-gray-500">Total Revenue (2025)</h3>
-            <h2 className="text-2xl font-bold">{totalRevenue}</h2>
-            <CardContent className="p-0 mt-2">
-              <ResponsiveContainer width="100%" height={200}>
-                <LineChart data={data}>
-                  <XAxis dataKey="name" hide />
-                  <YAxis hide />
-                  <Tooltip formatter={(value) => `$${value}`} />
-                  <Line
-                    type="monotone"
-                    dataKey="revenue"
-                    stroke="#000"
-                    dot={{ r: 3 }}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
-            </CardContent>
-          </Card>
+          <div className="flex justify-between items-center">
+            <h3 className="text-sm font-medium text-gray-500">Total Revenue</h3>
+            <Select value={selectedYear} onValueChange={setSelectedYear}>
+              <SelectTrigger className="w-32">
+                <SelectValue placeholder="Chọn năm" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="All time">All time</SelectItem>
+                <SelectItem value="2024">2024</SelectItem>
+                <SelectItem value="2025">2025</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <h2 className="text-2xl font-bold">{totalRevenue}$</h2>
+          <div className="w-full h-72"> 
+            <ResponsiveContainer width="100%" height="100%">
+              <LineChart data={data}>
+                <XAxis dataKey="name" hide />
+                <YAxis hide />
+                <Tooltip formatter={(value) => `$${value}`} />
+                <Line
+                  type="monotone"
+                  dataKey="revenue"
+                  stroke="#000"
+                  dot={{ r: 3 }}
+                />
+              </LineChart>
+            </ResponsiveContainer>
+          </div>
         </CardContent>
       </Card>
     </ContentLayout>
