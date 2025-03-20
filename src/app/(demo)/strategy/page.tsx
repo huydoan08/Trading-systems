@@ -10,10 +10,12 @@ import { useRouter } from "next/navigation";
 import { auth } from "@/firebaseConfig";
 
 const multiTime = [
-  "Khung 1M: Lưỡng lự.",
-  "Khung 1W: => Giảm, bắt đầu bó hẹp.",
-  "Khung D1 => Tăng, bắt đầu hành trình.",
-  "Khung H4 => Tăng, đăng bắt đầu mở rộng."
+  "Cập nhật tình hình thị trường ngày 20-03-2025:",
+  "Khung 1M => Lưỡng lự, đo fibo vẫn giữ cấu trúc sóng tăng.",
+  "Khung 1W => Giảm, bắt đầu có dấu hiệu điều chỉnh.",
+  "Khung D1 => Sideway, bắt đầu cắt lên trên 2 DTB.",
+  "Khung H4 => Tăng, RSI đang mở rộng, mới chạm vùng 70 đã có dấu hiệu điều chỉnh",
+  "Khung H1 => RSI chưa chạm vùng 80 thì có dấu hiệu điều chỉnh, lực tăng không thực sự mạnh mẽ, cần chú ý quan sát tiếp.."
 ];
 const planningH4 = [
   "Chiến lược ngắn hạn => Vào hàng BTC, quảng lý SL đáy 82K, quản lý theo cấu trúc sóng H4."
