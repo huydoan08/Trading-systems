@@ -1,5 +1,5 @@
 import {
- Sprout,
+  Sprout,
   LucideIcon,
   LandPlot,
   AlignHorizontalDistributeCenter,
@@ -7,6 +7,8 @@ import {
   FileQuestionIcon,
   Book
 } from "lucide-react";
+import { getAuth } from "firebase/auth";
+import { ALLOWED_UID } from "@/AuthService";
 
 type Submenu = {
   href: string;
@@ -28,6 +30,9 @@ type Group = {
 };
 
 export function getMenuList(pathname: string): Group[] {
+  const auth = getAuth();
+  const user = auth.currentUser;
+  const isAdmin = user?.email == "doanvanhuy268@gmail.com"
   return [
     {
       groupLabel: "",
@@ -66,7 +71,8 @@ export function getMenuList(pathname: string): Group[] {
             },
             {
               href: "/transaction-journal",
-              label: "Transaction Journal"
+              label: "Transaction Journal",
+              active: !isAdmin
             }
           ]
         }
