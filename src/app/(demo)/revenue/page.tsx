@@ -11,6 +11,7 @@ import {
 } from "recharts";
 
 const data = [
+  { name: "Start/2024", revenue: 0 },
   { name: "04-08/2024", revenue: 700 },
   { name: "09/2024", revenue: -183 },
   { name: "10/2024", revenue: -890 },
