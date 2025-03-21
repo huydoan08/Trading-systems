@@ -37,7 +37,7 @@ export default function DuringTradeExecutionPage() {
       <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
         <CardContent className="p-6 space-y-4">
           <div className="font-bold text-lg text-black-800 dark:text-white">
-            Trong vào lệnh giao dịch:
+            Trong khi vào lệnh giao dịch:
           </div>
           <div className="space-y-2">
             {duringTradeExecution.map((item, idx) => (
