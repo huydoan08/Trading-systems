@@ -13,18 +13,6 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const PTKT = [
   {
-    title: "Cập nhật tình hình thị trường chart BTC ngày 20-03-2025:",
-    content: [
-      "Khung 1M => RSI lưỡng lự, đo fibo vẫn giữ cấu trúc sóng tăng.",
-      "Khung 1W => RSI giảm, nhưng có dấu hiệu bó lại.",
-      "Khung D1 => RSI sideway, nhưng bắt đầu cắt lên trên 2 đường TB.",
-      "Khung H4 => RSI tăng và đang mở rộng, mới chạm vùng 70, bắt đầu có dấu hiệu điều chỉnh.",
-      "Khung H1 => RSI tăng, chưa chạm vùng 80 có dấu hiệu điều chỉnh cần chú ý quan sát thêm.",
-      "CHIẾN LƯỢC NGẮN HẠN => LƯỚT SÓNG NGẮN H4, QUẢN LÝ LỆNH Ở KHUNG H4 hoặc fibo 0.6",
-      "CHIẾN LƯỢC DÀI HẠN => KHUNG 1W ĐÃ PHÂN KÌ NÊN THOÁT VỐN LỚN, CHỜ SETUP MỚI."
-    ]
-  },
-  {
     title: "Cập nhật tình hình thị trường chart BTC ngày 21-03-2025:",
     content: [
       "Khung 1M => RSI lưỡng lự, đo fibo vẫn giữ cấu trúc sóng tăng.",
@@ -33,6 +21,18 @@ const PTKT = [
       "Khung H4 => Sóng đang tạo cấu trúc tăng dần, trước đó chạm trendline kháng cự và không phá qua nổi, RSI mới chạm vùng 70 đã điều chỉnh xuống, lực tăng không mạnh, nhưng fibo vẫn giữ cấu trúc tại 0.382 .",
       "Khung H1 => RSI giảm xuống vùng 40 đã bật lên chứng tỏ lực bán không mạnh, chỉ là nhịp điều chỉnh nhẹ.",
       "CHIẾN LƯỢC NGẮN HẠN => LƯỚT SÓNG NGẮN H4, TIẾP TỤC GIỮ LỆNH VÀ QUẢN LÝ LỆNH Ở KHUNG H4 hoặc fibo 0.6",
+      "CHIẾN LƯỢC DÀI HẠN => KHUNG 1W ĐÃ PHÂN KÌ NÊN THOÁT VỐN LỚN, CHỜ SETUP MỚI."
+    ]
+  },
+  {
+    title: "Cập nhật tình hình thị trường chart BTC ngày 20-03-2025:",
+    content: [
+      "Khung 1M => RSI lưỡng lự, đo fibo vẫn giữ cấu trúc sóng tăng.",
+      "Khung 1W => RSI giảm, nhưng có dấu hiệu bó lại.",
+      "Khung D1 => RSI sideway, nhưng bắt đầu cắt lên trên 2 đường TB.",
+      "Khung H4 => RSI tăng và đang mở rộng, mới chạm vùng 70, bắt đầu có dấu hiệu điều chỉnh.",
+      "Khung H1 => RSI tăng, chưa chạm vùng 80 có dấu hiệu điều chỉnh cần chú ý quan sát thêm.",
+      "CHIẾN LƯỢC NGẮN HẠN => LƯỚT SÓNG NGẮN H4, QUẢN LÝ LỆNH Ở KHUNG H4 hoặc fibo 0.6",
       "CHIẾN LƯỢC DÀI HẠN => KHUNG 1W ĐÃ PHÂN KÌ NÊN THOÁT VỐN LỚN, CHỜ SETUP MỚI."
     ]
   }
