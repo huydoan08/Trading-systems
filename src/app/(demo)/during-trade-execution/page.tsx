@@ -1,6 +1,7 @@
 "use client";
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { Card, CardContent } from "@/components/ui/card";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { auth } from "@/firebaseConfig";
 import { useSidebar } from "@/hooks/use-sidebar";
@@ -42,7 +43,7 @@ export default function DuringTradeExecutionPage() {
           <div className="space-y-2">
             {duringTradeExecution.map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2 ">
-                <span className="text-black-600 dark:text-white">-</span>
+                 <Checkbox/>
                 <Label className="text-black-700 font-semibold dark:text-white">
                   {item}
                 </Label>
