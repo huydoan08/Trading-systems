@@ -18,9 +18,9 @@ const PTKT = [
       "Khung 1M => RSI lưỡng lự, đo fibo vẫn giữ cấu trúc sóng tăng.",
       "Khung 1W => RSI giảm, nhưng có dấu hiệu bó lại.",
       "Khung D1 => RSI sideway, nhưng bắt đầu cắt lên trên 2 đường TB.",
-      "Khung H4 => RSI tăng và đang mở rộng, mới chạm vùng 70 đã có dấu hiệu điều chỉnh, lực tăng không mạnh cần thận trọng.",
-      "Khung H1 => RSI tăng, chưa chạm vùng 80 thì có dấu hiệu điều chỉnh, lực tăng không mạnh, cần chú ý quan sát tiếp.",
-      "CHIẾN LƯỢC NGẮN HẠN => LƯỚT SÓNG NGẮN H4, QUẢN LÝ LỆNH về Fibo 0.5 của sóng H1 do là lực tăng không mạnh.",
+      "Khung H4 => RSI tăng và đang mở rộng, mới chạm vùng 70, bắt đầu có dấu hiệu điều chỉnh.",
+      "Khung H1 => RSI tăng, chưa chạm vùng 80 có dấu hiệu điều chỉnh cần chú ý quan sát thêm.",
+      "CHIẾN LƯỢC NGẮN HẠN => LƯỚT SÓNG NGẮN H4, QUẢN LÝ LỆNH Ở KHUNG H4 hoặc fibo 0.6",
       "CHIẾN LƯỢC DÀI HẠN => KHUNG 1W ĐÃ PHÂN KÌ NÊN THOÁT VỐN LỚN, CHỜ SETUP MỚI."
     ]
   }
