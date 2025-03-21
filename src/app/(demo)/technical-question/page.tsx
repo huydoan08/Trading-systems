@@ -20,7 +20,8 @@ const faqs = [
     ]
   },
   {
-    title: "2.Tại sao có những lúc giá giảm nhưng RSI thì sideway, giá tăng nhưng RSI sideway, giá sideway nhưng RSI giảm ?",
+    title:
+      "2.Tại sao có những lúc giá giảm nhưng RSI thì sideway, giá tăng nhưng RSI sideway, giá sideway nhưng RSI giảm ?",
     content: [
       "Có những giai đoạn thị trường sideway, hình thái sẽ rất nhiễu loạn, tín hiệu RSI cũng nhiễu loạn. Thì việc của mình cần view đa khung thời gian để biết được thị trường đang ở giai đoạn nào.",
       "Sideway sẽ có 2 hình thái sideway: Nếu giá sideway ở đáy thì nó thể hiện sự tích lũy của bên mua. Nếu giá sideway ở đỉnh nó thể hiện sự phân phối của bên bán",
@@ -28,10 +29,19 @@ const faqs = [
     ]
   },
   {
-    title: "3.RSI ở các khung thời gian khác nhau thì cho các tín hiệu chỉ báo khác nhau như vậy có phải đồng thuận không ?",
+    title:
+      "3.RSI ở các khung thời gian khác nhau thì cho các tín hiệu chỉ báo khác nhau như vậy có phải đồng thuận không ?",
     content: [
       "Áp dụng lý thuyết của sóng Eliot thì trong con sóng tăng chính sẽ có những con sóng nhỏ, trong con sóng nhỏ sẽ có những con sóng nhỏ hơn, khung thời gian càng lớn thì cho thấy xu hướng chính càng rõ rệt.",
       "Trong con sóng tăng cũng có thời điểm nó sẽ dừng lại điều chỉnh, sideway rồi mới tăng tiếp. Khi này nếu nhìn ở khung nhỏ hơn thì sẽ khá nhiễu loạn. Việc của mình là khi view khung nhỏ thấy nhiễu loạn thì sẽ bỏ qua và chuyển sang khung lớn hơn, có tín hiệu rõ ràng hơn để follow theo."
+    ]
+  },
+  {
+    title:
+      "4.Khi nào thì nên đặt lệnh dừng lỗ, khi nào thì không cần đặt lệnh dừng lỗ ?",
+    content: [
+      "Đặt lệnh dừng lỗ cần tuân thủ tuyệt đối trong một số trường hợp như sau: giao dịch ở khung H4 trở xuống, giao dịch phái sinh",
+      "Lệnh dừng lỗ không cần thiết phải đặt nếu đầu tư trong khung thời gian 1D trở lên, thậm chí có thể áp dụng chiến lược mua DCA khi giá tiếp tục giảm, nhưng phải hiểu thật sự sâu về đầu tư, cũng như vốn phải thật sự sẵn sàng cho dài hạn."
     ]
   }
 ];
@@ -61,12 +71,18 @@ export default function RSIPage() {
           onClick={() => setOpenIndex(openIndex === index ? null : index)}
         >
           <div className="flex justify-between items-center p-6">
-            <span className="font-bold text-lg text-black-800 dark:text-white">{faq.title}</span>
+            <span className="font-bold text-lg text-black-800 dark:text-white">
+              {faq.title}
+            </span>
             {openIndex === index ? <ChevronUp /> : <ChevronDown />}
           </div>
           <motion.div
             initial={{ height: 0, opacity: 0 }}
-            animate={openIndex === index ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }}
+            animate={
+              openIndex === index
+                ? { height: "auto", opacity: 1 }
+                : { height: 0, opacity: 0 }
+            }
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
@@ -74,7 +90,9 @@ export default function RSIPage() {
               {faq.content.map((item, idx) => (
                 <div key={idx} className="flex items-start space-x-2">
                   <span className="text-black-600 dark:text-white">-</span>
-                  <Label className="text-black-700 font-semibold dark:text-white">{item}</Label>
+                  <Label className="text-black-700 font-semibold dark:text-white">
+                    {item}
+                  </Label>
                 </div>
               ))}
             </CardContent>

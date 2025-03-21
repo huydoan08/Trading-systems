@@ -106,8 +106,8 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/rsi",
-          label: "Q&A RSI",
+          href: "/technical-question",
+          label: "Q&A Technical",
           icon: FileQuestionIcon,
           submenus: []
         }
