@@ -15,25 +15,27 @@ const PTKT = [
   {
     title: "Cập nhật tình hình thị trường chart BTC ngày 21-03-2025:",
     content: [
-      "Khung 1M => RSI lưỡng lự, đo fibo vẫn giữ cấu trúc sóng tăng.",
-      "Khung 1W => RSI giảm, nhưng có dấu hiệu bó lại.",
-      "Khung D1 => RSI tăng, có điều chỉnh xuống nhưng vẫn chưa chạm đường TB nhanh.",
-      "Khung H4 => RSI sideway quanh vùng 40-60, 2 đường TB bó sát lại cho thấy khả năng thiên về sideway biên độ hẹp.",
-      "Khung H1 => RSI giảm, đang bắt đầu có dấu hiệu bó lại.",
-      "CHIẾN LƯỢC NGẮN HẠN => LƯỚT SÓNG NGẮN H4, TIẾP TỤC GIỮ LỆNH VÀ QUẢN LÝ LỆNH Ở KHUNG H4 hoặc fibo 0.6",
-      "CHIẾN LƯỢC DÀI HẠN => KHUNG 1W ĐÃ PHÂN KÌ NÊN THOÁT VỐN LỚN, CHỜ SETUP MỚI."
+      "Khung 1M => RSI cắt qua TBN, sắp chạm tới TBC, xu hướng bó sát 2 ĐTB, đo fibo vẫn giữ cấu trúc 0.5, sóng tăng đi được khoảng 80% HT.",
+      "Khung 1W => RSI cắt qua 2 DTB, xu hướng tiếp tục mở rộng, đang trong nhịp điều chỉnh, sóng giảm đi được khoảng 25% HT.",
+      "Khung D1 => RSI cắt qua 2 DTB, xu hướng tăng, sóng tăng đi được khoảng 20% HT.",
+      "Khung H4 => RSI bó sát 2 DTB, thiên về sideway biên độ hẹp.",
+      "Khung H1 => RSI giảm, sóng giảm đi được khoảng 80% HT.",
+      "DÀI HẠN: Chờ khung W đi gần hết hành trình giảm sẽ phân bổ vốn vào để gom hàng dần.",
+      "TRUNG HẠN: Khung D bắt đầu sóng tăng, có thể tham gia nhưng lưu ý đang đi ngược xu hướng khung W, khá nguy hiểm.",
+      "NGẮN HẠN => H4 sideway biên độ hẹp nên có thể follow theo chiến lược sideway hoặc ngồi ngoài chơi.",
     ]
   },
   {
     title: "Cập nhật tình hình thị trường chart BTC ngày 20-03-2025:",
     content: [
       "Khung 1M => RSI lưỡng lự, đo fibo vẫn giữ cấu trúc sóng tăng.",
-      "Khung 1W => RSI giảm, nhưng có dấu hiệu bó lại.",
-      "Khung D1 => RSI sideway, nhưng bắt đầu cắt lên trên 2 đường TB.",
+      "Khung 1W => RSI giảm, xu hướng tiếp tục mở rộng.",
+      "Khung D1 => RSI bó sát 2 DTB, đã kết thúc hành trình giảm.",
       "Khung H4 => RSI tăng và đang mở rộng, mới chạm vùng 70, bắt đầu có dấu hiệu điều chỉnh.",
       "Khung H1 => RSI tăng, chưa chạm vùng 80 có dấu hiệu điều chỉnh cần chú ý quan sát thêm.",
-      "CHIẾN LƯỢC NGẮN HẠN => LƯỚT SÓNG NGẮN H4, QUẢN LÝ LỆNH Ở KHUNG H4 hoặc fibo 0.6",
-      "CHIẾN LƯỢC DÀI HẠN => KHUNG 1W ĐÃ PHÂN KÌ NÊN THOÁT VỐN LỚN, CHỜ SETUP MỚI."
+      "DÀI HẠN: Chờ khung W đi gần hết hành trình giảm sẽ phân bổ vốn vào để gom hàng dần.",
+      "TRUNG HẠN: Khung D kết thúc hành trình giảm, có thể tham gia nhưng lưu ý đang đi ngược xu hướng khung W, khá nguy hiểm.",
+      "NGẮN HẠN: H4 tăng, có thể chờ nhịp điều chỉnh để tham gia."
     ]
   }
 ];
