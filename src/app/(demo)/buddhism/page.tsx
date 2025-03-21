@@ -74,7 +74,7 @@ export default function BuddhismPage() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <CardContent className="p-6 space-y-2 border-t text-black-700 dark:text-white max-h-[30vh] overflow-auto sm:max-h-none sm:overflow-visible">
+            <CardContent className="p-6 space-y-2 border-t text-black-700 dark:text-white max-h-[35vh] overflow-auto sm:max-h-none sm:overflow-visible">
               {bud.content.map((item, idx) => (
                 <div key={idx} className="flex items-start space-x-2">
                   <Label className="text-black-700 font-semibold dark:text-white">{item}</Label>
