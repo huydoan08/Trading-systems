@@ -23,6 +23,18 @@ const PTKT = [
       "CHIẾN LƯỢC NGẮN HẠN => LƯỚT SÓNG NGẮN H4, QUẢN LÝ LỆNH Ở KHUNG H4 hoặc fibo 0.6",
       "CHIẾN LƯỢC DÀI HẠN => KHUNG 1W ĐÃ PHÂN KÌ NÊN THOÁT VỐN LỚN, CHỜ SETUP MỚI."
     ]
+  },
+  {
+    title: "Cập nhật tình hình thị trường chart BTC ngày 21-03-2025:",
+    content: [
+      "Khung 1M => RSI lưỡng lự, đo fibo vẫn giữ cấu trúc sóng tăng.",
+      "Khung 1W => RSI giảm, nhưng có dấu hiệu bó lại.",
+      "Khung D1 => RSI sideway, có điều chỉnh xuống nhưng vẫn chưa chạm đường TB nhanh.",
+      "Khung H4 => Sóng đang tạo cấu trúc tăng dần, trước đó chạm trendline kháng cự và không phá qua nổi, RSI mới chạm vùng 70 đã điều chỉnh xuống, lực tăng không mạnh, nhưng fibo vẫn giữ cấu trúc tại 0.382 .",
+      "Khung H1 => RSI giảm xuống vùng 40 đã bật lên chứng tỏ lực bán không mạnh, chỉ là nhịp điều chỉnh nhẹ.",
+      "CHIẾN LƯỢC NGẮN HẠN => LƯỚT SÓNG NGẮN H4, TIẾP TỤC GIỮ LỆNH VÀ QUẢN LÝ LỆNH Ở KHUNG H4 hoặc fibo 0.6",
+      "CHIẾN LƯỢC DÀI HẠN => KHUNG 1W ĐÃ PHÂN KÌ NÊN THOÁT VỐN LỚN, CHỜ SETUP MỚI."
+    ]
   }
 ];
 
