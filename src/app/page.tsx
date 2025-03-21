@@ -119,7 +119,7 @@ export default function HomePage() {
               Trade what you see not what you think
             </h1>
             <h1 className="text-center text-lg font-light leading-tight md:text-2xl lg:leading-[1.1]">
-              Kiên nhẫn, trực giác, kỉ luật
+              Kiên nhẫn, kỉ luật, trực giác
             </h1>
             <Tabs defaultValue="account" className="w-[400px]">
               <TabsList className="grid w-full grid-cols-2">
