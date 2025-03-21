@@ -22,7 +22,7 @@ const PTKT = [
       "Khung H1 => RSI giảm, sóng giảm đi được khoảng 80% HT.",
       "DÀI HẠN: Chờ khung W đi gần hết hành trình giảm sẽ phân bổ vốn vào để gom hàng dần.",
       "TRUNG HẠN: Khung D bắt đầu sóng tăng, có thể tham gia nhưng lưu ý đang đi ngược xu hướng khung W, khá nguy hiểm.",
-      "NGẮN HẠN => H4 sideway biên độ hẹp nên có thể follow theo chiến lược sideway hoặc ngồi ngoài chơi.",
+      "NGẮN HẠN: Khung H4 sideway biên độ hẹp nên có thể follow theo chiến lược đánh sóng sideway hoặc ngồi ngoài chơi.",
     ]
   },
   {
