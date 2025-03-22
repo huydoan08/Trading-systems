@@ -73,6 +73,10 @@ export function getMenuList(pathname: string): Group[] {
               label: "Beautiful Model"
             },
             {
+              href: "/manage-order",
+              label: "Manage Order"
+            },
+            {
               href: "/transaction-journal",
               label: "Transaction Journal",
               active: !isAdmin

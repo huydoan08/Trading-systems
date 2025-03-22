@@ -11,14 +11,11 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/firebaseConfig";
 
 const images = [
-  "/beautiful-modal/1.Xu hướng tăng.png",
-  "/beautiful-modal/2.Bắt đáy khi tạo đáy cao dần.png",
-  "/beautiful-modal/3.Bắt sóng hồi của sóng tăng trước đó.png",
-  "/beautiful-modal/4.Điểm vào lệnh phá trendline.png",
-  "/beautiful-modal/5.Điểm vào lệnh mô hình tam giác tăng.png",
+  "/manage-order/7.QLL tăng.png",
+  "/manage-order/6.QLL giảm.png"
 ];
 
-export default function BeautifulModelPage() {
+export default function ManageOrderPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
