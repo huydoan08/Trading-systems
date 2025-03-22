@@ -53,7 +53,7 @@ export function Menu({ isOpen }: MenuProps) {
               )}
               {menus.map(
                 ({ href, label, icon: Icon, active, submenus }, index) =>
-                  !submenus || submenus.length === 0 || active ? (
+                  !submenus || submenus.length === 0 ? (
                     <div className="w-full" key={index}>
                       <TooltipProvider disableHoverableContent>
                         <Tooltip delayDuration={100}>
@@ -62,7 +62,7 @@ export function Menu({ isOpen }: MenuProps) {
                               variant={
                                 (active === undefined &&
                                   pathname.startsWith(href)) ||
-                                active
+                                  active
                                   ? "secondary"
                                   : "ghost"
                               }
@@ -102,7 +102,7 @@ export function Menu({ isOpen }: MenuProps) {
                     </div>
                   ) : (
                     <div className="w-full" key={index}>
-                      <CollapseMenuButton
+                      {!active && <CollapseMenuButton
                         icon={Icon}
                         label={label}
                         active={
@@ -112,7 +112,7 @@ export function Menu({ isOpen }: MenuProps) {
                         }
                         submenus={submenus}
                         isOpen={isOpen}
-                      />
+                      />}
                     </div>
                   )
               )}

@@ -49,7 +49,7 @@ export default function ManageOrderPage() {
   };
 
   return (
-    <ContentLayout title="Mẫu hình đúng tiêu chuẩn.">
+    <ContentLayout title="Quản lý một lệnh giao dịch.">
       <Card
         className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
         style={{

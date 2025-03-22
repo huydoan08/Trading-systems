@@ -68,6 +68,14 @@ export function getMenuList(pathname: string): Group[] {
               href: "/after-trade-closes",
               label: "After Trade Closes"
             },
+            {
+              href: "/beautiful-model",
+              label: "Beautiful Model",
+            },
+            {
+              href: "/manage-order",
+              label: "Manage Order",
+            },
           ]
         }
       ]
@@ -80,11 +88,7 @@ export function getMenuList(pathname: string): Group[] {
           label: "Transaction journal",
           icon: AlignHorizontalDistributeCenter,
           submenus: [
-            {
-              href: "/beautiful-model",
-              label: "Beautiful Model",
-              active: !isAdmin
-            },
+            
             {
               href: "/win-order",
               label: "Win Order",
