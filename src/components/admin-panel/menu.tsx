@@ -53,7 +53,7 @@ export function Menu({ isOpen }: MenuProps) {
               )}
               {menus.map(
                 ({ href, label, icon: Icon, active, submenus }, index) =>
-                  !submenus || submenus.length === 0 ? (
+                  !submenus || submenus.length === 0 || active ? (
                     <div className="w-full" key={index}>
                       <TooltipProvider disableHoverableContent>
                         <Tooltip delayDuration={100}>

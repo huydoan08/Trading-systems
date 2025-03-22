@@ -9,20 +9,13 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 import { getAuth } from "firebase/auth";
-import { ALLOWED_UID } from "@/AuthService";
 
 const images = [
   "/transaction-journal/NKGD-01.png",
-  "/transaction-journal/NKGD-02.png",
-  "/transaction-journal/NKGD-03.png",
-  "/transaction-journal/NKGD-04.png",
-  "/transaction-journal/NKGD-05.png",
-  "/transaction-journal/NKGD-06.png",
-  "/transaction-journal/NKGD-07.png",
   "/transaction-journal/NKGD-08.png",
 ];
 
-export default function TransactionJournalPage() {
+export default function WinOrderPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
@@ -30,7 +23,6 @@ export default function TransactionJournalPage() {
   const auth = getAuth();
   const user = auth.currentUser;
 
-  const isAdmin = user && user.uid === ALLOWED_UID;
   const router = useRouter();
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {

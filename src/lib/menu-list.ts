@@ -68,13 +68,36 @@ export function getMenuList(pathname: string): Group[] {
               href: "/after-trade-closes",
               label: "After Trade Closes"
             },
+          ]
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "",
+          label: "Transaction journal",
+          icon: AlignHorizontalDistributeCenter,
+          submenus: [
             {
               href: "/beautiful-model",
-              label: "Beautiful Model"
+              label: "Beautiful Model",
+              active: !isAdmin
             },
             {
-              href: "/transaction-journal",
-              label: "Transaction Journal",
+              href: "/win-order",
+              label: "Win Order",
+              active: !isAdmin
+            },
+            {
+              href: "/loss-order",
+              label: "Loss Order",
+              active: !isAdmin
+            },
+            {
+              href: "/missing-chance",
+              label: "Missing Chance",
               active: !isAdmin
             }
           ]

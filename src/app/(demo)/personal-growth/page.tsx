@@ -9,7 +9,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { onAuthStateChanged } from "firebase/auth";
 import { getAuth } from "firebase/auth";
-import { ALLOWED_UID } from "@/AuthService";
 
 const images = [
   "/personal-growth/PTBT-05.jpg",
@@ -25,8 +24,6 @@ export default function PersonalGrowthPage() {
   const [windowHeight, setWindowHeight] = useState(0);
 
   const auth = getAuth();
-  const user = auth.currentUser;
- 
   const router = useRouter();
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
