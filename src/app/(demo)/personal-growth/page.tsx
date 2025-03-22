@@ -12,9 +12,11 @@ import { getAuth } from "firebase/auth";
 import { ALLOWED_UID } from "@/AuthService";
 
 const images = [
+  "/personal-growth/PTBT-05.jpg",
   "/personal-growth/growth-01.jpg",
   "/personal-growth/growth-03.jpg",
   "/personal-growth/growth-02.jpg",
+  "/personal-growth/PTBT-06.jpg",
 ];
 
 export default function PersonalGrowthPage() {
