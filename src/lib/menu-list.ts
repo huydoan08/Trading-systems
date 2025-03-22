@@ -155,8 +155,7 @@ export function getMenuList(pathname: string): Group[] {
           href: "/story-telling",
           label: "Story telling",
           icon: Bird, 
-          submenus: [],
-          active: !isAdmin
+          submenus: []
         }
       ]
     },
