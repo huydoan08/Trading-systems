@@ -17,30 +17,15 @@ import {
   SelectTrigger,
   SelectValue
 } from "@/components/ui/select";
+import { allData } from "@/data/data";
 
 interface DataPoint {
   name: string;
   revenue: number;
 }
 
-type YearlyData = {
+export type YearlyData = {
   [key: string]: DataPoint[];
-};
-
-const allData: YearlyData = {
-  "2024": [
-    { name: "Start/2024", revenue: 0 },
-    { name: "04-08/2024", revenue: 700 },
-    { name: "09/2024", revenue: -183 },
-    { name: "10/2024", revenue: -890 },
-    { name: "11/2024", revenue: 650 },
-    { name: "12/2024", revenue: -3124 }
-  ],
-  "2025": [
-    { name: "01/2025", revenue: -1018 },
-    { name: "02/2025", revenue: -129 },
-    { name: "03/2025", revenue: -16 }
-  ]
 };
 
 const allTimeData: DataPoint[] = [...allData["2024"], ...allData["2025"]];

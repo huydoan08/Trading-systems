@@ -2,20 +2,13 @@
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import { psychologicalMastery } from "@/data/data";
 import { auth } from "@/firebaseConfig";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-
-const psychologicalMastery = [
-  "Tiền dùng cho trading và đầu tư phải là tiền nhàn rỗi.",
-  "Phải rất giỏi về phân tích kĩ thuật.",
-  "Học tập có chiều sâu, nhìn lại bản thân và sửa mình.",
-  "Nên tập trung vào một số ít đồng coin và chỉ giao dịch tập trung ở khung H4.",
-  "Quản trị vốn, quản trị rủi ro cho thật tốt để khi bấm xác nhận vào lệnh xong thì việc còn lại là của thị trường."
-];
 
 export default function PsychologicalMasteryPage() {
   const sidebar = useStore(useSidebar, (x) => x);

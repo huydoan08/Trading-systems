@@ -25,7 +25,6 @@ export default function PersonalGrowthPage() {
   const auth = getAuth();
   const user = auth.currentUser;
  
-  const isAdmin = user && user.uid === ALLOWED_UID;
   const router = useRouter();
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {

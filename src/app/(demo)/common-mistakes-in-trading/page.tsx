@@ -2,20 +2,13 @@
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import { commonMistake } from "@/data/data";
 import { auth } from "@/firebaseConfig";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-
-const psychologicalMastery = [
-  "Hay mở tài khoản ra xem các khoản lời lỗ rồi bị áp lực tâm lý.",
-  "Lỗi thấy giá mới di chuyển một đoạn đã vội vàng đóng lệnh bằng cảm xúc.",
-  "Lỗi không kiên nhẫn chờ cơ hội vào lệnh đẹp.",
-  "Lỗi sợ thua không chịu cắt lỗ, dẫn đến trường hợp thua lỗ lớn và cháy tài khoản.",
-  "Lỗi khi thấy dấu hiệu đã bị fail nhưng vẫn cố chấp và kì vọng không chịu cắt lỗ."
-];
 
 export default function CommonMistakesInTradingPage() {
   const sidebar = useStore(useSidebar, (x) => x);
@@ -38,7 +31,7 @@ export default function CommonMistakesInTradingPage() {
             Các lỗi thường mắc phải trong giao dịch:
           </div>
           <div className="space-y-2">
-            {psychologicalMastery.map((item, idx) => (
+            {commonMistake.map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2 ">
                 <span className="text-black-600 dark:text-white">-</span>
                 <Label className="text-black-700 font-semibold dark:text-white">

@@ -1,15 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import { ContentLayout } from "@/components/admin-panel/content-layout";
-import { Card, CardContent } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
 import { auth } from "@/firebaseConfig";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import { motion } from "framer-motion";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ExpandableCard } from "@/app/component/ExpandableCard/ExpandableCard";
 
 const faqs = [
   {
@@ -68,39 +65,13 @@ export default function RSIPage() {
   return (
     <ContentLayout title="Hỏi đáp về phân tích kĩ thuật">
       {faqs.map((faq, index) => (
-        <Card
+        <ExpandableCard
           key={index}
-          className="max-h-[67.5vh] overflow-hidden shadow-lg border border-black-200 dark:border-black-700 mt-4 cursor-pointer"
+          title={faq.title}
+          content={faq.content}
+          isOpen={openIndex === index}
           onClick={() => setOpenIndex(openIndex === index ? null : index)}
-        >
-          <div className="flex justify-between items-center p-6">
-            <span className="font-bold text-lg text-black-800 dark:text-white">
-              {faq.title}
-            </span>
-            {openIndex === index ? <ChevronUp /> : <ChevronDown />}
-          </div>
-          <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={
-              openIndex === index
-                ? { height: "auto", opacity: 1 }
-                : { height: 0, opacity: 0 }
-            }
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden"
-          >
-            <CardContent className="p-6 space-y-2 border-t text-black-600 dark:text-white max-h-[30vh] overflow-auto sm:max-h-none sm:overflow-visible" >
-              {faq.content.map((item, idx) => (
-                <div key={idx} className="flex items-start space-x-2">
-                  <span className="text-black-600 dark:text-white">-</span>
-                  <Label className="text-black-700 font-semibold dark:text-white">
-                    {item}
-                  </Label>
-                </div>
-              ))}
-            </CardContent>
-          </motion.div>
-        </Card>
+        />
       ))}
     </ContentLayout>
   );

@@ -8,6 +8,7 @@ import {
   PersonStandingIcon,
   TreeDeciduous,
   Leaf,
+  Bird
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 import { ALLOWED_UID } from "@/AuthService";
@@ -142,6 +143,18 @@ export function getMenuList(pathname: string): Group[] {
           href: "/revenue",
           label: "Revenue",
           icon: Leaf,
+          submenus: [],
+          active: !isAdmin
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/story-telling",
+          label: "Story telling",
+          icon: Bird, 
           submenus: [],
           active: !isAdmin
         }

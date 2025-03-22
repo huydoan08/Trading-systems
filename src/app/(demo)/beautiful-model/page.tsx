@@ -58,7 +58,7 @@ export default function BeautifulModelPage() {
       <Card
         className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
         style={{
-          height: `${windowHeight - 80}px`, // Trừ đi khoảng header nếu cần (80px là ví dụ, chỉnh theo layout thực tế của bạn)
+          height: `${windowHeight - 80}px`,
         }}
       >
         <CardContent className="p-6 space-y-4 h-full">

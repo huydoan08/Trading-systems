@@ -3,18 +3,13 @@ import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import { afterTraderCloses } from "@/data/data";
 import { auth } from "@/firebaseConfig";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-
-const afterTraderCloses = [
-  "Không cố gắng tìm cơ hội vào lệnh ngay sau khi chạm Stoploss.",
-  "Ghi chép nhật kí giao dịch một cách tỉ mỉ, cẩn thận, chi tiết.",
-  "Quên đi kết quả giao dịch và chỉ giữ lại cho mình bài học."
-];
 
 export default function ConditionForEnteringATradePage() {
   const sidebar = useStore(useSidebar, (x) => x);
