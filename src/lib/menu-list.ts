@@ -8,7 +8,8 @@ import {
   PersonStandingIcon,
   TreeDeciduous,
   Leaf,
-  Bird
+  Bird,
+  NotebookPen
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 import { ALLOWED_UID } from "@/AuthService";
@@ -86,25 +87,23 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "",
           label: "Transaction journal",
-          icon: AlignHorizontalDistributeCenter,
+          icon: NotebookPen,
           submenus: [
             
             {
               href: "/win-order",
               label: "Win Order",
-              active: !isAdmin
             },
             {
               href: "/loss-order",
               label: "Loss Order",
-              active: !isAdmin
             },
             {
               href: "/missing-chance",
               label: "Missing Chance",
-              active: !isAdmin
             }
-          ]
+          ],
+          active: !isAdmin
         }
       ]
     },
