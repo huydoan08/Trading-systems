@@ -154,13 +154,14 @@ export function getMenuList(pathname: string): Group[] {
         }
       ]
     },
+   
     {
       groupLabel: "",
       menus: [
         {
-          href: "/buddhism",
-          label: "The precepts in Buddhism",
-          icon: TreeDeciduous,
+          href: "/personal-growth",
+          label: "Personal growth",
+          icon: PersonStandingIcon,
           submenus: []
         }
       ]
@@ -169,9 +170,9 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/personal-growth",
-          label: "Personal growth",
-          icon: PersonStandingIcon,
+          href: "/buddhism",
+          label: "The precepts in Buddhism",
+          icon: TreeDeciduous,
           submenus: []
         }
       ]
