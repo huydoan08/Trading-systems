@@ -9,10 +9,10 @@ import {
   TreeDeciduous,
   Leaf,
   Bird,
-  NotebookPen
+  NotebookPen,
+  Highlighter
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
-import { ALLOWED_UID } from "@/AuthService";
 
 type Submenu = {
   href: string;
@@ -72,10 +72,12 @@ export function getMenuList(pathname: string): Group[] {
             {
               href: "/beautiful-model",
               label: "Beautiful Model",
+              active: !isAdmin
             },
             {
               href: "/manage-order",
               label: "Manage Order",
+              active: !isAdmin
             },
           ]
         }
@@ -126,6 +128,18 @@ export function getMenuList(pathname: string): Group[] {
           label: "Common Mistakes In Trading",
           icon: Carrot,
           submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/important-notes",
+          label: "Important Notes",
+          icon: Highlighter,
+          submenus: [],
+          active: !isAdmin
         }
       ]
     },

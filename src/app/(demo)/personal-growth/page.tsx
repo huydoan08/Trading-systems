@@ -16,6 +16,7 @@ const images = [
   "/personal-growth/growth-03.jpg",
   "/personal-growth/growth-02.jpg",
   "/personal-growth/PTBT-06.jpg",
+  "/personal-growth/PTBT-09.webp",
 ];
 
 export default function PersonalGrowthPage() {

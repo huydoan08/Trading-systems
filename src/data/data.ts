@@ -63,6 +63,12 @@ export const afterTraderCloses = [
   "Ghi chép nhật kí giao dịch một cách tỉ mỉ, cẩn thận, chi tiết.",
   "Quên đi kết quả giao dịch và chỉ giữ lại cho mình bài học."
 ];
+export const importantNotes = [
+  "Thị trường cypto này là một thị trường thao túng giá, và chúng ta chỉ follow theo dựa vào những dấu hiệu.",
+  "Những dấu hiệu thì luôn có tính xác suất, không chắc chắn một điều gì cả.",
+  "Việc quan trọng nhất là kĩ năng xử lý chứ không phải là dự đoán giá.",
+  "Chỉ làm theo hệ thống giao dịch, không giao dịch theo cảm tính, không để cho cảm xúc xen vào các quyết định giao dịch."
+];
 
 export const buddhism = [
   {
