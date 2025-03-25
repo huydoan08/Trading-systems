@@ -143,7 +143,9 @@ export const importantNotes = [
   "Những dấu hiệu thì luôn luôn chỉ mang tính xác suất không chắc chắn một điều gì cả.",
   "Điều quan trọng nhất là tập trung vào kĩ năng xử lý chứ không phải dự đoán giá.",
   "Phải tách biệt mình ra khỏi đám đông, đám đông luôn là nhóm mất tiền, nhưng không có nghĩa là mình cũng sẽ mất tiền.",
-  "Chỉ làm theo systems, không giao dịch theo cảm tính, không để cho cảm xúc xen vào các quyết định giao dịch."
+  "Chỉ làm theo systems, không giao dịch theo cảm tính, không để cho cảm xúc xen vào các quyết định giao dịch.",
+  "Cần tách mình ra khỏi ý kiến của những người khác, mọi dự phóng của người khác xem chỉ để tham khảo.",
+  "Đứng ngoài thị trường cũng là một vị thế.",
 ];
 
 export const faqs = [
