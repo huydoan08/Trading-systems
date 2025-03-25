@@ -50,8 +50,11 @@ export const experience = [
 
 export const allData: YearlyData = {
   "2024": [
-    { name: "Start/2024", revenue: 0 },
-    { name: "04-08/2024", revenue: 700 },
+    { name: "04/2024", revenue: 0 },
+    { name: "05/2024", revenue: 30 },
+    { name: "06/2024", revenue: 20 },
+    { name: "07/2024", revenue: 50 },
+    { name: "08/2024", revenue: 500 },
     { name: "09/2024", revenue: -183 },
     { name: "10/2024", revenue: -890 },
     { name: "11/2024", revenue: 650 },
@@ -60,7 +63,7 @@ export const allData: YearlyData = {
   "2025": [
     { name: "01/2025", revenue: -1018 },
     { name: "02/2025", revenue: -129 },
-    { name: "03/2025", revenue: -16 }
+    { name: "03/2025", revenue: -3 }
   ]
 };
 
