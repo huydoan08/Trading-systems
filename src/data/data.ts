@@ -142,6 +142,7 @@ export const importantNotes = [
   "Chúng ta phải thừa nhận rằng thị trường crypto này là một thị trường thao túng giá, và chúng ta chỉ follow theo dựa vào các dấu hiệu.",
   "Những dấu hiệu thì luôn luôn chỉ mang tính xác suất không chắc chắn một điều gì cả.",
   "Điều quan trọng nhất là tập trung vào kĩ năng xử lý chứ không phải dự đoán giá.",
+  "Phải tách biệt mình ra khỏi đám đông, đám đông luôn là nhóm mất tiền, nhưng không có nghĩa là mình cũng sẽ mất tiền.",
   "Chỉ làm theo systems, không giao dịch theo cảm tính, không để cho cảm xúc xen vào các quyết định giao dịch."
 ];
 
