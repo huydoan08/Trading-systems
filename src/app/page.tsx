@@ -80,7 +80,7 @@ export default function HomePage() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        router.push("/strategy");
+        router.push("/crypto-journal");
       } else {
         router.push("/");
       }

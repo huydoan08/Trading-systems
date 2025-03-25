@@ -34,7 +34,7 @@ export function Sidebar() {
           variant="link"
           asChild
         >
-          <Link href="/strategy" className="flex items-center gap-2">
+          <Link href="/cypto-journal" className="flex items-center gap-2">
             <PanelsTopLeft className="w-6 h-6 mr-1" />
             <h1
               className={cn(

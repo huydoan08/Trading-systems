@@ -7,10 +7,10 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { auth } from "@/firebaseConfig";
 import { ExpandableCard } from "@/app/component/ExpandableCard/ExpandableCard";
-import { PTKT } from "@/data/data";
+import { experience } from "@/data/data";
 import { useState, useEffect } from "react";
 
-export default function StrategyPage() {
+export default function CryptoJournalPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const router = useRouter();
   useEffect(() => {
@@ -25,15 +25,15 @@ export default function StrategyPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   if (!sidebar) return null;
   return (
-    <ContentLayout title="Chiến lược giao dịch">
+    <ContentLayout title="Hành trình tôi đi tìm tôi">
       <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700 mb-2">
         <CardHeader>
           <div className="font-bold text-2xl text-black-800 dark:text-white">
-            View về đa khung thời gian để nhìn thấy được bức tranh tổng thể thị trường:
+           GÓC CHIA SẺ KIẾN THỨC, KINH NGHIỆM, CHIẾN LƯỢC VÀ TÂM SỰ NGHỀ TRADE:
           </div>
         </CardHeader>
       </Card>
-      {PTKT.map((item, index) => (
+      {experience.map((item, index) => (
         <ExpandableCard
           key={index}
           title={item.title}

@@ -1,7 +1,6 @@
 import {
   Sprout,
   LucideIcon,
-  LandPlot,
   AlignHorizontalDistributeCenter,
   Carrot,
   FileQuestionIcon,
@@ -10,7 +9,8 @@ import {
   Leaf,
   Bird,
   NotebookPen,
-  Highlighter
+  Highlighter,
+  Footprints
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 
@@ -42,9 +42,9 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/strategy",
-          label: "Strategy",
-          icon: LandPlot,
+          href: "/crypto-journal",
+          label: "Crypto Journal",
+          icon: Footprints,
           submenus: []
         }
       ]

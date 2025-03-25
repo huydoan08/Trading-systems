@@ -12,7 +12,7 @@ interface ExpandableCardProps {
 export function ExpandableCard({ title, content, isOpen, onClick }: ExpandableCardProps) {
   return (
     <Card
-      className="shadow-lg border border-black-200 dark:border-black-700 mt-4 cursor-pointer"
+      className="shadow-lg border border-black-200 dark:border-black-700 mt-0 cursor-pointer"
       onClick={onClick}
     >
       <div className="flex justify-between items-center p-6">
