@@ -57,8 +57,11 @@ export const experience = [
 
 export const allData: YearlyData = {
   "2024": [
-    { name: "Start/2024", revenue: 0 },
-    { name: "04-08/2024", revenue: 700 },
+    { name: "04/2024", revenue: 0 },
+    { name: "05/2024", revenue: 30 },
+    { name: "06/2024", revenue: 20 },
+    { name: "07/2024", revenue: 50 },
+    { name: "08/2024", revenue: 500 },
     { name: "09/2024", revenue: -183 },
     { name: "10/2024", revenue: -890 },
     { name: "11/2024", revenue: 650 },
@@ -67,7 +70,7 @@ export const allData: YearlyData = {
   "2025": [
     { name: "01/2025", revenue: -1018 },
     { name: "02/2025", revenue: -129 },
-    { name: "03/2025", revenue: -16 }
+    { name: "03/2025", revenue: -3 }
   ]
 };
 
@@ -149,7 +152,10 @@ export const importantNotes = [
   "Chúng ta phải thừa nhận rằng thị trường crypto này là một thị trường thao túng giá, và chúng ta chỉ follow theo dựa vào các dấu hiệu.",
   "Những dấu hiệu thì luôn luôn chỉ mang tính xác suất không chắc chắn một điều gì cả.",
   "Điều quan trọng nhất là tập trung vào kĩ năng xử lý chứ không phải dự đoán giá.",
-  "Chỉ làm theo systems, không giao dịch theo cảm tính, không để cho cảm xúc xen vào các quyết định giao dịch."
+  "Phải tách biệt mình ra khỏi đám đông, đám đông luôn là nhóm mất tiền, nhưng không có nghĩa là mình cũng sẽ mất tiền.",
+  "Chỉ làm theo systems, không giao dịch theo cảm tính, không để cho cảm xúc xen vào các quyết định giao dịch.",
+  "Cần tách mình ra khỏi ý kiến của những người khác, mọi dự phóng của người khác chỉ xem để tham khảo thêm.",
+  "Đứng ngoài thị trường cũng là một vị thế."
 ];
 
 export const faqs = [
