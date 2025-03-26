@@ -79,6 +79,11 @@ export function getMenuList(pathname: string): Group[] {
               label: "Manage Order",
               active: !isAdmin
             },
+            {
+              href: "/weakening-model",
+              label: "Weaking Model",
+              active: !isAdmin
+            },
           ]
         }
       ]
