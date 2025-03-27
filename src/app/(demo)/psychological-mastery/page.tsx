@@ -10,6 +10,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { Check } from "lucide-react"
+import { Checkbox } from "@/components/ui/checkbox";
 
 export default function PsychologicalMasteryPage() {
   const sidebar = useStore(useSidebar, (x) => x);
@@ -34,7 +35,7 @@ export default function PsychologicalMasteryPage() {
           <div className="space-y-2">
             {psychologicalMastery.map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2 ">
-                <Check/>
+                <Checkbox/>
                 <Label className="text-black-700 font-semibold dark:text-white">
                   {item}
                 </Label>
