@@ -2,7 +2,13 @@ import { YearlyData } from "@/app/(demo)/revenue/page";
 
 export const experience = [
   {
-    title: "Ngày 26-03-2023",
+    title: "Ngày 27-03-2025",
+    content: [
+      "Hãy tập trung một thứ cho thật giỏi...mà ra tiền...thay vì cái gì cũng biết mà đang mất tiền!\n\nLý Tiểu Long từng có một câu nói nổi tiếng rằng: Tôi không sợ người luyện 10.000 cú đá, tôi chỉ sợ người luyện 1 cú đá 10.000 lần.\n\nTrong phân tích kĩ thuật cũng vậy, việc bạn sử dụng công cụ chỉ báo nào không quan trọng, bạn biết sử dụng bao nhiêu bộ công cụ chỉ báo càng không có ý nghĩa gì nếu như bạn không thực sự hiểu sâu về bản chất của công cụ chỉ báo đó.\n\nĐôi khi việc biết nhiều phương pháp quá thậm chí còn làm hại chính bạn vì nhiều phương pháp quá thì sinh ra rối loạn đao pháp rồi dẫn đến bị tẩu hỏa nhập ma.\n\nTrong các bộ phim kiếm hiệp thì các đại cao thủ thường chỉ có cho mình một món võ công thượng thừa là đã đủ để tung hoành giang hồ được rồi\n\n Rồi chung quy lại là phương pháp của bạn có đang tạo ra lợi nhuận ổn định hay không, với mình thì đích đến vẫn là tìm ra thứ phù hợp với bản thân mình và tiếp tục phát huy nó vậy là đủ."
+     ]
+  },
+  {
+    title: "Ngày 26-03-2025",
     content: [
       "Cài nút áo đầu tiên đã sai rồi, nhưng đến nút cuối cùng mới phát hiện, vì vậy không thể không cởi hết các nút ra.\n\nCó 1 số việc, ngay từ đầu đã sai rồi, nhưng đến lúc không thể cứu vãn mới chịu thừa nhận.\n\nĐời người, tiếc nuối lớn nhất chính là dễ dàng từ bỏ thứ không nên từ bỏ, nhưng lại cố chấp kiên trì cái không nên kiên trì...\n\n\Trong trading cũng vậy, sai lầm lớn nhất là không biết lúc nào nên kiên trì và lúc nào nên từ bỏ.\n\nTừ bỏ quá sớm:\n\nBạn có một phương pháp tốt, nhưng chỉ vì vài lần thua lỗ, bạn bỏ cuộc và đi tìm một phương pháp khác.\n\nBạn cắt lệnh quá sớm vì sợ mất lợi nhuận, nhưng sau đó giá lại đi đúng hướng và bạn bỏ lỡ lợi nhuận lớn.\n\nCố chấp với thứ không nên kiên trì:\n\nGiữ một lệnh thua lỗ quá lâu chỉ vì \"hy vọng giá quay lại.\"\n\nCố gắng \"bắt đáy\" hoặc \"bắt đỉnh\" mà không có tín hiệu rõ ràng.\n\nLiên tục nạp tiền để gồng lệnh thay vì chấp nhận sai lầm và học hỏi từ nó.\n\nNắm giữ một đồng coin rác trong khi tài khoản đã chia 3 chia 5, chỉ vì \"hi vọng nó sẽ go to the moon\".",
       
@@ -209,3 +215,11 @@ export const faqs = [
     ]
   }
 ];
+
+export const quintessenceRsi = [
+  "RSI đang nằm ở vị trí nào \( nằm ở \" trên hay dưới \" \) so với 2 đường trung bình.",
+  "Đỉnh hoặc đáy của RSI gần nhất trước đó nằm ở vùng nào.",
+  "Hành trình di chuyển của đường TBC so với đường TBN đang ở giai đoạn nào, đã bó hẹp chưa hay vẫn đang mở rộng.",
+  "Các khung lớn đang cho thấy xu hướng là gì, các khung nhỏ cho thấy điều gì ( sự tích lũy của lực mua hay sự tham gia của lực bán ), khung thời gian giao dịch đang cho thấy điều gì.",
+  "Kết hợp các đỉnh hoặc đáy của RSI lại thì đang cho thấy dấu hiệu của hội tụ hay phân kì."
+]

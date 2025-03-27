@@ -10,7 +10,8 @@ import {
   Bird,
   NotebookPen,
   Highlighter,
-  Footprints
+  Footprints,
+  Activity
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 
@@ -110,6 +111,18 @@ export function getMenuList(pathname: string): Group[] {
               label: "Missing Chance",
             }
           ],
+          active: !isAdmin
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/quintessence-rsi",
+          label: "Quintessence of RSI",
+          icon: Activity,
+          submenus: [],
           active: !isAdmin
         }
       ]
