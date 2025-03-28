@@ -199,6 +199,18 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
+          href: "/statistic",
+          label: "Statistic",
+          icon: Leaf,
+          submenus: [],
+          active: !isAdmin
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
           href: "/revenue",
           label: "Revenue",
           icon: Leaf,
