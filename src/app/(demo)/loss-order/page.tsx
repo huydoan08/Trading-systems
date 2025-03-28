@@ -13,6 +13,7 @@ import { getAuth } from "firebase/auth";
 const images = [
   "/transaction-journal/NKGD-02.png",
   "/transaction-journal/NKGD-06.png",
+  "/transaction-journal/BTCUSDT_2025-03-28_16-39-36.png"
 ];
 
 export default function LossOrderPage() {
