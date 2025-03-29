@@ -14,6 +14,7 @@ import { useEffect } from "react";
 export default function StatisticPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   const router = useRouter();
+  
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (!currentUser) {
@@ -23,17 +24,30 @@ export default function StatisticPage() {
 
     return () => unsubscribe();
   }, [router]);
+  
   if (!sidebar) return null;
+  
   return (
     <ContentLayout title="Thống kê chuỗi các lệnh giao dịch">
-      <div className="flex items-center justify-center">
-        <Card className="w-full h-[418px] flex items-start justify-start shadow-lg border border-black-200 dark:border-black-700 p-4">
-          <CardContent className="flex flex-row items-start justify-start space-x-4">
+      <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+        <Card className="w-full md:w-[400px] h-auto md:h-[418px] flex flex-col items-start justify-start shadow-lg border border-black-200 dark:border-black-700 p-4">
+          <CardContent className="grid grid-cols-10 gap-2">
             <XCheckbox />
+            <VCheckbox />
+            <VCheckbox />
+            <VCheckbox />
+            <VCheckbox />
+            <VCheckbox />
+            <VCheckbox />
+            <VCheckbox />
+            <VCheckbox />
+            <VCheckbox />
             <VCheckbox />
           </CardContent>
         </Card>
-        <BarChartPage />
+        <div className="w-full md:w-auto flex-grow">
+          <BarChartPage />
+        </div>
       </div>
     </ContentLayout>
   );
