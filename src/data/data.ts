@@ -141,12 +141,13 @@ export const conditionForEnteringATrade = [
 ];
 
 export const duringTradeExecution = [
-  "Quản lý lệnh giao dịch theo cấu trúc sóng hoặc theo fibo, không đặt stoploss quá sát.",
-  "Không để cảm xúc chi phối vào và chốt lời non, chỉ đóng lệnh khi đã đạt đủ target đặt ra trước đó hoặc chạm stoploss.",
-  "Không vội vàng dời stoploss ngay sau khi giá vừa mới chạy một xíu.",
+  "Quản lý lệnh theo cấu trúc sóng, follow theo chiến lược một cách tuyệt đối.",
+  "Không bị cảm xúc chi phối vào và chốt lời non, cứ follow theo cấu trúc sóng và dời SL về những vùng giá quan trọng.",
+  "Chỉ nhồi thêm lệnh khi lệnh 1 đã có lợi nhuận đủ cover cho SL của lệnh 2, dời SL quản lý lệnh khi giá đã tạo đỉnh đáy.",
   "Không cố gắng tìm cơ hội vào lệnh ngay sau khi chạm stoploss.",
   "Tuyệt đối không đóng lệnh bằng tay khi mà giá đang chạy.",
-  "Chỉ giao dịch 1 chiều theo xu hướng chính."
+  "Không vội dời SL khi giá chưa chạy xa.",
+  "Không kéo dài SL khi đã quyết định vào lệnh."
 ];
 
 export const psychologicalMastery = [
