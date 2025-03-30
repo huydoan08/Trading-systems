@@ -1,20 +1,8 @@
 import React from "react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from "recharts";
 import { Card, CardContent } from "@/components/ui/card";
+import { innerData, outerData } from "@/data/data";
 
-const innerData = [
-  { name: "4", value: 100 },
-  { name: "5", value: 80 },
-];
-
-const outerData = [
-  { name: "A1", value: 20 },
-  { name: "A2", value: 30 },
-  { name: "A3", value: 50 },
-  { name: "B1", value: 30 },
-  { name: "B2", value: 10 },
-  { name: "B3", value: 40 },
-];
 
 const COLORS_INNER = ["#6E64C1", "#6E64C1"];
 const COLORS_OUTER = Array(outerData.length).fill("#80C9A9");
@@ -40,7 +28,7 @@ const CustomTooltip = ({ active, payload }: any) => {
     const isInnerCircle = innerData.some((item) => item.name === name);
     return (
       <div style={{ background: "#fff", padding: "5px", border: "1px solid #ccc" }}>
-        <p>{isInnerCircle ? `Month: ${name} PNL: ${value}` : ""}</p>
+        <p>{isInnerCircle ? `Month: ${name} PNL: ${value}` : value}</p>
       </div>
     );
   }

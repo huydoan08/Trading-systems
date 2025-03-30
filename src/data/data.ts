@@ -229,3 +229,17 @@ export const quintessenceRsi = [
   "Các khung lớn đang cho thấy xu hướng là gì, các khung nhỏ cho thấy điều gì ( sự tích lũy của lực mua hay sự tham gia của lực bán ), khung thời gian giao dịch đang cho thấy điều gì.",
   "Kết hợp các đỉnh hoặc đáy của RSI lại thì đang cho thấy dấu hiệu của hội tụ hay phân kì."
 ]
+
+export const innerData = [
+  { name: "4", value: 10 },
+  // { name: "5", value: 80 },
+];
+
+export const outerData = [
+  { name: "A1", value: 10 },
+  // { name: "A2", value: 30 },
+  // { name: "A3", value: 50 },
+  // { name: "B1", value: 30 },
+  // { name: "B2", value: 10 },
+  // { name: "B3", value: 40 },
+];

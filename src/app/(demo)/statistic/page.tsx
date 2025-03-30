@@ -1,5 +1,4 @@
 "use client";
-import CustomPieChart from "@/components/admin-panel/pie-chart";
 import TransactionCheckboxes from "@/components/admin-panel/check-component";
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { auth } from "@/firebaseConfig";
@@ -13,6 +12,7 @@ import NestedPieChart from "@/components/admin-panel/pie-chart";
 export default function StatisticPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   const router = useRouter();
+  
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (!currentUser) {
@@ -22,7 +22,9 @@ export default function StatisticPage() {
 
     return () => unsubscribe();
   }, [router]);
+  
   if (!sidebar) return null;
+  
   return (
     <ContentLayout title="Thống kê chuỗi các lệnh giao dịch">
       <div className="flex items-center justify-center">

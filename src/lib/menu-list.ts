@@ -11,7 +11,8 @@ import {
   NotebookPen,
   Highlighter,
   Footprints,
-  Activity
+  Activity,
+  Star
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 
@@ -201,7 +202,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/statistic",
           label: "Statistic",
-          icon: Leaf,
+          icon: Star,
           submenus: [],
           active: !isAdmin
         }
