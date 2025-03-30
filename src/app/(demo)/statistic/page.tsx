@@ -1,15 +1,14 @@
 "use client";
-import VCheckbox from "@/components/admin-panel/VCheckbox";
-import XCheckbox from "@/components/admin-panel/XCheckbox";
-import BarChartPage from "@/components/admin-panel/bar-chart";
+import CustomPieChart from "@/components/admin-panel/pie-chart";
+import TransactionCheckboxes from "@/components/admin-panel/check-component";
 import { ContentLayout } from "@/components/admin-panel/content-layout";
-import { Card, CardContent } from "@/components/ui/card";
 import { auth } from "@/firebaseConfig";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
+import NestedPieChart from "@/components/admin-panel/pie-chart";
 
 export default function StatisticPage() {
   const sidebar = useStore(useSidebar, (x) => x);
@@ -27,13 +26,8 @@ export default function StatisticPage() {
   return (
     <ContentLayout title="Thống kê chuỗi các lệnh giao dịch">
       <div className="flex items-center justify-center">
-        <Card className="w-full h-[418px] flex items-start justify-start shadow-lg border border-black-200 dark:border-black-700 p-4">
-          <CardContent className="flex flex-row items-start justify-start space-x-4">
-            <XCheckbox />
-            <VCheckbox />
-          </CardContent>
-        </Card>
-        <BarChartPage />
+        <TransactionCheckboxes/>
+        <NestedPieChart/>
       </div>
     </ContentLayout>
   );
