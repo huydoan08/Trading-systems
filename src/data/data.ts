@@ -11,14 +11,14 @@ export const experience = [
     title: "Ngày 27-03-2025",
     content: [
       "Hãy tập trung một thứ cho thật giỏi...mà ra tiền...thay vì cái gì cũng biết mà đang mất tiền!\n\nLý Tiểu Long từng có một câu nói nổi tiếng rằng: Tôi không sợ người luyện 10.000 cú đá, tôi chỉ sợ người luyện 1 cú đá 10.000 lần.\n\nTrong phân tích kĩ thuật cũng vậy, việc bạn sử dụng công cụ chỉ báo nào không quan trọng, bạn biết sử dụng bao nhiêu bộ công cụ chỉ báo càng không có ý nghĩa gì nếu như bạn không thực sự hiểu sâu về bản chất của công cụ chỉ báo đó.\n\nĐôi khi việc biết nhiều phương pháp quá thậm chí còn làm hại chính bạn vì nhiều phương pháp quá thì sinh ra rối loạn đao pháp rồi dẫn đến bị tẩu hỏa nhập ma.\n\nTrong các bộ phim kiếm hiệp thì các đại cao thủ võ lâm thường chỉ có cho mình một món võ công thượng thừa là đã đủ để tung hoành giang hồ được rồi\n\n Rồi chung quy lại là phương pháp của bạn có đang tạo ra lợi nhuận ổn định hay không, với mình thì đích đến vẫn là tìm ra thứ phù hợp với bản thân mình và tiếp tục phát huy nó vậy là đủ."
-     ]
+    ]
   },
   {
     title: "Ngày 26-03-2025",
     content: [
       "Cài nút áo đầu tiên đã sai rồi, nhưng đến nút cuối cùng mới phát hiện, vì vậy không thể không cởi hết các nút ra.\n\nCó 1 số việc, ngay từ đầu đã sai rồi, nhưng đến lúc không thể cứu vãn mới chịu thừa nhận.\n\nĐời người, tiếc nuối lớn nhất chính là dễ dàng từ bỏ thứ không nên từ bỏ, nhưng lại cố chấp kiên trì cái không nên kiên trì...\n\n\Trong trading cũng vậy, sai lầm lớn nhất là không biết lúc nào nên kiên trì và lúc nào nên từ bỏ.\n\nTừ bỏ quá sớm:\n\nBạn có một phương pháp tốt, nhưng chỉ vì vài lần thua lỗ, bạn bỏ cuộc và đi tìm một phương pháp khác.\n\nBạn cắt lệnh quá sớm vì sợ mất lợi nhuận, nhưng sau đó giá lại đi đúng hướng và bạn bỏ lỡ lợi nhuận lớn.\n\nCố chấp với thứ không nên kiên trì:\n\nGiữ một lệnh thua lỗ quá lâu chỉ vì \"hy vọng giá quay lại.\"\n\nCố gắng \"bắt đáy\" hoặc \"bắt đỉnh\" mà không có tín hiệu rõ ràng.\n\nLiên tục nạp tiền để gồng lệnh thay vì chấp nhận sai lầm và học hỏi từ nó.\n\nNắm giữ một đồng coin rác trong khi tài khoản đã chia 3 chia 5, chỉ vì \"hi vọng nó sẽ go to the moon\".",
-      
-     ]
+
+    ]
   },
   {
     title: "Ngày 25-03-2025",
@@ -130,17 +130,14 @@ export const commonMistake = [
 ];
 
 export const conditionForEnteringATrade = [
+  "Lên chiến lược rõ ràng trước khi vào lệnh.",
+  "Chọn bộ khung thời gian giao dịch: \"H1, H4, D1\" và các khung thời gian phải đồng thuận.",
   "Các mẫu hình đúng tiêu chuẩn, mẫu hình đẹp.",
-  "Các khung thời gian phải đồng thuận.",
   "Xác định các đường trendline quan trọng và theo dõi phản ứng giá tại các vùng đó.",
   "Chờ xác nhận sóng hồi, để tối ưu điểm vào lệnh đẹp.",
-  "Chờ dấu hiệu xác nhận Price Action.",
+  "Tối ưu điểm vào lệnh đẹp ở khung thời gian nhỏ.",
   "Không cố tình đoán đỉnh và đoán đáy.",
   "Mức rủi ro, mức thưởng và xác suất.",
-  "Dùng fibo để xác định hiệu lực con sóng còn mạnh không.",
-  "Tối ưu điểm vào lệnh đẹp ở khung thời gian nhỏ.",
-  "Tính toán cho thật kĩ mức rủi ro cho phép.",
-  "Phải có chiến lược rõ ràng trước khi vào lệnh."
 ];
 
 export const duringTradeExecution = [
@@ -183,7 +180,7 @@ export const faqs = [
       "Vùng tích luỹ lực mua:\nHiểu là vùng giá mà lực bán đã suy yếu và có sự tham gia vào của lực mua.\nVà đây là vùng giá có khả năng đảo chiều từ giảm thành tăng.\n\nVùng tích luỹ lực bán:\nHiểu là vùng giá mà lực mua đã suy yếu, lực bán bắt đầu mạnh lên...\nVà đây là vùng giá có khả năng đảo chiều từ tăng thành giảm.\n\n==> Để xác định vùng giá này thì cần áp dụng rất nhiều kiến thức:\n\nRSI, Lý thuyết Dow, Sóng Elliott, Phân tích đa khung thời gian..."
     ]
   },
- 
+
 ];
 
 export const quintessenceRsi = [
