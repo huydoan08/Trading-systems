@@ -87,7 +87,7 @@ export const allData: YearlyData = {
 };
 
 export const afterTraderCloses = [
-  "Không cố gắng tìm cơ hội vào lệnh ngay sau khi chạm Stoploss.",
+  "Không cố gắng tìm cơ hội vào lệnh ngay sau khi chạm Stoploss, TakeProfit.",
   "Ghi chép nhật kí giao dịch một cách tỉ mỉ, cẩn thận, chi tiết.",
   "Quên đi kết quả giao dịch và chỉ giữ lại cho mình bài học."
 ];
