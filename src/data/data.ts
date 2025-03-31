@@ -124,7 +124,14 @@ export const buddhism = [
       "9. Chớ vội tin điều gì, chỉ vì điều ấy được sức mạnh và quyền uy ủng hộ.",
       "10. Chớ vội tin điều gì, chỉ vì điều ấy được các nhà truyền giáo hay đạo sư của mình tuyên thuyết."
     ]
+  },,
+  {
+    title: "Bát chánh đạo",
+    content: [
+      "Bát Chánh Đạo – Con Đường Giải Thoát\n\nBát Chánh Đạo là con đường thực hành giúp con người thoát khỏi khổ đau, đạt đến trí tuệ và giải thoát. Đây không chỉ là những nguyên tắc đạo đức mà còn là phương pháp sống tỉnh thức, dẫn dắt con người đến sự an lạc và giác ngộ. Tám yếu tố này được chia thành ba nhóm chính:\n\n1. Nhận thức đúng đắn (Trí tuệ – Tuệ học)\n\nChánh kiến: Thấy rõ bản chất của thực tại, hiểu đúng về nhân quả, vô thường, vô ngã.\n\nChánh tư duy: Suy nghĩ thiện lành, không bị chi phối bởi tham, sân, si, hướng đến từ bi và giải thoát.\n\n2. Hành vi đúng đắn (Đạo đức – Giới học)\n\nChánh ngữ: Lời nói chân thật, hòa ái, không nói dối, không gây chia rẽ, không ác khẩu.\n\nChánh nghiệp: Hành động chân chính, không sát sinh, không trộm cắp, không tà dâm.\n\nChánh mạng: Nghề nghiệp lương thiện, nuôi sống bản thân mà không làm tổn hại đến người và chúng sinh.\n\n3. Tu tập tâm thức (Thiền định – Định học)\n\nChánh tinh tấn: Nỗ lực không ngừng trong việc từ bỏ điều xấu, nuôi dưỡng điều thiện.\n\nChánh niệm: Sống tỉnh thức trong từng giây phút, không để tâm bị cuốn vào vọng tưởng.\n\nChánh định: Tâm an trú vững vàng, đạt đến sự tĩnh lặng và trí tuệ sâu sắc.\n\nSự Liên Kết của Bát Chánh Đạo\n\nBát Chánh Đạo không phải tám con đường riêng biệt mà là tám yếu tố hỗ trợ nhau. Khi có Chánh kiến, ta sẽ có Chánh tư duy; khi tư duy đúng, lời nói và hành động sẽ chân chính. Khi sống đúng, tâm sẽ an định, từ đó tinh tấn, tỉnh thức và đạt đến giải thoát.\n\nThực hành Bát Chánh Đạo không phải là chấp vào một khuôn khổ cứng nhắc mà là sự chuyển hóa dần dần, giúp con người thoát khỏi phiền não, đạt được trí tuệ và từ bi. Đây chính là con đường dẫn đến vô ngã, buông bỏ chấp trước, và hòa nhập với chân lý của vũ trụ."
+    ]
   }
+
 ];
 
 export const commonMistake = [
