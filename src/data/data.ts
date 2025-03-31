@@ -124,7 +124,7 @@ export const buddhism = [
       "9. Chớ vội tin điều gì, chỉ vì điều ấy được sức mạnh và quyền uy ủng hộ.",
       "10. Chớ vội tin điều gì, chỉ vì điều ấy được các nhà truyền giáo hay đạo sư của mình tuyên thuyết."
     ]
-  },,
+  },
   {
     title: "Bát chánh đạo",
     content: [
