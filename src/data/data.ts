@@ -202,7 +202,8 @@ export const quintessenceRsi = [
   "Đỉnh hoặc đáy của RSI gần nhất trước đó nằm ở vùng nào.",
   "Hành trình di chuyển của đường TBC so với đường TBN đang ở giai đoạn nào, đã bó hẹp chưa hay vẫn đang mở rộng.",
   "Các khung lớn đang cho thấy xu hướng là gì, các khung nhỏ cho thấy điều gì ( sự tích lũy của lực mua hay sự tham gia của lực bán ), khung thời gian giao dịch đang cho thấy điều gì.",
-  "Kết hợp các đỉnh hoặc đáy của RSI lại thì đang cho thấy dấu hiệu của hội tụ hay phân kì."
+  "Kết hợp các đỉnh hoặc đáy của RSI lại thì đang cho thấy dấu hiệu của hội tụ hay phân kì.",
+  "RSI khung H4 mà rơi về vùng 30, quan sát thêm khung H1 RSI chưa chạm vùng 20 thì đây là cơ hội tốt để follow theo chiến lược rải vốn ra mua SPOT."
 ]
 
 export const innerData = [
