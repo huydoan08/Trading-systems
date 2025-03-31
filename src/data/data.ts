@@ -2,6 +2,12 @@ import { YearlyData } from "@/app/(demo)/revenue/page";
 
 export const experience = [
   {
+    title: "Ngày 31-03-2025",
+    content: [
+      "Khung M: RSI sắp chạm đường TBC, khả năng cao sẽ cắt xuống.\nKhung W: RSI nằm dưới 2 đường TB, đang cắt xuống với 1 góc rất rộng.\nKhung D: RSI đã bắt đầu cắt xuống 2 đường TB, đường TBN cũng chuẩn bị cắt xuống.\nKhung H4: RSI đã chạm xuống vùng 30, vẫn đang tiếp tục mở rộng.\n------------------\nThật khó để khuyên ai đó nên hành động như thế nào vì quyết định như nào là việc của mỗi người.\n Với mình thì hiện tại mình không quá tập trung vào việc dự đoán hướng đi của thị trường nữa mà mình tập trung vào \"KĨ NĂNG XỬ LÝ và QUẢN TRỊ RỦI RO cho thật tốt\".\n------------\n ===>Trading là một chuỗi kết quả của rất nhiều lệnh giao dịch và lệnh này cũng chỉ là một lệnh trong rất nhiều lệnh mà thôi. Đừng mang tư duy đặt cược allin cho 1 lệnh là được.",
+    ]
+  },
+  {
     title: "Ngày 28-03-2025",
     content: [
       "Thông thường người ta thua lỗ bởi vì sự kỳ vọng vượt quá năng lực của chính họ...\n\nCó những thứ chỉ cần bớt tham lại, nhẹ nhàng quan sát thì bạn đều có thể nhìn ra được.\n\nBạn không phải đang chiến đấu với market, mà bạn chỉ đang chiến đấu với lòng tham của chính mình.\n\nCó những thứ chỉ cần bớt tham lại, mọi chuyện sẽ rất dễ dàng... nhưng khi bạn đẩy lòng tham của mình lớn lên, mong muốn nhiều hơn... thì mọi khó khăn sẽ đến từ đó.\n\nChúng ta KHÔNG THỂ kiểm soát được hướng đi của thị trường, nhưng chúng ta có thể kiểm soát được rủi ro mà chúng ta có thể đối mặt khi mọi thứ đi ngược lại với dự phóng.\n\nNếu bạn tính toán được và biết cách chấp nhận... thì thị trường đi lên, đi xuống hay đi ngang đều nằm trong kế hoạch của bạn cả rồi.\n\nHiểu được những điều này, bạn nương theo thị trường một cách nhẹ nhàng... thật sự những điều này chỉ khi bớt tham lại, bạn sẽ nhìn ra được...\n\nĐiều quan trọng trong đầu tư... đích đến thật sự của bạn muốn gì...\n\nMục tiêu của mình chỉ là đi cùng thị trường và bình an, vậy là đủ 🙂"
