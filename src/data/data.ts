@@ -2,6 +2,12 @@ import { YearlyData } from "@/app/(demo)/revenue/page";
 
 export const experience = [
   {
+    title: "Ngày 01-04-2025",
+    content: [
+      "Tiền sẽ  là kết quả của việc trading và đầu tư giỏi. Bạn không cần phải có quá nhiều tiền trong giai đoạn đầu tiên...\nBạn chỉ cần nghiêm túc với số tiền 100$ như của mình. Thật sự nghiêm túc đến tận cùng và học cách gia tăng nó đều đặn trong 6 tháng, 1 năm.\nKhi làm được điều đó trong 6 tháng, 1 năm thì bạn sẽ rút ra được rất nhiều bài học, và từ đó bạn sẽ có tư duy khác với nghề trade này.\n-----------\nTrading đòi hỏi sự ổn định, nếu biết cách tạo ra lợi nhuận với 100$, bạn cũng sẽ biết cách tạo ra lợi nhuận với số vốn 10.000$, 100.000$ cũng tương tự như vậy...",
+    ]
+  },
+  {
     title: "Ngày 31-03-2025",
     content: [
       "Khung M: RSI sắp chạm đường TBC, khả năng cao sẽ cắt xuống.\nKhung W: RSI nằm dưới 2 đường TB, đang cắt xuống với 1 góc rất rộng.\nKhung D: RSI đã bắt đầu cắt xuống 2 đường TB, đường TBN cũng chuẩn bị cắt xuống.\nKhung H4: RSI đã chạm xuống vùng 30, vẫn đang tiếp tục mở rộng.\n------------------\nThật khó để khuyên ai đó nên hành động như thế nào vì quyết định như nào là việc của mỗi người.\n Với mình thì hiện tại mình không quá tập trung vào việc dự đoán hướng đi của thị trường nữa mà mình tập trung vào \"KĨ NĂNG XỬ LÝ và QUẢN TRỊ RỦI RO cho thật tốt\".\n------------\n ===>Trading là một chuỗi kết quả của rất nhiều lệnh giao dịch và lệnh này cũng chỉ là một lệnh trong rất nhiều lệnh mà thôi. Đừng mang tư duy đặt cược allin cho 1 lệnh là được.",
