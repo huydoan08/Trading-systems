@@ -100,7 +100,8 @@ export const allData: YearlyData = {
   "2025": [
     { name: "01/2025", revenue: -1018 },
     { name: "02/2025", revenue: -129 },
-    { name: "03/2025", revenue: -40 }
+    { name: "03/2025", revenue: -40 },
+    { name: "04/2025", revenue: 0 }
   ]
 };
 
@@ -241,12 +242,12 @@ export const storyTelling =
   ]
 
 export const innerData = [
-  { name: "4", value: 10 },
+  { name: "4", value: 44 },
   // { name: "5", value: 80 },
 ];
 
 export const outerData = [
-  { name: "A1", value: 10 },
+  { name: "A1", value: 44 },
   // { name: "A2", value: 30 },
   // { name: "A3", value: 50 },
   // { name: "B1", value: 30 },
