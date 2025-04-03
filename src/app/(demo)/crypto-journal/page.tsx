@@ -8,7 +8,8 @@ import { useRouter } from "next/navigation";
 import { auth } from "@/firebaseConfig";
 import { ExpandableCard } from "@/app/component/ExpandableCard/ExpandableCard";
 import { experience } from "@/data/data";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import { ArrowUpFromDot, Loader } from "lucide-react";
 
 const ITEMS_PER_PAGE = 6;
 
@@ -20,17 +21,23 @@ export default function CryptoJournalPage() {
   const loadMore = () => {
     setVisibleCount((prev) => prev + ITEMS_PER_PAGE);
   };
+
+  const loadLess = () => {
+    setVisibleCount((prev) => Math.max(prev - ITEMS_PER_PAGE, ITEMS_PER_PAGE));
+  };
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (!currentUser) {
         router.push("/");
       }
     });
-
     return () => unsubscribe();
   }, [router]);
+
   const sidebar = useStore(useSidebar, (x) => x);
   if (!sidebar) return null;
+
   return (
     <ContentLayout title="Hành trình tôi đi tìm tôi">
       <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700 mb-2">
@@ -50,16 +57,12 @@ export default function CryptoJournalPage() {
           onClick={() => setOpenIndex(openIndex === index ? null : index)}
         />
       ))}
-      {visibleCount < experience.length && (
-        <div className="flex justify-center mt-4">
-          <button
-            onClick={loadMore}
-            className="p-2 bg-gray-300 text-black rounded-lg hover:bg-gray-400"
-          >
-            Load more
-          </button>
-        </div>
-      )}
+      <div className="flex justify-center mt-4 space-x-4">
+        {visibleCount < experience.length && (
+          <Loader onClick={loadMore} className="cursor-pointer" />
+        )}
+        {visibleCount > ITEMS_PER_PAGE && <ArrowUpFromDot onClick={loadLess} />}
+      </div>
     </ContentLayout>
   );
 }
