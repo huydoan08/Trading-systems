@@ -11,11 +11,11 @@ import { onAuthStateChanged } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 const images = [
-  "/transaction-journal/NKGD-04.png",
-  "/transaction-journal/NKGD-07.png",
+  "/signs-of-h1-weakening/H1-weaking-000021.png",
+  "/signs-of-h1-weakening/H1-weaking-0000212.png",
 ];
 
-export default function MissingChangePage() {
+export default function SignsOfH1WeakeningPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);

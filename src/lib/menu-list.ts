@@ -110,6 +110,10 @@ export function getMenuList(pathname: string): Group[] {
             {
               href: "/missing-chance",
               label: "Missing Chance",
+            },
+            {
+              href: "/signs-of-h1-weakening",
+              label: "Signs of H1 weakening",
             }
           ],
           active: !isAdmin
