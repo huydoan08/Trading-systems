@@ -13,6 +13,7 @@ import { getAuth } from "firebase/auth";
 const images = [
   "/signs-of-h1-weakening/H1-weaking-000021.png",
   "/signs-of-h1-weakening/H1-weaking-0000212.png",
+  "/signs-of-h1-weakening/H1-weakening-0000312.png",
 ];
 
 export default function SignsOfH1WeakeningPage() {
