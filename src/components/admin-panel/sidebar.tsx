@@ -34,7 +34,7 @@ export function Sidebar() {
           variant="link"
           asChild
         >
-          <Link href="/crypto-journal" className="flex items-center gap-2">
+          <div className="flex items-center gap-2">
             <PanelsTopLeft className="w-6 h-6 mr-1" />
             <h1
               className={cn(
@@ -46,7 +46,7 @@ export function Sidebar() {
             >
               Trading systems
             </h1>
-          </Link>
+          </div>
         </Button>
         <Menu isOpen={getOpenState()} />
       </div>
