@@ -2,17 +2,17 @@ import {
   Sprout,
   LucideIcon,
   AlignHorizontalDistributeCenter,
-  Carrot,
   FileQuestionIcon,
   PersonStandingIcon,
   TreeDeciduous,
-  Leaf,
   Bird,
   NotebookPen,
   Highlighter,
   Footprints,
-  Activity,
-  Star
+  Star,
+  MountainSnow,
+  Ghost,
+  Gift,
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 
@@ -95,7 +95,7 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "",
-          label: "Transaction journal",
+          label: "Transaction history",
           icon: NotebookPen,
           submenus: [
             
@@ -122,7 +122,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/quintessence-rsi",
           label: "Quintessence of RSI",
-          icon: Activity,
+          icon: MountainSnow,
           submenus: [],
           active: !isAdmin
         }
@@ -145,7 +145,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/common-mistakes-in-trading",
           label: "Common Mistakes In Trading",
-          icon: Carrot,
+          icon: Ghost,
           submenus: []
         }
       ]
@@ -214,7 +214,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/revenue",
           label: "Revenue",
-          icon: Leaf,
+          icon: Gift,
           submenus: [],
           active: !isAdmin
         }
