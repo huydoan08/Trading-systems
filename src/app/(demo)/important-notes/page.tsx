@@ -8,7 +8,7 @@ import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { Hammer } from "lucide-react"
+import { Plane } from "lucide-react"
 import { importantNotes } from "@/data/data";
 
 export default function ImportantNotesPage() {
@@ -34,7 +34,7 @@ export default function ImportantNotesPage() {
           <div className="space-y-2">
             {importantNotes.map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2 ">
-                <Hammer/>
+                <Plane/>
                 <Label className="text-black-700 font-semibold dark:text-white">
                   {item}
                 </Label>

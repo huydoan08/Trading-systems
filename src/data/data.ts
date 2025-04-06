@@ -203,7 +203,7 @@ export const importantNotes = [
   "Phải tách biệt mình ra khỏi đám đông, đám đông luôn là nhóm mất tiền, nhưng không có nghĩa là mình cũng sẽ mất tiền.",
   "Chỉ làm theo systems, không giao dịch theo cảm tính, không để cho cảm xúc xen vào các quyết định giao dịch.",
   "Cần tách mình ra khỏi ý kiến của những người khác, mọi dự phóng của người khác chỉ để tham khảo.",
-  "Đứng ngoài thị trường cũng là một vị thế."
+  "Đứng ngoài thị trường cũng là một vị thế, chỉ vào lệnh khi có setup đẹp."
 ];
 
 export const faqs = [
