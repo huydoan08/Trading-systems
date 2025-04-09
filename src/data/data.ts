@@ -171,6 +171,7 @@ export const conditionForEnteringATrade = [
   "Lên chiến lược rõ ràng trước khi vào lệnh.",
   "Chọn bộ khung thời gian giao dịch: \"H1, H4, D1\" và các khung thời gian phải đồng thuận.",
   "Các mẫu hình đúng tiêu chuẩn, mẫu hình đẹp.",
+  "Quan sát RSI để thấy được các dấu hiệu về lực.",
   "Xác định các đường trendline quan trọng và theo dõi phản ứng giá tại các vùng đó.",
   "Chờ xác nhận sóng hồi, để tối ưu điểm vào lệnh đẹp.",
   "Tối ưu điểm vào lệnh đẹp ở khung thời gian nhỏ.",
