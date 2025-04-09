@@ -2,7 +2,7 @@ import { YearlyData } from "@/app/(demo)/revenue/page";
 
 export const experience = [
   {
-    title: "Ngày 04-04-2025",
+    title: "Ngày 09-04-2025",
     content: [
       "Để có thể đi đường dài cùng với thị trường thì bắt buộc mỗi cá nhân phải tự xây dựng cho mình một hệ thống giao dịch, việc này tốn rất nhiều thời gian và công sức\n\n.Đa số nhiều người thua là bởi vì họ không có một hệ thống giao dịch, không thực sự có tư duy đúng về nghề, không thật sự nghiêm túc đào sâu đến tận cùng.\n\nSẽ là vô nghĩa nếu thắng được 3 tháng, 6 tháng....nhưng lại thua hết tất cả trong 1 ngày...\n\nThế nên, chỉ có hệ thống giao dịch và ý thức tuân thủ nó tuyệt đối, cũng như quản trị tâm, hiểu chính mình...đó là chìa khoá giúp bạn đi xa và hiểu về nghề này.\n\nHãy cứ thật chậm rãi, làm tốt bài toán quản trị rủi ro trong quá trình xây dựng hệ thống giao dịch. Chắc chắn các bạn sẽ đối diện rất nhiều khó khăn, nhưng thực sự...khó khăn càng lớn, có những cú tát càng đau...thì bài học mới thấm.\n\nNhưng nhớ kỹ: Đừng để nhiều bài học đau đớn đến với bạn...vì sẽ có nhiều người sẽ gục ngã và ko vượt qua được.\n\nHãy làm tốt bài toán quản trị rủi ro, hãy làm sao cho phép mình có cơ hội làm lại, hãy làm sao thua mà ko ảnh hưởng gì đến cuộc sống của bạn. Cách tốt nhất là dùng một số tiền rất nhỏ, giao dịch cực kỳ thận trọng...và bài học sẽ hình thành.."
     ]
