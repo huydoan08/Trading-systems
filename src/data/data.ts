@@ -174,7 +174,6 @@ export const conditionForEnteringATrade = [
   "Quan sát RSI để thấy được các dấu hiệu về lực.",
   "Xác định các đường trendline quan trọng và theo dõi phản ứng giá tại các vùng đó.",
   "Chờ xác nhận sóng hồi, để tối ưu điểm vào lệnh đẹp.",
-  "Tối ưu điểm vào lệnh đẹp ở khung thời gian nhỏ.",
   "Không cố tình đoán đỉnh và đoán đáy.",
   "Mức rủi ro, mức thưởng và xác suất.",
 ];
@@ -227,9 +226,9 @@ export const quintessenceRsi = [
   "RSI đang nằm ở vị trí nào \( nằm ở \" trên hay dưới \" \) so với 2 đường trung bình.",
   "Đỉnh hoặc đáy của RSI gần nhất trước đó nằm ở vùng nào.",
   "Hành trình di chuyển của đường TBC so với đường TBN đang ở giai đoạn nào, đã bó hẹp chưa hay vẫn đang mở rộng.",
-  "Các khung lớn đang cho thấy xu hướng là gì, các khung nhỏ cho thấy điều gì ( sự tích lũy của lực mua hay sự tham gia của lực bán ), khung thời gian giao dịch đang cho thấy điều gì.",
   "Kết hợp các đỉnh hoặc đáy của RSI lại thì đang cho thấy dấu hiệu của hội tụ hay phân kì.",
-  "RSI khung H4 mà rơi về vùng 30, quan sát thêm khung H1 RSI chưa chạm vùng 20 thì đây là cơ hội tốt để follow theo chiến lược rải vốn ra mua SPOT."
+  "RSI khung H4 chạm vùng 20 => có thể vào mua SPOT, tuy nhiên xác suất cao vẫn còn 1 nhịp retest nữa.",
+  "RSI khung H1 chạm vùng 20 => cứ kiên nhẫn chờ đợi retest tiếp và xác nhận lực bán đã suy yếu mới mua SPOT."
 ]
 
 export const storyTelling =
