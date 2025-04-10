@@ -175,10 +175,9 @@ export const commonMistake = [
 
 export const conditionForEnteringATrade = [
   "Lên chiến lược rõ ràng trước khi vào lệnh.",
-  "Chọn bộ khung thời gian giao dịch: \"H1, H4, D1\" và các khung thời gian phải đồng thuận.",
   "Các mẫu hình đúng tiêu chuẩn, mẫu hình đẹp.",
-  "Quan sát RSI để thấy được các dấu hiệu về lực.",
-  "Xác định các đường trendline quan trọng và theo dõi phản ứng giá tại các vùng đó.",
+  "Xác định các đường trendline, vùng hỗ trợ, vùng kháng cự, quan trọng và theo dõi phản ứng giá tại các vùng đó.",
+  "Quan sát RSI đa khung thời gian để thấy được các dấu hiệu về lực.",
   "Chờ xác nhận sóng hồi, để tối ưu điểm vào lệnh đẹp.",
   "Không cố tình đoán đỉnh và đoán đáy.",
   "Mức rủi ro, mức thưởng và xác suất.",
