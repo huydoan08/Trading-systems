@@ -161,8 +161,7 @@ export function getMenuList(pathname: string): Group[] {
           href: "/important-notes",
           label: "Important Notes",
           icon: Highlighter,
-          submenus: [],
-          active: !isAdmin
+          submenus: []
         }
       ]
     },
