@@ -265,12 +265,12 @@ export const storyTelling =
   ]
 
 export const innerData = [
-  { name: "4", value: 0.1 },
+  { name: "4", value: 20 },
   // { name: "5", value: 80 },
 ];
 
 export const outerData = [
-  { name: "A1", value: 0.1 },
+  { name: "A1", value: 20 },
   // { name: "A2", value: 30 },
   // { name: "A3", value: 50 },
   // { name: "B1", value: 30 },

@@ -4,8 +4,8 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function TransactionCheckboxes() {
   const rows = [
-    // [<VCheckbox key={1} />] 
-    []
+    [<VCheckbox key={1} />] 
+    // []
   ];
 
   const volumn = [100];
