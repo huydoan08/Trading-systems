@@ -17,6 +17,15 @@ const images = [
   "/personal-growth/growth-02.jpg",
   "/personal-growth/PTBT-06.jpg",
   "/personal-growth/PTBT-09.webp",
+  "/personal-growth/growth-04.webp",
+  "/personal-growth/growth-05.webp",
+  "/personal-growth/growth-06.webp",
+  "/personal-growth/growth-07.webp",
+  "/personal-growth/growth-08.jpg",
+  "/personal-growth/growth-09.webp",
+  "/personal-growth/growth-10.webp",
+  "/personal-growth/growth-11.webp",
+  "/personal-growth/growth-12.jpg",
 ];
 
 export default function PersonalGrowthPage() {

@@ -7,7 +7,7 @@ import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import NestedPieChart from "@/components/admin-panel/pie-chart";
+import BarChartComponent from "@/components/admin-panel/bar-chart";
 
 export default function StatisticPage() {
   const sidebar = useStore(useSidebar, (x) => x);
@@ -29,7 +29,7 @@ export default function StatisticPage() {
     <ContentLayout title="Thống kê chuỗi các lệnh giao dịch">
       <div className="flex items-center justify-center">
         <TransactionCheckboxes/>
-        <NestedPieChart/>
+        <BarChartComponent/>
       </div>
     </ContentLayout>
   );

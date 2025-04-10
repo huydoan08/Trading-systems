@@ -16,7 +16,6 @@ export default function TransactionCheckboxes() {
       <CardContent className="space-y-2">
         {rows.map((row, rowIndex) => (
           <div key={rowIndex} className="flex items-center space-x-2">
-            <span className="font-bold">Vol{`($${volumn[rowIndex]})`} Exp: {`($${expense[rowIndex]})`}</span>
             <div className="flex flex-wrap gap-2">{row}</div>
           </div>
         ))}

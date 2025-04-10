@@ -2,13 +2,13 @@ import { YearlyData } from "@/app/(demo)/revenue/page";
 
 export const experience = [
   {
-    title: "Ngày 10-04-2025 *** Sự bình an ***",
+    title: "Ngày 10-04-2025 *** Sự Bình An ***",
     content: [
       "Có rất nhiều người chọn cách là ngồi hàng giờ trước máy tính, để giao dịch mua bán loạn xạ, nhưng có rất nhiều người họ chọn phong cách rất nhẹ nhàng, họ thưởng thức ly trà, họ đọc sách, nghiền ngẫm và những lệnh của họ vẫn tạo ra lợi nhuận rất tốt, vậy thì trong trading không phải cứ giao dịch nhiều là tốt mà yếu tố lợi nhuận phải đặt lên hàng đầu, vào lệnh giao dịch phải làm sao tối ưu được, phải chọn được điểm vào lệnh đẹp, tối ưu được khi lợi nhuận nó đến, và cắt lỗ sớm nhất khi mà thua lỗ nó đến, làm sao thua lỗ phải ít và lợi nhuận cứ để cho nó chạy, nhưng đám đông toàn làm ngược lại.\n\nKhi hiểu được quy luật vận hành của thị trường thì chúng ta cần biết cách kiên nhẫn chờ đợi, nhiều người chờ đợi trong một trạng thái rất là bất an, lo lắng, nhỡ ra lỡ con sóng này thì sao, nhỡ giá nó tăng nữa mà nó không về vùng mua thì sao, lúc này chúng ta lại nôn nóng hấp tấp vào mua, rồi vẫn là những khoản thua lỗ, những thứ này để hiểu được cần một quá trình dài đi cùng thị trường, và khi hiểu được thì đầu tư rất là nhẹ nhàng, thoải mái và bình an.\n\nNếu đi với thị trường tài chính thì đừng để những cây nến xanh đỏ nó làm ảnh hưởng tới tâm lý của chúng ta, đừng để thị trường nó dày vò chúng ta, thì để làm được điều này cần phải thực sự hiểu được bản chất, phải làm sao đào sâu vào trong tâm thức, vì chỉ khi đào sâu vào trong tâm thức thì chúng ta mới hiểu được ý nghĩa của việc trading và đầu tư, cái sự quý giá của sự bình an trong trading và đầu tư..."
     ]
   },
   {
-    title: "Ngày 09-04-2025",
+    title: "Ngày 09-04-2025 *** Sự nghiêm túc ***",
     content: [
       "Để có thể đi đường dài cùng với thị trường thì bắt buộc mỗi cá nhân phải tự xây dựng cho mình một hệ thống giao dịch, việc này tốn rất nhiều thời gian và công sức.\n\nĐa số nhiều người thua là bởi vì họ không có một hệ thống giao dịch, không thực sự có tư duy đúng về nghề, không thật sự nghiêm túc đào sâu đến tận cùng.\n\nSẽ là vô nghĩa nếu thắng được 3 tháng, 6 tháng....nhưng lại thua hết tất cả trong 1 ngày...\n\nThế nên, chỉ có hệ thống giao dịch và ý thức tuân thủ nó tuyệt đối, cũng như quản trị tâm, hiểu chính mình...đó là chìa khoá giúp bạn đi xa và hiểu về nghề này.\n\nHãy cứ thật chậm rãi, làm tốt bài toán quản trị rủi ro trong quá trình xây dựng hệ thống giao dịch. Chắc chắn các bạn sẽ đối diện rất nhiều khó khăn, nhưng thực sự...khó khăn càng lớn, có những cú tát càng đau...thì bài học mới thấm.\n\nNhưng nhớ kỹ: Đừng để nhiều bài học đau đớn đến với bạn...vì sẽ có nhiều người sẽ gục ngã và ko vượt qua được.\n\nHãy làm tốt bài toán quản trị rủi ro, hãy làm sao cho phép mình có cơ hội làm lại, hãy làm sao thua mà ko ảnh hưởng gì đến cuộc sống của bạn. Cách tốt nhất là dùng một số tiền rất nhỏ, giao dịch cực kỳ thận trọng...và bài học sẽ hình thành.."
     ]
@@ -20,7 +20,7 @@ export const experience = [
     ]
   },
   {
-    title: "Ngày 03-04-2025",
+    title: "Ngày 03-04-2025  *** Lộ Trình Phát Triển Của Một Trader***",
     content: [
       "HÀNH TRÌNH CỦA MỘT TRADER PHẢI TRẢI QUA:\n\nGiai đoạn 1: Ngây thơ vô số tội, không có một kĩ năng hay kiến thức gì về trading, nghe ai đó nói là trading kiếm tiền dễ quá, thấy người ta show lãi và tìm đến trading, vào thị trường với suy nghĩ rất ngây thơ là vào để kiếm tiền, nhưng họ không ý thức được kiến thức và năng lực của họ chưa có, chưa có thái độ open để học tập, nên giai đoạn này đa số sẽ bỏ cuộc vì thua lỗ, không kiếm được tiền...\n\nGiai đoạn 2: Ý thức được việc là à, để có thể kiếm được tiền trong thị trường này thì cần phải học tập, trang bị kiến thức, tuy nhiên là chưa biết học tập như thế nào, lúc này bắt đầu họ tìm kiếm kiến thức trên mạng internet hoặc mua sách về nghiên cứu, và lúc này họ nghĩ đơn giản là chỉ cần học tập, chỉ cần có một phương pháp hay công cụ chỉ báo nào đó là có thể kiếm được tiền, giống như kiểu đi tìm kiếm chén thánh vậy, và tầm 60% sẽ bị rụng trong giai đoạn này.\n\nGiai đoạn 3: Lúc này họ hiểu ra được là để có thể thành công trong trading thì cần phải có một hệ thống giao dịch cho riêng mình, lúc này họ bắt đầu open để học tập, khi này chỉ tập trung vào việc hoàn thiện hệ thống, và quản trị cảm xúc rất tốt, lúc này không còn đi chống đối lại thị trường, bắt đầu bỏ qua câu chuyện làm giàu nhanh từ trading, hiểu được bài toán quản trị vốn và quản trị rủi ro là như thế nào, và bắt đầu quan sát những người khác và mỉm cười sao ngày trước mình vô minh vậy.\n\nGiai đoạn 4: Hoàn thiện năng lực một cách có ý thức, lúc này họ đã ở một level khá cao rồi , giao dịch theo phương pháp gì sẽ trung thành với phương pháp giao dịch đó, lúc này sẽ tập trung tối ưu hệ thống giao dịch của chính mình, hiểu được câu chuyện thắng thua trong trading là câu chuyện hết sức bình thường, nhưng kiểm soát được số lệnh thua rất là ít, tỉ lệ số lệnh thắng nhiều cũng như gồng lời rất là tốt, cũng như bắt đầu duy trì lợi nhuận một cách ổn định, lúc này tự giao dịch, không tranh luận với bất kì ai, không nói lên hay chia sẻ nhận định ra bên ngoài vì đơn giản họ ý thức được rằng là mình chả biết gì về thị trường nhiều, họ chỉ biết là với đi theo với dự phóng như vậy nếu đúng thì họ kiếm được lợi nhuận bao nhiêu,còn nếu sai thì họ chấp nhận trả giá cho một stoploss là bao nhiêu, và mọi thứ diễn ra rất là nhẹ nhàng, họ xem nhẹ việc được và mất, dù thị trường có đi như thế nào đi nữa họ vẫn rất thoải mái.\n\nGiai đoạn 5: Level cao nhất, lúc này năng lực vô thức, thấy nó là một công việc ngày qua ngày một cách vô cảm, không còn cảm xúc với trading nữa, vào lệnh khi có setup đẹp bằng không đứng ngoài ung dung tự tại..."
     ]
@@ -264,16 +264,6 @@ export const storyTelling =
     }
   ]
 
-export const innerData = [
-  { name: "4", value: 20 },
-  // { name: "5", value: 80 },
-];
-
-export const outerData = [
-  { name: "A1", value: 20 },
-  // { name: "A2", value: 30 },
-  // { name: "A3", value: 50 },
-  // { name: "B1", value: 30 },
-  // { name: "B2", value: 10 },
-  // { name: "B3", value: 40 },
+export const dataStatistic= [
+  { name: '1', profit: 20},
 ];
