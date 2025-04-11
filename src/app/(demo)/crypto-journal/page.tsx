@@ -43,7 +43,7 @@ export default function CryptoJournalPage() {
       <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700 mb-2">
         <CardHeader>
           <div className="font-bold text-2xl text-black-800 dark:text-white">
-            GÓC CHIA SẺ KIẾN THỨC, KINH NGHIỆM, CHIẾN LƯỢC VÀ TÂM SỰ NGHỀ TRADE:
+            TRADING PHIÊU LƯU KÍ
           </div>
         </CardHeader>
       </Card>
