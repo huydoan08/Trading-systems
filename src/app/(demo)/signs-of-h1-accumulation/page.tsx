@@ -11,7 +11,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 const images = [
-  "/signs-of-h1-accumulation/H1-weakening-000031.png"
+  "/signs-of-h1-accumulation/H1-acc-001.png"
 ];
 
 export default function SignsOfH1AccumulationPage() {
