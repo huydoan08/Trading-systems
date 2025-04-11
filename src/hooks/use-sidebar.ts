@@ -6,11 +6,14 @@ type SidebarSettings = { disabled: boolean; isHoverOpen: boolean };
 type SidebarStore = {
   isOpen: boolean;
   isHover: boolean;
+  openSubmenu: string | null;
   settings: SidebarSettings;
   toggleOpen: () => void;
   setIsOpen: (isOpen: boolean) => void;
   setIsHover: (isHover: boolean) => void;
   getOpenState: () => boolean;
+  setOpenSubmenu: (submenu: string | null) => void;
+  getOpenSubmenu: () => string | null;
   setSettings: (settings: Partial<SidebarSettings>) => void;
 };
 
@@ -19,6 +22,7 @@ export const useSidebar = create(
     (set, get) => ({
       isOpen: true,
       isHover: false,
+      openSubmenu: null,
       settings: { disabled: false, isHoverOpen: false },
       toggleOpen: () => {
         set({ isOpen: !get().isOpen });
@@ -32,6 +36,12 @@ export const useSidebar = create(
       getOpenState: () => {
         const state = get();
         return state.isOpen || (state.settings.isHoverOpen && state.isHover);
+      },
+      setOpenSubmenu: (submenu: string | null) => {
+        set({ openSubmenu: submenu });
+      },
+      getOpenSubmenu: () => {
+        return get().openSubmenu;
       },
       setSettings: (settings: Partial<SidebarSettings>) => {
         set(

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronDown, Dot, LucideIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -27,6 +27,8 @@ import {
   DropdownMenuSeparator
 } from "@/components/ui/dropdown-menu";
 import { usePathname } from "next/navigation";
+import { useSidebar } from "@/hooks/use-sidebar";
+import { useStore } from "@/hooks/use-store";
 
 type Submenu = {
   href: string;
@@ -53,12 +55,33 @@ export function CollapseMenuButton({
   const isSubmenuActive = submenus.some((submenu) =>
     submenu.active === undefined ? submenu.href === pathname : submenu.active
   );
-  const [isCollapsed, setIsCollapsed] = useState<boolean>(isSubmenuActive);
+  
+  // Use global sidebar state to track open submenus
+  const sidebar = useStore(useSidebar, (state) => state);
+  const isCollapsed = sidebar?.openSubmenu === label;
+  
+  // Update collapsed state when open submenu changes
+  const handleToggleCollapse = () => {
+    if (sidebar) {
+      // If this submenu is already open, close it
+      // Otherwise, open this submenu and close any other open submenu
+      sidebar.setOpenSubmenu(isCollapsed ? null : label);
+    }
+  };
+
+  // Track if this submenu is active
+  useEffect(() => {
+    if (isSubmenuActive && sidebar) {
+      sidebar.setOpenSubmenu(label);
+    }
+  }, []);
+
+  if (!sidebar) return null;
 
   return isOpen ? (
     <Collapsible
       open={isCollapsed}
-      onOpenChange={setIsCollapsed}
+      onOpenChange={handleToggleCollapse}
       className="w-full"
     >
       <CollapsibleTrigger

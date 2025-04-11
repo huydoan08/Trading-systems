@@ -52,7 +52,7 @@ export default function SignsOfH1AccumulationPage() {
 
   return (
     <>
-      <ContentLayout title="Nhật kí giao dịch">
+      <ContentLayout title="Signs of H1 Accumulation">
         <Card
           className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
           style={{
