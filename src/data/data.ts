@@ -190,21 +190,17 @@ export const conditionForEnteringATrade = [
 ];
 
 export const duringTradeExecution = [
-  "Quản lý lệnh theo cấu trúc sóng, follow theo chiến lược một cách tuyệt đối.",
-  "Không bị cảm xúc chi phối vào và chốt lời non, cứ follow theo cấu trúc sóng và dời SL về những vùng giá quan trọng.",
-  "Chỉ nhồi thêm lệnh khi lệnh 1 đã có lợi nhuận đủ cover cho SL của lệnh 2, dời SL quản lý lệnh khi giá đã tạo đỉnh đáy.",
-  "Không cố gắng tìm cơ hội vào lệnh ngay sau khi chạm stoploss.",
-  "Tuyệt đối không đóng lệnh bằng tay khi mà giá đang chạy.",
-  "Không vội dời SL khi giá chưa chạy xa.",
-  "Không kéo dài SL khi đã quyết định vào lệnh."
+  "Quản lý lệnh theo cấu trúc sóng hoặc dời Stoploss về những vùng giá quan trọng, follow theo chiến lược một cách tuyệt đối - không bị cảm xúc chi phối vào và chốt lời non.",
+  "Chỉ nhồi thêm lệnh khi đã có lợi nhuận đủ lớn và có sự xác nhận xu hướng của RSI.",
+  "Tuyệt đối không đóng lệnh bằng tay khi mà giá chưa chạm Stoploss.",
+  "Không nên vội dời Stoploss khi mà giá chưa chạy xa.",
+  "Tuyệt đối không kéo dài Stoploss ra xa."
 ];
 
 export const psychologicalMastery = [
   "Tiền dùng cho trading và đầu tư phải là tiền nhàn rỗi.",
-  "Phải rất giỏi về phân tích kĩ thuật.",
-  "Học tập có chiều sâu, nhìn lại bản thân và sửa mình.",
-  "Nên tập trung vào một số ít đồng coin và chỉ giao dịch tập trung ở khung H4.",
-  "Quản trị vốn, quản trị rủi ro cho thật tốt để khi bấm xác nhận vào lệnh xong thì việc còn lại là của thị trường."
+  "Nên tập trung vào một số ít đồng coin và chỉ giao dịch ở khung H4 hoặc khung H1.",
+  "Quản trị vốn, quản trị rủi ro cho thật tốt, khi đã enter vào lệnh xong thì việc còn lại là để cho thị trường làm việc."
 ];
 
 export const importantNotes = [
