@@ -114,6 +114,10 @@ export function getMenuList(pathname: string): Group[] {
             {
               href: "/signs-of-h1-weakening",
               label: "Signs of H1 weakening",
+            },
+            {
+              href: "/signs-of-h1-accumulation",
+              label: "Signs of H1 accumulation",
             }
           ],
           active: !isAdmin
