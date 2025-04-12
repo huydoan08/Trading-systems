@@ -11,7 +11,8 @@ import {
   Star,
   MountainSnow,
   Ghost,
-  Gift
+  LucideFileBarChart,
+  Wallpaper
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 
@@ -102,7 +103,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/quintessence-rsi",
           label: "Phân Tích Kĩ Thuật",
-          icon: MountainSnow,
+          icon: Wallpaper,
           submenus: [],
           active: !isAdmin
         }
@@ -148,7 +149,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/revenue",
           label: "Báo Cáo Kết Quả",
-          icon: Gift,
+          icon: LucideFileBarChart,
           submenus: [],
           active: !isAdmin
         }
