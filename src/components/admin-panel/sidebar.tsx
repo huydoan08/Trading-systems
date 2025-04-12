@@ -43,7 +43,7 @@ export function Sidebar() {
                   : "translate-x-0 opacity-100"
               )}
             >
-              Trading systems
+              Trading System
             </h1>
           </div>
         </Button>

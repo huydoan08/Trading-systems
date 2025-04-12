@@ -44,10 +44,23 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/crypto-journal",
-          label: "Crypto Journal",
-          icon: Footprints,
-          submenus: []
+          href: "",
+          label: "Hệ Thống Giao Dịch",
+          icon: AlignHorizontalDistributeCenter,
+          submenus: [
+            {
+              href: "/conditions-for-entering-a-trade",
+              label: "Bộ Tiêu Chí Vào Lệnh"
+            },
+            {
+              href: "/during-trade-execution",
+              label: "Tiêu Chí Giữ Lệnh"
+            },
+            {
+              href: "/after-trade-closes",
+              label: "Tiêu Chí Thoát Lệnh"
+            },
+          ]
         }
       ]
     },
@@ -55,38 +68,10 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "",
-          label: "Trading Process",
-          icon: AlignHorizontalDistributeCenter,
-          submenus: [
-            {
-              href: "/conditions-for-entering-a-trade",
-              label: "Conditions For Entering a Trade"
-            },
-            {
-              href: "/during-trade-execution",
-              label: "During Trade Execution"
-            },
-            {
-              href: "/after-trade-closes",
-              label: "After Trade Closes"
-            },
-            {
-              href: "/beautiful-model",
-              label: "Beautiful Model",
-              active: !isAdmin
-            },
-            {
-              href: "/manage-order",
-              label: "Manage Order",
-              active: !isAdmin
-            },
-            {
-              href: "/weakening-model",
-              label: "Weaking Model",
-              active: !isAdmin
-            },
-          ]
+          href: "/crypto-journal",
+          label: "Tổng hợp kinh nghiệm",
+          icon: Footprints,
+          submenus: []
         }
       ]
     },

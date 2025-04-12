@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       ? `https://${process.env.VERCEL_URL}`
       : `http://localhost:${process.env.PORT || 3000}`
   ),
-  title: "Trading systems",
+  title: "Trading System",
   description:
     "A stunning and functional retractable sidebar for Next.js built on top of shadcn/ui complete with desktop and mobile responsiveness.",
   alternates: {
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     url: "/",
-    title: "Trading systems",
+    title: "Trading System",
     description:
       "A stunning and functional retractable sidebar for Next.js built on top of shadcn/ui complete with desktop and mobile responsiveness.",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trading systems",
+    title: "Trading System",
     description:
       "A stunning and functional retractable sidebar for Next.js built on top of shadcn/ui complete with desktop and mobile responsiveness."
   }
