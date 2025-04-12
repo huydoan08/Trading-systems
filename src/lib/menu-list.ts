@@ -4,7 +4,6 @@ import {
   AlignHorizontalDistributeCenter,
   FileQuestionIcon,
   PersonStandingIcon,
-  TreeDeciduous,
   Bird,
   NotebookPen,
   Highlighter,
@@ -12,7 +11,7 @@ import {
   Star,
   MountainSnow,
   Ghost,
-  Gift,
+  Gift
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 
@@ -38,7 +37,7 @@ type Group = {
 export function getMenuList(pathname: string): Group[] {
   const auth = getAuth();
   const user = auth.currentUser;
-  const isAdmin = user?.email == "doanvanhuy268@gmail.com"
+  const isAdmin = user?.email == "doanvanhuy268@gmail.com";
   return [
     {
       groupLabel: "",
@@ -57,9 +56,9 @@ export function getMenuList(pathname: string): Group[] {
               label: "Tiêu Chí Giữ Lệnh"
             },
             {
-              href: "/after-trade-closes",
+              href: "/exit-trade-order",
               label: "Tiêu Chí Thoát Lệnh"
-            },
+            }
           ]
         }
       ]
@@ -68,41 +67,29 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/crypto-journal",
-          label: "Tổng hợp kinh nghiệm",
-          icon: Footprints,
-          submenus: []
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
           href: "",
-          label: "Transaction history",
+          label: "Nhật Kí Giao Dịch",
           icon: NotebookPen,
           submenus: [
-            
             {
-              href: "/win-order",
-              label: "Win Order",
+              href: "/loss-order",
+              label: "Các Lệnh Thua Lỗ Lớn"
             },
             {
               href: "/loss-order",
-              label: "Loss Order",
+              label: "Các Lệnh Thua Lỗ Nhỏ"
+            },
+            {
+              href: "/win-order",
+              label: "Các Lệnh Chốt Lời Non"
+            },
+            {
+              href: "/win-order",
+              label: "Các Lệnh Thắng Lớn"
             },
             {
               href: "/missing-chance",
-              label: "Missing Chance",
-            },
-            {
-              href: "/signs-of-h1-weakening",
-              label: "Signs of H1 weakening",
-            },
-            {
-              href: "/signs-of-h1-accumulation",
-              label: "Signs of H1 accumulation",
+              label: "Bỏ Lỡ Dù Đã Thấy Cơ Hội"
             }
           ],
           active: !isAdmin
@@ -114,7 +101,7 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "/quintessence-rsi",
-          label: "Quintessence of RSI",
+          label: "Phân Tích Kĩ Thuật",
           icon: MountainSnow,
           submenus: [],
           active: !isAdmin
@@ -126,7 +113,7 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "/psychological-mastery",
-          label: "Psychological Mastery in Trading",
+          label: "Tâm Lý Giao Dịch",
           icon: Sprout,
           submenus: []
         }
@@ -136,54 +123,9 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/common-mistakes-in-trading",
-          label: "Common Mistakes In Trading",
-          icon: Ghost,
-          submenus: []
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/important-notes",
-          label: "Important Notes",
-          icon: Highlighter,
-          submenus: []
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/technical-question",
-          label: "Q&A Technical",
-          icon: FileQuestionIcon,
-          submenus: []
-        }
-      ]
-    },
-   
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/personal-growth",
-          label: "Personal growth",
-          icon: PersonStandingIcon,
-          submenus: []
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/buddhism",
-          label: "The precepts in Buddhism",
-          icon: TreeDeciduous,
+          href: "/",
+          label: "Tư Duy & Chiến Thuật",
+          icon: Bird,
           submenus: []
         }
       ]
@@ -193,7 +135,7 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "/statistic",
-          label: "Statistic",
+          label: "Thống Kê Chuỗi Lệnh",
           icon: Star,
           submenus: [],
           active: !isAdmin
@@ -205,7 +147,7 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "/revenue",
-          label: "Revenue",
+          label: "Báo Cáo Kết Quả",
           icon: Gift,
           submenus: [],
           active: !isAdmin
@@ -216,12 +158,67 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/story-telling",
-          label: "Story telling",
-          icon: Bird, 
+          href: "/personal-growth",
+          label: "Tầm Sư Học Đạo",
+          icon: PersonStandingIcon,
           submenus: []
         }
       ]
     },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/crypto-journal",
+          label: "Tổng Hợp Kinh Nghiệm",
+          icon: Footprints,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/common-mistakes-in-trading",
+          label: "Sai Lầm Nghiêm Trọng",
+          icon: Ghost,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/important-notes",
+          label: "Lưu Ý Quan Trọng",
+          icon: Highlighter,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/technical-question",
+          label: "Hỏi Xoáy Đáp Xoay",
+          icon: FileQuestionIcon,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/story-telling",
+          label: "Những Câu Chuyện Hay",
+          icon: Bird,
+          submenus: []
+        }
+      ]
+    }
   ];
 }

@@ -13,14 +13,20 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const images = [
-  "/weakening-model/8.Mô hình suy yếu 01.png",
+const images = ["/weakening-model/8.Mô hình suy yếu 01.png"];
+
+const imagesH1 = [
+  "/signs-of-h1-weakening/H1-weaking-000021.png",
+  "/signs-of-h1-weakening/H1-weaking-0000212.png",
+  "/signs-of-h1-weakening/H1-weakening-0000312.png",
+  "/signs-of-h1-weakening/H1-weakening-000031.png",
+  "/signs-of-h1-weakening/H1-weakening-00000042.png"
 ];
 
-
 export default function ConditionForEnteringATradePage() {
-   const [currentIndex, setCurrentIndex] = useState(0);
-    const [windowHeight, setWindowHeight] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndexH1, setCurrentIndexH1] = useState(0);
+  const [windowHeight, setWindowHeight] = useState(0);
   const sidebar = useStore(useSidebar, (x) => x);
   const router = useRouter();
   useEffect(() => {
@@ -31,7 +37,7 @@ export default function ConditionForEnteringATradePage() {
     });
 
     return () => unsubscribe();
-  }, [router]); 
+  }, [router]);
   if (!sidebar) return null;
 
   const nextImage = () => {
@@ -41,8 +47,16 @@ export default function ConditionForEnteringATradePage() {
   const prevImage = () => {
     setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
   };
+
+  const nextImageH1 = () => {
+    setCurrentIndexH1((prev) => (prev + 1) % imagesH1.length);
+  };
+
+  const prevImageH1 = () => {
+    setCurrentIndexH1((prev) => (prev - 1 + imagesH1.length) % imagesH1.length);
+  };
   return (
-    <ContentLayout title="Quá trình thực hiện lệnh giao dịch">
+    <ContentLayout title="Hệ Thống Giao Dịch">
       <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
         <CardContent className="p-6 space-y-4">
           <div className="font-bold text-lg text-black-800 dark:text-white">
@@ -63,7 +77,7 @@ export default function ConditionForEnteringATradePage() {
       <Card
         className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
         style={{
-          height: `${windowHeight - 80}px`,
+          height: `${windowHeight - 80}px`
         }}
       >
         <CardContent className="p-6 space-y-4 h-full">
@@ -87,7 +101,10 @@ export default function ConditionForEnteringATradePage() {
               className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
               aria-label="Previous Image"
             >
-              <ChevronLeft size={32} className="text-black-800 dark:text-black-200" />
+              <ChevronLeft
+                size={32}
+                className="text-black-800 dark:text-black-200"
+              />
             </button>
 
             {/* Nút Next */}
@@ -96,12 +113,67 @@ export default function ConditionForEnteringATradePage() {
               className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
               aria-label="Next Image"
             >
-              <ChevronRight size={32} className="text-black-800 dark:text-black-200" />
+              <ChevronRight
+                size={32}
+                className="text-black-800 dark:text-black-200"
+              />
             </button>
 
             {/* Hiển thị số ảnh */}
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black/60 text-white text-sm px-3 py-1 rounded-full">
               {currentIndex + 1} / {images.length}
+            </div>
+          </div>
+        </CardContent>
+      </Card>
+      <Card
+        className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
+        style={{
+          height: `${windowHeight - 80}px`
+        }}
+      >
+        <CardContent className="p-6 space-y-4 h-full">
+          <div className="relative w-full h-full overflow-hidden rounded-lg">
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={currentIndexH1}
+                src={imagesH1[currentIndexH1]}
+                alt={`Mẫu ${currentIndexH1 + 1}`}
+                className="w-full h-full object-contain"
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -100 }}
+                transition={{ duration: 0.5 }}
+              />
+            </AnimatePresence>
+
+            {/* Nút Prev */}
+            <button
+              onClick={prevImageH1}
+              className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
+              aria-label="Previous Image"
+            >
+              <ChevronLeft
+                size={32}
+                className="text-black-800 dark:text-black-200"
+              />
+            </button>
+
+            {/* Nút Next */}
+            <button
+              onClick={nextImageH1}
+              className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
+              aria-label="Next Image"
+            >
+              <ChevronRight
+                size={32}
+                className="text-black-800 dark:text-black-200"
+              />
+            </button>
+
+            {/* Hiển thị số ảnh */}
+            <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black/60 text-white text-sm px-3 py-1 rounded-full">
+              {currentIndexH1 + 1} / {imagesH1.length}
             </div>
           </div>
         </CardContent>
