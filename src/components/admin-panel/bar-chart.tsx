@@ -6,7 +6,6 @@ import {
   ReferenceLine,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
   Legend,
   ResponsiveContainer,
@@ -31,15 +30,14 @@ const BarChartComponent = () => {
             bottom: 5,
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="name" />
           <YAxis />
           <Tooltip />
           <Legend verticalAlign="top" wrapperStyle={{ lineHeight: '40px' }} />
           <ReferenceLine y={0} stroke="#000" />
           <Brush dataKey="name" height={30} stroke="#8884d8" />
-          <Bar dataKey="profit" fill="#82ca9d" />
-          <Bar dataKey="loss" fill="#8884d8" />
+          <Bar dataKey="profit" fill="#82ca9d" barSize={20} />
+          <Bar dataKey="loss" fill="#8884d8" barSize={20} />
         </BarChart>
       </ResponsiveContainer>
         </div>
