@@ -7,8 +7,8 @@ import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { Checkbox } from "@/components/ui/checkbox"
+import { useEffect, useRef, useState } from "react";
+import { Checkbox } from "@/components/ui/checkbox";
 import { conditionForEnteringATrade } from "@/data/data";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -26,6 +26,8 @@ export default function ConditionForEnteringATradePage() {
   const [windowHeight, setWindowHeight] = useState(0);
   const sidebar = useStore(useSidebar, (x) => x);
   const router = useRouter();
+  const imageContainerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (!currentUser) {
@@ -35,15 +37,44 @@ export default function ConditionForEnteringATradePage() {
 
     return () => unsubscribe();
   }, [router]);
+
+  useEffect(() => {
+    const updateHeight = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    updateHeight();
+    window.addEventListener("resize", updateHeight);
+    return () => window.removeEventListener("resize", updateHeight);
+  }, []);
+
   if (!sidebar) return null;
 
+  const scrollToImage = () => {
+    if (imageContainerRef.current) {
+      imageContainerRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "nearest",
+      });
+    }
+  };
+
   const nextImage = () => {
-    setCurrentIndex((prev) => (prev + 1) % images.length);
+    setCurrentIndex((prev) => {
+      const next = (prev + 1) % images.length;
+      scrollToImage();
+      return next;
+    });
   };
 
   const prevImage = () => {
-    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+    setCurrentIndex((prev) => {
+      const next = (prev - 1 + images.length) % images.length;
+      scrollToImage();
+      return next;
+    });
   };
+
   return (
     <ContentLayout title="Hệ Thống Giao Dịch">
       <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
@@ -53,16 +84,17 @@ export default function ConditionForEnteringATradePage() {
           </div>
           <div className="space-y-2">
             {conditionForEnteringATrade.map((item, idx) => (
-              <div key={idx} className="flex items-start space-x-2 ">
-                <Checkbox/>
+              <div key={idx} className="flex items-start space-x-2">
+                <Checkbox />
                 <Label className="text-black-700 font-semibold dark:text-white">
                   {item}
                 </Label>
               </div>
             ))}
           </div>
-        </CardContent> 
+        </CardContent>
       </Card>
+
       <Card
         className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
         style={{
@@ -70,7 +102,10 @@ export default function ConditionForEnteringATradePage() {
         }}
       >
         <CardContent className="p-6 space-y-4 h-full">
-          <div className="relative w-full h-full overflow-hidden rounded-lg">
+          <div
+            ref={imageContainerRef}
+            className="relative w-full h-full overflow-hidden rounded-lg"
+          >
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentIndex}
@@ -90,7 +125,10 @@ export default function ConditionForEnteringATradePage() {
               className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
               aria-label="Previous Image"
             >
-              <ChevronLeft size={32} className="text-black-800 dark:text-black-200" />
+              <ChevronLeft
+                size={32}
+                className="text-black-800 dark:text-black-200"
+              />
             </button>
 
             {/* Nút Next */}
@@ -99,7 +137,10 @@ export default function ConditionForEnteringATradePage() {
               className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
               aria-label="Next Image"
             >
-              <ChevronRight size={32} className="text-black-800 dark:text-black-200" />
+              <ChevronRight
+                size={32}
+                className="text-black-800 dark:text-black-200"
+              />
             </button>
 
             {/* Hiển thị số ảnh */}

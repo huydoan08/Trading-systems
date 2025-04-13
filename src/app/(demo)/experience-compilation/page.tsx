@@ -36,7 +36,7 @@ export default function CryptoJournalPage() {
     setIsLoading(true);
     try {
       // Simulate API delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      await new Promise(resolve => setTimeout(resolve, 500));
       
       // Simulate API response
       const startIndex = (page - 1) * ITEMS_PER_PAGE;

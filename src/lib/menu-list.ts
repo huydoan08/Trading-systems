@@ -49,7 +49,7 @@ export function getMenuList(pathname: string): Group[] {
           icon: AlignHorizontalDistributeCenter,
           submenus: [
             {
-              href: "/conditions-for-entering-a-trade",
+              href: "/trade-entry-conditions",
               label: "Bộ Tiêu Chí Vào Lệnh"
             },
             {
@@ -101,7 +101,7 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/quintessence-rsi",
+          href: "/technical-analysis",
           label: "Phân Tích Kĩ Thuật",
           icon: Wallpaper,
           submenus: [],
@@ -113,7 +113,7 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/psychological-mastery",
+          href: "/trading-psychology",
           label: "Tâm Lý Giao Dịch",
           icon: Sprout,
           submenus: []
@@ -147,7 +147,7 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/revenue",
+          href: "/performance-report",
           label: "Báo Cáo Kết Quả",
           icon: LucideFileBarChart,
           submenus: [],
@@ -159,7 +159,7 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/personal-growth",
+          href: "/mentorship",
           label: "Tầm Sư Học Đạo",
           icon: PersonStandingIcon,
           submenus: []
@@ -170,7 +170,7 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/crypto-journal",
+          href: "/experience-compilation",
           label: "Tổng Hợp Kinh Nghiệm",
           icon: Footprints,
           submenus: []
@@ -181,7 +181,7 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/common-mistakes-in-trading",
+          href: "/serious-mistake",
           label: "Sai Lầm Nghiêm Trọng",
           icon: Ghost,
           submenus: []

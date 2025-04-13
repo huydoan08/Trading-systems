@@ -1,26 +1,25 @@
 "use client";
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { Card, CardContent } from "@/components/ui/card";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Label } from "@/components/ui/label";
-import { duringTradeExecution } from "@/data/data";
-import { auth } from "@/firebaseConfig";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
-import { onAuthStateChanged } from "firebase/auth";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { onAuthStateChanged, getAuth } from "firebase/auth";
+import { buddhism, imagesPersonal } from "@/data/data";
+import { ExpandableCard } from "@/app/component/ExpandableCard/ExpandableCard";
 
-const images = ["/manage-order/7.QLL tăng.png", "/manage-order/6.QLL giảm.png"];
-
-export default function DuringTradeExecutionPage() {
+export default function PersonalGrowthPage() {
+  const sidebar = useStore(useSidebar, (x) => x);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
-  const sidebar = useStore(useSidebar, (x) => x);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const imageRef = useRef<HTMLDivElement>(null);
+
+  const auth = getAuth();
   const router = useRouter();
-  const imageContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -28,82 +27,60 @@ export default function DuringTradeExecutionPage() {
         router.push("/");
       }
     });
-
     return () => unsubscribe();
   }, [router]);
 
   useEffect(() => {
-    const updateHeight = () => {
-      setWindowHeight(window.innerHeight);
-    };
-
-    updateHeight();
-    window.addEventListener("resize", updateHeight);
-    return () => window.removeEventListener("resize", updateHeight);
+    const handleResize = () => setWindowHeight(window.innerHeight);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const scrollToImage = () => {
-    if (imageContainerRef.current) {
-      imageContainerRef.current.scrollIntoView({
-        behavior: "instant",
-        block: "nearest",
-      });
-    }
+    imageRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
   };
 
   const nextImage = () => {
     setCurrentIndex((prev) => {
-      const next = (prev + 1) % images.length;
-      scrollToImage();
-      return next;
+      const newIndex = (prev + 1) % imagesPersonal.length;
+      return newIndex;
     });
+    scrollToImage();
   };
 
   const prevImage = () => {
     setCurrentIndex((prev) => {
-      const next = (prev - 1 + images.length) % images.length;
-      scrollToImage();
-      return next;
+      const newIndex = (prev - 1 + imagesPersonal.length) % imagesPersonal.length;
+      return newIndex;
     });
+    scrollToImage();
   };
 
   if (!sidebar) return null;
 
   return (
-    <ContentLayout title="Hệ Thống Giao Dịch">
-      <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
-        <CardContent className="p-6 space-y-4">
-          <div className="font-bold text-lg text-black-800 dark:text-white">
-            Trong khi vào lệnh giao dịch:
-          </div>
-          <div className="space-y-2">
-            {duringTradeExecution.map((item, idx) => (
-              <div key={idx} className="flex items-start space-x-2">
-                <Checkbox />
-                <Label className="text-black-700 font-semibold dark:text-white">
-                  {item}
-                </Label>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-
+    <ContentLayout title="Phát triển bản thân.">
+      {buddhism.map((bud, index) => (
+        <ExpandableCard
+          key={index}
+          title={bud.title}
+          content={bud.content}
+          isOpen={openIndex === index}
+          onClick={() => setOpenIndex(openIndex === index ? null : index)}
+        />
+      ))}
       <Card
         className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
-        style={{
-          height: `${windowHeight - 80}px`,
-        }}
+        style={{ height: `${windowHeight - 80}px` }}
+        ref={imageRef}
       >
         <CardContent className="p-6 space-y-4 h-full">
-          <div
-            ref={imageContainerRef}
-            className="relative w-full h-full overflow-hidden rounded-lg"
-          >
+          <div className="relative w-full h-full overflow-hidden rounded-lg">
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentIndex}
-                src={images[currentIndex]}
+                src={imagesPersonal[currentIndex]}
                 alt={`Mẫu ${currentIndex + 1}`}
                 className="w-full h-full object-contain"
                 initial={{ opacity: 0, x: 100 }}
@@ -113,7 +90,6 @@ export default function DuringTradeExecutionPage() {
               />
             </AnimatePresence>
 
-            {/* Nút Prev */}
             <button
               onClick={prevImage}
               className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
@@ -122,7 +98,6 @@ export default function DuringTradeExecutionPage() {
               <ChevronLeft size={32} className="text-black-800 dark:text-black-200" />
             </button>
 
-            {/* Nút Next */}
             <button
               onClick={nextImage}
               className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
@@ -131,9 +106,8 @@ export default function DuringTradeExecutionPage() {
               <ChevronRight size={32} className="text-black-800 dark:text-black-200" />
             </button>
 
-            {/* Hiển thị số ảnh */}
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black/60 text-white text-sm px-3 py-1 rounded-full">
-              {currentIndex + 1} / {images.length}
+              {currentIndex + 1} / {imagesPersonal.length}
             </div>
           </div>
         </CardContent>

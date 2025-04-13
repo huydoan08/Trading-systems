@@ -1,4 +1,4 @@
-import { YearlyData } from "@/app/(demo)/revenue/page";
+import { YearlyData } from "@/app/(demo)/performance-report/page";
 
 export const experience = [
   {
@@ -130,9 +130,7 @@ export const allData: YearlyData = {
 };
 
 export const afterTraderCloses = [
-  "Không cố gắng tìm cơ hội vào lệnh ngay sau khi chạm Stoploss, TakeProfit.",
-  "Ghi chép nhật kí giao dịch một cách tỉ mỉ, cẩn thận, chi tiết.",
-  "Quên đi kết quả giao dịch và chỉ giữ lại cho mình bài học."
+  "Xuất hiện mẫu hình suy yếu tại khung thời gian H1"
 ];
 
 export const buddhism = [
