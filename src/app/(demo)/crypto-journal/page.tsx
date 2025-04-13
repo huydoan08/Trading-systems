@@ -48,7 +48,7 @@ export default function CryptoJournalPage() {
         return;
       }
 
-      setItems(prev => [...prev, ...newItems]);
+      setItems(prev => [...prev, ...newItems] as any);
       setPage(prev => prev + 1);
     } catch (error) {
       console.error('Error fetching items:', error);
@@ -109,7 +109,7 @@ export default function CryptoJournalPage() {
         <ExpandableCard
           key={index}
           title={item.title}
-          content={item.content}
+          content={item.content as any}
           isOpen={openIndex === index}
           onClick={() => setOpenIndex(openIndex === index ? null : index)}
         />
