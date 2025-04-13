@@ -8,23 +8,54 @@ import { useRouter } from "next/navigation";
 import { auth } from "@/firebaseConfig";
 import { ExpandableCard } from "@/app/component/ExpandableCard/ExpandableCard";
 import { experience } from "@/data/data";
-import { useState, useEffect, useRef } from "react";
-import { ArrowUpFromDot, Loader } from "lucide-react";
+import { useState, useEffect, useRef, useCallback } from "react";
+import { Loader } from "lucide-react";
 
 const ITEMS_PER_PAGE = 6;
+
+// Simulate API response type
+interface ExperienceItem {
+  title: string;
+  content: string;
+}
 
 export default function CryptoJournalPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const router = useRouter();
-  const [visibleCount, setVisibleCount] = useState(ITEMS_PER_PAGE);
+  const [items, setItems] = useState<ExperienceItem[]>([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [hasMore, setHasMore] = useState(true);
+  const [page, setPage] = useState(1);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const loadMoreRef = useRef<HTMLDivElement>(null);
 
-  const loadMore = () => {
-    setVisibleCount((prev) => prev + ITEMS_PER_PAGE);
-  };
+  // Simulate API call
+  const fetchItems = useCallback(async () => {
+    if (!hasMore || isLoading) return;
+    
+    setIsLoading(true);
+    try {
+      // Simulate API delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Simulate API response
+      const startIndex = (page - 1) * ITEMS_PER_PAGE;
+      const endIndex = startIndex + ITEMS_PER_PAGE;
+      const newItems = experience.slice(startIndex, endIndex);
+      
+      if (newItems.length === 0) {
+        setHasMore(false);
+        return;
+      }
 
-  const loadLess = () => {
-    setVisibleCount((prev) => Math.max(prev - ITEMS_PER_PAGE, ITEMS_PER_PAGE));
-  };
+      setItems(prev => [...prev, ...newItems]);
+      setPage(prev => prev + 1);
+    } catch (error) {
+      console.error('Error fetching items:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  }, [page, hasMore, isLoading]);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -34,6 +65,32 @@ export default function CryptoJournalPage() {
     });
     return () => unsubscribe();
   }, [router]);
+
+  // Initial load
+  useEffect(() => {
+    fetchItems();
+  }, []);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          fetchItems();
+        }
+      },
+      { threshold: 1.0 }
+    );
+
+    if (loadMoreRef.current) {
+      observerRef.current.observe(loadMoreRef.current);
+    }
+
+    return () => {
+      if (observerRef.current) {
+        observerRef.current.disconnect();
+      }
+    };
+  }, [fetchItems]);
 
   const sidebar = useStore(useSidebar, (x) => x);
   if (!sidebar) return null;
@@ -48,7 +105,7 @@ export default function CryptoJournalPage() {
         </CardHeader>
       </Card>
 
-      {experience.slice(0, visibleCount).map((item, index) => (
+      {items.map((item, index) => (
         <ExpandableCard
           key={index}
           title={item.title}
@@ -57,12 +114,15 @@ export default function CryptoJournalPage() {
           onClick={() => setOpenIndex(openIndex === index ? null : index)}
         />
       ))}
-      <div className="flex justify-center mt-4 space-x-4">
-        {visibleCount < experience.length && (
-          <Loader onClick={loadMore} className="cursor-pointer" />
-        )}
-        {visibleCount > ITEMS_PER_PAGE && <ArrowUpFromDot onClick={loadLess} />}
-      </div>
+      
+      {hasMore && (
+        <div 
+          ref={loadMoreRef}
+          className="flex justify-center items-center p-4"
+        >
+          {isLoading && <Loader className="animate-spin" />}
+        </div>
+      )}
     </ContentLayout>
   );
 }
