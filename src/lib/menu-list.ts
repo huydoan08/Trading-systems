@@ -170,17 +170,6 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/experience-compilation",
-          label: "Tổng Hợp Kinh Nghiệm",
-          icon: Footprints,
-          submenus: []
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
           href: "/serious-mistake",
           label: "Sai Lầm Nghiêm Trọng",
           icon: Ghost,
@@ -217,6 +206,17 @@ export function getMenuList(pathname: string): Group[] {
           href: "/story-telling",
           label: "Những Câu Chuyện Hay",
           icon: Bird,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/experience-compilation",
+          label: "Tổng Hợp Kinh Nghiệm",
+          icon: Footprints,
           submenus: []
         }
       ]

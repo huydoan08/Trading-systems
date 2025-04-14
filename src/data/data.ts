@@ -2,111 +2,47 @@ import { YearlyData } from "@/app/(demo)/performance-report/page";
 
 export const experience = [
   {
-    title: "Ngày 10-04-2025 *** Sự Bình An ***",
+    title: "Sự Bình An",
     content: [
       "Có rất nhiều người chọn cách là ngồi hàng giờ trước máy tính, để giao dịch mua bán loạn xạ, nhưng có rất nhiều người họ chọn phong cách rất nhẹ nhàng, họ thưởng thức ly trà, họ đọc sách, nghiền ngẫm và những lệnh của họ vẫn tạo ra lợi nhuận rất tốt, vậy thì trong trading không phải cứ giao dịch nhiều là tốt mà yếu tố lợi nhuận phải đặt lên hàng đầu, vào lệnh giao dịch phải làm sao tối ưu được, phải chọn được điểm vào lệnh đẹp, tối ưu được khi lợi nhuận nó đến, và cắt lỗ sớm nhất khi mà thua lỗ nó đến, làm sao thua lỗ phải ít và lợi nhuận cứ để cho nó chạy, nhưng đám đông toàn làm ngược lại.\n\nKhi hiểu được quy luật vận hành của thị trường thì chúng ta cần biết cách kiên nhẫn chờ đợi, nhiều người chờ đợi trong một trạng thái rất là bất an, lo lắng, nhỡ ra lỡ con sóng này thì sao, nhỡ giá nó tăng nữa mà nó không về vùng mua thì sao, lúc này chúng ta lại nôn nóng hấp tấp vào mua, rồi vẫn là những khoản thua lỗ, những thứ này để hiểu được cần một quá trình dài đi cùng thị trường, và khi hiểu được thì đầu tư rất là nhẹ nhàng, thoải mái và bình an.\n\nNếu đi với thị trường tài chính thì đừng để những cây nến xanh đỏ nó làm ảnh hưởng tới tâm lý của chúng ta, đừng để thị trường nó dày vò chúng ta, thì để làm được điều này cần phải thực sự hiểu được bản chất, phải làm sao đào sâu vào trong tâm thức, vì chỉ khi đào sâu vào trong tâm thức thì chúng ta mới hiểu được ý nghĩa của việc trading và đầu tư, cái sự quý giá của sự bình an trong trading và đầu tư..."
     ]
   },
   {
-    title: "Ngày 09-04-2025 *** Sự nghiêm túc ***",
+    title: "Sự nghiêm túc",
     content: [
       "Để có thể đi đường dài cùng với thị trường thì bắt buộc mỗi cá nhân phải tự xây dựng cho mình một hệ thống giao dịch, việc này tốn rất nhiều thời gian và công sức.\n\nĐa số nhiều người thua là bởi vì họ không có một hệ thống giao dịch, không thực sự có tư duy đúng về nghề, không thật sự nghiêm túc đào sâu đến tận cùng.\n\nSẽ là vô nghĩa nếu thắng được 3 tháng, 6 tháng....nhưng lại thua hết tất cả trong 1 ngày...\n\nThế nên, chỉ có hệ thống giao dịch và ý thức tuân thủ nó tuyệt đối, cũng như quản trị tâm, hiểu chính mình...đó là chìa khoá giúp bạn đi xa và hiểu về nghề này.\n\nHãy cứ thật chậm rãi, làm tốt bài toán quản trị rủi ro trong quá trình xây dựng hệ thống giao dịch. Chắc chắn các bạn sẽ đối diện rất nhiều khó khăn, nhưng thực sự...khó khăn càng lớn, có những cú tát càng đau...thì bài học mới thấm.\n\nNhưng nhớ kỹ: Đừng để nhiều bài học đau đớn đến với bạn...vì sẽ có nhiều người sẽ gục ngã và ko vượt qua được.\n\nHãy làm tốt bài toán quản trị rủi ro, hãy làm sao cho phép mình có cơ hội làm lại, hãy làm sao thua mà ko ảnh hưởng gì đến cuộc sống của bạn. Cách tốt nhất là dùng một số tiền rất nhỏ, giao dịch cực kỳ thận trọng...và bài học sẽ hình thành.."
     ]
   },
   {
-    title: "Ngày 04-04-2025",
+    title: "Quy luật nhân quả",
     content: [
       "Quy luật nhân quả trong đầu tư cũng như trong cuộc sống...\n\n Muốn có được cái QUẢ là đầu tư THẮNG kiếm được nhiều tiền, thì cái nhân gieo bây giờ là sự hiểu biết, kiến thức, đi cùng thị trường, tận tâm, nỗ lực, đào sâu, phải giỏi thì quả ngọt sẽ đến.\n\n Nếu gieo QUẢ là sự ỷ lại vào người khác, không có sự nỗ lực thì chắc chắn sẽ đến giai đoạn thị trường khó xử lý, và nếu không có kĩ năng thực sự thì sẽ không biết xử lý như thế nào...\n\nNó không hề đơn giản đâu, nó là một quá trình phát triển bản thân, đào sâu tâm thức...hoàn thiện chính mình...\n\nGừng càng già càng cay, khi già đi thì sức khoẻ giảm, khó có thể làm những công việc chân tay mãi được, chắc chắn phải dùng trí tuệ để kiếm tiền và xây dựng danh mục tài sản lớn."
     ]
   },
   {
-    title: "Ngày 03-04-2025  *** Lộ Trình Phát Triển Của Một Trader***",
+    title: "Lộ Trình Phát Triển Của Một Trader",
     content: [
       "HÀNH TRÌNH CỦA MỘT TRADER PHẢI TRẢI QUA:\n\nGiai đoạn 1: Ngây thơ vô số tội, không có một kĩ năng hay kiến thức gì về trading, nghe ai đó nói là trading kiếm tiền dễ quá, thấy người ta show lãi và tìm đến trading, vào thị trường với suy nghĩ rất ngây thơ là vào để kiếm tiền, nhưng họ không ý thức được kiến thức và năng lực của họ chưa có, chưa có thái độ open để học tập, nên giai đoạn này đa số sẽ bỏ cuộc vì thua lỗ, không kiếm được tiền...\n\nGiai đoạn 2: Ý thức được việc là à, để có thể kiếm được tiền trong thị trường này thì cần phải học tập, trang bị kiến thức, tuy nhiên là chưa biết học tập như thế nào, lúc này bắt đầu họ tìm kiếm kiến thức trên mạng internet hoặc mua sách về nghiên cứu, và lúc này họ nghĩ đơn giản là chỉ cần học tập, chỉ cần có một phương pháp hay công cụ chỉ báo nào đó là có thể kiếm được tiền, giống như kiểu đi tìm kiếm chén thánh vậy, và tầm 60% sẽ bị rụng trong giai đoạn này.\n\nGiai đoạn 3: Lúc này họ hiểu ra được là để có thể thành công trong trading thì cần phải có một hệ thống giao dịch cho riêng mình, lúc này họ bắt đầu open để học tập, khi này chỉ tập trung vào việc hoàn thiện hệ thống, và quản trị cảm xúc rất tốt, lúc này không còn đi chống đối lại thị trường, bắt đầu bỏ qua câu chuyện làm giàu nhanh từ trading, hiểu được bài toán quản trị vốn và quản trị rủi ro là như thế nào, và bắt đầu quan sát những người khác và mỉm cười sao ngày trước mình vô minh vậy.\n\nGiai đoạn 4: Hoàn thiện năng lực một cách có ý thức, lúc này họ đã ở một level khá cao rồi , giao dịch theo phương pháp gì sẽ trung thành với phương pháp giao dịch đó, lúc này sẽ tập trung tối ưu hệ thống giao dịch của chính mình, hiểu được câu chuyện thắng thua trong trading là câu chuyện hết sức bình thường, nhưng kiểm soát được số lệnh thua rất là ít, tỉ lệ số lệnh thắng nhiều cũng như gồng lời rất là tốt, cũng như bắt đầu duy trì lợi nhuận một cách ổn định, lúc này tự giao dịch, không tranh luận với bất kì ai, không nói lên hay chia sẻ nhận định ra bên ngoài vì đơn giản họ ý thức được rằng là mình chả biết gì về thị trường nhiều, họ chỉ biết là với đi theo với dự phóng như vậy nếu đúng thì họ kiếm được lợi nhuận bao nhiêu,còn nếu sai thì họ chấp nhận trả giá cho một stoploss là bao nhiêu, và mọi thứ diễn ra rất là nhẹ nhàng, họ xem nhẹ việc được và mất, dù thị trường có đi như thế nào đi nữa họ vẫn rất thoải mái.\n\nGiai đoạn 5: Level cao nhất, lúc này năng lực vô thức, thấy nó là một công việc ngày qua ngày một cách vô cảm, không còn cảm xúc với trading nữa, vào lệnh khi có setup đẹp bằng không đứng ngoài ung dung tự tại..."
     ]
   },
   {
-    title: "Ngày 02-04-2025",
-    content: [
-      "CỰC QUAN TRỌNG:\n\nMột số lưu ý quan trọng:\n\nChúng ta phải thừa nhận rằng thị trường crypto này là một thị trường thao túng giá, và chúng ta chỉ follow theo dựa vào các dấu hiệu.\nNhững dấu hiệu thì luôn luôn chỉ mang tính xác suất không chắc chắn một điều gì cả.\nĐiều quan trọng nhất là tập trung vào kĩ năng xử lý chứ không phải dự đoán giá.\nPhải tách biệt mình ra khỏi đám đông, đám đông luôn là nhóm mất tiền, nhưng không có nghĩa là mình cũng sẽ mất tiền.\nChỉ làm theo systems, không giao dịch theo cảm tính, không để cho cảm xúc xen vào các quyết định giao dịch.\n\nPhân tích chart BTC ngày 02-04-2024\n\n--------------\n\nĐầu tiên nhìn ở khung 1M: Về cơ bản khúc này RSI đã cắt xuống đường trung bình nhanh, chưa cắt xuống đường trung bình chậm, chúng ta có thể kết luận là sideway, nhưng thực tế lực mua giai đoạn này yếu, kết thúc cây nến của tháng 3 thể hiện sự lưỡng lự.\n\n Để view rõ hơn thì chúng ta sẽ vào khung nhỏ hơn là khung 1W, 1W thì RSI và 2 đường trung bình vẫn đang mở rộng, đóng nến tuần trước vẫn thể hiện sự lưỡng lự, nếu nhìn RSI khúc này thì đang mở rất rộng nhưng vẫn giữ cấu trúc 0.5 của FIBO, thực sự mình thấy khúc này là nhạy cảm, với dữ liệu trong quá khứ thì khả năng cao vẫn sẽ có 1 sóng hồi, RSI ước lượng đã đi khoảng 50% hành trình và đang có dấu hiệu tạo đáy, để kết luận thì chắc chắn là đang ở vùng giảm, nhưng nhìn rõ hơn nữa thì phải về các khung nhỏ hơn để xem.\n\n1D khúc này thì mình cần quan sát, và đang thấy lực bán đang yếu, có sự tham gia vào của lực mua, chúng ta đang thấy D1 đang bắt đầu sideway trong vùng RSI 40-60.\n\n H4 RSI cắt qua 2 đường trung bình, xu hướng tăng, RSI vẫn đang tiếp tục mở rộng, cần tiếp tục quan sát tiếp.\n\n --------------\n\n ======> Chiến lược lúc này thì mình sẽ ưu tiên đánh sóng dài ở khung 1D, target lên vùng 100k$, chấp nhận bỏ qua những biến động nhỏ của thị trường, Altcoin lúc này cũng đã tạo đáy và đang trong vùng tích lũy khá đẹp có thể vào nhưng cần quản lý phân bổ vốn không allin"
-    ]
-  },
-  {
-    title: "Ngày 01-04-2025",
-    content: [
-      "Tiền sẽ  là kết quả của việc trading và đầu tư giỏi. Bạn không cần phải có quá nhiều tiền trong giai đoạn đầu tiên...\nBạn chỉ cần nghiêm túc với số tiền 100$ như của mình. Thật sự nghiêm túc đến tận cùng và học cách gia tăng nó đều đặn trong 6 tháng, 1 năm.\nKhi làm được điều đó trong 6 tháng, 1 năm thì bạn sẽ rút ra được rất nhiều bài học, và từ đó bạn sẽ có tư duy khác với nghề trade này.\n-----------\nTrading đòi hỏi sự ổn định, nếu biết cách tạo ra lợi nhuận với 100$, bạn cũng sẽ biết cách tạo ra lợi nhuận với số vốn 10.000$, 100.000$ cũng tương tự như vậy...",
-    ]
-  },
-  {
-    title: "Ngày 31-03-2025",
-    content: [
-      "Khung M: RSI sắp chạm đường TBC, khả năng cao sẽ cắt xuống.\nKhung W: RSI nằm dưới 2 đường TB, đang cắt xuống với 1 góc rất rộng.\nKhung D: RSI đã bắt đầu cắt xuống 2 đường TB, đường TBN cũng chuẩn bị cắt xuống.\nKhung H4: RSI đã chạm xuống vùng 30, vẫn đang tiếp tục mở rộng.\n------------------\nThật khó để khuyên ai đó nên hành động như thế nào vì quyết định như nào là việc của mỗi người.\n Với mình thì hiện tại mình không quá tập trung vào việc dự đoán hướng đi của thị trường nữa mà mình tập trung vào \"KĨ NĂNG XỬ LÝ và QUẢN TRỊ RỦI RO cho thật tốt\".\n------------\n ===>Trading là một chuỗi kết quả của rất nhiều lệnh giao dịch và lệnh này cũng chỉ là một lệnh trong rất nhiều lệnh mà thôi. Đừng mang tư duy đặt cược allin cho 1 lệnh là được.",
-    ]
-  },
-  {
-    title: "Ngày 28-03-2025",
+    title: "Sự kì vọng cao quá",
     content: [
       "Thông thường người ta thua lỗ bởi vì sự kỳ vọng vượt quá năng lực của chính họ...\n\nCó những thứ chỉ cần bớt tham lại, nhẹ nhàng quan sát thì bạn đều có thể nhìn ra được.\n\nBạn không phải đang chiến đấu với market, mà bạn chỉ đang chiến đấu với lòng tham của chính mình.\n\nCó những thứ chỉ cần bớt tham lại, mọi chuyện sẽ rất dễ dàng... nhưng khi bạn đẩy lòng tham của mình lớn lên, mong muốn nhiều hơn... thì mọi khó khăn sẽ đến từ đó.\n\nChúng ta KHÔNG THỂ kiểm soát được hướng đi của thị trường, nhưng chúng ta có thể kiểm soát được rủi ro mà chúng ta có thể đối mặt khi mọi thứ đi ngược lại với dự phóng.\n\nNếu bạn tính toán được và biết cách chấp nhận... thì thị trường đi lên, đi xuống hay đi ngang đều nằm trong kế hoạch của bạn cả rồi.\n\nHiểu được những điều này, bạn nương theo thị trường một cách nhẹ nhàng... thật sự những điều này chỉ khi bớt tham lại, bạn sẽ nhìn ra được...\n\nĐiều quan trọng trong đầu tư... đích đến thật sự của bạn muốn gì...\n\nMục tiêu của mình chỉ là đi cùng thị trường và bình an, vậy là đủ 🙂"
     ]
   },
   {
-    title: "Ngày 27-03-2025",
+    title: "Sự tập trung",
     content: [
       "Hãy tập trung một thứ cho thật giỏi...mà ra tiền...thay vì cái gì cũng biết mà đang mất tiền!\n\nLý Tiểu Long từng có một câu nói nổi tiếng rằng: Tôi không sợ người luyện 10.000 cú đá, tôi chỉ sợ người luyện 1 cú đá 10.000 lần.\n\nTrong phân tích kĩ thuật cũng vậy, việc bạn sử dụng công cụ chỉ báo nào không quan trọng, bạn biết sử dụng bao nhiêu bộ công cụ chỉ báo càng không có ý nghĩa gì nếu như bạn không thực sự hiểu sâu về bản chất của công cụ chỉ báo đó.\n\nĐôi khi việc biết nhiều phương pháp quá thậm chí còn làm hại chính bạn vì nhiều phương pháp quá thì sinh ra rối loạn đao pháp rồi dẫn đến bị tẩu hỏa nhập ma.\n\nTrong các bộ phim kiếm hiệp thì các đại cao thủ võ lâm thường chỉ có cho mình một món võ công thượng thừa là đã đủ để tung hoành giang hồ được rồi\n\n Rồi chung quy lại là phương pháp của bạn có đang tạo ra lợi nhuận ổn định hay không, với mình thì đích đến vẫn là tìm ra thứ phù hợp với bản thân mình và tiếp tục phát huy nó vậy là đủ."
     ]
   },
   {
-    title: "Ngày 26-03-2025",
+    title: "Sự định hướng đúng",
     content: [
       "Cài nút áo đầu tiên đã sai rồi, nhưng đến nút cuối cùng mới phát hiện, vì vậy không thể không cởi hết các nút ra.\n\nCó 1 số việc, ngay từ đầu đã sai rồi, nhưng đến lúc không thể cứu vãn mới chịu thừa nhận.\n\nĐời người, tiếc nuối lớn nhất chính là dễ dàng từ bỏ thứ không nên từ bỏ, nhưng lại cố chấp kiên trì cái không nên kiên trì...\n\n\Trong trading cũng vậy, sai lầm lớn nhất là không biết lúc nào nên kiên trì và lúc nào nên từ bỏ.\n\nTừ bỏ quá sớm:\n\nBạn có một phương pháp tốt, nhưng chỉ vì vài lần thua lỗ, bạn bỏ cuộc và đi tìm một phương pháp khác.\n\nBạn cắt lệnh quá sớm vì sợ mất lợi nhuận, nhưng sau đó giá lại đi đúng hướng và bạn bỏ lỡ lợi nhuận lớn.\n\nCố chấp với thứ không nên kiên trì:\n\nGiữ một lệnh thua lỗ quá lâu chỉ vì \"hy vọng giá quay lại.\"\n\nCố gắng \"bắt đáy\" hoặc \"bắt đỉnh\" mà không có tín hiệu rõ ràng.\n\nLiên tục nạp tiền để gồng lệnh thay vì chấp nhận sai lầm và học hỏi từ nó.\n\nNắm giữ một đồng coin rác trong khi tài khoản đã chia 3 chia 5, chỉ vì \"hi vọng nó sẽ go to the moon\".",
-
     ]
   },
-  {
-    title: "Ngày 25-03-2025",
-    content: [
-      'Thực ra vẫn còn nhiều bạn có những suy nghĩ rất ngây thơ...đại loại như là: Túm lại bây giờ mua coin nào, cổ phiếu nào...chỉ cần cho cái tên.\n\nNhưng thực tế...đầu tư đâu đơn giản thế. Nếu các bạn quan sát bên ngoài cộng đồng thì sẽ thấy là với tư duy như vậy người ta thua lỗ, bị chia tài khoản và cháy tài khoản rất nhiều với tư duy như vậy.\n\nNên khi mà mình hiểu ra điều này mình không chia sẻ kèo cọt, hạn chế chia sẻ nhận định. Không phải mình sợ hay ích kỷ gì, mà là nếu làm điều đó cho bạn thì đích đến bạn cũng sẽ thua mà thôi.\n\nThay đổi tư duy trước, học tập và đào sâu...\n\nSẽ có giai đoạn thuận lợi, sẽ có giai đoạn khó khăn...nhưng mình tin là bạn sẽ học được rất nhiều trong những giai đoạn khó khăn, còn mà mua đâu thắng đó thì chỉ làm cho bạn kiêu ngạo, tự cao...và chắc chắn là sau đó sẽ sấp mặt.\n\nNếu bạn có sự mong cầu học tập, hãy đặt mục tiêu học tập...thay vì mong cầu kiếm được tiền. Bạn sẽ làm rất tốt...\n\nCòn nếu thực sự mục tiêu của bạn là kiếm tiền vội vàng, bạn sẽ chẳng học được gì nhiều...đặc biệt khi mà có những thứ không thuận lợi đến thì trong bạn luôn là sự trách móc, oán giận...thay vì nhìn ra những bài học.\n\nHãy quan sát ở bên ngoài cộng đồng mà xem...họ đi chửi người này, chửi người kia...đã từng chia sẻ hay chỉ họ mua coin...nhưng người quyết định cuối cùng vẫn là bản thân họ, họ là người click và bấm nút mua bán...xong rồi đi chửi người khác.\n\nThắng thì họ cho rằng họ giỏi, thua thì họ đi đổ lỗi cho người khác...đám đông luôn vậy...khi hiểu ra điều này thì mình hầu như không đi hóng hớt kèo cọt, mà chỉ tập trung vào bản thân, và cũng không share kèo ra ngoài vì việc làm đó không có giá trị gì, vô ích và luôn rình rập "hoạ" cho bản thân.\n\nNgười ta không biết kỹ năng xử lý, đúng lần 1, đúng lần 2 nhưng chỉ cần 1 lần sai...họ sẽ mất hết và trách bạn...\n\nMình đã trải qua rồi, nên đó là lý do tại sao ở đây mình chỉ dừng lại ở mức độ chia sẻ kiến thức, kỹ năng xử lý....chứ không nói về các hành động mua bán. Vì nếu bạn không hiểu...vô tình mình làm hại chính bạn.\n\nCác bạn cần phải có chiều sâu, học tập và dành thời gian suy ngẫm...đừng vội vàng quyết định một thứ gì khi mình chưa hiểu rõ...\n\nĐích đến của trading và đầu tư là phục vụ cho cuộc sống. Hãy làm sao đầu tư một cách thoải mái và bình an...dù kết quả thế nào...vẫn thoải mái, vẫn sống tốt...đó mới là cách đầu tư đúng đắn.\n\n'
-    ]
-  },
-  {
-    title: "Ngày 24-03-2025",
-    content: [
-      "Khung 1M => RSI cắt qua TBN, sắp chạm tới TBC, xu hướng bó sát 2 ĐTB, sóng tăng đi được khoảng 80% HT.",
-      "Khung 1W => RSI cắt qua 2 DTB, xu hướng tiếp tục mở rộng, đang trong nhịp điều chỉnh, sóng giảm đi được khoảng 25% HT.",
-      "Khung D1 => RSI nằm trên 2 DTB, xu hướng tiếp tục tăng, sóng tăng đi được khoảng 40% HT.",
-      "Khung H4 => RSI nằm trên 2 DTB, đang mở rộng.",
-      "Khung H1 => RSI nằm trên 2 DTB, sóng tăng đã đi gần hết HT, lực tăng không mạnh, khả năng sẽ có nhịp điều chỉnh nhẹ, nếu điều chỉnh xong vẫn giữ cấu trúc fibo 0.382 thì vẫn kì vọng tăng tiếp.",
-      "DÀI HẠN: Chờ khung W đi gần hết hành trình giảm sẽ phân bổ vốn vào để gom hàng dần.",
-      "TRUNG HẠN: Khung D RSI đã đi xa vị thế không còn đẹp nữa, lực mua không thực sự mạnh, đang đi ngược xu hướng khung W.",
-      "NGẮN HẠN: Không tham gia, có thể tăng tiếp nhưng con sóng này rủi ro nhiều hơn cơ hội."
-    ]
-  },
-  {
-    title: "Ngày 21-03-2025",
-    content: [
-      "Khung 1M => RSI cắt qua TBN, sắp chạm tới TBC, xu hướng bó sát 2 ĐTB, đo fibo vẫn giữ cấu trúc 0.5, sóng tăng đi được khoảng 80% HT.",
-      "Khung 1W => RSI cắt qua 2 DTB, xu hướng tiếp tục mở rộng, đang trong nhịp điều chỉnh, sóng giảm đi được khoảng 25% HT.",
-      "Khung D1 => RSI cắt qua 2 DTB, xu hướng tăng, sóng tăng đi được khoảng 20% HT.",
-      "Khung H4 => RSI bó sát 2 DTB, thiên về sideway biên độ hẹp.",
-      "Khung H1 => RSI giảm, sóng giảm đi được khoảng 80% HT.",
-      "DÀI HẠN: Chờ khung W đi gần hết hành trình giảm sẽ phân bổ vốn vào để gom hàng dần.",
-      "TRUNG HẠN: Khung D bắt đầu sóng tăng, có thể tham gia nhưng lưu ý đang đi ngược xu hướng khung W, khá nguy hiểm.",
-      "NGẮN HẠN: Khung H4 sideway biên độ hẹp nên có thể follow theo chiến lược đánh sóng sideway hoặc ngồi ngoài chơi."
-    ]
-  },
-  {
-    title: "Ngày 20-03-2025",
-    content: [
-      "Khung 1M => RSI lưỡng lự, đo fibo vẫn giữ cấu trúc sóng tăng.",
-      "Khung 1W => RSI giảm, xu hướng tiếp tục mở rộng.",
-      "Khung D1 => RSI bó sát 2 DTB, đã kết thúc hành trình giảm.",
-      "Khung H4 => RSI tăng và đang mở rộng, mới chạm vùng 70, bắt đầu có dấu hiệu điều chỉnh.",
-      "Khung H1 => RSI tăng, chưa chạm vùng 80 có dấu hiệu điều chỉnh cần chú ý quan sát thêm.",
-      "DÀI HẠN: Chờ khung W đi gần hết hành trình giảm sẽ phân bổ vốn vào để gom hàng dần.",
-      "TRUNG HẠN: Khung D kết thúc hành trình giảm, có thể tham gia nhưng lưu ý đang đi ngược xu hướng khung W, khá nguy hiểm.",
-      "NGẮN HẠN: H4 tăng, có thể chờ nhịp điều chỉnh để tham gia."
-    ]
-  }
 ];
 
 export const allData: YearlyData = {
