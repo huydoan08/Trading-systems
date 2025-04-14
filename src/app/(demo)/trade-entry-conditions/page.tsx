@@ -9,16 +9,19 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
-import { conditionForEnteringATrade } from "@/data/data";
+import {
+  beforeOrderNotes,
+  conditionForEnteringATrade,
+} from "@/data/data";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Dot } from "lucide-react";
 
 const images = [
   "/beautiful-modal/1.Xu hướng tăng.png",
   "/beautiful-modal/2.Bắt đáy khi tạo đáy cao dần.png",
   "/beautiful-modal/3.Bắt sóng hồi của sóng tăng trước đó.png",
   "/beautiful-modal/4.Điểm vào lệnh phá trendline.png",
-  "/beautiful-modal/5.Điểm vào lệnh mô hình tam giác tăng.png",
+  "/beautiful-modal/5.Điểm vào lệnh mô hình tam giác tăng.png"
 ];
 
 export default function ConditionForEnteringATradePage() {
@@ -54,7 +57,7 @@ export default function ConditionForEnteringATradePage() {
     if (imageContainerRef.current) {
       imageContainerRef.current.scrollIntoView({
         behavior: "smooth",
-        block: "nearest",
+        block: "nearest"
       });
     }
   };
@@ -80,7 +83,7 @@ export default function ConditionForEnteringATradePage() {
       <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
         <CardContent className="p-6 space-y-4">
           <div className="font-bold text-lg text-black-800 dark:text-white">
-            Bộ tiêu chí vào lệnh giao dịch:
+            BỘ TIÊU CHÍ VÀO LỆNH GIAO DỊCH:
           </div>
           <div className="space-y-2">
             {conditionForEnteringATrade.map((item, idx) => (
@@ -94,11 +97,28 @@ export default function ConditionForEnteringATradePage() {
           </div>
         </CardContent>
       </Card>
+      <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
+        <CardContent className="p-6 space-y-4">
+          <div className="font-bold text-lg text-black-800 dark:text-white">
+            MỘT SỐ LƯU Ý:
+          </div>
+          <div className="space-y-2">
+            {beforeOrderNotes.map((item, idx) => (
+              <div key={idx} className="flex items-start space-x-2 ">
+                <Dot />
+                <Label className="text-black-700 font-semibold dark:text-white">
+                  {item}
+                </Label>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
 
       <Card
         className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
         style={{
-          height: `${windowHeight - 80}px`,
+          height: `${windowHeight - 80}px`
         }}
       >
         <CardContent className="p-6 space-y-4 h-full">

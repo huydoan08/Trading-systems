@@ -9,7 +9,7 @@ import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { Skull } from "lucide-react"
+import { Dot } from "lucide-react"
 
 export default function CommonMistakesInTradingPage() {
   const sidebar = useStore(useSidebar, (x) => x);
@@ -34,7 +34,7 @@ export default function CommonMistakesInTradingPage() {
           <div className="space-y-2">
             {commonMistake.map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2 ">
-                <Skull/>
+                <Dot/>
                 <Label className="text-black-700 font-semibold dark:text-white">
                   {item}
                 </Label>

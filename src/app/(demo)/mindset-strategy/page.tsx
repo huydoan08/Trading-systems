@@ -2,15 +2,14 @@
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-import { mindsetAndStrategy, psychologicalMastery } from "@/data/data";
+import { mindsetAndStrategy } from "@/data/data";
 import { auth } from "@/firebaseConfig";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
-import { Check } from "lucide-react";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Dot } from "lucide-react";
 
 export default function MindsetStrategyPage() {
   const sidebar = useStore(useSidebar, (x) => x);
@@ -35,7 +34,7 @@ export default function MindsetStrategyPage() {
           <div className="space-y-2">
             {mindsetAndStrategy.map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2 ">
-                <Checkbox />
+                <Dot />
                 <Label className="text-black-700 font-semibold dark:text-white">
                   {item}
                 </Label>

@@ -212,6 +212,13 @@ export const importantNotes = [
   "Cần tách mình ra khỏi ý kiến của những người khác, mọi dự phóng của người khác chỉ để tham khảo.",
   "Đứng ngoài thị trường cũng là một vị thế, chỉ vào lệnh khi có setup đẹp."
 ];
+export const beforeOrderNotes = [
+  "Chờ phá vỡ cấu trúc rồi mới vào",
+  "Kiễn nhẫn chờ giá lọt vào vùng cản, hỗ trợ & kháng cự",
+  "Nhìn vào RSI, đừng quá tập trung nhìn vào nến, hãy nhìn vào RSI và nhìn xu hướng",
+  "Chờ các tín hiệu vào lệnh như cạm bẫy, quá đà, sự thất bại của mẫu hình & mẫu nến, phá vỡ cấu trúc, mô hình đảo chiều",
+  "Xác định thời gian giữ lệnh"
+];
 
 export const faqs = [
   {
