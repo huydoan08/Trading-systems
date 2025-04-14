@@ -73,19 +73,19 @@ export function getMenuList(pathname: string): Group[] {
           icon: NotebookPen,
           submenus: [
             {
-              href: "/loss-order",
+              href: "/big-loss-order",
               label: "Các Lệnh Thua Lỗ Lớn"
             },
             {
-              href: "/loss-order",
+              href: "/small-loss-order",
               label: "Các Lệnh Thua Lỗ Nhỏ"
             },
             {
-              href: "/win-order",
+              href: "/early-take-profit",
               label: "Các Lệnh Chốt Lời Non"
             },
             {
-              href: "/win-order",
+              href: "/big-win-order",
               label: "Các Lệnh Thắng Lớn"
             },
             {

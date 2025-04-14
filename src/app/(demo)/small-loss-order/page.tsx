@@ -11,11 +11,10 @@ import { onAuthStateChanged } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 const images = [
-  "/transaction-journal/NKGD-01.png",
-  "/transaction-journal/NKGD-08.png",
+  "",
 ];
 
-export default function WinOrderPage() {
+export default function SmallLossOrderPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);

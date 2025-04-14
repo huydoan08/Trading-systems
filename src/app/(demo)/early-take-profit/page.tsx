@@ -11,10 +11,10 @@ import { onAuthStateChanged } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 const images = [
-  "/missing-chance/NKGD-07.png",
+  "",
 ];
 
-export default function MissingChangePage() {
+export default function EarlyTakeProfitPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);

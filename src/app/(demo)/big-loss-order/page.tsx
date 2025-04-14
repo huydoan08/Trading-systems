@@ -11,12 +11,10 @@ import { onAuthStateChanged } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 const images = [
-  "/transaction-journal/NKGD-02.png",
-  "/transaction-journal/NKGD-06.png",
-  "/transaction-journal/BTC-2025-03-28 164751.png"
+  ""
 ];
 
-export default function LossOrderPage() {
+export default function BigLossOrderPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
