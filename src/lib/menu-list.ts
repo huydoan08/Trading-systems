@@ -124,7 +124,7 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/",
+          href: "/mindset-strategy",
           label: "Tư Duy & Chiến Thuật",
           icon: Bird,
           submenus: []

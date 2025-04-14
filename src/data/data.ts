@@ -130,7 +130,9 @@ export const allData: YearlyData = {
 };
 
 export const afterTraderCloses = [
-  "Xuất hiện mẫu hình suy yếu tại khung thời gian H1"
+  "Không cố gắng tìm cơ hội vào lệnh ngay sau khi chạm Stoploss, TakeProfit.",
+  "Ghi chép nhật kí giao dịch một cách tỉ mỉ, cẩn thận, chi tiết.",
+  "Quên đi kết quả giao dịch và chỉ giữ lại cho mình bài học."
 ];
 
 export const buddhism = [
@@ -228,19 +230,12 @@ export const faqs = [
 ];
 
 export const quintessenceRsi = [
-  "Tín hiệu hội tụ: \"Biểu đồ giá tạo đáy sau thấp hơn đáy trước, RSI tạo đáy sau cao hơn đáy trước.\"",
-  "Tín hiệu phân kì: \"Biểu đồ giá tạo đỉnh sau cao hơn đỉnh trước, RSI tạo đáy sau thấp hơn đáy trước.\"",
-  "Dấu hiệu lực mua áp đảo: \"RSI và 2 đường trung bình mở rộng và hướng lên trên, RSI vượt ra ngoài vùng 80.\"",
-  "Dấu hiệu lực bán áp đảo: \"RSI và 2 đường trung bình mở rộng và hướng xuống dưới, RSI vượt ra ngoài vùng 20.\"",
-  "Dấu hiệu lực mua tham gia không mạnh: \"RSI chưa vượt ra ngoài vùng 80 đã cụp xuống, RSI bó sát vào 2 đường trung bình chuẩn bị cắt xuống.\"",
-  "Dấu hiệu lực bán tham gia không mạnh: \"RSI chưa vượt ra ngoài vùng 20 đã giật lên, RSI bó sát vào 2 đường trung bình chuẩn bị cắt lên.\"",
-]
-export const supportAndResistance = [
-  "Hỗ trợ & kháng cự: Vùng giá mà giá chạm và quay đầu",
-  "Hỗ trợ & kháng cự có độ tin cao khi đã Test lại \(retest\)",
-  "Tại vùng hỗ trợ và kháng cự cần quan sát phản ứng của giá",
-  "Khi giá phá qua vùng kháng cự thì vùng kháng cự đó trở thành vùng hỗ trợ và ngược lại",
-  "Khi mà giá đã test lại nhiều lần tại vùng hỗ trợ thì vùng hỗ trợ đó không còn cứng nữa và ngược lại"
+  "RSI đang nằm ở vị trí nào \( nằm ở \" trên hay dưới \" \) so với 2 đường trung bình.",
+  "Đỉnh hoặc đáy của RSI gần nhất trước đó nằm ở vùng nào.",
+  "Hành trình di chuyển của đường TBC so với đường TBN đang ở giai đoạn nào, đã bó hẹp chưa hay vẫn đang mở rộng.",
+  "Kết hợp các đỉnh hoặc đáy của RSI lại thì đang cho thấy dấu hiệu của hội tụ hay phân kì.",
+  "RSI khung H4 chạm vùng 20 => có thể vào mua SPOT, tuy nhiên xác suất cao vẫn còn 1 nhịp retest nữa.",
+  "RSI khung H1 chạm vùng 20 => cứ kiên nhẫn chờ đợi retest tiếp và xác nhận lực bán đã suy yếu mới mua SPOT."
 ]
 
 export const storyTelling =
@@ -265,9 +260,9 @@ export const storyTelling =
     }
   ]
 
-export const dataStatistic = [
-  { name: '1', profit: 20 },
-  { name: '2', loss: 10 },
+export const dataStatistic= [
+  { name: '1', profit: 20},
+  { name: '2', loss: 10},
 ];
 
 export const imagesPersonal = [
@@ -345,3 +340,7 @@ export const imagesPersonal = [
   "/personal-growth/growth-71.png",
   "/personal-growth/growth-72.png"
 ];
+
+export const mindsetAndStrategy = [
+  "Khi mà một vùng hỗ trợ hay kháng cự giá test lại nhiều lần rồi thì đó không còn là vùng hỗ trợ hay kháng cự cứng nữa. "
+]
