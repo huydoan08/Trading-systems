@@ -344,3 +344,11 @@ export const imagesPersonal = [
 export const mindsetAndStrategy = [
   "Khi mà một vùng hỗ trợ hay kháng cự giá test lại nhiều lần rồi thì đó không còn là vùng hỗ trợ hay kháng cự cứng nữa. "
 ]
+
+export const supportAndResistance = [
+  "Hỗ trợ & kháng cự: Vùng giá mà giá chạm và quay đầu",
+  "Hỗ trợ & kháng cự có độ tin cao khi đã Test lại (retest)",
+  "Tại vùng hỗ trợ và kháng cự cần quan sát phản ứng của giá",
+  "Khi giá phá qua vùng kháng cự thì vùng kháng cự đó trở thành vùng hỗ trợ và ngược lại",
+  'Khi mà giá đã test lại nhiều lần tại vùng hỗ trợ thì vùng hỗ trợ đó không còn cứng nữa và ngược lại'
+]
