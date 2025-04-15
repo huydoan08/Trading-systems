@@ -56,7 +56,8 @@ export default function HomePage() {
   const handleSignUp = async () => {
     setLoading(true);
     try {
-      await register(emailRegister, passwordRegister);
+      // await register(emailRegister, passwordRegister);
+      await register('','')
     } catch (error) {
       toast.error(`Đăng kí thất bại. ${error}`, {
         position: "top-right",
