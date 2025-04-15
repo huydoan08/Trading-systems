@@ -21,7 +21,9 @@ const images = [
   "/beautiful-modal/2.Bắt đáy khi tạo đáy cao dần.png",
   "/beautiful-modal/3.Bắt sóng hồi của sóng tăng trước đó.png",
   "/beautiful-modal/4.Điểm vào lệnh phá trendline.png",
-  "/beautiful-modal/5.Điểm vào lệnh mô hình tam giác tăng.png"
+  "/beautiful-modal/5.Điểm vào lệnh mô hình tam giác tăng.png",
+  "/beautiful-modal/Entry-06.png",
+  "/beautiful-modal/entry-07.png"
 ];
 
 export default function ConditionForEnteringATradePage() {
