@@ -11,11 +11,13 @@ import { onAuthStateChanged } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 const images = [
-  "/missing-chance/NKGD-07.png",
-  "/missing-chance/miss-chance-002.png",
+  "/safe-stop-loss-mindset/doan-day-0001.png",
+  "/safe-stop-loss-mindset/doan-day-0002.png",
+  "/safe-stop-loss-mindset/doan-day-0003.png",
+  "/safe-stop-loss-mindset/doan-day-0004.png",
 ];
 
-export default function MissingChangePage() {
+export default function SafeStopLossMindsetPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
@@ -52,7 +54,6 @@ export default function MissingChangePage() {
 
   return (
     <>
-
       <ContentLayout title="Nhật kí giao dịch.">
         <Card
           className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"

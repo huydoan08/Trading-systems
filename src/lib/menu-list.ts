@@ -91,6 +91,14 @@ export function getMenuList(pathname: string): Group[] {
             {
               href: "/missing-chance",
               label: "Bỏ Lỡ Dù Đã Thấy Cơ Hội"
+            },
+            {
+              href: "/avoid-lossing-order",
+              label: "Né Lệnh Thua Xuất Sắc"
+            },
+            {
+              href: "/safe-stop-loss-mindset",
+              label: "Tư Duy Stoploss An Toàn"
             }
           ],
           active: !isAdmin

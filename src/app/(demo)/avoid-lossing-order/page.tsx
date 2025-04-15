@@ -11,11 +11,10 @@ import { onAuthStateChanged } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 const images = [
-  "/missing-chance/NKGD-07.png",
-  "/missing-chance/miss-chance-002.png",
+ "/avoid-lossing-order/ne-lenh-thua-0001.png"
 ];
 
-export default function MissingChangePage() {
+export default function AvoidLossingOrderPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
@@ -52,7 +51,6 @@ export default function MissingChangePage() {
 
   return (
     <>
-
       <ContentLayout title="Nhật kí giao dịch.">
         <Card
           className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"

@@ -66,9 +66,9 @@ export const allData: YearlyData = {
 };
 
 export const afterTraderCloses = [
-  "Không cố gắng tìm cơ hội vào lệnh ngay sau khi chạm Stoploss, TakeProfit.",
-  "Ghi chép nhật kí giao dịch một cách tỉ mỉ, cẩn thận, chi tiết.",
-  "Quên đi kết quả giao dịch và chỉ giữ lại cho mình bài học."
+  "Khung thời gian nhỏ cho thấy dấu hiệu đảo chiều xu hướng, dấu hiệu phân kì của RSI.",
+  "Xuất hiện các mô hình giá đảo chiều xu hướng.",
+  "Giá phá qua những vùng kháng cự, hỗ trợ quan trọng ( chạm stoploss )."
 ];
 
 export const buddhism = [
@@ -118,11 +118,12 @@ export const commonMistake = [
 export const conditionForEnteringATrade = [
   "Lên chiến lược rõ ràng trước khi vào lệnh.",
   "Không cố tình đoán đỉnh và đoán đáy.",
+  "Mức rủi ro, mức thưởng và xác suất.",
   "Các mẫu hình đúng tiêu chuẩn, mẫu hình đẹp.",
-  "Quan sát RSI đa khung thời gian để thấy được các dấu hiệu về lực.",
+  "Quan sát RSI khung nhỏ để thấy được các dấu hiệu về lực.",
   "Xác định các đường trendline, vùng hỗ trợ, vùng kháng cự, quan trọng và theo dõi phản ứng giá tại các vùng đó.",
   "Chờ xác nhận sóng hồi, để tối ưu điểm vào lệnh đẹp.",
-  "Mức rủi ro, mức thưởng và xác suất.",
+  "Đặt lệnh chờ giá phá qua vùng sideway, phá qua vùng cản mới vào lệnh.",
 ];
 
 export const duringTradeExecution = [
@@ -285,7 +286,8 @@ export const imagesPersonal = [
 ];
 
 export const mindsetAndStrategy = [
-  "Khi mà một vùng hỗ trợ hay kháng cự giá test lại nhiều lần rồi thì đó không còn là vùng hỗ trợ hay kháng cự cứng nữa. "
+  "Khi mà một vùng hỗ trợ hay kháng cự giá test lại nhiều lần rồi thì đó không còn là vùng hỗ trợ hay kháng cự cứng nữa, hãy kiên nhẫn chờ đợi giá phá qua vùng cản mới tham gia vào lệnh.",
+  "Khi mà giá đảo chiều xu hướng thì thông thường sẽ quay lại retest, quét SL xong mới đi vào xu hướng mới, nên hãy kiên nhẫn chờ đợi người ta bị quét SL xong rồi thì mình mới tham gia."
 ]
 
 export const supportAndResistance = [
