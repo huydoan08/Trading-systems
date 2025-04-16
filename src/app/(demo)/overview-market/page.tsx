@@ -34,7 +34,7 @@ export default function ExperienceCompilationPage() {
         <Card className="shadow-lg border border-black-200 dark:border-black-700 mb-2">
           <CardHeader>
             <div className="font-bold text-2xl text-black-800 dark:text-white">
-              TỔNG QUAN TÌNH HÌNH THỊ TRƯỜNG CHART BTC
+              Review Về Thị Trường
             </div>
           </CardHeader>
         </Card>
