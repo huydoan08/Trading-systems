@@ -6,12 +6,12 @@ import {
   PersonStandingIcon,
   Bird,
   NotebookPen,
-  Highlighter,
   Footprints,
   Star,
   LucideFileBarChart,
   Wallpaper,
-  Ban
+  Ban,
+  BellRing
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 
@@ -194,7 +194,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/important-notes",
           label: "Lưu Ý Quan Trọng",
-          icon: Highlighter,
+          icon: BellRing,
           submenus: []
         }
       ]
