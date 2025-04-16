@@ -9,10 +9,9 @@ import {
   Highlighter,
   Footprints,
   Star,
-  MountainSnow,
-  Ghost,
   LucideFileBarChart,
-  Wallpaper
+  Wallpaper,
+  Ban
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 
@@ -184,7 +183,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/serious-mistake",
           label: "Sai Lầm Nghiêm Trọng",
-          icon: Ghost,
+          icon: Ban,
           submenus: []
         }
       ]
