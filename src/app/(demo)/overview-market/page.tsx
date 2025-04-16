@@ -29,12 +29,12 @@ export default function ExperienceCompilationPage() {
   if (!sidebar) return null;
 
   return (
-    <ContentLayout title="Tổng hợp kinh nghiệm">
+    <ContentLayout title="Cập nhật tình hình thị trường">
       <div className="flex flex-col h-[calc(100vh-4rem)]">
         <Card className="shadow-lg border border-black-200 dark:border-black-700 mb-2">
           <CardHeader>
             <div className="font-bold text-2xl text-black-800 dark:text-white">
-              TRADING PHIÊU LƯU KÍ
+              TỔNG QUAN TÌNH HÌNH THỊ TRƯỜNG CHART BTC
             </div>
           </CardHeader>
         </Card>
