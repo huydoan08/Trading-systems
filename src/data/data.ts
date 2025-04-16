@@ -133,7 +133,8 @@ export const duringTradeExecution = [
   "Chỉ nhồi thêm lệnh khi đã có lợi nhuận đủ lớn và có sự xác nhận xu hướng của RSI.",
   "Tuyệt đối không đóng lệnh bằng tay khi mà giá chưa chạm Stoploss.",
   "Không nên vội dời Stoploss khi mà giá chưa chạy xa.",
-  "Tuyệt đối không kéo dài Stoploss ra xa."
+  "Tuyệt đối không kéo dài Stoploss ra xa.",
+  "Chỉ mở chart ra xem sau ít nhất 2h và chỉ nhìn vào mô hình và RSI thôi, không nhìn và giá."
 ];
 
 export const psychologicalMastery = [
@@ -149,7 +150,8 @@ export const importantNotes = [
   "Phải tách biệt mình ra khỏi đám đông, đám đông luôn là nhóm mất tiền, nhưng không có nghĩa là mình cũng sẽ mất tiền.",
   "Chỉ làm theo systems, không giao dịch theo cảm tính, không để cho cảm xúc xen vào các quyết định giao dịch.",
   "Cần tách mình ra khỏi ý kiến của những người khác, mọi dự phóng của người khác chỉ để tham khảo.",
-  "Đứng ngoài thị trường cũng là một vị thế, chỉ vào lệnh khi có setup đẹp."
+  "Đứng ngoài thị trường cũng là một vị thế, chỉ vào lệnh khi có setup đẹp.",
+  "Thị trường bây giờ chuyển dần về game trading, đòi hỏi phải có kĩ năng thật sự mới chơi được, đừng ngây thơ suy nghĩ mua một đồng coin nào đó ở đáy và chờ nó tăng."
 ];
 export const beforeOrderNotes = [
   "Chờ phá vỡ cấu trúc rồi mới vào",
