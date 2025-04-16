@@ -73,6 +73,10 @@ export function getMenuList(pathname: string): Group[] {
           icon: NotebookPen,
           submenus: [
             {
+              href: "/overview-market",
+              label: "Tổng quan thị trường"
+            },
+            {
               href: "/big-loss-order",
               label: "Các Lệnh Thua Lỗ Lớn"
             },
