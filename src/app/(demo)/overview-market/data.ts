@@ -5,7 +5,7 @@ export const dataOverview = [
         {
           time: "M",
           rsi: 61,
-          conclusion: "SW",
+          conclusion: "SIDEWAY",
           assessment : [
             "RSI cắt qua TBN sắp chạm tới TBC, Xu hướng bó sát 2 DTB",
             "Hiện tại M vẫn giữ cấu trúc fibo 0.5",
@@ -34,7 +34,7 @@ export const dataOverview = [
         {
           time: "H4",
           rsi: 45,
-          conclusion: "Giảm",
+          conclusion: "GIẢM",
           assessment : [
             "RSI cắt xuống dưới 2 DTB",
             "xu hướng giảm",
@@ -43,7 +43,7 @@ export const dataOverview = [
         {
           time: "H1",
           rsi: 35,
-          conclusion: "Giảm",
+          conclusion: "GIẢM",
           assessment : [
             "RSI cắt xuống dưới 2 DTB",
             "xu hướng giảm",
@@ -51,9 +51,9 @@ export const dataOverview = [
           ],
         },
         {
-          time: "Kết luận",
+          time: "KẾT LUẬN",
           rsi: '',
-          conclusion: "Giảm",
+          conclusion: "TĂNG",
           assessment : [
             "Chiến lược lúc này là Sell và chờ Sell"
           ],

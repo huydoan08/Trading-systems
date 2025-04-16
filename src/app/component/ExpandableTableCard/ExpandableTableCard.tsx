@@ -54,16 +54,16 @@ export function ExpandableTableCard({
             <Table>
               <TableHeader>
                 <TableRow>
-                  <TableHead className="text-center font-bold text-red-600 border border-gray-300 bg-gray-50 w-24">
+                  <TableHead className="text-center font-bold text-black-600 border border-gray-300 bg-gray-50 w-24">
                     KHUNG
                   </TableHead>
-                  <TableHead className="text-center font-bold text-red-600 border border-gray-300 bg-gray-50 w-24">
+                  <TableHead className="text-center font-bold text-black-600 border border-gray-300 bg-gray-50 w-24">
                     RSI
                   </TableHead>
-                  <TableHead className="text-center font-bold text-red-600 border border-gray-300 bg-gray-50 w-24">
+                  <TableHead className="text-center font-bold text-black-600 border border-gray-300 bg-gray-50 w-24">
                     KẾT LUẬN
                   </TableHead>
-                  <TableHead className="text-center font-bold text-red-600 border border-gray-300 bg-gray-50">
+                  <TableHead className="text-center font-bold text-black-600 border border-gray-300 bg-gray-50">
                     NHẬN ĐỊNH
                   </TableHead>
                 </TableRow>
@@ -71,17 +71,21 @@ export function ExpandableTableCard({
               <TableBody>
                 {content.map((row: any, index: number) => (
                   <TableRow key={index}>
-                    <TableCell className="text-center text-purple-700 font-medium border border-gray-300">
-                      {row.time}
+                    <TableCell className="text-center font-medium border border-gray-300">
+                      {row.time === "KẾT LUẬN" ? (
+                        <span className="text-red-600">{row.time}</span>
+                      ) : (
+                        <span className="text-orange-700">{row.time}</span>
+                      )}
                     </TableCell>
                     <TableCell className="text-center border border-gray-300">
-                      {row.rsi}
+                      <span className="text-purple-600">{row.rsi}</span>
                     </TableCell>
                     <TableCell className="text-center font-medium border border-gray-300">
-                      {row.kl === "GIẢM" ? (
+                      {row.conclusion.includes("GIẢM") ? (
                         <span className="text-red-600">{row.conclusion}</span>
-                      ) : row.conclusion.includes("GIẢM") ? (
-                        <span className="text-red-600">{row.conclusion}</span>
+                      ) : row.conclusion.includes("TĂNG") ? (
+                        <span className="text-green-600">{row.conclusion}</span>
                       ) : (
                         <span>{row.conclusion}</span>
                       )}
