@@ -19,7 +19,8 @@ const imagesH1 = [
   "/signs-of-h1-weakening/H1-weaking-0000212.png",
   "/signs-of-h1-weakening/H1-weakening-0000312.png",
   "/signs-of-h1-weakening/H1-weakening-000031.png",
-  "/signs-of-h1-weakening/H1-weakening-00000042.png"
+  "/signs-of-h1-weakening/H1-weakening-00000042.png",
+  "/signs-of-h1-weakening/sign-of-H1-weakening.png"
 ];
 
 export default function ConditionForEnteringATradePage() {
