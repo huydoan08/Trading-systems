@@ -5,83 +5,57 @@ export const dataOverview = [
         {
           time: "M",
           rsi: 61,
-          kl: "SW",
-          nhanDinh: [
-            "RSI cắt qua TBN sắp chạm tới TBC, Xu hướng bố sát 2 DTB",
+          conclusion: "SW",
+          assessment : [
+            "RSI cắt qua TBN sắp chạm tới TBC, Xu hướng bó sát 2 DTB",
             "Hiện tại M vẫn giữ cấu trúc fibo 0.5",
-            "ước chừng sóng tăng đi được 80% hành trình",
-          ],
-        },
-        {
-          time: "2W",
-          rsi: 53.5,
-          kl: "GIẢM",
-          nhanDinh: [
-            "RSI cắt qua 2 DTB xu hướng tiếp tục mở rộng",
-            "đang trong nhịp điều chỉnh, sóng giảm đi được 30%",
+            "Ước chừng sóng tăng đi được 85% hành trình",
           ],
         },
         {
           time: "W",
-          rsi: 45.7,
-          kl: "GIẢM",
-          nhanDinh: [
+          rsi: 48,
+          conclusion: "GIẢM",
+          assessment : [
             "RSI cắt qua 2 DTB xu hướng tiếp tục mở rộng",
-            "đang trong nhịp điều chỉnh, sóng giảm đi được 40%",
-          ],
-        },
-        {
-          time: "3D",
-          rsi: 39,
-          kl: "GIẢM",
-          nhanDinh: [
-            "RSI nằm dưới 2 DTBN hiện tại hồi mốc lên",
-            "đang trong xu hướng giảm mạnh",
-            "sóng giảm đi được khoảng 50%",
+            "đang bó sát đường TBN, sóng giảm đi được 50%",
           ],
         },
         {
           time: "1D",
-          rsi: 40,
-          kl: "SW GIẢM",
-          nhanDinh: [
-            "RSI bò sát 2 DTBN",
-            "xu hướng chính vẫn là giảm",
-            "rsi có sự tích lũy cần quan sát thêm khung nhỏ hơn",
+          rsi: 49,
+          conclusion: "SIDEWAY",
+          assessment : [
+            "RSI bó sát 2 DTB",
+            "xu hướng chính là sideway",
+            "RSI có sự tích lũy cần quan sát thêm khung nhỏ hơn",
           ],
         },
         {
-          time: "12H",
-          rsi: 42.5,
-          kl: "SW",
-          nhanDinh: [
-            "RSI bò sát 2 DTBN",
-            "H12 thiếu về sw biên độ nên dần. Xu hướng chính vẫn là giảm",
-            "RSI cho thấy rõ hơn về sự tích lũy của lực mua",
+          time: "H4",
+          rsi: 45,
+          conclusion: "Giảm",
+          assessment : [
+            "RSI cắt xuống dưới 2 DTB",
+            "xu hướng giảm",
           ],
         },
         {
-          time: "8H",
-          rsi: 44,
-          kl: "SW",
-          nhanDinh: ["H8 cũng gần tương tự H12"],
-        },
-        {
-          time: "4H",
-          rsi: 47.5,
-          kl: "SW",
-          nhanDinh: [
-            "RSI bò sát 2 DTB",
-            "xu hướng chính thiên về SW biên độ nhỏ",
+          time: "H1",
+          rsi: 35,
+          conclusion: "Giảm",
+          assessment : [
+            "RSI cắt xuống dưới 2 DTB",
+            "xu hướng giảm",
+            "các đỉnh cũ chạm vùng 70 quay đầu, lực mua yếu."
           ],
         },
         {
-          time: "2H",
-          rsi: 50,
-          kl: "SW",
-          nhanDinh: [
-            "RSI bò sát 2 DTB",
-            "xu hướng chính thiên về SW biên độ nhỏ",
+          time: "Kết luận",
+          rsi: '',
+          conclusion: "Giảm",
+          assessment : [
+            "Chiến lược lúc này là Sell và chờ Sell"
           ],
         },
       ]
