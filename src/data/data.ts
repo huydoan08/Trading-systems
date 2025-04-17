@@ -125,7 +125,8 @@ export const conditionForEnteringATrade = [
   "Quan sát RSI khung nhỏ để thấy được các dấu hiệu về lực.",
   "Xác định các đường trendline, vùng hỗ trợ, vùng kháng cự, quan trọng và theo dõi phản ứng giá tại các vùng đó.",
   "Chờ xác nhận sóng hồi, để tối ưu điểm vào lệnh đẹp.",
-  "Đặt lệnh chờ giá phá qua vùng sideway, phá qua vùng cản mới vào lệnh."
+  "Đặt lệnh chờ giá phá qua vùng sideway, phá qua vùng cản mới vào lệnh.",
+  "Khi giá đang nhì nhằng thì chờ cho nó quét SL xong thì vào mua."
 ];
 
 export const duringTradeExecution = [
