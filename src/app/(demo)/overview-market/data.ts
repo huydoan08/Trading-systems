@@ -22,7 +22,7 @@ export const dataOverview = [
           ],
         },
         {
-          time: "1D",
+          time: "D",
           rsi: 49,
           conclusion: "SIDEWAY",
           assessment : [
