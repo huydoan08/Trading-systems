@@ -3,7 +3,6 @@ import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { duringTradeExecution } from "@/data/data";
 import { auth } from "@/firebaseConfig";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
@@ -12,6 +11,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { duringTradeExecution } from "./data";
 
 const images = ["/manage-order/7.QLL tăng.png", "/manage-order/6.QLL giảm.png"];
 

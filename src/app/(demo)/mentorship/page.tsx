@@ -8,8 +8,8 @@ import { useState, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { onAuthStateChanged, getAuth } from "firebase/auth";
-import { buddhism, imagesPersonal } from "@/data/data";
 import { ExpandableCard } from "@/app/component/ExpandableCard/ExpandableCard";
+import { buddhism, imagesPersonal } from "./data";
 
 export default function PersonalGrowthPage() {
   const sidebar = useStore(useSidebar, (x) => x);

@@ -3,7 +3,6 @@ import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
-import { afterTraderCloses } from "@/data/data";
 import { auth } from "@/firebaseConfig";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
@@ -12,6 +11,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { afterTraderCloses } from "./data";
 
 const images = ["/weakening-model/8.Mô hình suy yếu 01.png"];
 const imagesH1 = [

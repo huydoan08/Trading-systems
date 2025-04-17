@@ -17,7 +17,7 @@ import {
   SelectTrigger,
   SelectValue
 } from "@/components/ui/select";
-import { allData } from "@/data/data";
+import { allData } from "./data";
 
 interface DataPoint {
   name: string;

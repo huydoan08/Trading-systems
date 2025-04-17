@@ -9,7 +9,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import { Dot } from "lucide-react"
-import { importantNotes } from "@/data/data";
+import { importantNotes } from "./data";
 
 export default function ImportantNotesPage() {
   const sidebar = useStore(useSidebar, (x) => x);

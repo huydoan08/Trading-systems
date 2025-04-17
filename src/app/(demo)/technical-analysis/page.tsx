@@ -8,9 +8,9 @@ import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { quintessenceRsi, supportAndResistance } from "@/data/data";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Dot } from "lucide-react";
+import { quintessenceRsi, supportAndResistance } from "./data";
 
 const images = ["/support-resistance/HTKC-01.png"];
 

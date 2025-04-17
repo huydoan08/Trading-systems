@@ -7,7 +7,7 @@ import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { ExpandableCard } from "@/app/component/ExpandableCard/ExpandableCard";
-import { faqs } from "@/data/data";
+import { faqs } from "./data";
 
 export default function RSIPage() {
   const sidebar = useStore(useSidebar, (x) => x);

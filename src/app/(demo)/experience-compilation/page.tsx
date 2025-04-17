@@ -7,8 +7,8 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { auth } from "@/firebaseConfig";
 import { ExpandableCard } from "@/app/component/ExpandableCard/ExpandableCard";
-import { experience } from "@/data/data";
 import { useState, useEffect } from "react";
+import { experience } from "./data";
 
 interface ExperienceItem {
   title: string;

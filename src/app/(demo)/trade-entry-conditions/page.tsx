@@ -9,22 +9,13 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronLeft, ChevronRight, Dot } from "lucide-react";
 import {
   beforeOrderNotes,
   conditionForEnteringATrade,
-} from "@/data/data";
-import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Dot } from "lucide-react";
-
-const images = [
-  "/beautiful-modal/1.Xu hướng tăng.png",
-  "/beautiful-modal/2.Bắt đáy khi tạo đáy cao dần.png",
-  "/beautiful-modal/3.Bắt sóng hồi của sóng tăng trước đó.png",
-  "/beautiful-modal/4.Điểm vào lệnh phá trendline.png",
-  "/beautiful-modal/5.Điểm vào lệnh mô hình tam giác tăng.png",
-  "/beautiful-modal/Entry-06.png",
-  "/beautiful-modal/entry-07.png"
-];
+  imagesCondition
+} from "./data";
 
 export default function ConditionForEnteringATradePage() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -66,7 +57,7 @@ export default function ConditionForEnteringATradePage() {
 
   const nextImage = () => {
     setCurrentIndex((prev) => {
-      const next = (prev + 1) % images.length;
+      const next = (prev + 1) % imagesCondition.length;
       scrollToImage();
       return next;
     });
@@ -74,7 +65,7 @@ export default function ConditionForEnteringATradePage() {
 
   const prevImage = () => {
     setCurrentIndex((prev) => {
-      const next = (prev - 1 + images.length) % images.length;
+      const next = (prev - 1 + imagesCondition.length) % imagesCondition.length;
       scrollToImage();
       return next;
     });
@@ -131,7 +122,7 @@ export default function ConditionForEnteringATradePage() {
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentIndex}
-                src={images[currentIndex]}
+                src={imagesCondition[currentIndex]}
                 alt={`Mẫu ${currentIndex + 1}`}
                 className="w-full h-full object-contain"
                 initial={{ opacity: 0, x: 100 }}
@@ -167,7 +158,7 @@ export default function ConditionForEnteringATradePage() {
 
             {/* Hiển thị số ảnh */}
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black/60 text-white text-sm px-3 py-1 rounded-full">
-              {currentIndex + 1} / {images.length}
+              {currentIndex + 1} / {imagesCondition.length}
             </div>
           </div>
         </CardContent>
