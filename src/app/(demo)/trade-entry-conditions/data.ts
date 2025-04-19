@@ -4,6 +4,7 @@ export const conditionForEnteringATrade = [
   "Mức rủi ro, mức thưởng và xác suất.",
   "Các mẫu hình đúng tiêu chuẩn, mẫu hình đẹp.",
   "Quan sát RSI khung nhỏ để thấy được các dấu hiệu về lực.",
+  "Chờ dấu hiệu xác nhận Price Action",
   "Xác định các đường trendline, vùng hỗ trợ, vùng kháng cự, quan trọng và theo dõi phản ứng giá tại các vùng đó.",
   "Chờ xác nhận sóng hồi, để tối ưu điểm vào lệnh đẹp.",
   "Đặt lệnh chờ giá phá qua vùng sideway, phá qua vùng cản mới vào lệnh.",
