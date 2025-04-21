@@ -4,13 +4,9 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function TransactionCheckboxes() {
   const rows = [
-    [<VCheckbox key={1} />, <XCheckbox key={2}/>] 
+    [<VCheckbox key={1} />, <XCheckbox key={2}/>, <XCheckbox key={3}/>] 
     // []
   ];
-
-  const volumn = [100];
-  const expense = [10]
-
   return (
     <Card className="w-full flex flex-col items-start shadow-lg border border-black-200 dark:border-black-700 p-4 h-[420px]">
       <CardContent className="space-y-2">
