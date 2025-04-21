@@ -1,90 +1,82 @@
-"use client";
-import { ContentLayout } from "@/components/admin-panel/content-layout";
-import { Card, CardContent } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
-import { auth } from "@/firebaseConfig";
-import { useSidebar } from "@/hooks/use-sidebar";
-import { useStore } from "@/hooks/use-store";
-import { onAuthStateChanged } from "firebase/auth";
-import { useRouter } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
-import { Checkbox } from "@/components/ui/checkbox";
-import { AnimatePresence, motion } from "framer-motion";
-import { ChevronLeft, ChevronRight, Dot } from "lucide-react";
-import {
-  beforeOrderNotes,
-  conditionForEnteringATrade,
-  imagesCondition
-} from "./data";
+"use client"
+import { ContentLayout } from "@/components/admin-panel/content-layout"
+import { Card, CardContent } from "@/components/ui/card"
+import { Label } from "@/components/ui/label"
+import { auth } from "@/firebaseConfig"
+import { useSidebar } from "@/hooks/use-sidebar"
+import { useStore } from "@/hooks/use-store"
+import { onAuthStateChanged } from "firebase/auth"
+import { useRouter } from "next/navigation"
+import { useEffect, useRef, useState } from "react"
+import { Checkbox } from "@/components/ui/checkbox"
+import { AnimatePresence, motion } from "framer-motion"
+import { ChevronLeft, ChevronRight, Dot } from "lucide-react"
+import { basicOrder, beforeOrderNotes, conditionForEnteringATrade, imagesCondition, plan, strategy } from "./data"
 
 export default function ConditionForEnteringATradePage() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [windowHeight, setWindowHeight] = useState(0);
-  const sidebar = useStore(useSidebar, (x) => x);
-  const router = useRouter();
-  const imageContainerRef = useRef<HTMLDivElement>(null);
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [windowHeight, setWindowHeight] = useState(0)
+  const sidebar = useStore(useSidebar, (x) => x)
+  const router = useRouter()
+  const imageContainerRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (!currentUser) {
-        router.push("/");
+        router.push("/")
       }
-    });
+    })
 
-    return () => unsubscribe();
-  }, [router]);
+    return () => unsubscribe()
+  }, [router])
 
   useEffect(() => {
     const updateHeight = () => {
-      setWindowHeight(window.innerHeight);
-    };
+      setWindowHeight(window.innerHeight)
+    }
 
-    updateHeight();
-    window.addEventListener("resize", updateHeight);
-    return () => window.removeEventListener("resize", updateHeight);
-  }, []);
+    updateHeight()
+    window.addEventListener("resize", updateHeight)
+    return () => window.removeEventListener("resize", updateHeight)
+  }, [])
 
-  if (!sidebar) return null;
+  if (!sidebar) return null
 
   const scrollToImage = () => {
     if (imageContainerRef.current) {
       imageContainerRef.current.scrollIntoView({
         behavior: "smooth",
-        block: "nearest"
-      });
+        block: "nearest",
+      })
     }
-  };
+  }
 
   const nextImage = () => {
     setCurrentIndex((prev) => {
-      const next = (prev + 1) % imagesCondition.length;
-      scrollToImage();
-      return next;
-    });
-  };
+      const next = (prev + 1) % imagesCondition.length
+      scrollToImage()
+      return next
+    })
+  }
 
   const prevImage = () => {
     setCurrentIndex((prev) => {
-      const next = (prev - 1 + imagesCondition.length) % imagesCondition.length;
-      scrollToImage();
-      return next;
-    });
-  };
+      const next = (prev - 1 + imagesCondition.length) % imagesCondition.length
+      scrollToImage()
+      return next
+    })
+  }
 
   return (
     <ContentLayout title="Hệ Thống Giao Dịch">
       <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
         <CardContent className="p-6 space-y-4">
-          <div className="font-bold text-lg text-black-800 dark:text-white">
-            BỘ TIÊU CHÍ VÀO LỆNH GIAO DỊCH:
-          </div>
+          <div className="font-bold text-lg text-black-800 dark:text-white">BỘ TIÊU CHÍ VÀO LỆNH GIAO DỊCH:</div>
           <div className="space-y-2">
             {conditionForEnteringATrade.map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2">
                 <Checkbox />
-                <Label className="text-black-700 font-semibold dark:text-white">
-                  {item}
-                </Label>
+                <Label className="text-black-700 font-semibold dark:text-white">{item}</Label>
               </div>
             ))}
           </div>
@@ -92,16 +84,47 @@ export default function ConditionForEnteringATradePage() {
       </Card>
       <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
         <CardContent className="p-6 space-y-4">
-          <div className="font-bold text-lg text-black-800 dark:text-white">
-            MỘT SỐ LƯU Ý:
+          <div className="font-bold text-lg text-black-800 dark:text-white">CHIẾN THUẬT:</div>
+          <div className="font-[600] text-lg text-black-800 dark:text-white">
+            1. Chọn phương án: tùy theo trạng thái thị trường có thể chọn các phương án khác nhau: mua(long),
+            bán(short), lướt ngắn, giữ dài, đứng ngoài.
           </div>
+          <div className="space-y-2">
+            {plan.map((item, idx) => (
+              <div key={idx} className="flex items-start space-x-2">
+                <Checkbox />
+                <Label className="text-black-700 font-semibold dark:text-white">{item}</Label>
+              </div>
+            ))}
+          </div>
+          <div className="font-[600] text-lg text-black-800 dark:text-white">2. Sử dụng các lệnh cơ bản:</div>
+          <div className="space-y-3">
+            {basicOrder.map((item, idx) => (
+              <div key={idx} className="flex items-start space-x-2">
+                <Dot className="mt-2 flex-shrink-0" />
+                <Label className="text-black-700 font-semibold dark:text-white block py-2">{item}</Label>
+              </div>
+            ))}
+          </div>
+          <div className="font-[600] text-lg text-black-800 dark:text-white">3. Một vài chiến thuật:</div>
+          <div className="space-y-3">
+            {strategy.map((item, idx) => (
+              <div key={idx} className="flex items-start space-x-2">
+                <Dot className="mt-2 flex-shrink-0" />
+                <Label className="text-black-700 font-semibold dark:text-white block py-2">{item}</Label>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+      <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
+        <CardContent className="p-6 space-y-4">
+          <div className="font-bold text-lg text-black-800 dark:text-white">MỘT SỐ LƯU Ý:</div>
           <div className="space-y-2">
             {beforeOrderNotes.map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2 ">
                 <Dot />
-                <Label className="text-black-700 font-semibold dark:text-white">
-                  {item}
-                </Label>
+                <Label className="text-black-700 font-semibold dark:text-white">{item}</Label>
               </div>
             ))}
           </div>
@@ -111,14 +134,11 @@ export default function ConditionForEnteringATradePage() {
       <Card
         className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
         style={{
-          height: `${windowHeight - 80}px`
+          height: `${windowHeight - 80}px`,
         }}
       >
         <CardContent className="p-6 space-y-4 h-full">
-          <div
-            ref={imageContainerRef}
-            className="relative w-full h-full overflow-hidden rounded-lg"
-          >
+          <div ref={imageContainerRef} className="relative w-full h-full overflow-hidden rounded-lg">
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentIndex}
@@ -138,10 +158,7 @@ export default function ConditionForEnteringATradePage() {
               className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
               aria-label="Previous Image"
             >
-              <ChevronLeft
-                size={32}
-                className="text-black-800 dark:text-black-200"
-              />
+              <ChevronLeft size={32} className="text-black-800 dark:text-black-200" />
             </button>
 
             {/* Nút Next */}
@@ -150,10 +167,7 @@ export default function ConditionForEnteringATradePage() {
               className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
               aria-label="Next Image"
             >
-              <ChevronRight
-                size={32}
-                className="text-black-800 dark:text-black-200"
-              />
+              <ChevronRight size={32} className="text-black-800 dark:text-black-200" />
             </button>
 
             {/* Hiển thị số ảnh */}
@@ -164,5 +178,5 @@ export default function ConditionForEnteringATradePage() {
         </CardContent>
       </Card>
     </ContentLayout>
-  );
+  )
 }
