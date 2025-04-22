@@ -104,7 +104,6 @@ export function getMenuList(pathname: string): Group[] {
               label: "Tư Duy Stoploss An Toàn"
             }
           ],
-          active: !isAdmin
         }
       ]
     },
@@ -116,7 +115,6 @@ export function getMenuList(pathname: string): Group[] {
           label: "Phân Tích Kĩ Thuật",
           icon: Wallpaper,
           submenus: [],
-          active: !isAdmin
         }
       ]
     },
