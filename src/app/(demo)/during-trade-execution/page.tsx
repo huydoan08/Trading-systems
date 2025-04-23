@@ -11,7 +11,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import { duringTradeExecution } from "./data";
+import { duringTradeExecution, keepOrder } from "./data";
 
 const images = ["/manage-order/7.QLL tăng.png", "/manage-order/6.QLL giảm.png"];
 
@@ -46,7 +46,7 @@ export default function DuringTradeExecutionPage() {
     if (imageContainerRef.current) {
       imageContainerRef.current.scrollIntoView({
         behavior: "instant",
-        block: "nearest",
+        block: "nearest"
       });
     }
   };
@@ -88,11 +88,28 @@ export default function DuringTradeExecutionPage() {
           </div>
         </CardContent>
       </Card>
+      <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
+        <CardContent className="p-6 space-y-4">
+          <div className="font-bold text-lg text-black-800 dark:text-white">
+            Tiêu chí tiếp tục giữ lệnh giao dịch:
+          </div>
+          <div className="space-y-2">
+            {keepOrder.map((item, idx) => (
+              <div key={idx} className="flex items-start space-x-2">
+                <Checkbox />
+                <Label className="text-black-700 font-semibold dark:text-white">
+                  {item}
+                </Label>
+              </div>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
 
       <Card
         className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
         style={{
-          height: `${windowHeight - 80}px`,
+          height: `${windowHeight - 80}px`
         }}
       >
         <CardContent className="p-6 space-y-4 h-full">
@@ -119,7 +136,10 @@ export default function DuringTradeExecutionPage() {
               className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
               aria-label="Previous Image"
             >
-              <ChevronLeft size={32} className="text-black-800 dark:text-black-200" />
+              <ChevronLeft
+                size={32}
+                className="text-black-800 dark:text-black-200"
+              />
             </button>
 
             {/* Nút Next */}
@@ -128,7 +148,10 @@ export default function DuringTradeExecutionPage() {
               className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
               aria-label="Next Image"
             >
-              <ChevronRight size={32} className="text-black-800 dark:text-black-200" />
+              <ChevronRight
+                size={32}
+                className="text-black-800 dark:text-black-200"
+              />
             </button>
 
             {/* Hiển thị số ảnh */}

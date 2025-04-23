@@ -6,3 +6,8 @@ export const duringTradeExecution = [
     "Tuyệt đối không kéo dài Stoploss ra xa.",
     "Chỉ mở chart ra xem sau ít nhất 2h và chỉ nhìn vào mô hình và RSI thôi, không nhìn và giá."
   ];
+
+  export const keepOrder = [
+    "Giá vẫn giữ trên vùng fibo 0.236",
+    "Có RSI vượt ra ngoài vùng 80"
+  ]
