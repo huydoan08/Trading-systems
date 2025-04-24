@@ -1,14 +1,14 @@
 export const conditionForEnteringATrade = [
   "Lên chiến lược rõ ràng trước khi vào lệnh.",
+  "Các khung thời gian phải đồng thuận.",
+  "Các mẫu hình đúng tiêu chuẩn, mẫu hình đẹp.",
+  "Chờ xác nhận sóng hồi, để tối ưu điểm vào lệnh đẹp.",
+  "RSI, 2 đường trung bình của khung giao dịch cắt nhau.",
+  "Chờ dấu hiệu xác nhận Price Action.",
+  "Dùng fibo để xác định hiệu lực con sóng còn mạnh không.",
+  "Xác định các đường trendline, vùng hỗ trợ, vùng kháng cự quan trọng và theo dõi phản ứng giá tại các vùng đó.",
   "Không cố tình đoán đỉnh và đoán đáy.",
   "Mức rủi ro, mức thưởng và xác suất.",
-  "Các mẫu hình đúng tiêu chuẩn, mẫu hình đẹp.",
-  "Các khung thời gian đồng thuận.",
-  "Chờ xác nhận sóng hồi, để tối ưu điểm vào lệnh đẹp.",
-  "Quan sát RSI khung nhỏ để thấy được các dấu hiệu về lực.",
-  "Chờ dấu hiệu xác nhận Price Action.",
-  "Xác định các đường trendline, vùng hỗ trợ, vùng kháng cự, quan trọng và theo dõi phản ứng giá tại các vùng đó.",
-  "Dùng fibo để xác định hiệu lực con sóng còn mạnh không."
 ];
 
 export const beforeOrderNotes = [
