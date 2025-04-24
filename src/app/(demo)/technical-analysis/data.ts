@@ -7,8 +7,8 @@ export const supportAndResistance = [
 ];
 
 export const quintessenceRsi = [
-  'RSI đang nằm ở vị trí nào ( nằm ở " trên hay dưới " ) so với 2 đường trung bình.',
-  "Đỉnh hoặc đáy của RSI gần nhất trước đó nằm ở vùng nào.",
-  "Hành trình di chuyển của đường TBC so với đường TBN đang ở giai đoạn nào, đã bó hẹp chưa hay vẫn đang mở rộng.",
-  "Kết hợp các đỉnh hoặc đáy của RSI lại thì đang cho thấy dấu hiệu của hội tụ hay phân kì."
+  "Hướng đi của RSI kết hợp với 2 đường trung bình => Xác định xu hướng của con sóng.",
+  "Đỉnh, đáy của RSI được tạo ra trước đó => Xác định mức độ tham gia vào của lực mua, lực bán.",
+  "Hành trình di chuyển của RSI kết hợp với 2 đường trung bình => Xác định quãng đường đi của con sóng.",
+  "Kết hợp các đỉnh, đáy của RSI => Xác định sự phân kì hay hội tụ."
 ];
