@@ -74,7 +74,7 @@ export const dataOverview = [
         conclusion: "GIẢM",
         assessment: [
           "RSI cắt qua lên đường TBN, sắp chạm đường TBC",
-          "Đường TBN đang đi ngang sóng giảm ước chừng đã đi được 50% hành trình"
+          "Đường TBN đang đi ngang sóng giảm ước chừng đã đi được 70% hành trình"
         ]
       },
       {
@@ -134,7 +134,7 @@ export const dataOverview = [
         conclusion: "GIẢM",
         assessment: [
           "RSI cắt qua lên đường TBN, sắp chạm đường TBC",
-          "Đường TBN đang đi ngang sóng giảm ước chừng đã đi được 60% hành trình"
+          "Đường TBN đang đi ngang sóng giảm ước chừng đã đi được 80% hành trình"
         ]
       },
       {
@@ -174,19 +174,14 @@ export const dataOverview = [
         ]
       },
       {
-        time: "Fear & Gear",
-        rsi: "",
-        conclusion: "63",
-        assessment: []
-      },
-      {
         time: "KẾT LUẬN",
         rsi: "",
         conclusion: "TĂNG",
         assessment: [
+          "Fear & Gear Index: 63",
           "Khung lớn tăng, có dấu hiệu của việc điều chỉnh",
-          "Khung nhỏ đang điều chỉnh, cần tiếp tục quan sát",
-          "ĐANG TRONG NHỊP ĐIỀU CHỈNH CỦA CON SÓNG TĂNG, CẦN QUAN SÁT ĐỂ BẮT CON SÓNG HỒI ( MẪU HÌNH SỐ 3 )"
+          "Khung nhỏ đang điều chỉnh, cần tiếp tục quan sát để tìm kiếm điểm vào lệnh đẹp",
+          "ĐANG TRONG NHỊP ĐIỀU CHỈNH CỦA CON SÓNG TĂNG, CHIẾN LƯỢC LÀ BUY VÀ CHỜ BUY"
         ]
       }
     ]
