@@ -10,7 +10,5 @@ export const quintessenceRsi = [
   'RSI đang nằm ở vị trí nào ( nằm ở " trên hay dưới " ) so với 2 đường trung bình.',
   "Đỉnh hoặc đáy của RSI gần nhất trước đó nằm ở vùng nào.",
   "Hành trình di chuyển của đường TBC so với đường TBN đang ở giai đoạn nào, đã bó hẹp chưa hay vẫn đang mở rộng.",
-  "Kết hợp các đỉnh hoặc đáy của RSI lại thì đang cho thấy dấu hiệu của hội tụ hay phân kì.",
-  "RSI khung H4 chạm vùng 20 => có thể vào mua SPOT, tuy nhiên xác suất cao vẫn còn 1 nhịp retest nữa.",
-  "RSI khung H1 chạm vùng 20 => cứ kiên nhẫn chờ đợi retest tiếp và xác nhận lực bán đã suy yếu mới mua SPOT."
+  "Kết hợp các đỉnh hoặc đáy của RSI lại thì đang cho thấy dấu hiệu của hội tụ hay phân kì."
 ];
