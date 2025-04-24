@@ -3,12 +3,12 @@ export const conditionForEnteringATrade = [
   "Không cố tình đoán đỉnh và đoán đáy.",
   "Mức rủi ro, mức thưởng và xác suất.",
   "Các mẫu hình đúng tiêu chuẩn, mẫu hình đẹp.",
-  "Quan sát RSI khung nhỏ để thấy được các dấu hiệu về lực.",
-  "Chờ dấu hiệu xác nhận Price Action",
-  "Xác định các đường trendline, vùng hỗ trợ, vùng kháng cự, quan trọng và theo dõi phản ứng giá tại các vùng đó.",
+  "Các khung thời gian đồng thuận.",
   "Chờ xác nhận sóng hồi, để tối ưu điểm vào lệnh đẹp.",
-  "Đặt lệnh chờ giá phá qua vùng sideway, phá qua vùng cản mới vào lệnh.",
-  "Khi giá đang nhì nhằng thì chờ cho nó quét SL xong thì vào mua."
+  "Quan sát RSI khung nhỏ để thấy được các dấu hiệu về lực.",
+  "Chờ dấu hiệu xác nhận Price Action.",
+  "Xác định các đường trendline, vùng hỗ trợ, vùng kháng cự, quan trọng và theo dõi phản ứng giá tại các vùng đó.",
+  "Dùng fibo để xác định hiệu lực con sóng còn mạnh không."
 ];
 
 export const beforeOrderNotes = [

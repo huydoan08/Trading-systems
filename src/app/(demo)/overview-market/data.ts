@@ -114,5 +114,81 @@ export const dataOverview = [
         ]
       }
     ]
+  },
+  {
+    title: "Ngày 24/04/2025",
+    content: [
+      {
+        time: "M",
+        rsi: 65,
+        conclusion: "SIDEWAY",
+        assessment: [
+          "RSI nằm giữa 2 DTB, xu hướng bó sát 2 DTB",
+          "Hiện tại M vẫn giữ cấu trúc fibo 0.5",
+          "Ước chừng sóng tăng đi được 85% hành trình"
+        ]
+      },
+      {
+        time: "W",
+        rsi: 56,
+        conclusion: "GIẢM",
+        assessment: [
+          "RSI cắt qua lên đường TBN, sắp chạm đường TBC",
+          "Đường TBN đang đi ngang sóng giảm ước chừng đã đi được 60% hành trình"
+        ]
+      },
+      {
+        time: "D",
+        rsi: 66,
+        conclusion: "TĂNG",
+        assessment: [
+          "RSI cắt lên trên 2 ĐTB và đang bắt đầu đi ngang, sóng tăng ước chừng đã đi được 50% hành trình",
+          "Đang gặp vùng cản tại 93k$",
+          "Giá nằm trên fibo 0.236",
+          "Đóng nến ngày thể hiện sự lưỡng lự"
+        ]
+      },
+      {
+        time: "H4",
+        rsi: 72,
+        conclusion: "TĂNG",
+        assessment: [
+          "RSI vượt ra ngoài vùng 80",
+          "Đang điều chỉnh đi xuống",
+          "Vẫn đang giữ giá trên fibo 0.236"
+        ]
+      },
+      {
+        time: "H2",
+        rsi: 63,
+        conclusion: "GIẢM",
+        assessment: ["RSI cắt xuống 2 ĐTB, đang bắt đầu điều chỉnh đi xuống"]
+      },
+      {
+        time: "H1",
+        rsi: 51,
+        conclusion: "GIẢM",
+        assessment: [
+          "RSI cắt xuống dưới 2 ĐTB và đang mở rộng",
+          "Giá đang giữ cấu trúc tại fibo 0.382"
+        ]
+      },
+      {
+        time: "Fear & Gear",
+        rsi: "",
+        conclusion: "63",
+        assessment: []
+      },
+      {
+        time: "KẾT LUẬN",
+        rsi: "",
+        conclusion: "TĂNG",
+        assessment: [
+          "Khung lớn tăng, có dấu hiệu của việc điều chỉnh",
+          "Khung nhỏ đang điều chỉnh, cần tiếp tục quan sát",
+          "ĐANG TRONG NHỊP ĐIỀU CHỈNH CỦA CON SÓNG TĂNG, CẦN QUAN SÁT ĐỂ BẮT CON SÓNG HỒI ( MẪU HÌNH SỐ 3 )"
+        ]
+      }
+    ]
   }
 ];

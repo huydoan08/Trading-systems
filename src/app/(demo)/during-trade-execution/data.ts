@@ -8,6 +8,9 @@ export const duringTradeExecution = [
   ];
 
   export const keepOrder = [
+    "Các khung thời gian đồng thuận",
     "Giá vẫn giữ trên vùng fibo 0.236",
-    "Có RSI vượt ra ngoài vùng 80"
+    "Có RSI vượt ra ngoài vùng 80",
+    "RSI khung nhỏ hơn chưa cho thấy dấu hiệu của sự phân kì",
+    "Chưa xuất hiện dấu hiệu thất bại của mẫu hình, mẫu nến."
   ]
