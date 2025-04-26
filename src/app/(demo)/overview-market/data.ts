@@ -185,5 +185,71 @@ export const dataOverview = [
         ]
       }
     ]
+  },
+  {
+    title: "Ngày 25/04/2025",
+    content: [
+      {
+        time: "M",
+        rsi: 65,
+        conclusion: "SIDEWAY",
+        assessment: [
+          "RSI nằm giữa 2 DTB, xu hướng bó sát 2 DTB",
+          "Hiện tại M vẫn giữ cấu trúc fibo 0.5",
+          "Ước chừng sóng tăng đi được 85% hành trình"
+        ]
+      },
+      {
+        time: "W",
+        rsi: 58,
+        conclusion: "TĂNG",
+        assessment: [
+          "RSI cắt qua lên đường TBN,đã chạm đường TBC, RSI sắp cắt qua 2 đường trung bình",
+        ]
+      },
+      {
+        time: "D",
+        rsi: 69,
+        conclusion: "TĂNG",
+        assessment: [
+          "RSI cắt lên trên 2 ĐTB và đang bắt đầu đi ngang, sóng tăng ước chừng đã đi được 50% hành trình",
+          "Giá nằm trên fibo 0.236"
+        ]
+      },
+      {
+        time: "H4",
+        rsi: 72,
+        conclusion: "TĂNG",
+        assessment: [
+          "RSI vượt ra ngoài vùng 80",
+          "Đã điều chỉnh đi xong",
+          "Vẫn đang giữ giá trên fibo 0.236"
+        ]
+      },
+      {
+        time: "H2",
+        rsi: 69,
+        conclusion: "TĂNG",
+        assessment: ["RSI đang bắt đầu cắt lên trên 2 đường TB"]
+      },
+      {
+        time: "H1",
+        rsi: 51,
+        conclusion: "TĂNG",
+        assessment: [
+          "RSI đã cắt lên trên 2 ĐTB và đang mở rộng",
+        ]
+      },
+      {
+        time: "KẾT LUẬN",
+        rsi: "",
+        conclusion: "TĂNG",
+        assessment: [
+          "Fear & Gear Index: 60",
+          "Khung H1-H2-H4-D1-W đều đồng thuận tăng",
+          "ĐANG TRONG NHỊP CON SÓNG TĂNG, CHIẾN LƯỢC LÀ BUY VÀ CHỜ BUY"
+        ]
+      }
+    ]
   }
 ];
