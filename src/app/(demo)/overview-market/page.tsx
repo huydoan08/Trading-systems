@@ -30,7 +30,7 @@ export default function ExperienceCompilationPage() {
     <ContentLayout title="Cập nhật tình hình thị trường">
       <div className="flex flex-col h-[calc(100vh-4rem)]">
         <div className="flex-1 overflow-auto">
-          <Card className="bg-white border border-[#e5e7eb] rounded-xl">
+          <Card className="bg-card dark:bg-black border border-[#e5e7eb] dark:border-[#222] rounded-xl">
             {dataOverview.map((item, index) => (
               <ExpandableTableCard
                 key={`${item.title}-${index}`}
