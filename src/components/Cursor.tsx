@@ -3,6 +3,35 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
+const Firefly = ({ index, centerX, centerY }: { index: number; centerX: number; centerY: number }) => {
+  const radius = 25;
+  const angle = (index * (2 * Math.PI)) / 16;
+  const x = centerX + radius * Math.cos(angle);
+  const y = centerY + radius * Math.sin(angle);
+
+  return (
+    <motion.div
+      className="absolute w-1.5 h-1.5 bg-red-500 dark:bg-blue-400 rounded-full"
+      style={{
+        boxShadow: "0 0 10px #60a5fa, 0 0 20px #60a5fa, 0 0 30px #60a5fa",
+      }}
+      initial={{ opacity: 0, scale: 0 }}
+      animate={{
+        x: x - 3,
+        y: y - 3,
+        opacity: [0, 1, 0],
+        scale: [0, 1, 0],
+      }}
+      transition={{
+        duration: 2,
+        repeat: Infinity,
+        delay: index * 0.1,
+        ease: "easeInOut",
+      }}
+    />
+  );
+};
+
 export const Cursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isPointer, setIsPointer] = useState(false);
@@ -54,6 +83,16 @@ export const Cursor = () => {
           mass: 0.1,
         }}
       />
+      <div className="fixed top-0 left-0 pointer-events-none z-50">
+        {[...Array(30)].map((_, index) => (
+          <Firefly
+            key={index}
+            index={index}
+            centerX={mousePosition.x}
+            centerY={mousePosition.y}
+          />
+        ))}
+      </div>
     </>
   );
 }; 
