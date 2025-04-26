@@ -1,5 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { motion } from "framer-motion";
+import { CardContent } from "@/components/ui/card";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import {
   Table,
@@ -15,6 +15,7 @@ interface ExpandableTableCardProps {
   content: any;
   isOpen: boolean;
   onClick: () => void;
+  isLast?: boolean;
 }
 
 interface DataRow {
@@ -28,84 +29,77 @@ export function ExpandableTableCard({
   title,
   content,
   isOpen,
-  onClick
+  onClick,
+  isLast = false,
 }: ExpandableTableCardProps) {
   return (
-    <Card
-      className="shadow-lg border border-black-200 dark:border-black-700 mt-0 cursor-pointer"
+    <div
+      className={`px-6 py-4 cursor-pointer select-none flex flex-col transition-colors duration-200 ${!isLast ? 'border-b border-[#e5e7eb]' : ''}`}
       onClick={onClick}
     >
-      <div className="flex justify-between items-center p-6">
-        <span className="font-bold text-lg text-black-800 dark:text-white">
-          {title}
-        </span>
-        {isOpen ? <ChevronUp /> : <ChevronDown />}
+      <div className="flex justify-between items-center">
+        <span className="font-medium text-base text-black-800">{title}</span>
+        {isOpen ? <ChevronUp className="text-black-800" /> : <ChevronDown className="text-black-800" />}
       </div>
-      <motion.div
-        initial={{ height: 0, opacity: 0 }}
-        animate={
-          isOpen ? { height: "auto", opacity: 1 } : { height: 0, opacity: 0 }
-        }
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        className="overflow-hidden"
-      >
-        <CardContent className="p-6 space-y-2 border-t text-black-700 dark:text-white max-h-[40vh] overflow-auto sm:max-h-[60vh]">
-          <div className="overflow-x-auto">
-            <Table>
-              <TableHeader>
-                <TableRow>
-                  <TableHead className="text-center font-bold text-black-600 border border-gray-300 bg-gray-50 w-24">
-                    KHUNG
-                  </TableHead>
-                  <TableHead className="text-center font-bold text-black-600 border border-gray-300 bg-gray-50 w-24">
-                    RSI
-                  </TableHead>
-                  <TableHead className="text-center font-bold text-black-600 border border-gray-300 bg-gray-50 w-24">
-                    KẾT LUẬN
-                  </TableHead>
-                  <TableHead className="text-center font-bold text-black-600 border border-gray-300 bg-gray-50">
-                    NHẬN ĐỊNH
-                  </TableHead>
-                </TableRow>
-              </TableHeader>
-              <TableBody>
-                {content.map((row: any, index: number) => (
-                  <TableRow key={index}>
-                    <TableCell className="text-center font-medium border border-gray-300">
-                      {row.time === "KẾT LUẬN" ? (
-                        <span className="text-red-600">{row.time}</span>
-                      ) : (
-                        <span className="text-orange-700">{row.time}</span>
-                      )}
-                    </TableCell>
-                    <TableCell className="text-center border border-gray-300">
-                      <span className="text-purple-600">{row.rsi}</span>
-                    </TableCell>
-                    <TableCell className="text-center font-medium border border-gray-300">
-                      {row.conclusion.includes("GIẢM") ? (
-                        <span className="text-red-600">{row.conclusion}</span>
-                      ) : row.conclusion.includes("TĂNG") ? (
-                        <span className="text-green-600">{row.conclusion}</span>
-                      ) : (
-                        <span>{row.conclusion}</span>
-                      )}
-                    </TableCell>
-                    <TableCell className="border border-gray-300">
-                      <ul className="list-none pl-0 m-0">
-                        {row.assessment.map((row: any, idx: number) => (
-                          <li key={idx} className="mb-1">
-                            - {row}
-                          </li>
-                        ))}
-                      </ul>
-                    </TableCell>
-                  </TableRow>
-                ))}
-              </TableBody>
-            </Table>
-          </div>
-        </CardContent>
-      </motion.div>
-    </Card>
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            key="expandable-table-content"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <CardContent className="p-0 pt-4 text-black-800 bg-transparent border-none">
+              <div className="overflow-x-auto">
+                <Table>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHead className="text-center font-bold border border-[#e5e7eb] bg-white w-24 text-black-800">KHUNG</TableHead>
+                      <TableHead className="text-center font-bold border border-[#e5e7eb] bg-white w-24 text-black-800">RSI</TableHead>
+                      <TableHead className="text-center font-bold border border-[#e5e7eb] bg-white w-24 text-black-800">KẾT LUẬN</TableHead>
+                      <TableHead className="text-center font-bold border border-[#e5e7eb] bg-white text-black-800">NHẬN ĐỊNH</TableHead>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    {content.map((row: any, index: number) => (
+                      <TableRow key={index}>
+                        <TableCell className="text-center font-medium border border-[#e5e7eb]">
+                          {row.time === "KẾT LUẬN" ? (
+                            <span className="text-red-400">{row.time}</span>
+                          ) : (
+                            <span className="text-orange-400">{row.time}</span>
+                          )}
+                        </TableCell>
+                        <TableCell className="text-center border border-[#e5e7eb]">
+                          <span className="text-purple-400">{row.rsi}</span>
+                        </TableCell>
+                        <TableCell className="text-center font-medium border border-[#e5e7eb]">
+                          {row.conclusion.includes("GIẢM") ? (
+                            <span className="text-red-400">{row.conclusion}</span>
+                          ) : row.conclusion.includes("TĂNG") ? (
+                            <span className="text-green-400">{row.conclusion}</span>
+                          ) : (
+                            <span>{row.conclusion}</span>
+                          )}
+                        </TableCell>
+                        <TableCell className="border border-[#e5e7eb]">
+                          <ul className="list-none pl-0 m-0">
+                            {row.assessment.map((row: any, idx: number) => (
+                              <li key={idx} className="mb-1">- {row}</li>
+                            ))}
+                          </ul>
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </div>
+            </CardContent>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   );
 }

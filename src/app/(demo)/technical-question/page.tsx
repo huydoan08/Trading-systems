@@ -8,6 +8,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { ExpandableCard } from "@/app/component/ExpandableCard/ExpandableCard";
 import { faqs } from "./data";
+import { Card } from "@/components/ui/card";
 
 export default function RSIPage() {
   const sidebar = useStore(useSidebar, (x) => x);
@@ -27,15 +28,19 @@ export default function RSIPage() {
 
   return (
     <ContentLayout title="Hỏi đáp về phân tích kĩ thuật">
-      {faqs.map((faq, index) => (
-        <ExpandableCard
-          key={index}
-          title={faq.title}
-          content={faq.content}
-          isOpen={openIndex === index}
-          onClick={() => setOpenIndex(openIndex === index ? null : index)}
-        />
-      ))}
+      <Card className="bg-white border border-[#e5e7eb] rounded-xl">
+        {faqs.map((faq, index) => (
+          <ExpandableCard
+            key={index}
+            title={faq.title}
+            content={faq.content}
+            isOpen={openIndex === index}
+            onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            isFirst={index === 0}
+            isLast={index === faqs.length - 1}
+          />
+        ))}
+      </Card>
     </ContentLayout>
   );
 }

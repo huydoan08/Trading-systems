@@ -61,15 +61,19 @@ export default function PersonalGrowthPage() {
 
   return (
     <ContentLayout title="Phát triển bản thân.">
-      {buddhism.map((bud, index) => (
-        <ExpandableCard
-          key={index}
-          title={bud.title}
-          content={bud.content}
-          isOpen={openIndex === index}
-          onClick={() => setOpenIndex(openIndex === index ? null : index)}
-        />
-      ))}
+      <Card className="bg-white border border-[#e5e7eb] rounded-xl mb-6">
+        {buddhism.map((bud, index) => (
+          <ExpandableCard
+            key={index}
+            title={bud.title}
+            content={bud.content}
+            isOpen={openIndex === index}
+            onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            isFirst={index === 0}
+            isLast={index === buddhism.length - 1}
+          />
+        ))}
+      </Card>
       <Card
         className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
         style={{ height: `${windowHeight - 80}px` }}

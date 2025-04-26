@@ -35,15 +35,19 @@ export default function ExperienceCompilationPage() {
     <ContentLayout title="Tổng hợp kinh nghiệm">
       <div className="flex flex-col h-[calc(100vh-4rem)]">
         <div className="flex-1 overflow-auto">
-          {experience.map((item, index) => (
-            <ExpandableCard
-              key={`${item.title}-${index}`}
-              title={item.title}
-              content={Array.isArray(item.content) ? item.content : [item.content]}
-              isOpen={openIndex === index}
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            />
-          ))}
+          <Card className="bg-white border border-[#e5e7eb] rounded-xl">
+            {experience.map((item, index) => (
+              <ExpandableCard
+                key={`${item.title}-${index}`}
+                title={item.title}
+                content={Array.isArray(item.content) ? item.content : [item.content]}
+                isOpen={openIndex === index}
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                isFirst={index === 0}
+                isLast={index === experience.length - 1}
+              />
+            ))}
+          </Card>
         </div>
       </div>
     </ContentLayout>

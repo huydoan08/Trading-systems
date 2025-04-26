@@ -29,24 +29,19 @@ export default function ExperienceCompilationPage() {
   return (
     <ContentLayout title="Cập nhật tình hình thị trường">
       <div className="flex flex-col h-[calc(100vh-4rem)]">
-        <Card className="shadow-lg border border-black-200 dark:border-black-700 mb-2">
-          <CardHeader>
-            <div className="font-bold text-2xl text-black-800 dark:text-white">
-              Review Về Thị Trường
-            </div>
-          </CardHeader>
-        </Card>
-
         <div className="flex-1 overflow-auto">
-          {dataOverview.map((item, index) => (
-            <ExpandableTableCard
-              key={`${item.title}-${index}`}
-              title={item.title}
-              content={Array.isArray(item.content) ? item.content : [item.content]}
-              isOpen={openIndex === index}
-              onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            />
-          ))}
+          <Card className="bg-white border border-[#e5e7eb] rounded-xl">
+            {dataOverview.map((item, index) => (
+              <ExpandableTableCard
+                key={`${item.title}-${index}`}
+                title={item.title}
+                content={Array.isArray(item.content) ? item.content : [item.content]}
+                isOpen={openIndex === index}
+                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+                isLast={index === dataOverview.length - 1}
+              />
+            ))}
+          </Card>
         </div>
       </div>
     </ContentLayout>
