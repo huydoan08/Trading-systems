@@ -61,7 +61,7 @@ export default function PersonalGrowthPage() {
 
   return (
     <ContentLayout title="Phát triển bản thân.">
-      <Card className="bg-white border border-[#e5e7eb] rounded-xl mb-6">
+      <Card className="bg-card border border-[#e5e7eb] dark:border-[#222] rounded-xl mb-6">
         {buddhism.map((bud, index) => (
           <ExpandableCard
             key={index}

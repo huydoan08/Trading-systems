@@ -35,7 +35,9 @@ export default function ExperienceCompilationPage() {
     <ContentLayout title="Tổng hợp kinh nghiệm">
       <div className="flex flex-col h-[calc(100vh-4rem)]">
         <div className="flex-1 overflow-auto">
-          <Card className="bg-white border border-[#e5e7eb] rounded-xl">
+          {/* Debug: This div should change color with theme */}
+          <div className="bg-card text-card-foreground p-4 mb-2 rounded-xl">Test Card Color: This should match the Card below in both light and dark mode.</div>
+          <Card className="bg-card dark:bg-black border border-[#e5e7eb] dark:border-[#222] rounded-xl">
             {experience.map((item, index) => (
               <ExpandableCard
                 key={`${item.title}-${index}`}

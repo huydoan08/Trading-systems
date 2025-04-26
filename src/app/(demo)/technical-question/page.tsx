@@ -28,7 +28,7 @@ export default function RSIPage() {
 
   return (
     <ContentLayout title="Hỏi đáp về phân tích kĩ thuật">
-      <Card className="bg-white border border-[#e5e7eb] rounded-xl">
+      <Card className="bg-card border border-[#e5e7eb] dark:border-[#222] rounded-xl">
         {faqs.map((faq, index) => (
           <ExpandableCard
             key={index}

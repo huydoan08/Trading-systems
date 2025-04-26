@@ -34,12 +34,12 @@ export function ExpandableTableCard({
 }: ExpandableTableCardProps) {
   return (
     <div
-      className={`px-6 py-4 cursor-pointer select-none flex flex-col transition-colors duration-200 ${!isLast ? 'border-b border-[#e5e7eb]' : ''}`}
+      className={`px-6 py-4 cursor-pointer select-none flex flex-col transition-colors duration-200 bg-card ${!isLast ? 'border-b border-[#e5e7eb] dark:border-[#222]' : ''}`}
       onClick={onClick}
     >
       <div className="flex justify-between items-center">
-        <span className="font-medium text-base text-black-800">{title}</span>
-        {isOpen ? <ChevronUp className="text-black-800" /> : <ChevronDown className="text-black-800" />}
+        <span className="font-medium text-base text-card-foreground">{title}</span>
+        {isOpen ? <ChevronUp className="text-card-foreground" /> : <ChevronDown className="text-card-foreground" />}
       </div>
       <AnimatePresence initial={false}>
         {isOpen && (
@@ -51,31 +51,31 @@ export function ExpandableTableCard({
             transition={{ duration: 0.5, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <CardContent className="p-0 pt-4 text-black-800 bg-transparent border-none">
+            <CardContent className="p-0 pt-4 text-foreground bg-transparent border-none">
               <div className="overflow-x-auto">
                 <Table>
                   <TableHeader>
                     <TableRow>
-                      <TableHead className="text-center font-bold border border-[#e5e7eb] bg-white w-24 text-black-800">KHUNG</TableHead>
-                      <TableHead className="text-center font-bold border border-[#e5e7eb] bg-white w-24 text-black-800">RSI</TableHead>
-                      <TableHead className="text-center font-bold border border-[#e5e7eb] bg-white w-24 text-black-800">KẾT LUẬN</TableHead>
-                      <TableHead className="text-center font-bold border border-[#e5e7eb] bg-white text-black-800">NHẬN ĐỊNH</TableHead>
+                      <TableHead className="text-center font-bold border border-[#e5e7eb] dark:border-[#222] bg-card w-24 text-card-foreground">KHUNG</TableHead>
+                      <TableHead className="text-center font-bold border border-[#e5e7eb] dark:border-[#222] bg-card w-24 text-card-foreground">RSI</TableHead>
+                      <TableHead className="text-center font-bold border border-[#e5e7eb] dark:border-[#222] bg-card w-24 text-card-foreground">KẾT LUẬN</TableHead>
+                      <TableHead className="text-center font-bold border border-[#e5e7eb] dark:border-[#222] bg-card text-card-foreground">NHẬN ĐỊNH</TableHead>
                     </TableRow>
                   </TableHeader>
                   <TableBody>
                     {content.map((row: any, index: number) => (
                       <TableRow key={index}>
-                        <TableCell className="text-center font-medium border border-[#e5e7eb]">
+                        <TableCell className="text-center font-medium border border-[#e5e7eb] dark:border-[#222] text-foreground">
                           {row.time === "KẾT LUẬN" ? (
                             <span className="text-red-400">{row.time}</span>
                           ) : (
                             <span className="text-orange-400">{row.time}</span>
                           )}
                         </TableCell>
-                        <TableCell className="text-center border border-[#e5e7eb]">
+                        <TableCell className="text-center border border-[#e5e7eb] dark:border-[#222] text-foreground">
                           <span className="text-purple-400">{row.rsi}</span>
                         </TableCell>
-                        <TableCell className="text-center font-medium border border-[#e5e7eb]">
+                        <TableCell className="text-center font-medium border border-[#e5e7eb] dark:border-[#222] text-foreground">
                           {row.conclusion.includes("GIẢM") ? (
                             <span className="text-red-400">{row.conclusion}</span>
                           ) : row.conclusion.includes("TĂNG") ? (
@@ -84,7 +84,7 @@ export function ExpandableTableCard({
                             <span>{row.conclusion}</span>
                           )}
                         </TableCell>
-                        <TableCell className="border border-[#e5e7eb]">
+                        <TableCell className="border border-[#e5e7eb] dark:border-[#222] text-foreground">
                           <ul className="list-none pl-0 m-0">
                             {row.assessment.map((row: any, idx: number) => (
                               <li key={idx} className="mb-1">- {row}</li>
