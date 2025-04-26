@@ -3,30 +3,38 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const Firefly = ({ index, centerX, centerY }: { index: number; centerX: number; centerY: number }) => {
+const Firefly = ({
+  index,
+  centerX,
+  centerY
+}: {
+  index: number;
+  centerX: number;
+  centerY: number;
+}) => {
   const radius = 25;
-  const angle = (index * (2 * Math.PI)) / 16;
+  const angle = (index * (2 * Math.PI)) / 15;
   const x = centerX + radius * Math.cos(angle);
   const y = centerY + radius * Math.sin(angle);
 
   return (
     <motion.div
-      className="absolute w-1.5 h-1.5 bg-red-500 dark:bg-blue-400 rounded-full"
+      className="absolute w-1.5 h-1.5 bg-green-400 dark:bg-blue-400 rounded-full"
       style={{
-        boxShadow: "0 0 10px #60a5fa, 0 0 20px #60a5fa, 0 0 30px #60a5fa",
+        boxShadow: "0 0 10px #60a5fa, 0 0 20px #60a5fa, 0 0 30px #60a5fa"
       }}
       initial={{ opacity: 0, scale: 0 }}
       animate={{
-        x: x - 3,
-        y: y - 3,
+        x: x - 5,
+        y: y - 5,
         opacity: [0, 1, 0],
-        scale: [0, 1, 0],
+        scale: [0, 1, 0]
       }}
       transition={{
         duration: 2,
         repeat: Infinity,
         delay: index * 0.1,
-        ease: "easeInOut",
+        ease: "easeInOut"
       }}
     />
   );
@@ -44,8 +52,8 @@ export const Cursor = () => {
       const target = e.target as HTMLElement;
       setIsPointer(
         window.getComputedStyle(target).cursor === "pointer" ||
-        target.tagName.toLowerCase() === "button" ||
-        target.tagName.toLowerCase() === "a"
+          target.tagName.toLowerCase() === "button" ||
+          target.tagName.toLowerCase() === "a"
       );
     };
 
@@ -56,17 +64,23 @@ export const Cursor = () => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 w-3 h-3 bg-pink-600 dark:bg-pink-600 rounded-full pointer-events-none z-50"
+        className="fixed top-0 left-0 rounded-full pointer-events-none z-50"
+        style={{
+          width: "25px",
+          height: "25px",
+          backgroundColor: "rgba(147, 197, 253, 0.2)",
+          border: "2px solid rgb(147, 197, 253)"
+        }}
         animate={{
-          x: mousePosition.x - 4,
-          y: mousePosition.y - 4,
-          scale: isPointer ? 1.5 : 1,
+          x: mousePosition.x - 20,
+          y: mousePosition.y - 20,
+          scale: 1.5
         }}
         transition={{
           type: "spring",
           stiffness: 1000,
           damping: 20,
-          mass: 0.1,
+          mass: 0.1
         }}
       />
       <motion.div
@@ -74,13 +88,13 @@ export const Cursor = () => {
         animate={{
           x: mousePosition.x - 12,
           y: mousePosition.y - 12,
-          scale: isPointer ? 1.5 : 1,
+          scale: isPointer ? 1.5 : 1
         }}
         transition={{
           type: "spring",
           stiffness: 100,
           damping: 25,
-          mass: 0.1,
+          mass: 0.1
         }}
       />
       <div className="fixed top-0 left-0 pointer-events-none z-50">
@@ -95,4 +109,4 @@ export const Cursor = () => {
       </div>
     </>
   );
-}; 
+};
