@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import { ThemeProvider } from "@/components/providers/theme-provider";
+import { CursorWrapper } from "@/components/CursorWrapper";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -42,6 +43,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider attribute="class" defaultTheme="system" >
+          <CursorWrapper />
           {children}
         </ThemeProvider>
       </body>
