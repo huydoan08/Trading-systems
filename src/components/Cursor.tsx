@@ -66,10 +66,10 @@ export const Cursor = () => {
       <motion.div
         className="fixed top-0 left-0 rounded-full pointer-events-none z-50"
         style={{
-          width: "25px",
-          height: "25px",
-          backgroundColor: "rgba(147, 197, 253, 0.2)",
-          border: "2px solid rgb(147, 197, 253)"
+          width: "10px",
+          height: "10px",
+          backgroundColor: "rgb(255, 202, 237)",  
+          border: "2px solid rgb(233, 41, 169)"
         }}
         animate={{
           x: mousePosition.x - 20,
