@@ -34,14 +34,6 @@ export default function ExperienceCompilationPage() {
   return (
     <ContentLayout title="Tổng hợp kinh nghiệm">
       <div className="flex flex-col h-[calc(100vh-4rem)]">
-        <Card className="shadow-lg border border-black-200 dark:border-black-700 mb-2">
-          <CardHeader>
-            <div className="font-bold text-2xl text-black-800 dark:text-white">
-              TRADING PHIÊU LƯU KÍ
-            </div>
-          </CardHeader>
-        </Card>
-
         <div className="flex-1 overflow-auto">
           {experience.map((item, index) => (
             <ExpandableCard
