@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { MousePointerClick, Snowflake } from "lucide-react";
 
 const Firefly = ({
   index,
@@ -43,10 +44,12 @@ const Firefly = ({
 export const Cursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isPointer, setIsPointer] = useState(false);
+  const [snowflakePosition, setSnowflakePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
+      setSnowflakePosition({ x: e.clientX - 12, y: e.clientY - 12 });
 
       // Check if the cursor is over a clickable element
       const target = e.target as HTMLElement;
@@ -64,16 +67,10 @@ export const Cursor = () => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 rounded-full pointer-events-none z-50"
-        style={{
-          width: "10px",
-          height: "10px",
-          backgroundColor: "rgb(255, 202, 237)",  
-          border: "2px solid rgb(233, 41, 169)"
-        }}
+        className="fixed top-0 left-0 pointer-events-none z-50"
         animate={{
-          x: mousePosition.x - 20,
-          y: mousePosition.y - 20,
+          x: mousePosition.x - 10,
+          y: mousePosition.y - 10,
           scale: 1.5
         }}
         transition={{
@@ -82,28 +79,38 @@ export const Cursor = () => {
           damping: 20,
           mass: 0.1
         }}
-      />
+      >
+        <MousePointerClick className="w-4 h-4 text-green-600 dark:text-green-400" />
+      </motion.div>
       <motion.div
-        className="fixed top-0 left-0 w-6 h-6 border-2 border-purple-600 dark:border-green-200 rounded-full pointer-events-none z-50"
+        className="fixed top-10 left-10 pointer-events-none z-50"
         animate={{
-          x: mousePosition.x - 12,
-          y: mousePosition.y - 12,
-          scale: isPointer ? 1.5 : 1
+          x: snowflakePosition.x,
+          y: snowflakePosition.y,
+          scale: isPointer ? 1.5 : 1,
+          rotate: 360
         }}
         transition={{
           type: "spring",
           stiffness: 100,
           damping: 25,
-          mass: 0.1
+          mass: 0.1,
+          rotate: {
+            duration: 2,
+            repeat: Infinity,
+            ease: "linear"
+          }
         }}
-      />
-      <div className="fixed top-0 left-0 pointer-events-none z-50">
+      >
+        <Snowflake className="w-6 h-6 text-purple-600 dark:text-white" />
+      </motion.div>
+      <div className="fixed top-50 left-50 pointer-events-none z-50">
         {[...Array(30)].map((_, index) => (
           <Firefly
             key={index}
             index={index}
-            centerX={mousePosition.x}
-            centerY={mousePosition.y}
+            centerX={snowflakePosition.x + 52}
+            centerY={snowflakePosition.y + 52}
           />
         ))}
       </div>
