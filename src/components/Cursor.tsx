@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { MousePointerClick, Snowflake } from "lucide-react";
+import { MousePointerClick, Snowflake, Pointer } from "lucide-react";
 
 const Firefly = ({
   index,
@@ -51,12 +51,13 @@ export const Cursor = () => {
       setMousePosition({ x: e.clientX, y: e.clientY });
       setSnowflakePosition({ x: e.clientX - 12, y: e.clientY - 12 });
 
-      // Check if the cursor is over a clickable element
+      // Check if the cursor is over a clickable element or checkbox
       const target = e.target as HTMLElement;
       setIsPointer(
         window.getComputedStyle(target).cursor === "pointer" ||
           target.tagName.toLowerCase() === "button" ||
-          target.tagName.toLowerCase() === "a"
+          target.tagName.toLowerCase() === "a" ||
+          target.tagName.toLowerCase() === "input" && target.getAttribute("type") === "checkbox"
       );
     };
 
@@ -69,8 +70,8 @@ export const Cursor = () => {
       <motion.div
         className="fixed top-0 left-0 pointer-events-none z-50"
         animate={{
-          x: mousePosition.x - 10,
-          y: mousePosition.y - 10,
+          x: mousePosition.x - 5,
+          y: mousePosition.y - 5,
           scale: 1.5
         }}
         transition={{
@@ -80,7 +81,11 @@ export const Cursor = () => {
           mass: 0.1
         }}
       >
-        <MousePointerClick className="w-4 h-4 text-green-600 dark:text-green-400" />
+        {isPointer ? (
+          <Pointer className="w-4 h-4 text-green-600 dark:text-green-400" />
+        ) : (
+          <MousePointerClick className="w-4 h-4 text-green-600 dark:text-green-400" />
+        )}
       </motion.div>
       <motion.div
         className="fixed top-10 left-10 pointer-events-none z-50"
