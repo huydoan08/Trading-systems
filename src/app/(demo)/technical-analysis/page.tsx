@@ -2,6 +2,7 @@
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
+import { Modal } from "@/components/ui/modal";
 import { auth } from "@/firebaseConfig";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
@@ -17,9 +18,12 @@ const images = ["/support-resistance/HTKC-01.png"];
 export default function QuintessenceOfRsiPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [windowHeight, setWindowHeight] = useState(0);
+  const [isRsiModalOpen, setIsRsiModalOpen] = useState(false);
+  const [isSupportModalOpen, setIsSupportModalOpen] = useState(false);
   const sidebar = useStore(useSidebar, (x) => x);
   const imageContainerRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (!currentUser) {
@@ -29,6 +33,7 @@ export default function QuintessenceOfRsiPage() {
 
     return () => unsubscribe();
   }, [router]);
+
   if (!sidebar) return null;
 
   const scrollToImage = () => {
@@ -55,42 +60,53 @@ export default function QuintessenceOfRsiPage() {
       return next;
     });
   };
+
   return (
     <ContentLayout title="Bộ công cụ chỉ báo RSI">
-      <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
-        <CardContent className="p-6 space-y-4">
-          <div className="font-bold text-lg text-black-800 dark:text-white">
-            CHỈ BÁO RSI:
-          </div>
-          <div className="space-y-2">
-            {quintessenceRsi.map((item, idx) => (
-              <div key={idx} className="flex items-start space-x-2 ">
-                <Dot />
-                <Label className="text-black-700 font-semibold dark:text-white">
-                  {item}
-                </Label>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-      <Card className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
-        <CardContent className="p-6 space-y-4">
-          <div className="font-bold text-lg text-black-800 dark:text-white">
-            HỖ TRỢ & KHÁNG CỰ:
-          </div>
-          <div className="space-y-2">
-            {supportAndResistance.map((item, idx) => (
-              <div key={idx} className="flex items-start space-x-2 ">
-                <Dot />
-                <Label className="text-black-700 font-semibold dark:text-white">
-                  {item}
-                </Label>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+      <div className="grid grid-cols-2 gap-4 mb-4">
+        <Card 
+          className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700 cursor-pointer hover:shadow-xl transition-shadow"
+          onClick={() => setIsRsiModalOpen(true)}
+        >
+          <CardContent className="p-6 space-y-4">
+            <div className="font-bold text-lg text-black-800 dark:text-white">
+              CHỈ BÁO RSI:
+            </div>
+            <div className="space-y-2">
+              {quintessenceRsi.map((item, idx) => (
+                <div key={idx} className="flex items-start space-x-2 ">
+                  <Dot />
+                  <Label className="text-black-700 font-semibold dark:text-white">
+                    {item}
+                  </Label>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card 
+          className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700 cursor-pointer hover:shadow-xl transition-shadow"
+          onClick={() => setIsSupportModalOpen(true)}
+        >
+          <CardContent className="p-6 space-y-4">
+            <div className="font-bold text-lg text-black-800 dark:text-white">
+              HỖ TRỢ & KHÁNG CỰ:
+            </div>
+            <div className="space-y-2">
+              {supportAndResistance.map((item, idx) => (
+                <div key={idx} className="flex items-start space-x-2 ">
+                  <Dot />
+                  <Label className="text-black-700 font-semibold dark:text-white">
+                    {item}
+                  </Label>
+                </div>
+              ))}
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+
       <Card
         className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
         style={{
@@ -115,7 +131,6 @@ export default function QuintessenceOfRsiPage() {
               />
             </AnimatePresence>
 
-            {/* Nút Prev */}
             <button
               onClick={prevImage}
               className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
@@ -127,7 +142,6 @@ export default function QuintessenceOfRsiPage() {
               />
             </button>
 
-            {/* Nút Next */}
             <button
               onClick={nextImage}
               className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
@@ -139,13 +153,46 @@ export default function QuintessenceOfRsiPage() {
               />
             </button>
 
-            {/* Hiển thị số ảnh */}
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black/60 text-white text-sm px-3 py-1 rounded-full">
               {currentIndex + 1} / {images.length}
             </div>
           </div>
         </CardContent>
       </Card>
+
+      <Modal
+        isOpen={isRsiModalOpen}
+        onClose={() => setIsRsiModalOpen(false)}
+        title="CHỈ BÁO RSI"
+      >
+        <div className="space-y-4">
+          {quintessenceRsi.map((item, idx) => (
+            <div key={idx} className="flex items-start space-x-3">
+              <Dot className="h-6 w-6 text-black-600 dark:text-black-300" />
+              <Label className="text-lg text-black-700 font-semibold dark:text-white">
+                {item}
+              </Label>
+            </div>
+          ))}
+        </div>
+      </Modal>
+
+      <Modal
+        isOpen={isSupportModalOpen}
+        onClose={() => setIsSupportModalOpen(false)}
+        title="HỖ TRỢ & KHÁNG CỰ"
+      >
+        <div className="space-y-4">
+          {supportAndResistance.map((item, idx) => (
+            <div key={idx} className="flex items-start space-x-3">
+              <Dot className="h-6 w-6 text-black-600 dark:text-black-300" />
+              <Label className="text-lg text-black-700 font-semibold dark:text-white">
+                {item}
+              </Label>
+            </div>
+          ))}
+        </div>
+      </Modal>
     </ContentLayout>
   );
 }
