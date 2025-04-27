@@ -62,7 +62,7 @@ export default function QuintessenceOfRsiPage() {
   };
 
   return (
-    <ContentLayout title="Bộ công cụ chỉ báo RSI">
+    <ContentLayout title="Phân tích kĩ thuật">
       <div className="grid grid-cols-2 gap-4 mb-4">
         <Card 
           className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700 cursor-pointer hover:shadow-xl transition-shadow"
@@ -72,11 +72,11 @@ export default function QuintessenceOfRsiPage() {
             <div className="font-bold text-lg text-black-800 dark:text-white">
               CHỈ BÁO RSI:
             </div>
-            <div className="space-y-2">
+            <div className="space-y-3">
               {quintessenceRsi.map((item, idx) => (
-                <div key={idx} className="flex items-start space-x-2 ">
-                  <Dot />
-                  <Label className="text-black-700 font-semibold dark:text-white">
+                <div key={idx} className="flex items-start">
+                  <Dot className="h-5 w-5 text-black-600 dark:text-black-300 mt-1 flex-shrink-0" />
+                  <Label className="text-black-700 font-semibold dark:text-white ml-2">
                     {item}
                   </Label>
                 </div>
@@ -93,11 +93,11 @@ export default function QuintessenceOfRsiPage() {
             <div className="font-bold text-lg text-black-800 dark:text-white">
               HỖ TRỢ & KHÁNG CỰ:
             </div>
-            <div className="space-y-2">
+            <div className="space-y-3">
               {supportAndResistance.map((item, idx) => (
-                <div key={idx} className="flex items-start space-x-2 ">
-                  <Dot />
-                  <Label className="text-black-700 font-semibold dark:text-white">
+                <div key={idx} className="flex items-start">
+                  <Dot className="h-5 w-5 text-black-600 dark:text-black-300 mt-1 flex-shrink-0" />
+                  <Label className="text-black-700 font-semibold dark:text-white ml-2">
                     {item}
                   </Label>
                 </div>
@@ -167,9 +167,9 @@ export default function QuintessenceOfRsiPage() {
       >
         <div className="space-y-4">
           {quintessenceRsi.map((item, idx) => (
-            <div key={idx} className="flex items-start space-x-3">
-              <Dot className="h-6 w-6 text-black-600 dark:text-black-300" />
-              <Label className="text-lg text-black-700 font-semibold dark:text-white">
+            <div key={idx} className="flex items-start">
+              <Dot className="h-6 w-6 text-black-600 dark:text-black-300 mt-1 flex-shrink-0" />
+              <Label className="text-lg text-black-700 font-semibold dark:text-white ml-3">
                 {item}
               </Label>
             </div>
@@ -184,9 +184,9 @@ export default function QuintessenceOfRsiPage() {
       >
         <div className="space-y-4">
           {supportAndResistance.map((item, idx) => (
-            <div key={idx} className="flex items-start space-x-3">
-              <Dot className="h-6 w-6 text-black-600 dark:text-black-300" />
-              <Label className="text-lg text-black-700 font-semibold dark:text-white">
+            <div key={idx} className="flex items-start">
+              <Dot className="h-6 w-6 text-black-600 dark:text-black-300 mt-1 flex-shrink-0" />
+              <Label className="text-lg text-black-700 font-semibold dark:text-white ml-3">
                 {item}
               </Label>
             </div>
