@@ -57,7 +57,6 @@ export function ExpandableTableCard({
                   <TableHeader>
                     <TableRow>
                       <TableHead className="text-center font-bold border border-[#e5e7eb] dark:border-[#222] bg-card w-24 text-card-foreground">KHUNG</TableHead>
-                      <TableHead className="text-center font-bold border border-[#e5e7eb] dark:border-[#222] bg-card w-24 text-card-foreground">RSI</TableHead>
                       <TableHead className="text-center font-bold border border-[#e5e7eb] dark:border-[#222] bg-card w-24 text-card-foreground">KẾT LUẬN</TableHead>
                       <TableHead className="text-center font-bold border border-[#e5e7eb] dark:border-[#222] bg-card text-card-foreground">NHẬN ĐỊNH</TableHead>
                     </TableRow>
@@ -65,16 +64,14 @@ export function ExpandableTableCard({
                   <TableBody>
                     {content.map((row: any, index: number) => (
                       <TableRow key={index}>
-                        <TableCell className="text-center font-medium border border-[#e5e7eb] dark:border-[#222] text-foreground">
+                        <TableCell className="text-center font-medium border border-[#e5e7eb] dark:border-[#222]">
                           {row.time === "KẾT LUẬN" ? (
-                            <span className="text-red-400">{row.time}</span>
+                            <span className="dark:text-red-400">{row.time}</span>
                           ) : (
-                            <span className="text-orange-400">{row.time}</span>
+                            <span className="text-purple-600 dark:text-purple-400">{row.time}</span>
                           )}
                         </TableCell>
-                        <TableCell className="text-center border border-[#e5e7eb] dark:border-[#222] text-foreground">
-                          <span className="text-purple-400">{row.rsi}</span>
-                        </TableCell>
+
                         <TableCell className="text-center font-medium border border-[#e5e7eb] dark:border-[#222] text-foreground">
                           {row.conclusion.includes("GIẢM") ? (
                             <span className="text-red-400">{row.conclusion}</span>

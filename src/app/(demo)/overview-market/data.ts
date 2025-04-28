@@ -1,253 +1,87 @@
 export const dataOverview = [
   {
-    title: "Ngày 16/04/2025",
+    title: "Ngày 30/04/2025",
     content: [
       {
         time: "M",
-        rsi: 61,
-        conclusion: "SIDEWAY",
+        conclusion: "TĂNG",
         assessment: [
-          "RSI cắt qua TBN sắp chạm tới TBC, Xu hướng bó sát 2 DTB",
+          "RSI nằm cắt lên chạm đường TBN",
           "Hiện tại M vẫn giữ cấu trúc fibo 0.5",
           "Ước chừng sóng tăng đi được 85% hành trình"
         ]
       },
       {
-        time: "W",
-        rsi: 48,
-        conclusion: "GIẢM",
+        time: "2W",
+        conclusion: "LƯỠNG LỰ",
         assessment: [
-          "RSI cắt qua 2 DTB xu hướng tiếp tục mở rộng",
-          "đang bó sát đường TBN, sóng giảm đi được 50%"
-        ]
-      },
-      {
-        time: "D",
-        rsi: 49,
-        conclusion: "SIDEWAY",
-        assessment: [
-          "RSI bó sát 2 DTB",
-          "xu hướng chính là sideway",
-          "RSI có sự tích lũy cần quan sát thêm khung nhỏ hơn"
-        ]
-      },
-      {
-        time: "H4",
-        rsi: 45,
-        conclusion: "GIẢM",
-        assessment: ["RSI cắt xuống dưới 2 DTB", "xu hướng giảm"]
-      },
-      {
-        time: "H1",
-        rsi: 35,
-        conclusion: "GIẢM",
-        assessment: [
-          "RSI cắt xuống dưới 2 DTB",
-          "xu hướng giảm",
-          "các đỉnh cũ chạm vùng 70 quay đầu, lực mua yếu."
-        ]
-      },
-      {
-        time: "KẾT LUẬN",
-        rsi: "",
-        conclusion: "GIẢM",
-        assessment: ["Chiến lược lúc này chờ nhịp điều chỉnh."]
-      }
-    ]
-  },
-  {
-    title: "Ngày 23/04/2025",
-    content: [
-      {
-        time: "M",
-        rsi: 65,
-        conclusion: "SIDEWAY",
-        assessment: [
-          "RSI nằm giữa 2 DTB, xu hướng bó sát 2 DTB",
-          "Hiện tại M vẫn giữ cấu trúc fibo 0.5",
-          "Ước chừng sóng tăng đi được 85% hành trình"
+          "RSI móc lên và đã chạm đường TBN",
         ]
       },
       {
         time: "W",
-        rsi: 56,
-        conclusion: "GIẢM",
+        conclusion: "LƯỠNG LỰ",
         assessment: [
-          "RSI cắt qua lên đường TBN, sắp chạm đường TBC",
-          "Đường TBN đang đi ngang sóng giảm ước chừng đã đi được 70% hành trình"
+          "RSI cắt qua lên đường TBN, sắp cắt qua đường TBC, đang lưỡng lự",
+        ]
+      },
+      {
+        time: "3D",
+        conclusion: "TĂNG",
+        assessment: [
+          "RSI cắt lên trên 2 ĐTB và đang mở rộng, mới bắt đầu hành trình tăng.",
         ]
       },
       {
         time: "D",
-        rsi: 66,
         conclusion: "TĂNG",
         assessment: [
-          "RSI cắt lên trên 2 ĐTB và đang mở rộng",
-          "Đang gặp vùng cản tại 93k$",
-          "Test vùng cản lần 2, khả năng cao sẽ điểu chỉnh xuống và test lại tiếp."
-        ]
-      },
-      {
-        time: "H4",
-        rsi: 82,
-        conclusion: "TĂNG",
-        assessment: [
-          "RSI vượt ra ngoài vùng 80",
-          "Có khả năng điều chỉnh và trả sóng",
-          "Cần chịu khó quan sát khung H4"
-        ]
-      },
-      {
-        time: "H1",
-        rsi: 75,
-        conclusion: "TĂNG",
-        assessment: ["RSI vượt ra ngoài vùng 80"]
-      },
-      {
-        time: "KẾT LUẬN",
-        rsi: "",
-        conclusion: "TĂNG",
-        assessment: [
-          "Khung nhỏ sóng đã đi khá xa và đang gặp vùng cản",
-          "Cần chờ nhịp điều chỉnh",
-          "Không có suy nghĩ SHORT"
-        ]
-      }
-    ]
-  },
-  {
-    title: "Ngày 24/04/2025",
-    content: [
-      {
-        time: "M",
-        rsi: 65,
-        conclusion: "SIDEWAY",
-        assessment: [
-          "RSI nằm giữa 2 DTB, xu hướng bó sát 2 DTB",
-          "Hiện tại M vẫn giữ cấu trúc fibo 0.5",
-          "Ước chừng sóng tăng đi được 85% hành trình"
-        ]
-      },
-      {
-        time: "W",
-        rsi: 56,
-        conclusion: "GIẢM",
-        assessment: [
-          "RSI cắt qua lên đường TBN, sắp chạm đường TBC",
-          "Đường TBN đang đi ngang sóng giảm ước chừng đã đi được 80% hành trình"
-        ]
-      },
-      {
-        time: "D",
-        rsi: 66,
-        conclusion: "TĂNG",
-        assessment: [
-          "RSI cắt lên trên 2 ĐTB và đang bắt đầu đi ngang, sóng tăng ước chừng đã đi được 50% hành trình",
-          "Đang gặp vùng cản tại 93k$",
-          "Giá nằm trên fibo 0.236",
-          "Đóng nến ngày thể hiện sự lưỡng lự"
-        ]
-      },
-      {
-        time: "H4",
-        rsi: 72,
-        conclusion: "TĂNG",
-        assessment: [
-          "RSI vượt ra ngoài vùng 80",
-          "Đang điều chỉnh đi xuống",
-          "Vẫn đang giữ giá trên fibo 0.236"
-        ]
-      },
-      {
-        time: "H2",
-        rsi: 63,
-        conclusion: "GIẢM",
-        assessment: ["RSI cắt xuống 2 ĐTB, đang bắt đầu điều chỉnh đi xuống"]
-      },
-      {
-        time: "H1",
-        rsi: 51,
-        conclusion: "GIẢM",
-        assessment: [
-          "RSI cắt xuống dưới 2 ĐTB và đang mở rộng",
-          "Giá đang giữ cấu trúc tại fibo 0.382"
-        ]
-      },
-      {
-        time: "KẾT LUẬN",
-        rsi: "",
-        conclusion: "TĂNG",
-        assessment: [
-          "Fear & Gear Index: 63",
-          "Khung lớn tăng, có dấu hiệu của việc điều chỉnh",
-          "Khung nhỏ đang điều chỉnh, cần tiếp tục quan sát để tìm kiếm điểm vào lệnh đẹp",
-          "ĐANG TRONG NHỊP ĐIỀU CHỈNH CỦA CON SÓNG TĂNG, CHIẾN LƯỢC LÀ BUY VÀ CHỜ BUY"
-        ]
-      }
-    ]
-  },
-  {
-    title: "Ngày 25/04/2025",
-    content: [
-      {
-        time: "M",
-        rsi: 65,
-        conclusion: "SIDEWAY",
-        assessment: [
-          "RSI nằm giữa 2 DTB, xu hướng bó sát 2 DTB",
-          "Hiện tại M vẫn giữ cấu trúc fibo 0.5",
-          "Ước chừng sóng tăng đi được 85% hành trình"
-        ]
-      },
-      {
-        time: "W",
-        rsi: 58,
-        conclusion: "TĂNG",
-        assessment: [
-          "RSI cắt qua lên đường TBN,đã chạm đường TBC, RSI sắp cắt qua 2 đường trung bình",
-        ]
-      },
-      {
-        time: "D",
-        rsi: 69,
-        conclusion: "TĂNG",
-        assessment: [
-          "RSI cắt lên trên 2 ĐTB và đang bắt đầu đi ngang, sóng tăng ước chừng đã đi được 50% hành trình",
+          "RSI nằm trên 2 đường TB và vẫn đang tiếp tục mở rộng, sóng tăng ước chừng đi được 50% hành trình",
           "Giá nằm trên fibo 0.236"
         ]
       },
       {
-        time: "H4",
-        rsi: 72,
-        conclusion: "TĂNG",
+        time: "H12",
+        conclusion: "LƯỠNG LỰ",
         assessment: [
-          "RSI vượt ra ngoài vùng 80",
-          "Đã điều chỉnh đi xong",
-          "Vẫn đang giữ giá trên fibo 0.236"
+          "RSI cắt xuống dưới đường TBN, sắp chạm đường TBC, sóng tăng đã đi được 2 nhịp, sắp kết thúc nhịp số 2",
         ]
       },
       {
-        time: "H2",
-        rsi: 69,
-        conclusion: "TĂNG",
-        assessment: ["RSI đang bắt đầu cắt lên trên 2 đường TB"]
+        time: "H8",
+        conclusion: "GIẢM",
+        assessment: [
+          "RSI đã cắt xuống dưới 2 đường TB, có khả năng sẽ đi vào một nhịp điều chỉnh"
+        ]
+      },
+      {
+        time: "H4",
+        conclusion: "GIẢM",
+        assessment: [
+          "RSI trước đó vượt ra ngoài vùng 80",
+          "Vẫn đang trong nhịp điều chỉnh giảm, RSI chưa cắt lên trên 2 đường trung bình, cần tiếp tục quan sát"
+        ]
       },
       {
         time: "H1",
-        rsi: 51,
-        conclusion: "TĂNG",
+        conclusion: "Sideway",
         assessment: [
           "RSI đã cắt lên trên 2 ĐTB và đang mở rộng",
         ]
       },
       {
+        time: "Fear & Gear",
+        conclusion: "Balance",
+        assessment: [
+          "54",
+        ]
+      },
+      {
         time: "KẾT LUẬN",
         rsi: "",
         conclusion: "TĂNG",
         assessment: [
-          "Fear & Gear Index: 60",
-          "Khung H1-H2-H4-D1-W đều đồng thuận tăng",
-          "ĐANG TRONG NHỊP CON SÓNG TĂNG, CHIẾN LƯỢC LÀ BUY VÀ CHỜ BUY"
+          "Khung D -> khung M vẫn đang cho thấy là xu hướng tăng, khung H8 trở xuống cho thấy xu hướng giảm"
         ]
       }
     ]
