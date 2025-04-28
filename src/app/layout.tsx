@@ -42,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ThemeProvider attribute="class" defaultTheme="system" >
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
           <CursorWrapper />
           {children}
         </ThemeProvider>
