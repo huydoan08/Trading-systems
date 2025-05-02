@@ -36,7 +36,7 @@ export function Modal({ isOpen, onClose, children, title }: ModalProps) {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white dark:bg-black-800 p-8 text-left align-middle shadow-xl transition-all">
+              <Dialog.Panel className="w-full max-w-4xl transform overflow-hidden rounded-2xl bg-white dark:bg-gray-800 p-8 text-left align-middle shadow-xl transition-all">
                 <div className="flex items-center justify-between mb-6">
                   {title && (
                     <Dialog.Title
@@ -48,9 +48,9 @@ export function Modal({ isOpen, onClose, children, title }: ModalProps) {
                   )}
                   <button
                     onClick={onClose}
-                    className="rounded-full p-2 hover:bg-black-100 dark:hover:bg-black-700 transition-colors"
+                    className="rounded-full p-2 hover:bg-black-100 dark:hover:bg-gray-700 transition-colors"
                   >
-                    <X className="h-6 w-6 text-black-600 dark:text-black-300" />
+                    <X className="h-6 w-6 text-gray-600 dark:text-gray-300" />
                   </button>
                 </div>
                 <div className="mt-2">
