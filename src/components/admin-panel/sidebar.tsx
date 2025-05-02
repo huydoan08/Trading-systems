@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { cn } from "@/lib/utils";
-import { TentTree } from "lucide-react";
+import { Bitcoin } from "lucide-react";
 
 export function Sidebar() {
   const sidebar = useStore(useSidebar, (x) => x);
@@ -25,28 +25,18 @@ export function Sidebar() {
         onMouseLeave={() => setIsHover(false)}
         className="relative h-full flex flex-col px-3 py-4 overflow-y-auto shadow-md dark:shadow-zinc-800"
       >
-        <Button
+        <span
           className={cn(
-            "transition-transform ease-in-out duration-300 mb-1",
+            "transition-transform ease-in-out duration-300 mb-1 border-none",
             !getOpenState() ? "translate-x-1" : "translate-x-0"
           )}
-          variant="link"
-          asChild
         >
-          <div className="flex items-center gap-2">
-            <TentTree className="w-6 h-6 mr-1" />
-            <h1
-              className={cn(
-                "font-bold text-lg whitespace-nowrap transition-[transform,opacity,display] ease-in-out duration-300",
-                !getOpenState()
-                  ? "-translate-x-96 opacity-0 hidden"
-                  : "translate-x-0 opacity-100"
-              )}
-            >
-              Trading System
+          <div className="flex items-center justify-start ml-5">
+            <h1 className={cn("font-bold text-lg whitespace-nowrap")}>
+              TRADING SYSTEM
             </h1>
           </div>
-        </Button>
+        </span>
         <Menu isOpen={getOpenState()} />
       </div>
     </aside>
