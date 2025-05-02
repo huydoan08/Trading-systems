@@ -68,7 +68,7 @@ export const Cursor = () => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 pointer-events-none z-50"
+        className="fixed top-0 left-0 pointer-events-none z-[9999]"
         animate={{
           x: mousePosition.x - 5,
           y: mousePosition.y - 5,
@@ -88,7 +88,7 @@ export const Cursor = () => {
         )}
       </motion.div>
       <motion.div
-        className="fixed top-10 left-10 pointer-events-none z-50"
+        className="fixed top-10 left-10 pointer-events-none z-[9999]"
         animate={{
           x: snowflakePosition.x,
           y: snowflakePosition.y,
@@ -109,7 +109,7 @@ export const Cursor = () => {
       >
         <Snowflake className="w-6 h-6 text-purple-600 dark:text-white" />
       </motion.div>
-      <div className="fixed top-50 left-50 pointer-events-none z-50">
+      <div className="fixed top-50 left-50 pointer-events-none z-[9999]">
         {[...Array(30)].map((_, index) => (
           <Firefly
             key={index}
