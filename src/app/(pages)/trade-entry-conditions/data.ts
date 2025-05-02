@@ -8,6 +8,7 @@ export const conditionForEnteringATrade = [
   "Dùng fibo để xác định hiệu lực con sóng còn mạnh không.",
   "Xác định các đường trendline, vùng hỗ trợ, vùng kháng cự quan trọng và theo dõi phản ứng giá tại các vùng đó.",
   "Không cố tình đoán đỉnh và đoán đáy.",
+  "Chỉ số sợ hãi về dưới 20",
   "Mức rủi ro, mức thưởng và xác suất."
 ];
 
