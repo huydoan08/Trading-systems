@@ -1,6 +1,6 @@
 import { CardContent } from "@/components/ui/card";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { ChevronDown, ChevronUp, Dot } from "lucide-react";
 import {
   Table,
   TableBody,
@@ -84,7 +84,7 @@ export function ExpandableTableCard({
                         <TableCell className="border border-[#e5e7eb] dark:border-[#222] text-foreground">
                           <ul className="list-none pl-0 m-0">
                             {row.assessment.map((row: any, idx: number) => (
-                              <li key={idx} className="mb-1">- {row}</li>
+                              <li key={idx} className="flex mb-1"><Dot/> {row}</li>
                             ))}
                           </ul>
                         </TableCell>
