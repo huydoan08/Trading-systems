@@ -79,11 +79,11 @@ export default function Page() {
    npm run dev
    ```
 
-## Demo
+## pages
 
 The app is hosted on Vercel. [Click here](https://shadcn-ui-sidebar.salimi.my) to visit.
 <br>
-Direct demo link: `https://shadcn-ui-sidebar.salimi.my`
+Direct pages link: `https://shadcn-ui-sidebar.salimi.my`
 
 ## Screenshots
 

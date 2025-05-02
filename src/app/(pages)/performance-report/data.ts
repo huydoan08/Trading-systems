@@ -1,4 +1,4 @@
-import { YearlyData } from "@/app/(demo)/performance-report/page";
+import { YearlyData } from "@/app/(pages)/performance-report/page";
 
 export const allData: YearlyData = {
   "2024": [

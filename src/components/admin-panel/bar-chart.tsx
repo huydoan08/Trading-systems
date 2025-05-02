@@ -11,7 +11,7 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { Card, CardContent } from '../ui/card';
-import { dataStatistic } from '@/app/(demo)/statistic/data';
+import { dataStatistic } from '@/app/(pages)/statistic/data';
 
 const BarChartComponent = () => {
   return (
