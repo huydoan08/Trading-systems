@@ -13,7 +13,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Dot } from "lucide-react";
 import { quintessenceRsi, supportAndResistance } from "./data";
 
-const images = ["/support-resistance/HTKC-01.png"];
+const images = ["/support-resistance/cam-bay-01.png"];
 
 export default function QuintessenceOfRsiPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -114,6 +114,7 @@ export default function QuintessenceOfRsiPage() {
         }}
       >
         <CardContent className="p-6 space-y-4 h-full">
+        <h1 className="font-bold">CẠM BẪY</h1>
           <div
             ref={imageContainerRef}
             className="relative w-full h-full overflow-hidden rounded-lg"
