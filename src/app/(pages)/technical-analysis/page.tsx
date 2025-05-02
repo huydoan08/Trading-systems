@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const images = ["/support-resistance/cam-bay-01.png"];
+const imagesExcess = ["/support-resistance/excess-02.png"];
 
 export default function QuintessenceOfRsiPage() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -191,7 +192,6 @@ export default function QuintessenceOfRsiPage() {
           }}
         >
           <CardContent className="p-6 space-y-4 h-full">
-            <h1 className="font-bold">CẠM BẪY</h1>
             <div
               ref={imageContainerRef}
               className="relative w-full h-full overflow-hidden rounded-lg"
@@ -238,7 +238,11 @@ export default function QuintessenceOfRsiPage() {
           </CardContent>
         </Card>
       </Modal>
-      <Modal isOpen={isExcess} onClose={() => setIsExcess(false)} title="CẠM BẪY">
+      <Modal
+        isOpen={isExcess}
+        onClose={() => setIsExcess(false)}
+        title="BỨT PHÁ"
+      >
         <Card
           className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
           style={{
@@ -246,7 +250,6 @@ export default function QuintessenceOfRsiPage() {
           }}
         >
           <CardContent className="p-6 space-y-4 h-full">
-            <h1 className="font-bold">CẠM BẪY</h1>
             <div
               ref={imageContainerRef}
               className="relative w-full h-full overflow-hidden rounded-lg"
@@ -254,7 +257,7 @@ export default function QuintessenceOfRsiPage() {
               <AnimatePresence mode="wait">
                 <motion.img
                   key={currentIndex}
-                  src={images[currentIndex]}
+                  src={imagesExcess[currentIndex]}
                   alt={`Mẫu ${currentIndex + 1}`}
                   className="w-full h-full object-contain"
                   initial={{ opacity: 0, x: 100 }}
