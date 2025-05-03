@@ -149,6 +149,7 @@ export default function QuintessenceOfRsiPage() {
   const [isTrap, setIsTrap] = useState(false);
   const [isExcess, setIsExcess] = useState(false);
   const [isBreak, setIsBreak] = useState(false);
+  const [isDivergence, setIsDivergence] = useState(false);
   const sidebar = useStore(useSidebar, (x) => x);
   const router = useRouter();
 
@@ -189,6 +190,11 @@ export default function QuintessenceOfRsiPage() {
       title: "QUÁ ĐÀ",
       imageSrc: "/support-resistance/break-01.png",
       onClick: () => setIsBreak(true)
+    },
+    {
+      title: "PHÂN KÌ",
+      imageSrc: "/support-resistance/divergence-01.png",
+      onClick: () => setIsDivergence(true)
     }
   ];
 
@@ -233,6 +239,12 @@ export default function QuintessenceOfRsiPage() {
         title="QUÁ ĐÀ"
         isOpen={isBreak}
         onClose={() => setIsBreak(false)}
+      />
+      <ImageGallery
+        images={["/support-resistance/divergence-02.png", "/support-resistance/divergence-03.png"]}
+        title="PHÂN KÌ"
+        isOpen={isDivergence}
+        onClose={() => setIsDivergence(false)}
       />
     </ContentLayout>
   );
