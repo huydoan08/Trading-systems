@@ -21,6 +21,7 @@ import {
 import { ImageGallery } from "@/components/trade-entry/ImageGallery";
 import { InfoModal } from "@/components/trade-entry/InfoModal";
 import { TradeCard } from "@/components/trade-entry/TradeCard";
+import { InfoCard } from "@/components/technical-analysis/InfoCard";
 
 export default function ConditionForEnteringATradePage() {
   const [modals, setModals] = useState({
@@ -73,12 +74,12 @@ export default function ConditionForEnteringATradePage() {
     <ContentLayout title="Hệ Thống Giao Dịch">
       <div className="grid grid-cols-2 gap-4 mb-4">
         {tradeCards.slice(0, 2).map((card, idx) => (
-          <TradeCard key={idx} {...card} />
+          <InfoCard key={idx} {...card} />
         ))}
       </div>
       <div className="grid grid-cols-2 gap-4 mb-4">
         {tradeCards.slice(2).map((card, idx) => (
-          <TradeCard key={idx} {...card} />
+          <InfoCard key={idx} {...card} />
         ))}
       </div>
 
