@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { MousePointerClick, Snowflake, Pointer } from "lucide-react";
+import { Snowflake, Pointer, MousePointer } from "lucide-react";
 
 const Firefly = ({
   index,
@@ -82,9 +82,9 @@ export const Cursor = () => {
         }}
       >
         {isPointer ? (
-          <Pointer className="w-4 h-4 text-green-600 dark:text-green-400" />
+          <Pointer className="w-4 h-4 text-red-600 dark:text-green-600" />
         ) : (
-          <MousePointerClick className="w-4 h-4 text-green-600 dark:text-green-400" />
+          <MousePointer className="w-4 h-4 text-red-600 dark:text-green-600" />
         )}
       </motion.div>
       <motion.div
