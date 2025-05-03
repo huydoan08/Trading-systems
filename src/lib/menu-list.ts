@@ -98,10 +98,6 @@ export function getMenuList(pathname: string): Group[] {
             {
               href: "/avoid-lossing-order",
               label: "Né Lệnh Thua Xuất Sắc"
-            },
-            {
-              href: "/safe-stop-loss-mindset",
-              label: "Tư Duy Stoploss An Toàn"
             }
           ],
         }
