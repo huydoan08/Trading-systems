@@ -56,12 +56,11 @@ export default function ConditionForEnteringATradePage() {
       title: "MỘT SỐ LƯU Ý",
       imageSrc: "/beautiful-modal/important-note.png",
       onClick: () => toggleModal("importantNote"),
-      isAnimated: true
     },
     {
       title: "CHIẾN LƯỢC",
       imageSrc: "/beautiful-modal/strategy.png",
-      onClick: () => toggleModal("strategy")
+      onClick: () => toggleModal("strategy"),
     },
     {
       title: "MẪU HÌNH ĐẸP",

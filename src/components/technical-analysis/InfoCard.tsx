@@ -9,7 +9,7 @@ interface InfoCardProps {
 
 export const InfoCard = ({ title, imageSrc, onClick }: InfoCardProps) => (
   <Card
-    className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700 cursor-pointer hover:shadow-xl transition-shadow"
+    className="max-h-[67.5vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700 cursor-pointer hover:shadow-xl transition-all duration-300 ease-in-out hover:scale-105"
     onClick={onClick}
   >
     <CardContent className="p-6 space-y-4">
