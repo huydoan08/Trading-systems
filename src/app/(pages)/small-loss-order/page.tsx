@@ -11,8 +11,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 const images = [
-  "/small-lossing-order/small-loss-0001.png",
-  "/small-lossing-order/lossing-000233.png",
+  "/small-lossing-order/small-lossing-01.png",
 ];
 
 export default function SmallLossOrderPage() {
