@@ -20,7 +20,6 @@ import {
 } from "./data";
 import { ImageGallery } from "@/components/trade-entry/ImageGallery";
 import { InfoModal } from "@/components/trade-entry/InfoModal";
-import { TradeCard } from "@/components/trade-entry/TradeCard";
 import { InfoCard } from "@/components/technical-analysis/InfoCard";
 
 export default function ConditionForEnteringATradePage() {

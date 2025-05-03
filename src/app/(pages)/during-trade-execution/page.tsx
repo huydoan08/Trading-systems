@@ -11,7 +11,6 @@ import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { duringTradeExecution, keepOrder } from "./data";
 import { InfoModal } from "@/components/trade-entry/InfoModal";
-import { TradeCard } from "@/components/trade-entry/TradeCard";
 import { InfoCard } from "@/components/technical-analysis/InfoCard";
 
 const IMAGES = ["/manage-order/7.QLL tăng.png", "/manage-order/6.QLL giảm.png"];
