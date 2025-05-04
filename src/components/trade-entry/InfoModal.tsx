@@ -13,7 +13,7 @@ interface InfoModalProps {
 
 export const InfoModal = ({ isCheckbox, isOpen, onClose, title, items }: InfoModalProps) => (
   <Modal isOpen={isOpen} onClose={onClose} title={title}>
-    <div className="space-y-4">
+    <div className="space-y-4 max-h-[600px] overflow-y-auto">
       {items.map((item, idx) => (
         <div key={idx} className="flex items-center justify-start">
           {isCheckbox ? <Checkbox /> : <Dot className="h-6 w-6 text-black-600 dark:text-black-300 mt-1 flex-shrink-0" />}

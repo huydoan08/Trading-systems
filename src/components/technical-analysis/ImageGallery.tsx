@@ -38,8 +38,11 @@ export const ImageGallery = ({ images, title, isOpen, onClose }: ImageGalleryPro
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={title}>
       <Card className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700">
-        <CardContent className="p-6 space-y-4 h-full">
-          <div ref={imageContainerRef} className="relative w-full h-full overflow-hidden rounded-lg">
+        <CardContent className="p-6 space-y-4">
+          <div
+            ref={imageContainerRef}
+            className="relative w-full h-[600px] overflow-hidden rounded-lg"
+          >
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentIndex}

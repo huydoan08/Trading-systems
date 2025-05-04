@@ -43,10 +43,10 @@ export const ImageGallery = ({ images, title, isOpen, onClose }: ImageGalleryPro
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={title}>
       <Card className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700">
-        <CardContent className="p-6 space-y-4 h-full">
+        <CardContent className="p-6 space-y-4">
           <div
             ref={imageContainerRef}
-            className="relative w-full h-full overflow-hidden rounded-lg"
+            className="relative w-full h-[600px] overflow-hidden rounded-lg"
           >
             <AnimatePresence mode="wait">
               <motion.img
@@ -58,6 +58,7 @@ export const ImageGallery = ({ images, title, isOpen, onClose }: ImageGalleryPro
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -100 }}
                 transition={{ duration: 0.5 }}
+                loading="eager"
               />
             </AnimatePresence>
 
