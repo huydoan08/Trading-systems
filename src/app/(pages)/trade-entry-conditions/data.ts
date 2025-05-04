@@ -40,5 +40,6 @@ export const imagesCondition = [
   "/beautiful-modal/2.Bắt đáy khi tạo đáy cao dần.png",
   "/beautiful-modal/3.Bắt sóng hồi của sóng tăng trước đó.png",
   "/beautiful-modal/4.Điểm vào lệnh phá trendline.png",
-  "/beautiful-modal/5.Điểm vào lệnh Sell chạm trendline.png"
+  "/beautiful-modal/5.Điểm vào lệnh Sell chạm trendline.png",
+  "/beautiful-modal/bắt đáy RSI.png"
 ];

@@ -10,5 +10,6 @@ export const quintessenceRsi = [
   "Hướng đi của RSI kết hợp với 2 đường trung bình => Xác định xu hướng của con sóng.",
   "Đỉnh, đáy của RSI được tạo ra trước đó => Xác định mức độ tham gia vào của lực mua, lực bán.",
   "Hành trình di chuyển của RSI kết hợp với 2 đường trung bình => Xác định quãng đường đi của con sóng.",
-  "Kết hợp các đỉnh, đáy của RSI => Xác định sự phân kì hay hội tụ."
+  "Kết hợp các đỉnh, đáy của RSI => Xác định sự phân kì hay hội tụ.",
+  "Khi mà giá rơi mạnh => Chuyển qua khung H4 để quan sát RSI sẽ cho tín hiệu khá chính xác."
 ];
