@@ -30,7 +30,7 @@ export const CARD_DATA: CardData[] = [
     title: "CẠM BẪY",
     imageSrc: "/support-resistance/trap-01.png",
     modalType: "trap",
-    images: ["/support-resistance/cam-bay-01.png"]
+    images: ["/support-resistance/cam-bay-01.png", "/support-resistance/cam-bay-02.png"]
   },
   {
     title: "BỨT PHÁ",
