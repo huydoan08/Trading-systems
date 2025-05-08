@@ -36,13 +36,16 @@ export const strategy = [
 ];
 
 export const BotHunter = [
-  "buy TOKEN PRICE VOLUMN USDT",
-  "buy TOKEN limit VOLUMN USDT",
-  "buylimit TOKEN atPRICE VOLUMN USDT tpPRICE",
-  "buylimit TOKEN atPRICE VOLUMN USDT tpPRICE slPRICE",
-  "sell TOKEN PRICE VOLUMN USDT",
-  "sell VOLUMN TOKEN limit USDT",
-  "sellstop VOLUMN TOKEN PRICE USDT",
+  "buy T P V USDT",
+  "sell V T P USDT",
+  "buy T limit V USDT",
+  "sell V T limit USDT",
+  "buy T market V USDT",
+  "sell V T market USDT",
+  "buylimit T atP V USDT tpP slP",
+  "buylimit T atP V USDT tpP",
+  "buylimit T atP V USDT tp30% sl-3%",
+  "buylimit T atP V USDT tp30%",
   "del TOKEN",
   "del all"
 ];
