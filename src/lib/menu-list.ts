@@ -70,6 +70,7 @@ export function getMenuList(pathname: string): Group[] {
           href: "",
           label: "Nhật Kí Giao Dịch",
           icon: NotebookPen,
+          active: !isAdmin,
           submenus: [
             {
               href: "/overview-market",
