@@ -13,6 +13,7 @@ import { Dot } from "lucide-react";
 import {
   basicOrder,
   beforeOrderNotes,
+  BotHunter,
   conditionForEnteringATrade,
   imagesCondition,
   plan,
@@ -27,6 +28,7 @@ export default function ConditionForEnteringATradePage() {
     criteria: false,
     importantNote: false,
     beautifulModel: false,
+    botHunterModel: false,
     strategy: false
   });
   const sidebar = useStore(useSidebar, (x) => x);
@@ -66,6 +68,11 @@ export default function ConditionForEnteringATradePage() {
       title: "MẪU HÌNH ĐẸP",
       imageSrc: "/beautiful-modal/beautiful-model.png",
       onClick: () => toggleModal("beautifulModel")
+    },
+    {
+      title: "BOT GIAO DỊCH",
+      imageSrc: "/beautiful-modal/bot-hunter.png",
+      onClick: () => toggleModal("botHunterModel")
     }
   ];
 
@@ -88,6 +95,13 @@ export default function ConditionForEnteringATradePage() {
         items={conditionForEnteringATrade}
         title="BỘ TIÊU CHÍ VÀO LỆNH"
         isCheckbox
+      />
+      <InfoModal
+        isOpen={modals.botHunterModel}
+        onClose={() => toggleModal("botHunterModel")}
+        items={BotHunter}
+        title="BOT GIAO DỊCH SPOT HUNTER"
+        isCopy
       />
       <InfoModal
         isOpen={modals.importantNote}

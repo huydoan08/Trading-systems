@@ -8,7 +8,7 @@ export const conditionForEnteringATrade = [
   "Mức rủi ro, mức thưởng và xác suất.",
   "Dùng fibo để xác định hiệu lực con sóng còn mạnh không.",
   "Tối ưu điểm vào lệnh đẹp ở khung thời gian nhỏ",
-  "Chỉ số sợ hãi về dưới mức 20",
+  "Chỉ số sợ hãi về dưới mức 20"
 ];
 
 export const beforeOrderNotes = [
@@ -33,6 +33,18 @@ export const strategy = [
   "Nhồi lệnh: là khi thị trường có xu hướng mạnh, thì ta sẽ gia tăng thêm vị thế giúp tối ưu hóa lợi nhuận, cách nhồi lệnh là đặt lệnh chờ con sóng điều chỉnh, hoặc đặt lệnh đuổi khi giá phá qua cản.",
   "Nhả lệnh: là khi thấy sóng suy yếu, thì ta sẽ giảm bớt vị thế đang nắm giữ để chốt một phần lợi nhuận, giảm thiểu rủi ro. Khi thị trường điều chỉnh xong thì có thể gia tăng vị thế trở lại.",
   "Đóng lệnh: là khi giá đã đạt được mục tiêu chốt lời thì ta đặt lệnh chốt lời (takeprofit), hoặc giá đi ngược dự phóng thì ta đặt lệnh cắt lỗ (stoploss)"
+];
+
+export const BotHunter = [
+  "buy TOKEN PRICE VOLUMN USDT",
+  "buy TOKEN limit VOLUMN USDT",
+  "buylimit TOKEN atPRICE VOLUMN USDT tpPRICE",
+  "buylimit TOKEN atPRICE VOLUMN USDT tpPRICE slPRICE",
+  "sell TOKEN PRICE VOLUMN USDT",
+  "sell VOLUMN TOKEN limit USDT",
+  "sellstop VOLUMN TOKEN PRICE USDT",
+  "del TOKEN",
+  "del all"
 ];
 
 export const imagesCondition = [
