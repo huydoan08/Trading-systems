@@ -115,40 +115,40 @@ export function getMenuList(pathname: string): Group[] {
         }
       ]
     },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/trading-psychology",
-          label: "Tâm Lý Giao Dịch",
-          icon: Sprout,
-          submenus: []
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/mindset-strategy",
-          label: "Tư Duy & Chiến Thuật",
-          icon: Bird,
-          submenus: []
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/statistic",
-          label: "Thống Kê Chuỗi Lệnh",
-          icon: Star,
-          submenus: [],
-          active: !isAdmin
-        }
-      ]
-    },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/trading-psychology",
+    //       label: "Tâm Lý Giao Dịch",
+    //       icon: Sprout,
+    //       submenus: []
+    //     }
+    //   ]
+    // },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/mindset-strategy",
+    //       label: "Tư Duy & Chiến Thuật",
+    //       icon: Bird,
+    //       submenus: []
+    //     }
+    //   ]
+    // },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/statistic",
+    //       label: "Thống Kê Chuỗi Lệnh",
+    //       icon: Star,
+    //       submenus: [],
+    //       active: !isAdmin
+    //     }
+    //   ]
+    // },
     {
       groupLabel: "",
       menus: [
@@ -183,49 +183,49 @@ export function getMenuList(pathname: string): Group[] {
         }
       ]
     },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/important-notes",
-          label: "Lưu Ý Quan Trọng",
-          icon: BellRing,
-          submenus: []
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/technical-question",
-          label: "Hỏi Xoáy Đáp Xoay",
-          icon: FileQuestionIcon,
-          submenus: []
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/story-telling",
-          label: "Những Câu Chuyện Hay",
-          icon: Bird,
-          submenus: []
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/experience-compilation",
-          label: "Tổng Hợp Kinh Nghiệm",
-          icon: Footprints,
-          submenus: []
-        }
-      ]
-    }
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/important-notes",
+    //       label: "Lưu Ý Quan Trọng",
+    //       icon: BellRing,
+    //       submenus: []
+    //     }
+    //   ]
+    // },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/technical-question",
+    //       label: "Hỏi Xoáy Đáp Xoay",
+    //       icon: FileQuestionIcon,
+    //       submenus: []
+    //     }
+    //   ]
+    // },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/story-telling",
+    //       label: "Những Câu Chuyện Hay",
+    //       icon: Bird,
+    //       submenus: []
+    //     }
+    //   ]
+    // },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/experience-compilation",
+    //       label: "Tổng Hợp Kinh Nghiệm",
+    //       icon: Footprints,
+    //       submenus: []
+    //     }
+    //   ]
+    // }
   ];
 }
