@@ -165,9 +165,9 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/mentorship",
-          label: "Tầm Sư Học Đạo",
-          icon: PersonStandingIcon,
+          href: "/serious-mistake",
+          label: "Những Sai Lầm Nghiêm Trọng",
+          icon: Ban,
           submenus: []
         }
       ]
@@ -176,13 +176,14 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/serious-mistake",
-          label: "Sai Lầm Nghiêm Trọng",
-          icon: Ban,
+          href: "/mentorship",
+          label: "Tầm Sư Học Đạo",
+          icon: PersonStandingIcon,
           submenus: []
         }
       ]
     },
+ 
     // {
     //   groupLabel: "",
     //   menus: [
