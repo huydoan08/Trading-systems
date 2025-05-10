@@ -49,15 +49,11 @@ export function getMenuList(pathname: string): Group[] {
           submenus: [
             {
               href: "/trade-entry-conditions",
-              label: "Bộ Tiêu Chí Vào Lệnh"
+              label: "Tiêu Chí Vào Lệnh"
             },
             {
               href: "/during-trade-execution",
-              label: "Tiêu Chí Giữ Lệnh"
-            },
-            {
-              href: "/exit-trade-order",
-              label: "Tiêu Chí Thoát Lệnh"
+              label: "Khi Đã Vào Lệnh"
             }
           ]
         }
