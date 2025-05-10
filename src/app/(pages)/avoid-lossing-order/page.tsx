@@ -9,7 +9,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { onAuthStateChanged, getAuth } from "firebase/auth";
 
-const images = ["/avoid-lossing-order/avoid-lossing-01.png", "/avoid-lossing-order/avoid-lossing-02.png", "/avoid-lossing-order/avoid-lossing-03.png", "/avoid-lossing-order/avoid-lossing-04.png", "/avoid-lossing-order/avoid-lossing-05.png", "/avoid-lossing-order/avoid-lossing-06.png", "/avoid-lossing-order/avoid-lossing-07.png"];
+const images = ["/avoid-lossing-order/avoid-lossing-01.png", "/avoid-lossing-order/avoid-lossing-02.png", "/avoid-lossing-order/avoid-lossing-03.png", "/avoid-lossing-order/avoid-lossing-04.png", "/avoid-lossing-order/avoid-lossing-05.png", "/avoid-lossing-order/avoid-lossing-06.png", "/avoid-lossing-order/avoid-lossing-07.png", "/avoid-lossing-order/avoid-lossing-08.png", "/avoid-lossing-order/avoid-lossing-09.png"];
 
 interface NavigationButtonProps {
   onClick: () => void;
