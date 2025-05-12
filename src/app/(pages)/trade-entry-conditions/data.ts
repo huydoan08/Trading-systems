@@ -7,8 +7,7 @@ export const conditionForEnteringATrade = [
   "Xác định trendline khi giá phá vỡ xu hướng trước đó.",
   "Mức rủi ro, mức thưởng và xác suất.",
   "Dùng fibo để xác định hiệu lực con sóng còn mạnh không.",
-  "Tối ưu điểm vào lệnh đẹp ở khung thời gian nhỏ",
-  "Chỉ số sợ hãi về dưới mức 20"
+  "Tối ưu điểm vào lệnh đẹp ở khung thời gian nhỏ"
 ];
 
 export const beforeOrderNotes = [
@@ -34,7 +33,10 @@ export const strategy = [
   "Bao vây: là khi thị trường đã đi đúng kế hoạch, khi ấy lệnh chờ có thể được khớp, hoặc có thể vào lệnh thị trường nếu lệnh chờ không được khớp",
   "Nhồi lệnh: là khi thị trường có xu hướng mạnh, thì ta sẽ gia tăng thêm vị thế giúp tối ưu hóa lợi nhuận, cách nhồi lệnh là đặt lệnh chờ con sóng điều chỉnh, hoặc đặt lệnh đuổi khi giá phá qua cản.",
   "Nhả lệnh: là khi thấy sóng suy yếu, thì ta sẽ giảm bớt vị thế đang nắm giữ để chốt một phần lợi nhuận, giảm thiểu rủi ro. Khi thị trường điều chỉnh xong thì có thể gia tăng vị thế trở lại.",
-  "Đóng lệnh: là khi giá đã đạt được mục tiêu chốt lời thì ta đặt lệnh chốt lời (takeprofit), hoặc giá đi ngược dự phóng thì ta đặt lệnh cắt lỗ (stoploss)"
+  "Đóng lệnh: là khi giá đã đạt được mục tiêu chốt lời thì ta đặt lệnh chốt lời (takeprofit), hoặc giá đi ngược dự phóng thì ta đặt lệnh cắt lỗ (stoploss)",
+  "DCA dài hạn: áp dụng chiến lược này khi có RSI khung 1W về vùng 30-40",
+  "DCA trung hạn: áp dụng chiến lược này khi có chỉ số sợ hãi về dưới mức 20 hoặc RSI khung 3D về vùng 30-40",
+  "DCA ngắn hạn: áp dụng chiến lược này khi có RSI khung H8 về vùng 30, tuy nhiên cần khá thận trọng và quan sát thêm ở khung H4 có dấu hiệu RSI bó hẹp nữa.",
 ];
 
 export const BotHunter = [
