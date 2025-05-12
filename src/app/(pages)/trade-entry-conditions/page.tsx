@@ -17,6 +17,7 @@ import {
   conditionForEnteringATrade,
   imagesCondition,
   plan,
+  StepOrderData,
   strategy
 } from "./data";
 import { ImageGallery } from "@/components/trade-entry/ImageGallery";
@@ -29,7 +30,8 @@ export default function ConditionForEnteringATradePage() {
     importantNote: false,
     beautifulModel: false,
     botHunterModel: false,
-    strategy: false
+    strategy: false,
+    stepOrder: false
   });
   const sidebar = useStore(useSidebar, (x) => x);
   const router = useRouter();
@@ -73,6 +75,11 @@ export default function ConditionForEnteringATradePage() {
       title: "BOT GIAO DỊCH",
       imageSrc: "/beautiful-modal/bot-hunter.png",
       onClick: () => toggleModal("botHunterModel")
+    },
+    {
+      title: "CÁC BƯỚC VÀO LỆNH SPOT",
+      imageSrc: "/beautiful-modal/step-order.png",
+      onClick: () => toggleModal("stepOrder")
     }
   ];
 
@@ -90,6 +97,12 @@ export default function ConditionForEnteringATradePage() {
       </div>
 
       <InfoModal
+        isOpen={modals.stepOrder}
+        onClose={() => toggleModal("stepOrder")}
+        items={StepOrderData}
+        title="CÁC BƯỚC VÀO LỆNH GIAO DỊCH SPOT"
+      />
+      <InfoModal
         isOpen={modals.criteria}
         onClose={() => toggleModal("criteria")}
         items={conditionForEnteringATrade}
@@ -101,7 +114,7 @@ export default function ConditionForEnteringATradePage() {
         onClose={() => toggleModal("botHunterModel")}
         items={BotHunter}
         title="BOT GIAO DỊCH SPOT HUNTER"
-        isCopy
+         isCopy
       />
       <InfoModal
         isOpen={modals.importantNote}
