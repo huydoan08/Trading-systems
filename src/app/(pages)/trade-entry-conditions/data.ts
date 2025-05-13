@@ -6,8 +6,7 @@ export const conditionForEnteringATrade = [
   "Không cố tình đoán đỉnh, đoán đáy.",
   "Xác định trendline khi giá phá vỡ xu hướng trước đó.",
   "Mức rủi ro, mức thưởng và xác suất.",
-  "Dùng fibo để xác định hiệu lực con sóng còn mạnh không.",
-  "Tối ưu điểm vào lệnh đẹp ở khung thời gian nhỏ"
+  "Dùng fibo để xác định hiệu lực con sóng còn mạnh không."
 ];
 
 export const beforeOrderNotes = [
