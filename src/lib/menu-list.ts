@@ -1,17 +1,17 @@
 import {
-  Sprout,
+  // Sprout,
   LucideIcon,
   AlignHorizontalDistributeCenter,
-  FileQuestionIcon,
+  // FileQuestionIcon,
   PersonStandingIcon,
-  Bird,
+  // Bird,
   NotebookPen,
-  Footprints,
-  Star,
+  // Footprints,
+  // Star,
   LucideFileBarChart,
   Wallpaper,
-  Ban,
-  BellRing
+  // Ban,
+  // BellRing
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 
@@ -157,17 +157,17 @@ export function getMenuList(pathname: string): Group[] {
         }
       ]
     },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/serious-mistake",
-          label: "Những Sai Lầm Nghiêm Trọng",
-          icon: Ban,
-          submenus: []
-        }
-      ]
-    },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/serious-mistake",
+    //       label: "Những Sai Lầm Nghiêm Trọng",
+    //       icon: Ban,
+    //       submenus: []
+    //     }
+    //   ]
+    // },
     {
       groupLabel: "",
       menus: [
