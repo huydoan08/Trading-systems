@@ -108,6 +108,7 @@ export function getMenuList(pathname: string): Group[] {
           label: "Phân Tích Kĩ Thuật",
           icon: Wallpaper,
           submenus: [],
+          active: !isAdmin
         }
       ]
     },
@@ -175,7 +176,8 @@ export function getMenuList(pathname: string): Group[] {
           href: "/mentorship",
           label: "Tầm Sư Học Đạo",
           icon: PersonStandingIcon,
-          submenus: []
+          submenus: [],
+          active: !isAdmin
         }
       ]
     },
