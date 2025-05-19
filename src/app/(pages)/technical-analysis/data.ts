@@ -11,5 +11,7 @@ export const quintessenceRsi = [
   "Đỉnh, đáy của RSI được tạo ra trước đó => Xác định mức độ tham gia vào của lực mua, lực bán.",
   "Hành trình di chuyển của RSI kết hợp với 2 đường trung bình => Xác định quãng đường đi của con sóng.",
   "Kết hợp các đỉnh, đáy của RSI => Xác định sự phân kì hay hội tụ.",
-  "Khi mà giá rơi mạnh => Chuyển qua khung H4 để quan sát RSI sẽ cho tín hiệu khá chính xác."
+  "Khi mà giá rơi mạnh => Chuyển qua khung H4 để quan sát RSI sẽ cho tín hiệu khá chính xác.",
+  "RSI của khung 3D về vùng 40 => rải vốn DCA buylimit, entry giảm 1% cho mỗi lệnh",
+  "RSI của khung H8 về vùng 30 => rải vốn DCA buylimit, entry giảm 1% cho mỗi lệnh"
 ];
