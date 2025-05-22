@@ -13,6 +13,8 @@ export const quintessenceRsi = [
   "Kết hợp các đỉnh, đáy của RSI => Xác định sự phân kì hay hội tụ.",
   "Khi mà giá rơi mạnh => Chuyển qua khung H4 để quan sát RSI sẽ cho tín hiệu khá chính xác.",
   "RSI của khung 3D về vùng 40 => rải vốn DCA buylimit, entry giảm 1% cho mỗi lệnh",
+  "RSI của khung 3D (altcoin) cắt lên trên đường trung bình chậm => Vào lệnh mua SPOT nắm trung hạn",
   "RSI của khung H8 về vùng 30 => rải vốn DCA buylimit, entry giảm 1% cho mỗi lệnh",
-  "RSI của khung H8 vượt ra ngoài vùng 80 => khả năng sóng vẫn tiếp tăng tiếp rất mạnh"
+  "RSI của khung H8 vượt ra ngoài vùng 80 + cắt lên trên đường trung bình chậm => vào lệnh Spot ngắn hạn, có quản lý SL",
+  "RSI của khung H4 vượt ra ngoài vùng 80 + cắt lên trên đường trung bình chậm => vào lệnh Spot ngắn hạn, có quản lý SL",
 ];
