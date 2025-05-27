@@ -63,7 +63,7 @@ export const StepOrderData = [
 "Xác định xu hướng của thị trường - kịch bản của thị trường",
 "Xác định sóng chính, sóng thứ cấp (mục đích là tìm kiếm khung thời gian giao dịch)",
 "Tìm điểm vào lệnh",
-"Xác định điểm chốt lời - Quản lý lệnh (2% - 5%)"
+"Xác định điểm chốt lời - Quản lý lệnh (1% - 2%)"
 ];
 
 export const imagesCondition = [
