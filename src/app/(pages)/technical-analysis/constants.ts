@@ -36,7 +36,7 @@ export const CARD_DATA: CardData[] = [
     title: "BỨT PHÁ",
     imageSrc: "/support-resistance/excess-01.png",
     modalType: "excess",
-    images: ["/support-resistance/excess-02.png"]
+    images: ["/support-resistance/excess-02.png", "/support-resistance/break-03.png"]
   },
   {
     title: "QUÁ ĐÀ",
