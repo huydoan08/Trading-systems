@@ -7,5 +7,5 @@ export const duringTradeExecution = [
   export const keepOrder = [
     "Giá vẫn giữ trên vùng fibo 0.236 tại khung thời gian giao dịch.",
     "Các khung thời gian đồng thuận.",
-    "Có RSI vượt ra ngoài vùng 80."
+    "Có RSI vượt ra ngoài vùng 80." 
   ]
