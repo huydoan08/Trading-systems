@@ -10,6 +10,7 @@ import {
   // Star,
   LucideFileBarChart,
   Wallpaper,
+  CloudSun,
   // Ban,
   // BellRing
 } from "lucide-react";
@@ -56,6 +57,23 @@ export function getMenuList(pathname: string): Group[] {
               label: "Khi Đã Vào Lệnh"
             }
           ]
+        }
+      ],
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "",
+          label: "Hệ Thống Đầu Tư",
+          icon: CloudSun,
+          active: !isAdmin,
+          submenus: [
+            {
+              href: "/bitcoin",
+              label: "Bitcoin ( BTC )"
+            }
+          ],
         }
       ]
     },
