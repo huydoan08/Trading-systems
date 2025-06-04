@@ -72,6 +72,10 @@ export function getMenuList(pathname: string): Group[] {
             {
               href: "/bitcoin",
               label: "Bitcoin ( BTC )"
+            },
+            {
+              href: "/solana",
+              label: "Solana"
             }
           ],
         }
