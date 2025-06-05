@@ -1,6 +1,6 @@
 export const supportAndResistance = [
-  "Chia vốn ra nhiều lần mua, không cài stoploss",
-  "Khi sóng chạy xa thì bán dần ra để chốt lời, không cần cài stoploss"
+  "Chia vốn ra nhiều lần mua",
+  "Khi sóng chạy xa thì bán dần ra để chốt lời"
 ];
 
 export const quintessenceRsi = [
