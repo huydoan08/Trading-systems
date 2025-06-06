@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { onAuthStateChanged, getAuth } from "firebase/auth";
@@ -28,7 +28,7 @@ export default function PersonalGrowthPage() {
       }
     });
     return () => unsubscribe();
-  }, [router]);
+  }, [router, auth]);
 
   useEffect(() => {
     const handleResize = () => setWindowHeight(window.innerHeight);
@@ -37,31 +37,30 @@ export default function PersonalGrowthPage() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const scrollToImage = () => {
+  const scrollToImage = useCallback(() => {
     imageRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
-  };
+  }, []);
 
-  const nextImage = () => {
-    setCurrentIndex((prev) => {
-      const newIndex = (prev + 1) % imagesPersonal.length;
-      return newIndex;
-    });
+  const nextImage = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % imagesPersonal.length);
     scrollToImage();
-  };
+  }, [scrollToImage]);
 
-  const prevImage = () => {
-    setCurrentIndex((prev) => {
-      const newIndex = (prev - 1 + imagesPersonal.length) % imagesPersonal.length;
-      return newIndex;
-    });
+  const prevImage = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + imagesPersonal.length) % imagesPersonal.length);
     scrollToImage();
-  };
+  }, [scrollToImage]);
+
+  const handleCardClick = useCallback((index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  }, [openIndex]);
+
+  const currentImage = useMemo(() => imagesPersonal[currentIndex], [currentIndex]);
 
   if (!sidebar) return null;
 
   return (
     <ContentLayout title="Phát triển bản thân.">
-
       <Card
         className="w-full overflow-hidden shadow-lg border border-black-200 dark:border-black-700"
         style={{ height: `${windowHeight - 80}px` }}
@@ -72,7 +71,7 @@ export default function PersonalGrowthPage() {
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentIndex}
-                src={imagesPersonal[currentIndex]}
+                src={currentImage}
                 alt={`Mẫu ${currentIndex + 1}`}
                 className="w-full h-full object-contain"
                 initial={{ opacity: 0, x: 100 }}
@@ -111,7 +110,7 @@ export default function PersonalGrowthPage() {
             title={bud.title}
             content={bud.content}
             isOpen={openIndex === index}
-            onClick={() => setOpenIndex(openIndex === index ? null : index)}
+            onClick={() => handleCardClick(index)}
             isFirst={index === 0}
             isLast={index === buddhism.length - 1}
           />
