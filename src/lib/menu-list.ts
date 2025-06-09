@@ -77,6 +77,10 @@ export function getMenuList(pathname: string): Group[] {
             {
               href: "/solana",
               label: "Solana ( SOL )"
+            },
+            {
+              href: "/pepe",
+              label: "Pepe"
             }
           ],
         }
