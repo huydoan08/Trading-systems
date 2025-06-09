@@ -4,11 +4,9 @@ export const conditionForEnteringATrade = [
   "Chờ xác nhận sóng hồi ở khung nhỏ để tối ưu điểm vào lệnh đẹp.",
   "Chờ đợi và Quan sát các vùng cản quan trọng mà giá có thể phản ứng tại đó đặc biệt là vùng cản ở khung thời gian lớn.",
   "Phân tích tương quan lực mua lực bán để tìm điểm vào lệnh. Các mô hình tích lũy lực RSI, trường hợp RSI vượt các vùng 80 hoặc 20. Ưu tiên các mẫu hình đẹp, RSI hội tụ hoặc phân kì, đỉnh đáy cao dần,...",
-  // "Các khung thời gian phải đồng thuận.",
   "Chờ dấu hiệu xác nhận Price Action.",
   "Không cố tình đoán đỉnh, đoán đáy.",
-  // "Xác định trendline khi giá phá vỡ xu hướng trước đó.",
- "Tính toán ước lượng mức thưởng và rủi ro, xác xuất thành công xem có đáng vào lệnh này hay là không. Tức phải xác định rõ SL TP trước khi vào lệnh.",
+  "Tính toán ước lượng mức thưởng và rủi ro, xác xuất thành công xem có đáng vào lệnh này hay là không. Tức phải xác định rõ SL TP trước khi vào lệnh.",
   "Dùng fibo để xác định hiệu lực con sóng còn mạnh không.",
   "Tính toán trước các trường hợp có thể xảy ra để có cách xử lý cũng như quản lý lệnh. Nếu giá đi đúng dự phóng thì sẽ xử lý như thế nào, sai dự phóng thì sẽ xử lý như thế nào. Đưa ra chiến lược rõ ràng."
 ];
@@ -39,7 +37,7 @@ export const strategy = [
   "Đóng lệnh: là khi giá đã đạt được mục tiêu chốt lời thì ta đặt lệnh chốt lời (takeprofit), hoặc giá đi ngược dự phóng thì ta đặt lệnh cắt lỗ (stoploss)",
   "DCA dài hạn: áp dụng chiến lược này khi có RSI khung 1W về vùng 30-40",
   "DCA trung hạn: áp dụng chiến lược này khi có chỉ số sợ hãi về dưới mức 20 hoặc RSI khung 3D về vùng 30-40",
-  "DCA ngắn hạn: áp dụng chiến lược này khi có RSI khung H8 về vùng 30, tuy nhiên cần khá thận trọng và quan sát thêm ở khung H4 có dấu hiệu RSI bó hẹp nữa.",
+  "DCA ngắn hạn: áp dụng chiến lược này khi có RSI khung H8 về vùng 30, tuy nhiên cần khá thận trọng và quan sát thêm ở khung H4 có dấu hiệu RSI bó hẹp nữa."
 ];
 
 export const BotHunter = [
@@ -65,10 +63,10 @@ export const BotHunter = [
   "del all"
 ];
 export const StepOrderData = [
-"Xác định xu hướng của thị trường - kịch bản của thị trường",
-"Xác định sóng chính, sóng thứ cấp (mục đích là tìm kiếm khung thời gian giao dịch)",
-"Tìm điểm vào lệnh",
-"Xác định điểm chốt lời - Quản lý lệnh (1% - 2%)"
+  "Xác định xu hướng của thị trường - kịch bản của thị trường",
+  "Xác định sóng chính, sóng thứ cấp (mục đích là tìm kiếm khung thời gian giao dịch)",
+  "Tìm điểm vào lệnh",
+  "Xác định điểm chốt lời - Quản lý lệnh (1% - 2%)"
 ];
 
 export const imagesCondition = [
