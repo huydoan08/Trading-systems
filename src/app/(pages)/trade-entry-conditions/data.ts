@@ -1,12 +1,16 @@
 export const conditionForEnteringATrade = [
-  "Các mẫu hình đúng tiêu chuẩn, mẫu hình đẹp.",
-  "Các khung thời gian phải đồng thuận.",
-  "Chờ xác nhận sóng hồi để tối ưu điểm vào lệnh đẹp.",
+  "Phân tích đa khung thời gian trên RSI => nhận định trạng thái của thị trường, xác định ta đang ở đâu trong con sóng. Xác định nhìn nhận cấu trúc thị trường, xác định xu hướng.",
+  "Xác định khung thời gian giao dịch phải đồng thuận với các khung thời gian lớn.",
+  "Chờ xác nhận sóng hồi ở khung nhỏ để tối ưu điểm vào lệnh đẹp.",
+  "Chờ đợi và Quan sát các vùng cản quan trọng mà giá có thể phản ứng tại đó đặc biệt là vùng cản ở khung thời gian lớn.",
+  "phân tích tương quan lực mua lực bán để tìm điểm vào lệnh. Các mô hình tích lũy lực RSI, trường hợp RSI vượt các vùng 80 hoặc 20. Ưu tiên các mẫu hình đẹp, RSI hội tụ hoặc phân kì, đỉnh đáy cao dần,...",
+  // "Các khung thời gian phải đồng thuận.",
   "Chờ dấu hiệu xác nhận Price Action.",
   "Không cố tình đoán đỉnh, đoán đáy.",
-  "Xác định trendline khi giá phá vỡ xu hướng trước đó.",
-  "Mức rủi ro, mức thưởng và xác suất.",
-  "Dùng fibo để xác định hiệu lực con sóng còn mạnh không."
+  // "Xác định trendline khi giá phá vỡ xu hướng trước đó.",
+ "Tính toán ước lượng mức thưởng và rủi ro, xác xuất thành công xem có đáng vào lệnh này ko. Tức phải xác định rõ SL TP trước khi vào lệnh.",
+  "Dùng fibo để xác định hiệu lực con sóng còn mạnh không.",
+  "tính toán trước các trường hợp có thể xãy ra để có cách sữ lí củng như quản lí lệnh. Nếu giá đi đúng dự phóng thì sẽ sử lí như thế nào, sai dự phóng thì sẽ sử lí như thế nào. Đưa ra chiến lược rõ ràng."
 ];
 
 export const beforeOrderNotes = [
