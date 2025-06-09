@@ -47,7 +47,7 @@ export const InfoModal = ({
               >
                 {copiedIndex === idx ? (
                   <Check className="text-green-500" />
-                ) : (
+                ) : ( 
                   <Copy />
                 )}
               </div>
