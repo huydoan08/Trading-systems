@@ -1,8 +1,8 @@
 export const conditionForEnteringATrade = [
-  "Phân tích đa khung thời gian trên RSI => nhận định trạng thái của thị trường, xác định ta đang ở đâu trong con sóng. Xác định nhìn nhận cấu trúc thị trường, xác định xu hướng.",
+  "Phân tích đa khung thời gian trên RSI => Xác định được xu hướng của con sóng chính và con sóng thứ cấp, xác định xem ta đang ở đâu của con sóng chính và con sóng phụ.",
   "Xác định khung thời gian giao dịch phải đồng thuận với các khung thời gian lớn.",
   "Chờ xác nhận sóng hồi ở khung nhỏ để tối ưu điểm vào lệnh đẹp.",
-  "Chờ đợi và Quan sát các vùng cản quan trọng mà giá có thể phản ứng tại đó đặc biệt là vùng cản ở khung thời gian lớn.",
+  "Chờ đợi và quan sát các vùng cản quan trọng mà giá có thể phản ứng tại đó đặc biệt là vùng cản ở khung thời gian lớn.",
   "Phân tích tương quan lực mua lực bán để tìm điểm vào lệnh. Các mô hình tích lũy lực RSI, trường hợp RSI vượt các vùng 80 hoặc 20. Ưu tiên các mẫu hình đẹp, RSI hội tụ hoặc phân kì, đỉnh đáy cao dần,...",
   "Chờ dấu hiệu xác nhận Price Action.",
   "Không cố tình đoán đỉnh, đoán đáy.",

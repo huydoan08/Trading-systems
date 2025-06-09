@@ -182,5 +182,54 @@ export const dataOverview = [
         ]
       }
     ]
+  },
+  {
+    title: "Ngày 06/09/2025",
+    content: [
+      {
+        time: "W",
+        conclusion: "TĂNG YẾU",
+        assessment: [
+          "RSI nằm trên 2 đường trung bình, xu hướng tăng nhưng RSI đang đi ngang cho thấy lực tăng không thực sự áp đảo",
+        ]
+      },
+      {
+        time: "D",
+        conclusion: "GIẢM YẾU",
+        assessment: [
+          "RSI đã cắt lên trên đường trung bình nhanh, tiến sát đường trung bình chậm, nhưng đường trung bình nhanh chưa tiến sát đường trung bình chậm, vẫn có khả năng tiếp tục giảm."
+        ]
+      },
+      {
+        time: "H4",
+        conclusion: "TĂNG",
+        assessment: [
+          "RSI nằm trên 2 đường trung bình, vẫn đang mở rộng, tiếp tục một xu hướng tăng, tuy nhiên đang tăng ngược pha so với khung D."
+        ]
+      },
+      {
+        time: "H1",
+        conclusion: "SIDEWAY",
+        assessment: [
+          "RSI đi sideway trong vùng 40-70",
+        ]
+      },
+      {
+        time: "Fear & Gear",
+        conclusion: "Đang tham lam",
+        assessment: [
+          "62",
+        ]
+      },
+      {
+        time: "KẾT LUẬN",
+        rsi: "",
+        conclusion: "TĂNG",
+        assessment: [
+          "Với đánh dài: Khung lớn điểm vào lệnh đã không còn đẹp,lực không thực sự mạnh, chờ setup mới.",
+          "Với đánh ngắn H4: Đang trong con sóng điều chỉnh của xu hướng giảm khung D, chiến lược là short và chờ short"
+        ]
+      }
+    ]
   }
 ];
