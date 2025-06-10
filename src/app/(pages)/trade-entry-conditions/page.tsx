@@ -57,7 +57,7 @@ export default function ConditionForEnteringATradePage() {
       isAnimated: true
     },
     {
-      title: "MỘT SỐ LƯU Ý",
+      title: "GIAO DỊCH P2P",
       imageSrc: "/beautiful-modal/important-note.png",
       onClick: () => toggleModal("importantNote"),
     },
@@ -120,7 +120,7 @@ export default function ConditionForEnteringATradePage() {
         isOpen={modals.importantNote}
         onClose={() => toggleModal("importantNote")}
         items={beforeOrderNotes}
-        title="LƯU Ý QUAN TRỌNG"
+        title="GIAO DỊCH P2P"
       />
       <Modal
         isOpen={modals.strategy}
