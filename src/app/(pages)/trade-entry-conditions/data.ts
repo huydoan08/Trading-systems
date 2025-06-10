@@ -15,7 +15,8 @@ export const beforeOrderNotes = [
   "Kiễn nhẫn chờ giá lọt vào vùng cản, hỗ trợ & kháng cự.",
   "Chờ đợi tín hiệu như cạm bẫy, quá đà, sự thất bại của mẫu hình, mẫu nến.",
   "Nhìn vào RSI, đừng quá tập trung nhìn vào giá, hãy nhìn vào RSI và nhìn xu hướng.",
-  "Xác định thời gian giữ lệnh dự kiến."
+  "Xác định thời gian giữ lệnh dự kiến.",
+  "Giao dịch P2P cần lưu ý: Kiểm tra thật kĩ giá mua, giá bán, kiểm tra thật kĩ số tiền nhận, tiền chuyển, kiểm tra thật kĩ nội dung, kiểm tra chắc chắn là đã nhận được tiền mới mở khóa."
 ];
 export const plan = [
   "Nếu xu hướng tăng: mua-giữ dài, mua-lướt ngắn, đứng ngoài(cuối sóng).",
