@@ -24,6 +24,8 @@ export const RulesTrade = [
   "6. Kiên nhẫn chờ đợi điểm vào lệnh đẹp",
   "7. Tuân thủ stoploss,takeprofit một cách tuyệt đối",
   "8. Không mở tài khoản ra xem giá, lời lỗ thường xuyên",
+  "9. Không chia sẻ bất kì nhận định, system, kịch bản nào với người khác",
+  "10. Đào sâu học tập, luyện tập hướng vào bên trong để quan sát bản thân mỗi ngày"
 ];
 
 export const beforeOrderNotes = [

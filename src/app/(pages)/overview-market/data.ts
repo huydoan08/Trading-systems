@@ -184,7 +184,7 @@ export const dataOverview = [
     ]
   },
   {
-    title: "Ngày 06/09/2025",
+    title: "Ngày 09/06/2025",
     content: [
       {
         time: "W",
@@ -228,6 +228,56 @@ export const dataOverview = [
         assessment: [
           "Với đánh dài: Khung lớn điểm vào lệnh đã không còn đẹp,lực không thực sự mạnh, chờ setup mới.",
           "Với đánh ngắn H4: Đang trong con sóng điều chỉnh của xu hướng giảm khung D, chiến lược là short và chờ short"
+        ]
+      }
+    ]
+  },
+  {
+    title: "Ngày 11/06/2025",
+    content: [
+      {
+        time: "W",
+        conclusion: "TĂNG",
+        assessment: [
+          "RSI nằm trên 2 đường trung bình, vẫn đang mở rộng, đường trung bình chậm mới cắt qua đường trung bình nhanh",
+        ]
+      },
+      {
+        time: "D",
+        conclusion: "TĂNG YẾU",
+        assessment: [
+          "RSI cắt lên trên 2 đường trung bình, đường trung bình nhanh vẫn nằm dưới đường trung bình chậm, RSI đang ở vùng 61 lực tăng không thực sự áp đảo"
+        ]
+      },
+      {
+        time: "H4",
+        conclusion: "TĂNG YẾU",
+        assessment: [
+          "RSI đã cắt xuống dưới đường trung bình nhanh, chưa chạm đường trung bình chậm, đường trung bình nhanh đã đi khá xa, chưa có RSI vượt ra ngoài vùng 80, lực tăng không thực sự áp đảo"
+        ]
+      },
+      {
+        time: "H1",
+        conclusion: "GIẢM",
+        assessment: [
+          "RSI nằm dưới 2 đường trung bình, đang mở rộng xuống, RSI đã đi khá xa, trước đó có RSI vượt ra ngoài vùng 80",
+        ]
+      },
+      {
+        time: "Fear & Gear",
+        conclusion: "Đang tham lam",
+        assessment: [
+          "72",
+        ]
+      },
+      {
+        time: "KẾT LUẬN",
+        rsi: "",
+        conclusion: "TĂNG",
+        assessment: [
+          "Với đánh dài: Chưa có setup",
+          "Với đánh ngắn H4: Chưa có setup",
+          "Với đánh ngắn H1: có thể tăng do có mẫu hình, tuy nhiên đang đi ngược pha so với khung H4"
         ]
       }
     ]
