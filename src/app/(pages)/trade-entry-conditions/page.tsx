@@ -74,28 +74,28 @@ export default function ConditionForEnteringATradePage() {
     },
     {
       title: "GIAO DỊCH P2P",
-      imageSrc: "/beautiful-modal/p2p.png",
+      imageSrc: "/rules/p2p.png",
       onClick: () => toggleModal("importantNote"),
     },
 
     {
       title: "MẪU HÌNH ĐẸP",
-      imageSrc: "/beautiful-modal/beautiful-model.png",
+      imageSrc: "/rules/beautiful-model.png",
       onClick: () => toggleModal("beautifulModel")
     },
     {
       title: "BOT GIAO DỊCH",
-      imageSrc: "/beautiful-modal/bot-hunter.png",
+      imageSrc: "/rules/bot-hunter.png",
       onClick: () => toggleModal("botHunterModel")
     },
     {
       title: "CÁC BƯỚC VÀO LỆNH SPOT",
-      imageSrc: "/beautiful-modal/step-order.png",
+      imageSrc: "/rules/step-order.png",
       onClick: () => toggleModal("stepOrder")
     },
     {
       title: "CHIẾN LƯỢC",
-      imageSrc: "/beautiful-modal/strategy.png",
+      imageSrc: "/rules/strategy.png",
       onClick: () => toggleModal("strategy"),
     },
   ];
