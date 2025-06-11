@@ -8,6 +8,7 @@ import {
   LucideFileBarChart,
   Wallpaper,
   CloudSun,
+  ScreenShareIcon,
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 
@@ -52,15 +53,24 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
+          href: "/overview-market",
+          label: "Tổng Quan Thị Trường",
+          icon: ScreenShareIcon,
+          active: !isAdmin,
+          submenus: [
+          ]
+        }
+      ],
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
           href: "",
           label: "Nhật Kí Giao Dịch",
           icon: NotebookPen,
           active: !isAdmin,
           submenus: [
-            {
-              href: "/overview-market",
-              label: "Tổng quan thị trường"
-            },
             {
               href: "/big-loss-order",
               label: "Các Lệnh Thua Lỗ Lớn"
