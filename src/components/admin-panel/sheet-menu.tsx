@@ -10,6 +10,7 @@ import {
   SheetTrigger,
   SheetTitle
 } from "@/components/ui/sheet";
+import { ColorfulLogo } from "@/components/admin-panel/colorful-logo";
 
 export function SheetMenu() {
   return (
@@ -27,7 +28,7 @@ export function SheetMenu() {
             asChild
           >
             <Link href="/cypto-journal" className="flex items-center gap-2">
-              <SheetTitle className="font-bold text-lg">Trading System</SheetTitle>
+              <ColorfulLogo text="Trading System" />
             </Link>
           </Button>
         </SheetHeader>

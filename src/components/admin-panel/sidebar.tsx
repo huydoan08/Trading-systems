@@ -6,6 +6,7 @@ import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { cn } from "@/lib/utils";
 import { Bitcoin } from "lucide-react";
+import { ColorfulLogo } from "@/components/admin-panel/colorful-logo";
 
 export function Sidebar() {
   const sidebar = useStore(useSidebar, (x) => x);
@@ -32,9 +33,7 @@ export function Sidebar() {
           )}
         >
           <div className="flex items-center justify-start ml-5">
-            <h1 className={cn("font-bold text-lg whitespace-nowrap")}>
-              TRADING SYSTEM
-            </h1>
+            <ColorfulLogo />
           </div>
         </span>
         <Menu isOpen={getOpenState()} />

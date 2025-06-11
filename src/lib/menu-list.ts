@@ -40,105 +40,105 @@ export function getMenuList(pathname: string): Group[] {
   const user = auth.currentUser;
   const isAdmin = user?.email == "doanvanhuy268@gmail.com";
   return [
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "",
-          label: "Hệ Thống Giao Dịch",
-          icon: AlignHorizontalDistributeCenter,
-            active: !isAdmin,
-          submenus: [
-            {
-              href: "/trade-entry-conditions",
-              label: "Tiêu Chí Vào Lệnh"
-            },
-            {
-              href: "/during-trade-execution",
-              label: "Khi Đã Vào Lệnh"
-            }
-          ]
-        }
-      ],
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "",
-          label: "Hệ Thống Đầu Tư",
-          icon: CloudSun,
-          active: !isAdmin,
-          submenus: [
-            {
-              href: "/bitcoin",
-              label: "Bitcoin ( BTC )"
-            },
-            {
-              href: "/solana",
-              label: "Solana ( SOL )"
-            },
-            {
-              href: "/pepe",
-              label: "Pepe"
-            }
-          ],
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "",
-          label: "Nhật Kí Giao Dịch",
-          icon: NotebookPen,
-          active: !isAdmin,
-          submenus: [
-            {
-              href: "/overview-market",
-              label: "Tổng quan thị trường"
-            },
-            {
-              href: "/big-loss-order",
-              label: "Các Lệnh Thua Lỗ Lớn"
-            },
-            {
-              href: "/small-loss-order",
-              label: "Các Lệnh Thua Lỗ Nhỏ"
-            },
-            {
-              href: "/early-take-profit",
-              label: "Các Lệnh Chốt Lời Non"
-            },
-            {
-              href: "/big-win-order",
-              label: "Các Lệnh Thắng Lớn"
-            },
-            {
-              href: "/missing-chance",
-              label: "Bỏ Lỡ Dù Đã Thấy Cơ Hội"
-            },
-            {
-              href: "/avoid-lossing-order",
-              label: "Né Lệnh Thua Xuất Sắc"
-            }
-          ],
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/technical-analysis",
-          label: "Phân Tích Kĩ Thuật",
-          icon: Wallpaper,
-          submenus: [],
-          active: !isAdmin
-        }
-      ]
-    },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "",
+    //       label: "Hệ Thống Giao Dịch",
+    //       icon: AlignHorizontalDistributeCenter,
+    //         active: !isAdmin,
+    //       submenus: [
+    //         {
+    //           href: "/trade-entry-conditions",
+    //           label: "Tiêu Chí Vào Lệnh"
+    //         },
+    //         {
+    //           href: "/during-trade-execution",
+    //           label: "Khi Đã Vào Lệnh"
+    //         }
+    //       ]
+    //     }
+    //   ],
+    // },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "",
+    //       label: "Hệ Thống Đầu Tư",
+    //       icon: CloudSun,
+    //       active: !isAdmin,
+    //       submenus: [
+    //         {
+    //           href: "/bitcoin",
+    //           label: "Bitcoin ( BTC )"
+    //         },
+    //         {
+    //           href: "/solana",
+    //           label: "Solana ( SOL )"
+    //         },
+    //         {
+    //           href: "/pepe",
+    //           label: "Pepe"
+    //         }
+    //       ],
+    //     }
+    //   ]
+    // },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "",
+    //       label: "Nhật Kí Giao Dịch",
+    //       icon: NotebookPen,
+    //       active: !isAdmin,
+    //       submenus: [
+    //         {
+    //           href: "/overview-market",
+    //           label: "Tổng quan thị trường"
+    //         },
+    //         {
+    //           href: "/big-loss-order",
+    //           label: "Các Lệnh Thua Lỗ Lớn"
+    //         },
+    //         {
+    //           href: "/small-loss-order",
+    //           label: "Các Lệnh Thua Lỗ Nhỏ"
+    //         },
+    //         {
+    //           href: "/early-take-profit",
+    //           label: "Các Lệnh Chốt Lời Non"
+    //         },
+    //         {
+    //           href: "/big-win-order",
+    //           label: "Các Lệnh Thắng Lớn"
+    //         },
+    //         {
+    //           href: "/missing-chance",
+    //           label: "Bỏ Lỡ Dù Đã Thấy Cơ Hội"
+    //         },
+    //         {
+    //           href: "/avoid-lossing-order",
+    //           label: "Né Lệnh Thua Xuất Sắc"
+    //         }
+    //       ],
+    //     }
+    //   ]
+    // },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/technical-analysis",
+    //       label: "Phân Tích Kĩ Thuật",
+    //       icon: Wallpaper,
+    //       submenus: [],
+    //       active: !isAdmin
+    //     }
+    //   ]
+    // },
     // {
     //   groupLabel: "",
     //   menus: [
@@ -173,18 +173,18 @@ export function getMenuList(pathname: string): Group[] {
     //     }
     //   ]
     // },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/performance-report",
-          label: "Báo Cáo Kết Quả",
-          icon: LucideFileBarChart,
-          submenus: [],
-          active: !isAdmin
-        }
-      ]
-    },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/performance-report",
+    //       label: "Báo Cáo Kết Quả",
+    //       icon: LucideFileBarChart,
+    //       submenus: [],
+    //       active: !isAdmin
+    //     }
+    //   ]
+    // },
     // {
     //   groupLabel: "",
     //   menus: [
@@ -196,19 +196,18 @@ export function getMenuList(pathname: string): Group[] {
     //     }
     //   ]
     // },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/mentorship",
-          label: "Tầm Sư Học Đạo",
-          icon: PersonStandingIcon,
-          submenus: [],
-          active: !isAdmin
-        }
-      ]
-    },
- 
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/mentorship",
+    //       label: "Tầm Sư Học Đạo",
+    //       icon: PersonStandingIcon,
+    //       submenus: [],
+    //       active: !isAdmin
+    //     }
+    //   ]
+    // },
     // {
     //   groupLabel: "",
     //   menus: [

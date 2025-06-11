@@ -25,6 +25,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 // Import react-toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { ColorfulLogo } from "@/components/admin-panel/colorful-logo";
 
 export default function HomePage() {
   const [email, setEmail] = useState("");
@@ -105,7 +106,7 @@ export default function HomePage() {
             className="flex justify-start items-center hover:opacity-85 transition-opacity duration-300"
           >
             <PanelsTopLeft className="w-6 h-6 mr-3" />
-            <span className="font-bold">Trading System</span>
+            <ColorfulLogo text="Trading System" />
             <span className="sr-only">Trading System</span>
           </Link>
           <nav className="ml-auto flex items-center gap-2">
