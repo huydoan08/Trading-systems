@@ -58,7 +58,7 @@ export default function ConditionForEnteringATradePage() {
     },
     {
       title: "GIAO DỊCH P2P",
-      imageSrc: "/beautiful-modal/important-note.png",
+      imageSrc: "/beautiful-modal/p2p.png",
       onClick: () => toggleModal("importantNote"),
     },
     {
