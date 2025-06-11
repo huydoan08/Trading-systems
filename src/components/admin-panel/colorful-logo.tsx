@@ -9,19 +9,19 @@ export function ColorfulLogo({ className, text = "TRADING SYSTEM" }: ColorfulLog
   // Google-inspired color palette
   const colors = [
     "text-blue-500",   // T
-    "text-red-500",    // R
+    "text-orange-500",    // R
     "text-yellow-500", // A
     "text-blue-500",   // D
     "text-green-500",  // I
-    "text-red-500",    // N
+    "text-purple-500",    // N
     "text-blue-500",   // G
     "text-gray-400",   // (space)
     "text-blue-500",   // S
-    "text-red-500",    // Y
+    "text-red-300",    // Y
     "text-yellow-500", // S
-    "text-blue-500",   // T
+    "text-purple-500",   // T
     "text-green-500",  // E
-    "text-red-500",    // M
+    "text-orange-500",    // M
   ];
 
   return (

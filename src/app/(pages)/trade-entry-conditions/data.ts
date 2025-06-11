@@ -10,6 +10,21 @@ export const conditionForEnteringATrade = [
   "Dùng fibo để xác định hiệu lực con sóng còn mạnh không.",
   "Tính toán trước các trường hợp có thể xảy ra để có cách xử lý cũng như quản lý lệnh. Nếu giá đi đúng dự phóng thì sẽ xử lý như thế nào, sai dự phóng thì sẽ xử lý như thế nào. Đưa ra chiến lược rõ ràng."
 ];
+export const exitTrade = [
+  "RSI khung giao dịch lực suy yếu ( cắt xuống đường trung bình chậm, chưa vượt ra ngoài vùng 80 và tạo đỉnh thấp dần )",
+  "Cấu trúc sóng không giữ được trên fibo 0.382",
+  "Xuất hiện cây nến nhấn chìm giảm"
+];
+export const RulesTrade = [
+  "1 Phân tích đồ thị, ghi chép nhật kí giao dịch, tâm lý, hành vi của bản thân mỗi ngày.",
+  "2. Không giao dịch future, chỉ giao dịch spot 2 đồng coin là BTC, PEPE",
+  "3. Khung giao dịch từ H4 trở lên",
+  "4. Không vào lệnh khi chưa đáp ứng bộ tiêu chí vào lệnh",
+  "5. Không thoát lệnh khi chưa đáp ứng bộ tiêu chí thoát lệnh",
+  "6. Kiên nhẫn chờ đợi điểm vào lệnh đẹp",
+  "7. Tuân thủ stoploss,takeprofit một cách tuyệt đối",
+  "8. Không mở tài khoản ra xem giá, lời lỗ thường xuyên",
+];
 
 export const beforeOrderNotes = [
 

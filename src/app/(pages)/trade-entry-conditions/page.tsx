@@ -15,6 +15,8 @@ import {
   beforeOrderNotes,
   BotHunter,
   conditionForEnteringATrade,
+  exitTrade,
+  RulesTrade,
   imagesCondition,
   plan,
   StepOrderData,
@@ -31,7 +33,9 @@ export default function ConditionForEnteringATradePage() {
     beautifulModel: false,
     botHunterModel: false,
     strategy: false,
-    stepOrder: false
+    stepOrder: false,
+    rules: false,
+    exitTrade: false
   });
   const sidebar = useStore(useSidebar, (x) => x);
   const router = useRouter();
@@ -51,9 +55,21 @@ export default function ConditionForEnteringATradePage() {
 
   const tradeCards = [
     {
-      title: "BỘ TIÊU CHÍ VÀO LỆNH GIAO DỊCH",
-      imageSrc: "/beautiful-modal/tieu-chi-01.png",
+      title: "BỘ TIÊU CHÍ ĐỂ VÀO LỆNH",
+      imageSrc: "/rules/tieu-chi-01.png",
       onClick: () => toggleModal("criteria"),
+      isAnimated: true
+    },
+    {
+      title: "BỘ TIÊU CHÍ ĐỂ THOÁT LỆNH",
+      imageSrc: "/rules/exit-trade.png",
+      onClick: () => toggleModal("exitTrade"),
+      isAnimated: true
+    },
+    {
+      title: "BỘ QUY TẮC PHẢI TUÂN THỦ",
+      imageSrc: "/rules/quy-tac.png",
+      onClick: () => toggleModal("rules"),
       isAnimated: true
     },
     {
@@ -61,11 +77,7 @@ export default function ConditionForEnteringATradePage() {
       imageSrc: "/beautiful-modal/p2p.png",
       onClick: () => toggleModal("importantNote"),
     },
-    {
-      title: "CHIẾN LƯỢC",
-      imageSrc: "/beautiful-modal/strategy.png",
-      onClick: () => toggleModal("strategy"),
-    },
+
     {
       title: "MẪU HÌNH ĐẸP",
       imageSrc: "/beautiful-modal/beautiful-model.png",
@@ -80,7 +92,12 @@ export default function ConditionForEnteringATradePage() {
       title: "CÁC BƯỚC VÀO LỆNH SPOT",
       imageSrc: "/beautiful-modal/step-order.png",
       onClick: () => toggleModal("stepOrder")
-    }
+    },
+    {
+      title: "CHIẾN LƯỢC",
+      imageSrc: "/beautiful-modal/strategy.png",
+      onClick: () => toggleModal("strategy"),
+    },
   ];
 
   return (
@@ -97,12 +114,6 @@ export default function ConditionForEnteringATradePage() {
       </div>
 
       <InfoModal
-        isOpen={modals.stepOrder}
-        onClose={() => toggleModal("stepOrder")}
-        items={StepOrderData}
-        title="CÁC BƯỚC VÀO LỆNH GIAO DỊCH SPOT"
-      />
-      <InfoModal
         isOpen={modals.criteria}
         onClose={() => toggleModal("criteria")}
         items={conditionForEnteringATrade}
@@ -110,17 +121,39 @@ export default function ConditionForEnteringATradePage() {
         isCheckbox
       />
       <InfoModal
-        isOpen={modals.botHunterModel}
-        onClose={() => toggleModal("botHunterModel")}
-        items={BotHunter}
-        title="BOT GIAO DỊCH SPOT HUNTER"
-         isCopy
+        isOpen={modals.exitTrade}
+        onClose={() => toggleModal("exitTrade")}
+        items={exitTrade}
+        title="BỘ TIÊU CHÍ THOÁT LỆNH"
+        isCheckbox
+      />
+      <InfoModal
+        isOpen={modals.rules}
+        onClose={() => toggleModal("rules")}
+        items={RulesTrade}
+        title="BỘ QUY TẮC PHẢI TUÂN THỦ"
+        isCheckbox={false}
       />
       <InfoModal
         isOpen={modals.importantNote}
         onClose={() => toggleModal("importantNote")}
         items={beforeOrderNotes}
         title="GIAO DỊCH P2P"
+      />
+      
+      <InfoModal
+        isOpen={modals.stepOrder}
+        onClose={() => toggleModal("stepOrder")}
+        items={StepOrderData}
+        title="CÁC BƯỚC VÀO LỆNH GIAO DỊCH SPOT"
+
+      />
+      <InfoModal
+        isOpen={modals.botHunterModel}
+        onClose={() => toggleModal("botHunterModel")}
+        items={BotHunter}
+        title="BOT GIAO DỊCH SPOT HUNTER"
+        isCopy
       />
       <Modal
         isOpen={modals.strategy}
