@@ -281,5 +281,55 @@ export const dataOverview = [
         ]
       }
     ]
+  },
+  {
+    title: "Ngày 12/06/2025",
+    content: [
+      {
+        time: "W",
+        conclusion: "TĂNG",
+        assessment: [
+          "RSI nằm trên 2 đường trung bình và vẫn đang tiếp tục mở rộng, sóng tăng mới bắt đầu đi",
+        ]
+      },
+      {
+        time: "D",
+        conclusion: "GIẢM",
+        assessment: [
+          "RSI cắt xuống dưới 2 đường trung bình, đường trung bình nhanh vẫn nằm dưới đường trung bình chậm, RSI tăng trước đó mới lên được vùng 62"
+        ]
+      },
+      {
+        time: "H4",
+        conclusion: "Giảm",
+        assessment: [
+          "RSI cắt xuống dưới 2 đường trung bình và vẫn đang mở rộng, không có sự tích lũy lực tăng mạnh trước đó"
+        ]
+      },
+      {
+        time: "H1",
+        conclusion: "GIẢM",
+        assessment: [
+          "RSI nằm dưới 2 đường trung bình vẫn đang tiếp tục giảm và tiến sát vùng 20, trước đó có sự tích lũy lực tăng mạnh",
+        ]
+      },
+      {
+        time: "Fear & Gear",
+        conclusion: "Đang tham lam",
+        assessment: [
+          "71",
+        ]
+      },
+      {
+        time: "KẾT LUẬN",
+        rsi: "",
+        conclusion: "Tăng và đang điều chỉnh",
+        assessment: [
+          "Với đánh dài: Chưa có setup",
+          "Với đánh ngắn H4: Chờ cho RSI điều chỉnh xong bắt đầu có dấu hiệu móc lên",
+          "Với đánh ngắn H1: có mẫu hình tích lũy lực của RSI, cần chờ cho RSI hội tụ tạo đỉnh đáy cao dần"
+        ]
+      }
+    ]
   }
 ];
