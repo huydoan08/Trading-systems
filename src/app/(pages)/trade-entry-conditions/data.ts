@@ -16,7 +16,7 @@ export const exitTrade = [
   "Xuất hiện cây nến nhấn chìm giảm"
 ];
 export const RulesTrade = [
-  "1 Phân tích đồ thị, ghi chép nhật kí giao dịch, tâm lý, hành vi của bản thân mỗi ngày.",
+  "1. Phân tích đồ thị, ghi chép nhật kí giao dịch, tâm lý, hành vi của bản thân mỗi ngày.",
   "2. Không giao dịch future, chỉ giao dịch spot 2 đồng coin là BTC, PEPE",
   "3. Khung giao dịch từ H4 trở lên",
   "4. Không vào lệnh khi chưa đáp ứng bộ tiêu chí vào lệnh",
