@@ -98,8 +98,16 @@ export default function HomePage() {
     }
   }, []);
   return (
-    <div className="flex flex-col min-h-screen">
-      <header className="z-[50] sticky top-0 w-full bg-background/95 border-b backdrop-blur-sm dark:bg-black/[0.6] border-border/40">
+    <div 
+      className="flex flex-col min-h-screen bg-cover bg-center bg-no-repeat relative"
+      style={{
+        backgroundImage: "url('/hugo-trading-bg.png')"
+      }}
+    >
+      {/* Background overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/20 dark:bg-black/40 z-0"></div>
+      
+      <header className="z-[50] sticky top-0 w-full bg-background/95 border-b backdrop-blur-sm dark:bg-black/[0.6] border-border/40 relative">
         <div className="container h-14 flex items-center">
           <Link
             href="/"
@@ -114,7 +122,7 @@ export default function HomePage() {
           </nav>
         </div>
       </header>
-      <main className="min-h-[calc(100vh-57px-97px)] flex-1">
+      <main className="min-h-[calc(100vh-57px-97px)] flex-1 relative z-10">
         <div className="container relative pb-10">
           <section className="mx-auto flex max-w-[980px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-6">
             <h1 className="text-center text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:leading-[1.1]">
@@ -226,7 +234,7 @@ export default function HomePage() {
           </section>
         </div>
       </main>
-      <footer className="py-6 md:py-0 border-t border-border/40">
+      <footer className="py-6 md:py-0 border-t border-border/40 relative z-10">
         <div className="container flex flex-col items-center justify-center gap-4 md:h-24 md:flex-row">
           <p className="text-balance text-center text-sm leading-loose text-muted-foreground">
             Tâm thức tôi trưởng thành từ nghề trading.
