@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { PanelsTopLeft } from "lucide-react";
 import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
@@ -113,7 +112,6 @@ export default function HomePage() {
             href="/"
             className="flex justify-start items-center hover:opacity-85 transition-opacity duration-300"
           >
-            <PanelsTopLeft className="w-6 h-6 mr-3" />
             <ColorfulLogo text="Trading System" />
             <span className="sr-only">Trading System</span>
           </Link>
