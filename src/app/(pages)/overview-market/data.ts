@@ -331,5 +331,54 @@ export const dataOverview = [
         ]
       }
     ]
+  },
+  {
+    title: "Ngày 12/06/2025",
+    content: [
+      {
+        time: "W",
+        conclusion: "TĂNG",
+        assessment: [
+          "RSI nằm trên 2 đường trung bình, đang điều chỉnh, cấu trúc tăng của fibo khá tốt",
+        ]
+      },
+      {
+        time: "D",
+        conclusion: "GIẢM",
+        assessment: [
+          "RSI cắt xuống dưới 2 đường trung bình, đường trung bình nhanh bó sát đường trung bình chậm, xu hướng RSI và 2 đường trung bình bó sát nhau"
+        ]
+      },
+      {
+        time: "H4",
+        conclusion: "Giảm",
+        assessment: [
+          "RSI nằm dưới 2 đường trung bình, vẫn đang tiếp tục mở rộng, xu hướng sideway trong biên độ rộng, hiện tại đã về vùng mua của sóng sideway"
+        ]
+      },
+      {
+        time: "H1",
+        conclusion: "TĂNG",
+        assessment: [
+          "RSI đã cắt lên trên 2 đường trung bình, đường trung bình nhanh bó sát đường trung bình chậm, có mô hình tích lũy tăng của RSI trước đó",
+        ]
+      },
+      {
+        time: "Fear & Gear",
+        conclusion: "Trung lập",
+        assessment: [
+          "61",
+        ]
+      },
+      {
+        time: "KẾT LUẬN",
+        rsi: "",
+        conclusion: "Sideway ở biên độ rộng",
+        assessment: [
+          "Với đánh dài: Chưa có setup",
+          "Với đánh ngắn H4: RSI về vùng mua của sóng sideway, đã vào hàng",
+        ]
+      }
+    ]
   }
 ];
