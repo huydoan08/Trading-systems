@@ -301,7 +301,7 @@ export const dataOverview = [
       },
       {
         time: "H4",
-        conclusion: "Giảm",
+        conclusion: "GIẢM",
         assessment: [
           "RSI cắt xuống dưới 2 đường trung bình và vẫn đang mở rộng, không có sự tích lũy lực tăng mạnh trước đó"
         ]
@@ -351,7 +351,7 @@ export const dataOverview = [
       },
       {
         time: "H4",
-        conclusion: "Giảm",
+        conclusion: "GIẢM",
         assessment: [
           "RSI nằm dưới 2 đường trung bình, vẫn đang tiếp tục mở rộng, xu hướng sideway trong biên độ rộng, hiện tại đã về vùng mua của sóng sideway"
         ]
@@ -377,6 +377,48 @@ export const dataOverview = [
         assessment: [
           "Với đánh dài: Chưa có setup",
           "Với đánh ngắn H4: RSI về vùng mua của sóng sideway, đã vào hàng",
+        ]
+      }
+    ]
+  },
+  {
+    title: "Ngày 15/06/2025",
+    content: [
+      {
+        time: "W",
+        conclusion: "Lưỡng lự",
+        assessment: [
+          "RSI nằm trên 2 đường trung bình và đang đi ngang, khúc này đang lưỡng lự, nhường sự quyết định cho khung thời gian nhỏ hơn",
+        ]
+      },
+      {
+        time: "D",
+        conclusion: "GIẢM",
+        assessment: [
+          "RSI nằm dưới 2 đường trung bình và đang mở rộng, trước đó không có sự tích lũy lực"
+        ]
+      },
+      {
+        time: "H4",
+        conclusion: "Sideway biên độ rộng",
+        assessment: [
+          "RSI sideway quanh vùng 40-70, hiện tại đang bó sát 2 đường trung bình"
+        ]
+      },
+      {
+        time: "Fear & Gear",
+        conclusion: "Trung lập",
+        assessment: [
+          "60",
+        ]
+      },
+      {
+        time: "KẾT LUẬN",
+        rsi: "",
+        conclusion: "Sideway ở biên độ rộng",
+        assessment: [
+          "Với đánh dài: Chưa có setup",
+          "Với đánh ngắn H4: RSI về vùng mua của sóng sideway, đã vào lệnh và quản lý SL 1.5%",
         ]
       }
     ]

@@ -45,9 +45,9 @@ export const CARD_DATA: CardData[] = [
     images: ["/support-resistance/break-02.png"]
   },
   {
-    title: "PHÂN KÌ",
+    title: "RSI H4 Đẹp",
     imageSrc: "/support-resistance/divergence-01.png",
     modalType: "divergence",
-    images: ["/support-resistance/divergence-02.png", "/support-resistance/divergence-03.png"]
+    images: ["/rsi-h4-beautiful/rsi-h4-01.png", "/rsi-h4-beautiful/rsi-h4-02.png", "/rsi-h4-beautiful/rsi-h4-03.png", "/rsi-h4-beautiful/rsi-h4-04.png", "/rsi-h4-beautiful/rsi-h4-05.png", "/rsi-h4-beautiful/rsi-h4-06.png", "/rsi-h4-beautiful/rsi-h4-07.png", "/rsi-h4-beautiful/rsi-h4-08.png",]
   }
 ]; 
