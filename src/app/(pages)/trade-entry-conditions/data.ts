@@ -82,10 +82,9 @@ export const BotHunter = [
   "del all"
 ];
 export const StepOrderData = [
-  "Xác định xu hướng của thị trường - kịch bản của thị trường",
-  "Xác định sóng chính, sóng thứ cấp (mục đích là tìm kiếm khung thời gian giao dịch)",
-  "Tìm điểm vào lệnh",
-  "Xác định điểm chốt lời - Quản lý lệnh (1% - 2%)"
+  "Quan sát RSI ở các khung thời gian lớn để nhìn ra xu hướng chính.",
+  "Quan sát RSI ở khung H4 để tìm kiếm cơ hội vào lệnh.",
+  "Xác định điểm chốt lời - điểm cắt lỗ (3%)"
 ];
 
 export const imagesCondition = [
