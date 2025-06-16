@@ -17,15 +17,15 @@ export const exitTrade = [
 ];
 export const RulesTrade = [
   "1. Phân tích đồ thị, ghi chép nhật kí giao dịch, tâm lý, hành vi của bản thân mỗi ngày.",
-  "2. Không giao dịch future, chỉ giao dịch spot 2 đồng coin là BTC, SOL",
-  "3. Khung giao dịch từ H4 trở lên",
-  "4. Không vào lệnh khi chưa đáp ứng bộ tiêu chí vào lệnh",
-  "5. Không thoát lệnh khi chưa đáp ứng bộ tiêu chí thoát lệnh",
-  "6. Kiên nhẫn chờ đợi điểm vào lệnh đẹp",
-  "7. Tuân thủ stoploss,takeprofit một cách tuyệt đối",
-  "8. Không mở tài khoản ra xem giá, lời lỗ thường xuyên",
-  "9. Không chia sẻ bất kì nhận định, system, kịch bản nào với người khác",
-  "10. Đào sâu học tập, luyện tập hướng vào bên trong để quan sát bản thân mỗi ngày"
+  "2. Không giao dịch future, chỉ giao dịch spot 2 đồng coin là BTC, ETH.",
+  "3. Khung giao dịch H4, H8, 1D, 3D.",
+  "4. Không vào lệnh khi chưa đáp ứng các tiêu chí vào lệnh.",
+  "5. Không thoát lệnh khi chưa đáp ứng các tiêu chí thoát lệnh.",
+  "6. Kiên nhẫn chờ đợi điểm vào lệnh đẹp.",
+  "7. Giao dịch khung H4, H8 thì buộc phải đặt Stoploss (3% mỗi lệnh).",
+  "8. Không mở tài khoản ra xem giá, lời lỗ thường xuyên.",
+  "9. Không chia sẻ bất kì nhận định nào, hay system giao dịch của mình cho người khác biết.",
+  "10. Đào sâu học tập mỗi ngày, tu tập hướng vào bên trong bản thân để quan sát mỗi ngày."
 ];
 
 export const beforeOrderNotes = [
