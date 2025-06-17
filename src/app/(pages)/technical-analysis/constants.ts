@@ -1,7 +1,7 @@
 type BaseCard = {
   title: string;
   imageSrc: string;
-  modalType: "rsi" | "support" | "trap" | "excess" | "break" | "divergence";
+  modalType: "rsi" | "support" | "trap" | "excess" | "break" | "rsi-h4" | "rsi-d";
 };
 
 type InfoCard = BaseCard & {
@@ -9,7 +9,7 @@ type InfoCard = BaseCard & {
 };
 
 type GalleryCard = BaseCard & {
-  modalType: "trap" | "excess" | "break" | "divergence";
+  modalType: "trap" | "excess" | "break" | "rsi-h4" | "rsi-d";
   images: string[];
 };
 
@@ -52,8 +52,8 @@ export const CARD_DATA: CardData[] = [
   },
   {
     title: "RSI H4 Đẹp",
-    imageSrc: "/support-resistance/divergence-01.png",
-    modalType: "divergence",
+    imageSrc: "/rules/h4.png",
+    modalType: "rsi-h4",
     images: [
       "/rsi-h4-beautiful/rsi-h4-01.png",
       "/rsi-h4-beautiful/rsi-h4-02.png",
@@ -71,6 +71,24 @@ export const CARD_DATA: CardData[] = [
       "/rsi-h4-beautiful/rsi-h4-14.png",
       "/rsi-h4-beautiful/rsi-h4-15.png",
       "/rsi-h4-beautiful/rsi-h4-16.png"
+    ]
+  },
+  {
+    title: "RSI D Đẹp",
+    imageSrc: "/rules/D.png",
+    modalType: "rsi-d",
+    images: [
+      "/rsi-d-beautiful/rsi-d-01.png",
+      "/rsi-d-beautiful/rsi-d-02.png",
+      "/rsi-d-beautiful/rsi-d-03.png",
+      "/rsi-d-beautiful/rsi-d-04.png",
+      "/rsi-d-beautiful/rsi-d-05.png",
+      "/rsi-d-beautiful/rsi-d-06.png",
+      "/rsi-d-beautiful/rsi-d-07.png",
+      "/rsi-d-beautiful/rsi-d-08.png",
+      "/rsi-d-beautiful/rsi-d-09.png",
+      "/rsi-d-beautiful/rsi-d-10.png",
+      "/rsi-d-beautiful/rsi-d-11.png",
     ]
   }
 ];
