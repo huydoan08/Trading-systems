@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import { quintessenceRsi, supportAndResistance } from "./data";
 import { CARD_DATA } from "./constants";
 
-type ModalType = "rsi" | "support" | "trap" | "excess" | "break" | "rsi-h4" | "rsi-d";
+type ModalType = "rsi" | "support" | "trap" | "excess" | "break" | "rsi-h4" | "rsi-d" | "rsi-h1";
 
 export default function TechnicalAnalysisPage() {
   const [activeModal, setActiveModal] = useState<ModalType | null>(null);

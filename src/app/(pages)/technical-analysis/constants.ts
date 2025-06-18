@@ -1,7 +1,7 @@
 type BaseCard = {
   title: string;
   imageSrc: string;
-  modalType: "rsi" | "support" | "trap" | "excess" | "break" | "rsi-h4" | "rsi-d";
+  modalType: "rsi" | "support" | "trap" | "excess" | "break" | "rsi-h4" | "rsi-d" | "rsi-h1";
 };
 
 type InfoCard = BaseCard & {
@@ -9,7 +9,7 @@ type InfoCard = BaseCard & {
 };
 
 type GalleryCard = BaseCard & {
-  modalType: "trap" | "excess" | "break" | "rsi-h4" | "rsi-d";
+  modalType: "trap" | "excess" | "break" | "rsi-h4" | "rsi-d" | "rsi-h1";
   images: string[];
 };
 
@@ -89,6 +89,16 @@ export const CARD_DATA: CardData[] = [
       "/rsi-d-beautiful/rsi-d-09.png",
       "/rsi-d-beautiful/rsi-d-10.png",
       "/rsi-d-beautiful/rsi-d-11.png",
+    ]
+  },
+   {
+    title: "RSI H1 SHORT Đẹp",
+    imageSrc: "/rules/D.png",
+    modalType: "rsi-h1",
+    images: [
+      "/rsi-h1-short-beautiful/rsi-h1-01.png",
+      "/rsi-h1-short-beautiful/rsi-h1-02.png",
+      "/rsi-h1-short-beautiful/rsi-h1-03.png",
     ]
   }
 ];
