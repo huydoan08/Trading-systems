@@ -99,6 +99,7 @@ export const CARD_DATA: CardData[] = [
       "/rsi-h1-short-beautiful/rsi-h1-01.png",
       "/rsi-h1-short-beautiful/rsi-h1-02.png",
       "/rsi-h1-short-beautiful/rsi-h1-03.png",
+      "/rsi-h1-short-beautiful/rsi-h1-04.png",
     ]
   }
 ];
