@@ -90,16 +90,5 @@ export const CARD_DATA: CardData[] = [
       "/rsi-d-beautiful/rsi-d-10.png",
       "/rsi-d-beautiful/rsi-d-11.png",
     ]
-  },
-   {
-    title: "RSI H1 SHORT Đẹp",
-    imageSrc: "/rules/D.png",
-    modalType: "rsi-h1",
-    images: [
-      "/rsi-h1-short-beautiful/rsi-h1-01.png",
-      "/rsi-h1-short-beautiful/rsi-h1-02.png",
-      "/rsi-h1-short-beautiful/rsi-h1-03.png",
-      "/rsi-h1-short-beautiful/rsi-h1-04.png",
-    ]
   }
 ];
