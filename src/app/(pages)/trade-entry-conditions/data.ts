@@ -1,14 +1,9 @@
 export const conditionForEnteringATrade = [
-  "Phân tích đa khung thời gian trên RSI => Xác định được xu hướng của con sóng chính và con sóng thứ cấp, xác định xem ta đang ở đâu của con sóng chính và con sóng phụ.",
-  "Xác định khung thời gian giao dịch phải đồng thuận với các khung thời gian lớn.",
-  "Chờ xác nhận sóng hồi ở khung nhỏ để tối ưu điểm vào lệnh đẹp.",
-  "Chờ đợi và quan sát các vùng cản quan trọng mà giá có thể phản ứng tại đó đặc biệt là vùng cản ở khung thời gian lớn.",
-  "Phân tích tương quan lực mua lực bán để tìm điểm vào lệnh. Các mô hình tích lũy lực RSI, trường hợp RSI vượt các vùng 80 hoặc 20. Ưu tiên các mẫu hình đẹp, RSI hội tụ hoặc phân kì, đỉnh đáy cao dần,...",
-  "Chờ dấu hiệu xác nhận Price Action.",
+  "Phân tích đa khung thời gian trên RSI => Các khung thời gian H2, H4, H8, 1D, 3D cần phải đồng thuận.",
+  "Chờ đợi và quan sát phản ứng của giá tại các vùng cản quan trọng.",
+  "Ưu tiên vào lệnh khi có các mô hình tích lũy lực RSI, trường hợp RSI vượt các vùng 80 hoặc 20. Ưu tiên các mẫu hình đẹp, RSI hội tụ hoặc phân kì, đỉnh đáy cao dần,...",
   "Không cố tình đoán đỉnh, đoán đáy.",
-  "Tính toán ước lượng mức thưởng và rủi ro, xác xuất thành công xem có đáng vào lệnh này hay là không. Tức phải xác định rõ SL TP trước khi vào lệnh.",
-  "Dùng fibo để xác định hiệu lực con sóng còn mạnh không.",
-  "Tính toán trước các trường hợp có thể xảy ra để có cách xử lý cũng như quản lý lệnh. Nếu giá đi đúng dự phóng thì sẽ xử lý như thế nào, sai dự phóng thì sẽ xử lý như thế nào. Đưa ra chiến lược rõ ràng."
+  "Tính toán trước các trường hợp có thể xảy ra để có cách xử lý cũng như quản lý lệnh. Nếu giá đi đúng dự phóng thì sẽ xử lý như thế nào, sai dự phóng thì sẽ xử lý như thế nào."
 ];
 export const exitTrade = [
   "RSI khung giao dịch lực suy yếu ( cắt xuống đường trung bình chậm, chưa vượt ra ngoài vùng 80 và tạo đỉnh thấp dần )",
