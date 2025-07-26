@@ -18,7 +18,6 @@ import {
   exitTrade,
   RulesTrade,
   imagesCondition,
-  plan,
   StepOrderData,
   strategy
 } from "./data";
@@ -140,7 +139,7 @@ export default function ConditionForEnteringATradePage() {
         items={beforeOrderNotes}
         title="GIAO DỊCH P2P"
       />
-      
+
       <InfoModal
         isOpen={modals.stepOrder}
         onClose={() => toggleModal("stepOrder")}
@@ -158,39 +157,8 @@ export default function ConditionForEnteringATradePage() {
       <Modal
         isOpen={modals.strategy}
         onClose={() => toggleModal("strategy")}
-        title="CHIẾN LƯỢC"
+        title="CHIẾN LƯỢC ĐẦU TƯ"
       >
-        <div className="font-[600] text-lg text-black-800 dark:text-white mb-2">
-          1. Chọn phương án: tùy theo trạng thái thị trường có thể chọn các
-          phương án khác nhau: mua(long), bán(short), lướt ngắn, giữ dài, đứng
-          ngoài.
-        </div>
-        <div className="space-y-2">
-          {plan.map((item, idx) => (
-            <div key={idx} className="flex items-start space-x-2">
-              <Checkbox />
-              <Label className="text-black-700 font-semibold dark:text-white">
-                {item}
-              </Label>
-            </div>
-          ))}
-        </div>
-        <div className="font-[600] text-lg text-black-800 dark:text-white mt-4">
-          2. Sử dụng các lệnh cơ bản:
-        </div>
-        <div className="space-y-3">
-          {basicOrder.map((item, idx) => (
-            <div key={idx} className="flex items-start space-x-2">
-              <Dot className="mt-2 flex-shrink-0" />
-              <Label className="text-black-700 font-semibold dark:text-white block py-2">
-                {item}
-              </Label>
-            </div>
-          ))}
-        </div>
-        <div className="font-[600] text-lg text-black-800 dark:text-white">
-          3. Một vài chiến thuật:
-        </div>
         <div className="space-y-3">
           {strategy.map((item, idx) => (
             <div key={idx} className="flex items-start space-x-2">

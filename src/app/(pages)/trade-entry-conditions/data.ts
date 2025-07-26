@@ -31,11 +31,6 @@ export const beforeOrderNotes = [
   "Bước 4: Kiểm tra xác nhận lệnh đã nhận đủ tiền, đủ coin",
   "Bước 5: Bấm xác nhận kết thúc giao dịch."
 ];
-export const plan = [
-  "Nếu xu hướng tăng: mua-giữ dài, mua-lướt ngắn, đứng ngoài(cuối sóng).",
-  "Nếu xu hướng giảm: bán-giữ dài, bán-lướt ngắn, đứng ngoài(cuối sóng).",
-  "Nếu thị trường sideway: mua-lướt ngắn, bán-lướt ngắn, đứng ngoài."
-];
 export const basicOrder = [
   "Lệnh đuổi(stop order): Áp dụng khi thị trường mạnh, giao dịch thuận xu hướng. Khi mua lên, đặt lệnh phía trên mức cản. Khi bán xuống đặt lệnh phía dưới mức cản. Loại lệnh này rủi ro cao, dễ bị mắc cạm bẫy.",
   "Lệnh chờ(limit order): Áp dụng khi thị trường yếu ( khi điều chỉnh) hay chưa hình thành xu hướng. Khi mua lên, chờ nhịp sóng hồi đặt lệnh phía trên mức đáy cũ tạo ra trước đó, khi bán xuống, chờ nhịp sóng hồi đặt lệnh phía dưới mức đỉnh cũ tạo ra trước đó",
@@ -44,14 +39,9 @@ export const basicOrder = [
   "Lệnh chốt lời(take profit order): Lệnh này dùng để đóng trạng thái, hiện thực hoá lợi nhuận khi giá đạt đến mực tiêu. Lệnh được đặt ở gần mức cản(non hơn chút) tuỳ thuộc vào kinh nghiệm hay hình thái của thị trường."
 ];
 export const strategy = [
-  "Dò sóng: là tham gia thị trường với một khối lượng nhỏ trong tổng khối lượng dự kiến, giúp cho ta có cảm giác bám sát thị trường, chuẩn bị cho việc nhồi thêm lệnh nếu như thị trường đi đúng kịch bản đề ra.",
-  "Bao vây: là khi thị trường đã đi đúng kế hoạch, khi ấy lệnh chờ có thể được khớp, hoặc có thể vào lệnh thị trường nếu lệnh chờ không được khớp",
-  "Nhồi lệnh: là khi thị trường có xu hướng mạnh, thì ta sẽ gia tăng thêm vị thế giúp tối ưu hóa lợi nhuận, cách nhồi lệnh là đặt lệnh chờ con sóng điều chỉnh, hoặc đặt lệnh đuổi khi giá phá qua cản.",
-  "Nhả lệnh: là khi thấy sóng suy yếu, thì ta sẽ giảm bớt vị thế đang nắm giữ để chốt một phần lợi nhuận, giảm thiểu rủi ro. Khi thị trường điều chỉnh xong thì có thể gia tăng vị thế trở lại.",
-  "Đóng lệnh: là khi giá đã đạt được mục tiêu chốt lời thì ta đặt lệnh chốt lời (takeprofit), hoặc giá đi ngược dự phóng thì ta đặt lệnh cắt lỗ (stoploss)",
-  "DCA dài hạn: áp dụng chiến lược này khi có RSI khung 1W về vùng 30-40, đi vol trung bình chia làm nhiều lần gom",
-  "DCA trung hạn: áp dụng chiến lược này khi có chỉ số sợ hãi về dưới mức 20 hoặc RSI khung 3D về vùng 30-40, đi vol trung bình",
-  "DCA ngắn hạn: áp dụng chiến lược này khi có RSI khung H8 về vùng 30, đi với vol nhỏ"
+  "Chọn tài sản có giá trị, vốn hoá lớn ( BTC ).",
+  "Khi RSI khung 1D || 3D || 1W về vùng 30-40.",
+  "Fear Index về dưới mức 20.",
 ];
 
 export const BotHunter = [
