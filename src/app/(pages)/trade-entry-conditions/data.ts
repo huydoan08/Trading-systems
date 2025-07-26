@@ -42,6 +42,7 @@ export const strategy = [
   "Chọn tài sản có giá trị, vốn hoá lớn ( BTC ).",
   "Khi RSI khung 1D || 3D || 1W về vùng 30-40.",
   "Fear Index về dưới mức 20.",
+  "Các khung thời gian nhỏ đồng thuận tăng."
 ];
 
 export const BotHunter = [
