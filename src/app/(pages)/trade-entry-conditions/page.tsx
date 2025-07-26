@@ -93,7 +93,7 @@ export default function ConditionForEnteringATradePage() {
       onClick: () => toggleModal("stepOrder")
     },
     {
-      title: "CHIẾN LƯỢC",
+      title: "CHIẾN LƯỢC ĐÂU TƯ",
       imageSrc: "/rules/strategy.png",
       onClick: () => toggleModal("strategy"),
     },
