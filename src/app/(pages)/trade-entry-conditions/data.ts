@@ -1,9 +1,9 @@
 export const conditionForEnteringATrade = [
-  "Phân tích đa khung thời gian trên RSI => Các khung thời gian H2, H4, H8, 1D, 3D cần phải đồng thuận.",
+  "Khung thời gian giao dịch là khung 1D",
+  "Vào các khung thời gian nhỏ ( H1, H2, H4 ) quan sát sự đồng pha.",
   "Chờ đợi và quan sát phản ứng của giá tại các vùng cản quan trọng.",
-  "Ưu tiên vào lệnh khi có các mô hình tích lũy lực RSI, trường hợp RSI vượt các vùng 80 hoặc 20. Ưu tiên các mẫu hình đẹp, RSI hội tụ hoặc phân kì, đỉnh đáy cao dần,...",
-  "Không cố tình đoán đỉnh, đoán đáy.",
-  "Tính toán trước các trường hợp có thể xảy ra để có cách xử lý cũng như quản lý lệnh. Nếu giá đi đúng dự phóng thì sẽ xử lý như thế nào, sai dự phóng thì sẽ xử lý như thế nào."
+  "Có các mô hình tích lũy lực RSI (RSI hội tụ hoặc phân kì, RSI vượt ra ngoài các vùng 80 hoặc 20), Các mẫu hình đẹp (Đỉnh đáy cao dần hoặc thấp dần, Price Action, Quét râu nến tại vùng cản).",
+  "Không cố tình đoán đỉnh, đoán đáy."
 ];
 export const exitTrade = [
   "RSI khung giao dịch lực suy yếu ( cắt xuống đường trung bình chậm, chưa vượt ra ngoài vùng 80 và tạo đỉnh thấp dần )",
