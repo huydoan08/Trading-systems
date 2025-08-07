@@ -1,7 +1,7 @@
 export const conditionForEnteringATrade = [
-  "Khung thời gian giao dịch là khung 1D",
-  "Vào các khung thời gian nhỏ ( H1, H2, H4 ) quan sát sự đồng pha.",
-  "Chờ đợi và quan sát phản ứng của giá tại các vùng cản quan trọng.",
+  "Bộ khung thời gian giao dịch là ( H1 H4 1D ).",
+  "Mỗi lệnh giao dịch chỉ (10$) ~ (2%-3%).",
+  "Chỉ giao dịch BTC vĩnh cửu",
   "Có các mô hình tích lũy lực RSI (RSI hội tụ hoặc phân kì, RSI vượt ra ngoài các vùng 80 hoặc 20), Các mẫu hình đẹp (Đỉnh đáy cao dần hoặc thấp dần, Price Action, Quét râu nến tại vùng cản).",
   "Không cố tình đoán đỉnh, đoán đáy."
 ];
