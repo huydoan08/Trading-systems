@@ -2,7 +2,8 @@ export const conditionForEnteringATrade = [
   "Bộ khung thời gian giao dịch là ( H1 H4 1D ).",
   "Mỗi lệnh giao dịch chỉ (10$) ~ (2%-3%).",
   "Chỉ giao dịch BTC vĩnh cửu",
-  "Có các mô hình tích lũy lực RSI (RSI hội tụ hoặc phân kì, RSI vượt ra ngoài các vùng 80 hoặc 20), Các mẫu hình đẹp (Đỉnh đáy cao dần hoặc thấp dần, Price Action, Quét râu nến tại vùng cản).",
+  "Có các mô hình tích lũy lực RSI (RSI hội tụ hoặc phân kì, RSI vượt ra ngoài các vùng 80 hoặc 20)",
+  "Các mẫu hình đẹp (Đỉnh đáy cao dần hoặc thấp dần, SFP).",
   "Không cố tình đoán đỉnh, đoán đáy."
 ];
 export const exitTrade = [
