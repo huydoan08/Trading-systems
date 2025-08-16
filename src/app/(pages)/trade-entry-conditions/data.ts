@@ -4,7 +4,10 @@ export const conditionForEnteringATrade = [
   "Chỉ giao dịch BTC vĩnh cửu",
   "Có các mô hình tích lũy lực RSI (RSI hội tụ hoặc phân kì, RSI vượt ra ngoài các vùng 80 hoặc 20)",
   "Các mẫu hình đẹp (Đỉnh đáy cao dần hoặc thấp dần, SFP).",
-  "Không cố tình đoán đỉnh, đoán đáy."
+  "Không cố tình đoán đỉnh, đoán đáy.",
+  "Trước khi bấm nút Enter vào lệnh thì cần phải xác định khoản tiền cắt lỗ trước cái đã",
+  "Khi BTC đã tăng mạnh, thì tìm altcoin để tìm kiếm điểm vào lệnh (SUI, PEPE, DOGE, ADA)",
+  "Khi BTC đã giảm mạnh, thì chờ BTC nó quay lại retest xong có mẫu hình đẹp thì vào lệnh (BTC)",
 ];
 export const exitTrade = [
   "RSI khung giao dịch lực suy yếu ( cắt xuống đường trung bình chậm, chưa vượt ra ngoài vùng 80 và tạo đỉnh thấp dần )",
