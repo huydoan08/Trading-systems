@@ -1,12 +1,11 @@
 export const conditionForEnteringATrade = [
-  "Bộ khung thời gian giao dịch là ( M30 H1 H2 H4 1D ).",
-  "Mỗi lệnh giao dịch chỉ (10$) ~ (2%-3%).",
-  "Chỉ giao dịch BTC vĩnh cửu",
+  "Khung thời gian giao dịch là khung H4, tìm điểm vào lệnh ở khung H1, H2. Và xác định xu hướng ở khung 1D",
+  "Cặp tiền giao dịch là BTC/USDT vĩnh cửu.",
+  "Tỉ lệ RR sẽ luôn đặt là 1: 3",
   "Có các mô hình tích lũy lực RSI (RSI hội tụ hoặc phân kì, RSI vượt ra ngoài các vùng 80 hoặc 20)",
   "Các mẫu hình đẹp (Đỉnh đáy cao dần hoặc thấp dần, SFP).",
   "Không cố tình đoán đỉnh, đoán đáy.",
-  "Trước khi bấm nút Enter vào lệnh thì cần phải xác định khoản tiền cắt lỗ trước cái đã.",
-  "Khi BTC đã tăng mạnh, thì tìm altcoin để tìm kiếm điểm vào lệnh (SUI, PEPE, DOGE, ADA).",
+  "Khi BTC đã tăng mạnh, thì tìm altcoin đang ở đáy để tìm kiếm điểm vào lệnh (SUI, PEPE, DOGE, ADA).",
   "Khi BTC đã giảm mạnh, thì chờ BTC nó quay lại retest xong có mẫu hình đẹp thì vào lệnh (BTC)",
 ];
 export const exitTrade = [
