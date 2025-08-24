@@ -53,8 +53,8 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/overview-market",
-          label: "Tổng Quan Thị Trường",
+          href: "/future",
+          label: "Hệ Thống Giao Dịch Future",
           icon: ScreenShareIcon,
           active: !isAdmin,
           submenus: [
