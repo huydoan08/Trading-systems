@@ -6,7 +6,7 @@ export interface ContentItem {
 
 export const dataOverview = [
   {
-    title: "Mẫu hình số 1 - Các dấu hiệu đẹp để vào 1 lệnh bán khống (Short).",
+    title: "Setup Future 01.",
     content: [
       {
         type: 'text' as const,
