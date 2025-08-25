@@ -112,8 +112,8 @@ export default function HomePage() {
             href="/"
             className="flex justify-start items-center hover:opacity-85 transition-opacity duration-300"
           >
-            <ColorfulLogo text="Trading System" />
-            <span className="sr-only">Trading System</span>
+            <ColorfulLogo text="Hugo Trading" />
+            <span className="sr-only">Hugo Trading</span>
           </Link>
           <nav className="ml-auto flex items-center gap-2">
             <ModeToggle />

@@ -41,7 +41,7 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "/trade-entry-conditions",
-          label: "Hệ Thống Giao Dịch",
+          label: "Hệ Thống Giao Dịch SPOT",
           icon: AlignHorizontalDistributeCenter,
           active: !isAdmin,
           submenus: [
