@@ -12,7 +12,7 @@ import { experience } from "./data";
 
 interface ExperienceItem {
   title: string;
-  content: string | string[];
+  content: string[];
 }
 
 export default function ExperienceCompilationPage() {
@@ -40,7 +40,7 @@ export default function ExperienceCompilationPage() {
               <ExpandableCard
                 key={`${item.title}-${index}`}
                 title={item.title}
-                content={Array.isArray(item.content) ? item.content : [item.content]}
+                content={item.content.map(text => ({ type: "text" as const, value: text }))}
                 isOpen={openIndex === index}
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 isFirst={index === 0}
