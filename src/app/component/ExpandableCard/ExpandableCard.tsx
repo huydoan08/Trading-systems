@@ -11,7 +11,7 @@ interface ContentItem {
 
 interface ExpandableCardProps {
   title: string;
-  content: ContentItem[];
+  content: ContentItem[] | any[];
   isOpen: boolean;
   onClick: () => void;
   isFirst?: boolean;
@@ -59,7 +59,7 @@ export function ExpandableCard({
                 <div key={idx} className="mb-4 last:mb-0">
                   {item.type === "text" ? (
                     <div className="text-foreground">
-                      {item.value.split("\n").map((line, lineIdx: number) => (
+                      {item.value.split("\n").map((line: any, lineIdx: number) => (
                         <span key={lineIdx}>
                           {line}
                           <br />
