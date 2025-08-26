@@ -108,7 +108,7 @@ export default function PersonalGrowthPage() {
           <ExpandableCard
             key={index}
             title={bud.title}
-            content={bud.content}
+            content={bud.content as any}
             isOpen={openIndex === index}
             onClick={() => handleCardClick(index)}
             isFirst={index === 0}
