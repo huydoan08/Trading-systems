@@ -145,17 +145,17 @@ export function getMenuList(pathname: string): Group[] {
         }
       ]
     },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/performance-report",
-          label: "Báo Cáo Kết Quả",
-          icon: LucideFileBarChart,
-          submenus: [],
-          active: !isAdmin
-        }
-      ]
-    },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/performance-report",
+    //       label: "Báo Cáo Kết Quả",
+    //       icon: LucideFileBarChart,
+    //       submenus: [],
+    //       active: !isAdmin
+    //     }
+    //   ]
+    // },
   ];
 }
