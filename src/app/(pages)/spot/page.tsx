@@ -82,16 +82,16 @@ export default function ConditionForEnteringATradePage() {
       imageSrc: "/rules/beautiful-model.png",
       onClick: () => toggleModal("beautifulModel")
     },
-    {
-      title: "BOT GIAO DỊCH",
-      imageSrc: "/rules/bot-hunter.png",
-      onClick: () => toggleModal("botHunterModel")
-    },
-    {
-      title: "CÁC BƯỚC VÀO LỆNH SPOT",
-      imageSrc: "/rules/step-order.png",
-      onClick: () => toggleModal("stepOrder")
-    },
+    // {
+    //   title: "BOT GIAO DỊCH",
+    //   imageSrc: "/rules/bot-hunter.png",
+    //   onClick: () => toggleModal("botHunterModel")
+    // },
+    // {
+    //   title: "CÁC BƯỚC VÀO LỆNH SPOT",
+    //   imageSrc: "/rules/step-order.png",
+    //   onClick: () => toggleModal("stepOrder")
+    // },
     {
       title: "CHIẾN LƯỢC ĐÂU TƯ",
       imageSrc: "/rules/strategy.png",

@@ -81,7 +81,7 @@ export default function HomePage() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        router.push("/trade-entry-conditions");
+        router.push("/spot");
       } else {
         router.push("/");
       }

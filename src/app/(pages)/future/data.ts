@@ -6,7 +6,7 @@ export interface ContentItem {
 
 export const dataOverview = [
   {
-    title: "Setup Future 01.",
+    title: "HỆ THỐNG VÀO LỆNH SHORT.",
     content: [
       {
         type: 'text' as const,
@@ -29,6 +29,37 @@ export const dataOverview = [
       {
         type: 'text' as const,
         value: "Khung H1, không có RSI vượt ra ngoài vùng 80.",
+      },
+      {
+        type: 'text' as const,
+        value: "----------------------------------------------------------",
+      },
+      {
+        type: 'text' as const,
+        value: "Khi giá chạy đúng dự phóng, RSI H1 và H4 đều vượt ra ngoài vùng 20, tiếp tục giữ lệnh và dời theo cấu trúc sóng.",
+      },
+      {
+        type: 'image' as const,
+        value: "/Future-S-H1/01.jpg",
+        alt: ""
+      },
+      {
+        type: 'text' as const,
+        value: "Giá tiếp tục chạy, RSI H1 không vượt ra ngoài vùng 20 nhưng H4 vượt ra ngoài vùng 20, tiếp tục giữ lệnh và dời theo cấu trúc sóng.",
+      },
+      {
+        type: 'image' as const,
+        value: "/Future-S-H4/02.jpg",
+        alt: ""
+      },
+      {
+        type: 'text' as const,
+        value: "Giá tiếp tục chạy, RSI H1 chạm vùng 20 nhưng H4 không ra ngoài vùng 20, lúc này chỉ số fear về dưới 15, giá đã rơi khoảng 30% từ đỉnh, đóng lệnh short.",
+      },
+      {
+        type: 'image' as const,
+        value: "/Future-S-H4/03.jpg",
+        alt: ""
       },
     ]
   }

@@ -8,7 +8,6 @@ import { useRouter } from "next/navigation";
 import { auth } from "@/firebaseConfig";
 import { useState, useEffect } from "react";
 import { dataOverview } from "./data";
-import { ExpandableTableCard } from "@/app/component/ExpandableTableCard/ExpandableTableCard";
 import { ExpandableCard } from "@/app/component/ExpandableCard/ExpandableCard";
 
 export default function ExperienceCompilationPage() {
@@ -28,7 +27,7 @@ export default function ExperienceCompilationPage() {
   if (!sidebar) return null;
 
   return (
-    <ContentLayout title="Cập nhật tình hình thị trường">
+    <ContentLayout title="Hệ Thống Giao Dịch Future ">
       <div className="flex flex-col h-[calc(100vh-4rem)]">
         <div className="flex-1 overflow-auto">
           <Card className="bg-card dark:bg-black border border-[#e5e7eb] dark:border-[#222] rounded-xl">

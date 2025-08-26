@@ -40,7 +40,7 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/trade-entry-conditions",
+          href: "/spot",
           label: "Hệ Thống Giao Dịch SPOT",
           icon: AlignHorizontalDistributeCenter,
           active: !isAdmin,
