@@ -41,7 +41,7 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "/spot",
-          label: "Hệ Thống Giao Dịch SPOT",
+          label: "Trading Spot",
           icon: AlignHorizontalDistributeCenter,
           active: !isAdmin,
           submenus: [
@@ -49,18 +49,30 @@ export function getMenuList(pathname: string): Group[] {
         }
       ],
     },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/future",
+    //       label: "Hệ Thống Giao Dịch Future",
+    //       icon: ScreenShareIcon,
+    //       active: !isAdmin,
+    //       submenus: [
+    //       ]
+    //     }
+    //   ],
+    // },
     {
       groupLabel: "",
       menus: [
         {
-          href: "/future",
-          label: "Hệ Thống Giao Dịch Future",
-          icon: ScreenShareIcon,
-          active: !isAdmin,
-          submenus: [
-          ]
+          href: "/technical-analysis",
+          label: "Mô Hình & Chỉ Báo RSI",
+          icon: Wallpaper,
+          submenus: [],
+          active: !isAdmin
         }
-      ],
+      ]
     },
     {
       groupLabel: "",
@@ -72,20 +84,16 @@ export function getMenuList(pathname: string): Group[] {
           active: !isAdmin,
           submenus: [
             {
-              href: "/big-loss-order",
-              label: "Các Lệnh Thua Lỗ Lớn"
+              href: "/big-win-order",
+              label: "  Lệnh Thắng Quan Trọng"
             },
             {
               href: "/small-loss-order",
-              label: "Các Lệnh Thua Lỗ Nhỏ"
+              label: "Lệnh Thua"
             },
             {
               href: "/early-take-profit",
               label: "Các Lệnh Chốt Lời Non"
-            },
-            {
-              href: "/big-win-order",
-              label: "Các Lệnh Thắng Lớn"
             },
             {
               href: "/missing-chance",
@@ -103,43 +111,31 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/technical-analysis",
-          label: "Phân Tích Kĩ Thuật",
-          icon: Wallpaper,
-          submenus: [],
-          active: !isAdmin
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
           href: "/mentorship",
-          label: "Tầm Sư Học Đạo",
+          label: "Đạo Trading",
           icon: PersonStandingIcon,
           submenus: [],
           active: !isAdmin
         }
       ]
     },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/experience-compilation",
-          label: "Con Đường Giác Ngộ",
-          icon: Footprints,
-          submenus: []
-        }
-      ]
-    },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/experience-compilation",
+    //       label: "Con Đường Giác Ngộ",
+    //       icon: Footprints,
+    //       submenus: []
+    //     }
+    //   ]
+    // },
     {
       groupLabel: "",
       menus: [
         {
           href: "/story-telling",
-          label: "Những Câu Chuyện Hay",
+          label: "Kể Chuyện",
           icon: Bird,
           submenus: []
         }

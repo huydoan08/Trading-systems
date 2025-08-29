@@ -21,13 +21,13 @@ export const CARD_DATA: CardData[] = [
     imageSrc: "/support-resistance/rsi.png",
     modalType: "rsi"
   },
+  // {
+  //   title: "HỖ TRỢ & KHÁNG CỰ",
+  //   imageSrc: "/support-resistance/resistance.png",
+  //   modalType: "support"
+  // },
   {
-    title: "HỖ TRỢ & KHÁNG CỰ",
-    imageSrc: "/support-resistance/resistance.png",
-    modalType: "support"
-  },
-  {
-    title: "CẠM BẪY",
+    title: "Swing Failure Pattern (SFP) - Mô Hình Thất Bại Dao Động",
     imageSrc: "/support-resistance/trap-01.png",
     modalType: "trap",
     images: [
@@ -35,23 +35,23 @@ export const CARD_DATA: CardData[] = [
       "/support-resistance/cam-bay-02.png"
     ]
   },
+  // {
+  //   title: "BỨT PHÁ",
+  //   imageSrc: "/support-resistance/excess-01.png",
+  //   modalType: "excess",
+  //   images: [
+  //     "/support-resistance/excess-02.png",
+  //     "/support-resistance/break-03.png"
+  //   ]
+  // },
+  // {
+  //   title: "QUÁ ĐÀ",
+  //   imageSrc: "/support-resistance/break-01.png",
+  //   modalType: "break",
+  //   images: ["/support-resistance/break-02.png"]
+  // },
   {
-    title: "BỨT PHÁ",
-    imageSrc: "/support-resistance/excess-01.png",
-    modalType: "excess",
-    images: [
-      "/support-resistance/excess-02.png",
-      "/support-resistance/break-03.png"
-    ]
-  },
-  {
-    title: "QUÁ ĐÀ",
-    imageSrc: "/support-resistance/break-01.png",
-    modalType: "break",
-    images: ["/support-resistance/break-02.png"]
-  },
-  {
-    title: "RSI H4 Đẹp",
+    title: "RSI H4 SPOT",
     imageSrc: "/rules/h4.png",
     modalType: "rsi-h4",
     images: [
@@ -74,7 +74,7 @@ export const CARD_DATA: CardData[] = [
     ]
   },
   {
-    title: "RSI D Đẹp",
+    title: "RSI D SPOT",
     imageSrc: "/rules/D.png",
     modalType: "rsi-d",
     images: [
