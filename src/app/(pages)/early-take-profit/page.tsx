@@ -11,13 +11,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 const images = [
-  "/early-close-orders/early-01.png",
-  "/early-close-orders/early-02.png",
   "/early-close-orders/early-03.png",
-  "/early-close-orders/early-04.png",
-  "/early-close-orders/early-05.png",
-  "/early-close-orders/early-06.png",
-  "/early-close-orders/early-07.png",
 ];
 
 export default function EarlyTakeProfitPage() {

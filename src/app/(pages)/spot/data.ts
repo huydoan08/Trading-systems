@@ -43,38 +43,45 @@ export const strategy = [
   "Các khung thời gian nhỏ đồng thuận tăng.",
   "Khi BTC đã tăng mạnh, thì tìm altcoin đang ở đáy để tìm kiếm điểm vào lệnh (ETH, BNB, SOL, SUI, PEPE, DOGE, ADA)."
 ];
-
-export const BotHunter = [
-  "buy BTC market V USDT",
-  "buylimit BTC atP V USDT tpP",
-  "buylimit BTC atP V USDT tp30%",
-  "buylimit BTC atP V USDT tpP slP",
-  "buylimit BTC atP V USDT tp30% sl-3%",
-  "buystop BTC atP V USDT tpP",
-  "buystop BTC atP V USDT tp30%",
-  "buystop BTC atP V USDT tpP slP",
-  "buystop BTC atP V USDT tp30% sl-3%",
-  "sell V BTC market USDT",
-  "sell V BTC P USDT",
-  "sellstop V BTC P USDT",
-  "sellstop V BTC -3% USDT",
-  "sellstop V BTC P USDT buy P",
-  "del BTC",
-  "del sell BTC",
-  "del buy BTC",
-  "del sell P BTCUSDT",
-  "del buy P BTCUSDT",
-  "del all"
-];
 export const StepOrderData = [
   "Quan sát RSI ở các khung thời gian lớn để nhìn ra xu hướng chính.",
   "Quan sát RSI ở khung H4 để tìm kiếm cơ hội vào lệnh.",
   "Xác định điểm chốt lời - điểm cắt lỗ (3%)"
 ];
 
-export const imagesCondition = [
-  "/beautiful-modal/1.Xu hướng tăng.png",
-  "/beautiful-modal/2.Bắt đáy khi tạo đáy cao dần.png",
-  "/beautiful-modal/3.Bắt sóng hồi của sóng tăng trước đó.png",
-  "/beautiful-modal/4.Điểm vào lệnh phá trendline.png",
+export const spotIncreaseH4 = [
+  "/rsi-h4-beautiful/rsi-h4-01.png",
+  "/rsi-h4-beautiful/rsi-h4-05.png",
+  "/rsi-h4-beautiful/rsi-h4-09.png",
+  "/rsi-h4-beautiful/rsi-h4-10.png",
+  "/rsi-h4-beautiful/rsi-h4-12.png",
+  "/rsi-h4-beautiful/rsi-h4-13.png",
+  "/rsi-h4-beautiful/rsi-h4-14.png",
+  "/rsi-h4-beautiful/rsi-h4-15.png",
+  "/rsi-h4-beautiful/rsi-h4-16.png"
+];
+
+export const spotcatchH4 = [
+  "/rsi-h4-beautiful/rsi-h4-02.png",
+  "/rsi-h4-beautiful/rsi-h4-03.png",
+  "/rsi-h4-beautiful/rsi-h4-04.png",
+  "/rsi-h4-beautiful/rsi-h4-06.png",
+  "/rsi-h4-beautiful/rsi-h4-06.png",
+  "/rsi-h4-beautiful/rsi-h4-08.png",
+];
+
+export const spotIncrease1D = [
+  "/rsi-d-beautiful/rsi-d-02.png",
+  "/rsi-d-beautiful/rsi-d-03.png",
+  "/rsi-d-beautiful/rsi-d-08.png",
+  "/rsi-d-beautiful/rsi-d-09.png",
+  "/rsi-d-beautiful/rsi-d-11.png",
+];
+
+export const spotcatch1D = [
+  "/rsi-d-beautiful/rsi-d-01.png",
+  "/rsi-d-beautiful/rsi-d-04.png",
+  "/rsi-d-beautiful/rsi-d-05.png",
+  "/rsi-d-beautiful/rsi-d-06.png",
+  "/rsi-d-beautiful/rsi-d-07.png",
 ];

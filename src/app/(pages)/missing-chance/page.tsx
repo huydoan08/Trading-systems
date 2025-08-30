@@ -11,8 +11,6 @@ import { onAuthStateChanged } from "firebase/auth";
 import { getAuth } from "firebase/auth";
 
 const images = [
-  "/missing-chance/miss-chance-001.png",
-  "/missing-chance/miss-chance-002.png",
   "/missing-chance/miss-chance-003.png",
 ];
 

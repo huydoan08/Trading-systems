@@ -7,19 +7,19 @@ import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Modal } from "@/components/ui/modal";
-import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Dot } from "lucide-react";
 import {
-  basicOrder,
   beforeOrderNotes,
-  BotHunter,
   conditionForEnteringATrade,
   exitTrade,
   RulesTrade,
-  imagesCondition,
+  spotIncreaseH4,
+  spotIncrease1D,
   StepOrderData,
-  strategy
+  strategy,
+  spotcatchH4,
+  spotcatch1D
 } from "./data";
 import { ImageGallery } from "@/components/trade-entry/ImageGallery";
 import { InfoModal } from "@/components/trade-entry/InfoModal";
@@ -29,7 +29,8 @@ export default function ConditionForEnteringATradePage() {
   const [modals, setModals] = useState({
     criteria: false,
     importantNote: false,
-    beautifulModel: false,
+    spotH4: false,
+    spotCatchH4: false,
     botHunterModel: false,
     strategy: false,
     stepOrder: false,
@@ -54,48 +55,24 @@ export default function ConditionForEnteringATradePage() {
 
   const tradeCards = [
     {
-      title: "BỘ TIÊU CHÍ ĐỂ VÀO LỆNH",
-      imageSrc: "/rules/tieu-chi-01.png",
-      onClick: () => toggleModal("criteria"),
-      isAnimated: true
+      title: "BẮT CON SÓNG HỒI CỦA MỘT SÓNG TĂNG TRƯỚC ĐÓ KHUNG H4",
+      imageSrc: "/beautiful-modal/3.Bắt sóng hồi của sóng tăng trước đó.png",
+      onClick: () => toggleModal("spotH4")
     },
     {
-      title: "BỘ TIÊU CHÍ ĐỂ THOÁT LỆNH",
-      imageSrc: "/rules/exit-trade.png",
-      onClick: () => toggleModal("exitTrade"),
-      isAnimated: true
+      title: "BẮT ĐÁY KHI TẠO ĐÁY CAO DẦN KHUNG H4",
+      imageSrc: "/beautiful-modal/2.Bắt đáy khi tạo đáy cao dần.png",
+      onClick: () => toggleModal("spotCatchH4")
     },
     {
-      title: "BỘ QUY TẮC PHẢI TUÂN THỦ",
-      imageSrc: "/rules/quy-tac.png",
-      onClick: () => toggleModal("rules"),
-      isAnimated: true
+      title: "BẮT CON SÓNG HỒI CỦA MỘT SÓNG TĂNG TRƯỚC ĐÓ KHUNG 1D",
+      imageSrc: "/beautiful-modal/3.Bắt sóng hồi của sóng tăng trước đó.png",
+      onClick: () => toggleModal("spotH4")
     },
     {
-      title: "GIAO DỊCH P2P",
-      imageSrc: "/rules/p2p.png",
-      onClick: () => toggleModal("importantNote"),
-    },
-
-    {
-      title: "MẪU HÌNH ĐẸP",
-      imageSrc: "/rules/beautiful-model.png",
-      onClick: () => toggleModal("beautifulModel")
-    },
-    // {
-    //   title: "BOT GIAO DỊCH",
-    //   imageSrc: "/rules/bot-hunter.png",
-    //   onClick: () => toggleModal("botHunterModel")
-    // },
-    // {
-    //   title: "CÁC BƯỚC VÀO LỆNH SPOT",
-    //   imageSrc: "/rules/step-order.png",
-    //   onClick: () => toggleModal("stepOrder")
-    // },
-    {
-      title: "CHIẾN LƯỢC ĐÂU TƯ",
-      imageSrc: "/rules/strategy.png",
-      onClick: () => toggleModal("strategy"),
+      title: "BẮT ĐÁY KHI TẠO ĐÁY CAO DẦN KHUNG 1D",
+      imageSrc: "/beautiful-modal/2.Bắt đáy khi tạo đáy cao dần.png",
+      onClick: () => toggleModal("spotCatchH4")
     },
   ];
 
@@ -147,13 +124,6 @@ export default function ConditionForEnteringATradePage() {
         title="CÁC BƯỚC VÀO LỆNH GIAO DỊCH SPOT"
 
       />
-      <InfoModal
-        isOpen={modals.botHunterModel}
-        onClose={() => toggleModal("botHunterModel")}
-        items={BotHunter}
-        title="BOT GIAO DỊCH SPOT HUNTER"
-        isCopy
-      />
       <Modal
         isOpen={modals.strategy}
         onClose={() => toggleModal("strategy")}
@@ -171,10 +141,28 @@ export default function ConditionForEnteringATradePage() {
         </div>
       </Modal>
       <ImageGallery
-        images={imagesCondition}
-        title="MẪU HÌNH ĐẸP"
-        isOpen={modals.beautifulModel}
-        onClose={() => toggleModal("beautifulModel")}
+        images={spotIncreaseH4}
+        title="BẮT CON SÓNG HỒI CỦA MỘT SÓNG TĂNG TRƯỚC ĐÓ kHUNG H4"
+        isOpen={modals.spotH4}
+        onClose={() => toggleModal("spotH4")}
+      />
+      <ImageGallery
+        images={spotcatchH4}
+        title="BẮT ĐÁY KHI TẠO ĐÁY CAO DẦN kHUNG H4"
+        isOpen={modals.spotCatchH4}
+        onClose={() => toggleModal("spotCatchH4")}
+      />
+      <ImageGallery
+        images={spotIncrease1D}
+        title="BẮT CON SÓNG HỒI CỦA MỘT SÓNG TĂNG TRƯỚC ĐÓ kHUNG H4"
+        isOpen={modals.spotH4}
+        onClose={() => toggleModal("spotH4")}
+      />
+      <ImageGallery
+        images={spotcatch1D}
+        title="BẮT ĐÁY KHI TẠO ĐÁY CAO DẦN kHUNG H4"
+        isOpen={modals.spotCatchH4}
+        onClose={() => toggleModal("spotCatchH4")}
       />
     </ContentLayout>
   );

@@ -83,14 +83,14 @@ export function getMenuList(pathname: string): Group[] {
           icon: NotebookPen,
           active: !isAdmin,
           submenus: [
-            {
-              href: "/big-win-order",
-              label: "  Lệnh Thắng Quan Trọng"
-            },
-            {
-              href: "/small-loss-order",
-              label: "Lệnh Thua"
-            },
+            // {
+            //   href: "/big-win-order",
+            //   label: "  Lệnh Thắng Quan Trọng"
+            // },
+            // {
+            //   href: "/small-loss-order",
+            //   label: "Lệnh Thua"
+            // },
             {
               href: "/early-take-profit",
               label: "Các Lệnh Chốt Lời Non"
