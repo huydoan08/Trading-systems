@@ -30,22 +30,4 @@ export const CARD_DATA: CardData[] = [
       "/support-resistance/cam-bay-02.png"
     ]
   },
-  {
-    title: "RSI D SPOT",
-    imageSrc: "/rules/D.png",
-    modalType: "rsi-d",
-    images: [
-      "/rsi-d-beautiful/rsi-d-01.png",
-      "/rsi-d-beautiful/rsi-d-02.png",
-      "/rsi-d-beautiful/rsi-d-03.png",
-      "/rsi-d-beautiful/rsi-d-04.png",
-      "/rsi-d-beautiful/rsi-d-05.png",
-      "/rsi-d-beautiful/rsi-d-06.png",
-      "/rsi-d-beautiful/rsi-d-07.png",
-      "/rsi-d-beautiful/rsi-d-08.png",
-      "/rsi-d-beautiful/rsi-d-09.png",
-      "/rsi-d-beautiful/rsi-d-10.png",
-      "/rsi-d-beautiful/rsi-d-11.png",
-    ]
-  }
 ];
