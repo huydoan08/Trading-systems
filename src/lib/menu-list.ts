@@ -49,18 +49,6 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/transaction-history",
-          label: "Nhật Ký Giao Dịch",
-          icon: LucideFileBarChart,
-          submenus: [],
-          active: !isAdmin
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
           href: "/performance-report",
           label: "Báo Cáo Kết Quả",
           icon: LucideFileBarChart,
