@@ -68,6 +68,7 @@ export const spotcatchH4 = [
   "/rsi-h4-beautiful/rsi-h4-06.png",
   "/rsi-h4-beautiful/rsi-h4-06.png",
   "/rsi-h4-beautiful/rsi-h4-08.png",
+  "/rsi-h4-beautiful/rsi-h4-17.jpg",
 ];
 
 export const spotIncrease1D = [
