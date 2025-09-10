@@ -1,6 +1,10 @@
 export const supportAndResistance = [
   "Chia vốn ra nhiều lần mua",
-  "Khi sóng chạy xa thì bán dần ra để chốt lời"
+  "Khi sóng chạy xa thì bán dần ra để chốt lời",
+  "Chờ đợi các tín hiệu xác nhận để vào lệnh",
+  "Sử dụng các công cụ phân tích kỹ thuật để xác định các mức hỗ trợ và kháng cự quan trọng",
+  "Theo dõi tin tức và sự kiện có thể ảnh hưởng đến giá cả",
+  "Quản lý rủi ro bằng cách đặt stop-loss và take-profit hợp lý"
 ];
 
 export const quintessenceRsi = [
