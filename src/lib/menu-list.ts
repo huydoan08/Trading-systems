@@ -40,7 +40,7 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/spot",
+          href: "/trading-spot",
           label: "Trading Spot",
           icon: AlignHorizontalDistributeCenter,
           active: !isAdmin,
@@ -49,19 +49,6 @@ export function getMenuList(pathname: string): Group[] {
         }
       ],
     },
-    // {
-    //   groupLabel: "",
-    //   menus: [
-    //     {
-    //       href: "/future",
-    //       label: "Hệ Thống Giao Dịch Future",
-    //       icon: ScreenShareIcon,
-    //       active: !isAdmin,
-    //       submenus: [
-    //       ]
-    //     }
-    //   ],
-    // },
     {
       groupLabel: "",
       menus: [
@@ -83,14 +70,6 @@ export function getMenuList(pathname: string): Group[] {
           icon: NotebookPen,
           active: !isAdmin,
           submenus: [
-            // {
-            //   href: "/big-win-order",
-            //   label: "  Lệnh Thắng Quan Trọng"
-            // },
-            // {
-            //   href: "/small-loss-order",
-            //   label: "Lệnh Thua"
-            // },
             {
               href: "/early-take-profit",
               label: "Các Lệnh Chốt Lời Non"
@@ -119,17 +98,6 @@ export function getMenuList(pathname: string): Group[] {
         }
       ]
     },
-    // {
-    //   groupLabel: "",
-    //   menus: [
-    //     {
-    //       href: "/experience-compilation",
-    //       label: "Con Đường Giác Ngộ",
-    //       icon: Footprints,
-    //       submenus: []
-    //     }
-    //   ]
-    // },
     {
       groupLabel: "",
       menus: [
@@ -141,17 +109,17 @@ export function getMenuList(pathname: string): Group[] {
         }
       ]
     },
-    // {
-    //   groupLabel: "",
-    //   menus: [
-    //     {
-    //       href: "/performance-report",
-    //       label: "Báo Cáo Kết Quả",
-    //       icon: LucideFileBarChart,
-    //       submenus: [],
-    //       active: !isAdmin
-    //     }
-    //   ]
-    // },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/performance-report",
+          label: "Báo Cáo Kết Quả",
+          icon: LucideFileBarChart,
+          submenus: [],
+          active: !isAdmin
+        }
+      ]
+    },
   ];
 }
