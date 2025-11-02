@@ -4,19 +4,10 @@ import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { useTheme } from "next-themes";
 import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  Tooltip,
-  ResponsiveContainer
+  BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Cell
 } from "recharts";
 import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue
+  Select, SelectContent, SelectItem, SelectTrigger, SelectValue
 } from "@/components/ui/select";
 import { allData } from "./data";
 
@@ -36,19 +27,22 @@ export default function RevenueChart() {
   const { theme } = useTheme();
   const data: DataPoint[] =
     selectedYear === "All time" ? allTimeData : allData[selectedYear] || [];
+
   const totalRevenue: number = data.reduce(
     (acc, item) => acc + item.revenue,
     0
   );
 
-  const textColor = theme === "dark" ? "#000" : "#000";
+  const textColor = theme === "dark" ? "#fff" : "#000";
 
   return (
     <ContentLayout title="Chiến lược giao dịch">
-      <Card className="max-h-[100vh] overflow-auto shadow-lg border border-black-200 dark:border-black-700">
+      <Card className="h-500 overflow-auto shadow-lg border border-black-200 dark:border-black-700 ">
         <CardContent className="p-6 space-y-4">
           <div className="flex justify-between items-center">
-            <h3 className="text-sm font-medium text-gray-500 dark:text-gray-700">Total Revenue</h3>
+            <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">
+              Total Revenue
+            </h3>
             <Select value={selectedYear} onValueChange={setSelectedYear}>
               <SelectTrigger className="w-32">
                 <SelectValue placeholder="Chọn năm" />
@@ -60,28 +54,30 @@ export default function RevenueChart() {
               </SelectContent>
             </Select>
           </div>
+
           <h2
-            className={`text-2xl font-bold ${
-              totalRevenue >= 0 
-                ? "text-green-500 dark:text-green-400" 
-                : "text-red-500 dark:text-red-400"
-            }`}
+            className={`text-2xl font-bold ${totalRevenue >= 0
+              ? "text-green-500 dark:text-green-400"
+              : "text-red-500 dark:text-red-400"
+              }`}
           >
             {totalRevenue}$
           </h2>
+
           <div className="w-full h-72">
             <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={data}>
-                <XAxis 
-                  dataKey="name" 
-                  stroke={theme === "dark" ? "#fff" : "#000"}
-                  tick={{ fill: theme === "dark" ? "#fff" : "#000" }}
+              <BarChart data={data}>
+                <CartesianGrid
+                  strokeDasharray="3 3"
+                  stroke={theme === "dark" ? "#555" : "#ccc"}
                 />
-                <YAxis 
-                  stroke={theme === "dark" ? "#fff" : "#000"}
-                  tick={{ fill: theme === "dark" ? "#fff" : "#000" }}
+                <XAxis
+                  dataKey="name"
+                  stroke={textColor}
+                  tick={{ fill: textColor }}
                 />
-                <Tooltip 
+                <YAxis stroke={textColor} tick={{ fill: textColor }} />
+                <Tooltip
                   formatter={(value) => `$${value}`}
                   contentStyle={{
                     backgroundColor: theme === "dark" ? "#fff" : "#fff",
@@ -90,20 +86,30 @@ export default function RevenueChart() {
                     borderRadius: "8px",
                     boxShadow: "0 2px 4px rgba(0,0,0,0.1)"
                   }}
-                  labelStyle={{
-                    color: "#000"
-                  }}
-                  itemStyle={{
-                    color: "#000"
-                  }}
+                  labelStyle={{ color: "#000" }}
+                  itemStyle={{ color: "#000" }}
                 />
-                <Line
-                  type="monotone"
+                <Bar
                   dataKey="revenue"
-                  stroke={theme === "dark" ? "#fff" : "#000"}
-                  dot={{ r: 3 }}
-                />
-              </LineChart>
+                  radius={[6, 6, 0, 0]}
+                  animationDuration={800}
+                >
+                  {data.map((entry, index) => (
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={
+                        entry.revenue >= 0
+                          ? theme === "dark"
+                            ? "#86efac"
+                            : "#22c55e"
+                          : theme === "dark"
+                            ? "#f87171"
+                            : "#ef4444"
+                      }
+                    />
+                  ))}
+                </Bar>
+              </BarChart>
             </ResponsiveContainer>
           </div>
         </CardContent>

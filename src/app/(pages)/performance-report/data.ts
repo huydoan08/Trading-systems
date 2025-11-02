@@ -20,6 +20,7 @@ export const allData: YearlyData = {
     { name: "06/2025", revenue: 19 },
     { name: "07/2025", revenue: -29 },
     { name: "08/2025", revenue: 13 },
-    { name: "09/2025", revenue: 55 }
+    { name: "09/2025", revenue: 43 },
+    { name: "09/2025", revenue: 123 }
   ]
 };
