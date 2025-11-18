@@ -4,11 +4,7 @@ import {
   PersonStandingIcon,
   Bird,
   NotebookPen,
-  Footprints,
   LucideFileBarChart,
-  Wallpaper,
-  CloudSun,
-  ScreenShareIcon,
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 
@@ -41,73 +37,13 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "/trading-spot",
-          label: "Trading Spot",
+          label: "Trading Spot BTC/USDT",
           icon: AlignHorizontalDistributeCenter,
           active: !isAdmin,
           submenus: [
           ]
         }
       ],
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/technical-analysis",
-          label: "Mô Hình & Chỉ Báo RSI",
-          icon: Wallpaper,
-          submenus: [],
-          active: !isAdmin
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "",
-          label: "Nhật Kí Giao Dịch",
-          icon: NotebookPen,
-          active: !isAdmin,
-          submenus: [
-            {
-              href: "/early-take-profit",
-              label: "Các Lệnh Chốt Lời Non"
-            },
-            {
-              href: "/missing-chance",
-              label: "Bỏ Lỡ Dù Đã Thấy Cơ Hội"
-            },
-            {
-              href: "/avoid-lossing-order",
-              label: "Né Lệnh Thua Xuất Sắc"
-            }
-          ],
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/mentorship",
-          label: "Đạo Trading",
-          icon: PersonStandingIcon,
-          submenus: [],
-          active: !isAdmin
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/story-telling",
-          label: "Kể Chuyện",
-          icon: Bird,
-          submenus: []
-        }
-      ]
     },
     {
       groupLabel: "",
