@@ -48,7 +48,7 @@ export default function ConditionForEnteringATradePage() {
       onClick: () => toggleModal("spotH4")
     },
     {
-      title: "BẮT ĐÁY KHI TẠO ĐÁY CỦA MỘT CON SÓNG GIẢM",
+      title: "BẮT ĐÁY KHUNG 1D",
       imageSrc: "/beautiful-modal/2.Bắt đáy khi tạo đáy cao dần.png",
       onClick: () => toggleModal("spotCatchH4")
     },
@@ -74,7 +74,7 @@ export default function ConditionForEnteringATradePage() {
       />
       <ImageGallery
         images={spotcatchH4}
-        title="BẮT ĐÁY KHI TẠO ĐÁY CỦA MỘT CON SÓNG GIẢM"
+        title="BẮT ĐÁY KHUNG 1D"
         isOpen={modals.spotCatchH4}
         onClose={() => toggleModal("spotCatchH4")}
       />

@@ -17,16 +17,10 @@ export const spotIncreaseH4 = [
 ];
 
 export const spotcatchH4 = [
-  "/rsi-h4-beautiful/rsi-h4-02.png",
-  "/rsi-h4-beautiful/rsi-h4-03.png",
-  "/rsi-h4-beautiful/rsi-h4-04.png",
-  "/rsi-h4-beautiful/rsi-h4-06.png",
-  "/rsi-h4-beautiful/rsi-h4-06.png",
-  "/rsi-h4-beautiful/rsi-h4-08.png",
-  "/rsi-h4-beautiful/rsi-h4-17.jpg",
-  "/rsi-d-beautiful/rsi-d-01.png",
-  "/rsi-d-beautiful/rsi-d-04.png",
-  "/rsi-d-beautiful/rsi-d-05.png",
-  "/rsi-d-beautiful/rsi-d-06.png",
-  "/rsi-d-beautiful/rsi-d-07.png",
+  "/rsi-d-beautiful/1D-spot-01.jpg",
+  "/rsi-d-beautiful/1D-spot-02.jpg",
+  "/rsi-d-beautiful/1D-spot-03.jpg",
+  "/rsi-d-beautiful/1D-spot-04.jpg",
+  "/rsi-d-beautiful/1D-spot-05.jpg",
+  "/rsi-d-beautiful/1D-spot-06.jpg",
 ];
