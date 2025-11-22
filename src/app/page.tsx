@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
 import { login, logout, register } from "@/AuthService";
@@ -56,7 +55,6 @@ export default function HomePage() {
   const handleSignUp = async () => {
     setLoading(true);
     try {
-      // await register(emailRegister, passwordRegister);
       await register('','')
     } catch (error) {
       toast.error(`Đăng kí thất bại. ${error}`, {
@@ -103,7 +101,6 @@ export default function HomePage() {
         backgroundImage: "url('/hugo-trading-bg.png')"
       }}
     >
-      {/* Background overlay for better text readability */}
       <div className="absolute inset-0 bg-black/20 dark:bg-black/40 z-0"></div>
       
       <header className="z-[50] sticky top-0 w-full bg-background/95 border-b backdrop-blur-sm dark:bg-black/[0.6] border-border/40 relative">
@@ -123,17 +120,7 @@ export default function HomePage() {
       <main className="min-h-[calc(100vh-57px-97px)] flex-1 relative z-10">
         <div className="container relative pb-10">
           <section className="mx-auto flex max-w-[980px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-6">
-            <h1 className="text-center text-3xl font-bold leading-tight tracking-tighter md:text-5xl lg:leading-[1.1]">
-              Trade what you see not what you think
-            </h1>
-            <h1 className="text-center text-lg font-light leading-tight md:text-2xl lg:leading-[1.1]">
-              Kiên nhẫn, kỉ luật, trực giác
-            </h1>
             <Tabs defaultValue="account" className="w-[400px]">
-              <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="account">Sign In</TabsTrigger>
-                <TabsTrigger value="password">Sign up</TabsTrigger>
-              </TabsList>
               <TabsContent value="account">
                 <Card>
                 <CardHeader>
@@ -184,47 +171,6 @@ export default function HomePage() {
                         <div>Login</div>
                       )}
                     </Button>
-                  </CardFooter>
-                </Card>
-              </TabsContent>
-              <TabsContent value="password">
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Sign up</CardTitle>
-                    <CardDescription>
-                      Type your email and password here to sign up
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-2">
-                    <div className="space-y-1">
-                      <Label htmlFor="current">Email</Label>
-                      <Input
-                        type="email"
-                        placeholder="Email"
-                        className="w-full h-10"
-                        value={emailRegister}
-                        onChange={(e) => {
-                          setEmailRegister(e.target.value);
-                        }}
-                        onKeyDown={handleKeyDown}
-                      />
-                    </div>
-                    <div className="space-y-1">
-                      <Label htmlFor="new">Password</Label>
-                      <Input
-                        type="password"
-                        placeholder="Password"
-                        className="w-full h-10"
-                        value={passwordRegister}
-                        onChange={(e) => {
-                          setPasswordRegister(e.target.value);;
-                        }}
-                        onKeyDown={handleKeyDown}
-                      />
-                    </div>
-                  </CardContent>
-                  <CardFooter>
-                    <Button onClick={handleSignUp}>Sign Up</Button>
                   </CardFooter>
                 </Card>
               </TabsContent>
