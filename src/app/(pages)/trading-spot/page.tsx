@@ -47,11 +47,11 @@ export default function ConditionForEnteringATradePage() {
       imageSrc: "/beautiful-modal/3.Bắt sóng hồi của sóng tăng trước đó.png",
       onClick: () => toggleModal("spotH4")
     },
-    {
-      title: "BẮT ĐÁY KHUNG 1D",
-      imageSrc: "/beautiful-modal/2.Bắt đáy khi tạo đáy cao dần.png",
-      onClick: () => toggleModal("spotCatchH4")
-    },
+    // {
+    //   title: "BẮT ĐÁY KHI TẠO ĐÁY CAO DẦN",
+    //   imageSrc: "/beautiful-modal/2.Bắt đáy khi tạo đáy cao dần.png",
+    //   onClick: () => toggleModal("spotCatchH4")
+    // },
   ];
 
   return (
