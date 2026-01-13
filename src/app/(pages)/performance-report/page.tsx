@@ -3,14 +3,9 @@ import { useState } from "react";
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { useTheme } from "next-themes";
-import {
-  BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Cell
-} from "recharts";
-import {
-  Select, SelectContent, SelectItem, SelectTrigger, SelectValue
-} from "@/components/ui/select";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid, Cell } from "recharts";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { allData } from "./data";
-
 interface DataPoint {
   name: string;
   revenue: number;
@@ -20,24 +15,19 @@ export type YearlyData = {
   [key: string]: DataPoint[];
 };
 
-const allTimeData: DataPoint[] = [...allData["2024"], ...allData["2025"]];
+const allTimeData: DataPoint[] = [...allData["2024"], ...allData["2025"], ...allData["2026"]];
 
 export default function RevenueChart() {
-  const [selectedYear, setSelectedYear] = useState<string>("All time");
   const { theme } = useTheme();
-  const data: DataPoint[] =
-    selectedYear === "All time" ? allTimeData : allData[selectedYear] || [];
+  const [selectedYear, setSelectedYear] = useState<string>("All time");
 
-  const totalRevenue: number = data.reduce(
-    (acc, item) => acc + item.revenue,
-    0
-  );
-
+  const data: DataPoint[] = selectedYear === "All time" ? allTimeData : allData[selectedYear] || [];
+  const totalRevenue: number = data.reduce((acc, item) => acc + item?.revenue, 0);
   const textColor = theme === "dark" ? "#fff" : "#000";
 
   return (
     <ContentLayout title="Chiến lược giao dịch">
-      <Card className="h-500 overflow-auto shadow-lg border border-black-200 dark:border-black-700 ">
+      <Card className="h-500 overflow-auto shadow-lg border border-black-200 dark:border-black-700">
         <CardContent className="p-6 space-y-4">
           <div className="flex justify-between items-center">
             <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">
@@ -51,19 +41,13 @@ export default function RevenueChart() {
                 <SelectItem value="All time">All time</SelectItem>
                 <SelectItem value="2024">2024</SelectItem>
                 <SelectItem value="2025">2025</SelectItem>
+                <SelectItem value="2026">2026</SelectItem>
               </SelectContent>
             </Select>
           </div>
-
-          <h2
-            className={`text-2xl font-bold ${totalRevenue >= 0
-              ? "text-green-500 dark:text-green-400"
-              : "text-red-500 dark:text-red-400"
-              }`}
-          >
+          <h2 className={`text-2xl font-bold ${totalRevenue >= 0? "text-green-500 dark:text-green-400" : "text-red-500 dark:text-red-400"}`}>
             {totalRevenue}$
           </h2>
-
           <div className="w-full h-72">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={data}>
@@ -80,7 +64,7 @@ export default function RevenueChart() {
                 <Tooltip
                   formatter={(value) => `$${value}`}
                   contentStyle={{
-                    backgroundColor: theme === "dark" ? "#fff" : "#fff",
+                    backgroundColor:"#fff",
                     color: "#000",
                     border: "none",
                     borderRadius: "8px",
