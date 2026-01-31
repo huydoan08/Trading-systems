@@ -209,6 +209,7 @@ export default function TradeJournal() {
               <table className="w-full border-collapse">
                 <thead>
                   <tr className={`border-b ${theme === "dark" ? "border-gray-600 bg-gray-700/50" : "border-gray-300 bg-gray-100"}`}>
+                    <th className={`px-4 py-3 text-left text-sm font-semibold ${textColorClass}`}>STT</th>
                     <th className={`px-4 py-3 text-left text-sm font-semibold ${textColorClass}`}>Date</th>
                     <th className={`px-4 py-3 text-left text-sm font-semibold ${textColorClass}`}>Symbol</th>
                     <th className={`px-4 py-3 text-left text-sm font-semibold ${textColorClass}`}>TimeFrame</th>
@@ -220,8 +221,11 @@ export default function TradeJournal() {
                   </tr>
                 </thead>
                 <tbody>
-                  {trades.map((trade) => (
+                  {trades.map((trade, idx) => (
                     <tr key={trade.id} className={`border-b ${theme === "dark" ? "border-gray-700 hover:bg-gray-800/50" : "border-gray-200 hover:bg-gray-50"}`}>
+                      <td className="px-4 py-3">
+                       <span>{idx + 1}</span>
+                      </td>
                       <td className="px-4 py-3">
                         <input
                           type="text"
