@@ -10,7 +10,8 @@ import { ImageGallery } from "@/components/trade-entry/ImageGallery";
 import { InfoCard } from "@/components/technical-analysis/InfoCard";
 import {
   spotIncreaseH4,
-  spotcatchH4,
+  spotcatch1D,
+  spotCatch1W
 } from "./data";
 
 export default function ConditionForEnteringATradePage() {
@@ -18,7 +19,9 @@ export default function ConditionForEnteringATradePage() {
     criteria: false,
     importantNote: false,
     spotH4: false,
-    spotCatchH4: false,
+    spotIncreasingH4: false,
+    spotCatch1D: false,
+    spotCatch1W: false,
     botHunterModel: false,
     strategy: false,
     stepOrder: false,
@@ -43,42 +46,44 @@ export default function ConditionForEnteringATradePage() {
 
   const tradeCards = [
     {
-      title: "BẮT CON SÓNG HỒI CỦA MỘT SÓNG TĂNG TRƯỚC ĐÓ",
-      imageSrc: "/beautiful-modal/3.Bắt sóng hồi của sóng tăng trước đó.png",
-      onClick: () => toggleModal("spotH4")
+      title: "BẮT ĐÁY KHI TẠO ĐÁY CAO DẦN KHUNG 1W",
+      imageSrc: "/beautiful-modal/2.Bắt đáy khi tạo đáy cao dần.png",
+      onClick: () => toggleModal("spotCatch1W"),
+      imageModal: spotCatch1W,
+      open: 'spotCatch1W'
     },
     {
-      title: "BẮT ĐÁY KHI TẠO ĐÁY CAO DẦN",
+      title: "BẮT ĐÁY KHI TẠO ĐÁY CAO DẦN KHUNG 1D",
       imageSrc: "/beautiful-modal/2.Bắt đáy khi tạo đáy cao dần.png",
-      onClick: () => toggleModal("spotCatchH4")
+      onClick: () => toggleModal("spotCatch1D"),
+      imageModal: spotcatch1D,
+      open: 'spotCatch1D'
     },
+    {
+      title: "BẮT CON SÓNG HỒI CỦA MỘT SÓNG TĂNG TRƯỚC ĐÓ H4 H2",
+      imageSrc: "/beautiful-modal/3.Bắt sóng hồi của sóng tăng trước đó.png",
+      onClick: () => toggleModal("spotIncreasingH4"),
+      imageModal: spotIncreaseH4,
+      open: 'spotIncreasingH4'
+    },
+
   ];
 
   return (
     <ContentLayout title="Hệ Thống Giao Dịch">
       <div className="grid grid-cols-2 gap-4 mb-4">
-        {tradeCards.slice(0, 2).map((card, idx) => (
+        {tradeCards.map((card, idx) => (
           <InfoCard key={idx} {...card} />
         ))}
       </div>
-      <div className="grid grid-cols-2 gap-4 mb-4">
-        {tradeCards.slice(2).map((card, idx) => (
-          <InfoCard key={idx} {...card} />
-        ))}
-      </div>
-      <ImageGallery
-        images={spotIncreaseH4}
-        title="BẮT CON SÓNG HỒI CỦA MỘT SÓNG TĂNG TRƯỚC"
-        isOpen={modals.spotH4}
-        onClose={() => toggleModal("spotH4")}
-      />
-      <ImageGallery
-        images={spotcatchH4}
-        title="BẮT ĐÁY KHUNG 1D"
-        isOpen={modals.spotCatchH4}
-        onClose={() => toggleModal("spotCatchH4")}
-      />
-      
+      {tradeCards.map((item) => (
+        <ImageGallery
+          images={item.imageModal}
+          title={item.title}
+          isOpen={modals[item.open as keyof typeof modals]}
+          onClose={() => toggleModal(item.open as keyof typeof modals)}
+        />
+      ))}
     </ContentLayout>
   );
 }

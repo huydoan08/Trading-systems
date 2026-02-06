@@ -1,3 +1,10 @@
+export const spotCatch1W = [
+  "/rsi-1w-beautiful/RSI-1W-01.png",
+  "/rsi-1w-beautiful/RSI-1W-02.png", 
+  "/rsi-1w-beautiful/RSI-1W-03.png", 
+  "/rsi-1w-beautiful/RSI-1W-04.png", 
+  "/rsi-1w-beautiful/RSI-1W-05.png", 
+]
 
 export const spotIncreaseH4 = [
   "/rsi-h4-beautiful/rsi-h4-01.png",
@@ -16,7 +23,7 @@ export const spotIncreaseH4 = [
   "/rsi-d-beautiful/rsi-d-11.png",
 ];
 
-export const spotcatchH4 = [
+export const spotcatch1D = [
   "/rsi-d-beautiful/1D-spot-01.jpg",
   "/rsi-d-beautiful/1D-spot-02.jpg",
   "/rsi-d-beautiful/1D-spot-03.jpg",
