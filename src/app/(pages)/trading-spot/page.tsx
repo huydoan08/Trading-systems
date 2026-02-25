@@ -76,8 +76,9 @@ export default function ConditionForEnteringATradePage() {
           <InfoCard key={idx} {...card} />
         ))}
       </div>
-      {tradeCards.map((item) => (
+      {tradeCards.map((item, idx) => (
         <ImageGallery
+          key={idx}
           images={item.imageModal}
           title={item.title}
           isOpen={modals[item.open as keyof typeof modals]}
