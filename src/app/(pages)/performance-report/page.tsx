@@ -15,14 +15,18 @@ export type YearlyData = {
   [key: string]: DataPoint[];
 };
 
-const allTimeData: DataPoint[] = [...allData["2024"], ...allData["2025"], ...allData["2026"]];
+// compute list of years from the data object so we don't forget to add new ones later
+const years = Object.keys(allData).sort();
+
+// flatten all year arrays for the "All time" selection
+const allTimeData: DataPoint[] = years.flatMap((y) => allData[y] || []);
 
 export default function RevenueChart() {
   const { theme } = useTheme();
   const [selectedYear, setSelectedYear] = useState<string>("All time");
 
-  const data: DataPoint[] = selectedYear === "All time" ? allTimeData : allData[selectedYear] || [];
-  const totalRevenue: number = data.reduce((acc, item) => acc + item?.revenue, 0);
+  const data: DataPoint[] =
+    selectedYear === "All time" ? allTimeData : allData[selectedYear] || [];  const totalRevenue: number = data.reduce((acc, item) => acc + item?.revenue, 0);
   const textColor = theme === "dark" ? "#fff" : "#000";
 
   return (
@@ -39,9 +43,11 @@ export default function RevenueChart() {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="All time">All time</SelectItem>
-                <SelectItem value="2024">2024</SelectItem>
-                <SelectItem value="2025">2025</SelectItem>
-                <SelectItem value="2026">2026</SelectItem>
+                {years.map((year) => (
+                  <SelectItem key={year} value={year}>
+                    {year}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>
