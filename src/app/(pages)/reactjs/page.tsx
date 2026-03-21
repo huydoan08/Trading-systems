@@ -3,7 +3,7 @@ import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { useRouter } from "next/navigation";
-import { raisingchildren } from "./data";
+import { reactHooks } from "./data";
 import { ExpandableCard } from "@/app/component/expandableCard";
 import { useState } from "react";
 
@@ -14,7 +14,7 @@ export default function RaisingChildrenPage() {
   if (!sidebar) return null;
   return (
     <ContentLayout title="JavaScript">
-      {raisingchildren.map((item, index) => (
+      {reactHooks.map((item, index) => (
         <ExpandableCard
           key={index}
           title={item.title}

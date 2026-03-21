@@ -134,7 +134,7 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "/mentorship",
-          label: "Mentorship",
+          label: "Sưu tầm",
           icon: Apple,
           submenus: []
         }
@@ -145,7 +145,40 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "/story-telling",
-          label: "Storytelling",
+          label: "Chuyện kể",
+          icon: Apple,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/internal-force",
+          label: "Nội lực bên trong",
+          icon: Apple,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/passion",
+          label: "Đam mê",
+          icon: Apple,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/health",
+          label: "Sức khỏe",
           icon: Apple,
           submenus: []
         }

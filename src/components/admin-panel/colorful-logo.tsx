@@ -5,7 +5,7 @@ interface ColorfulLogoProps {
   text?: string;
 }
 
-export function ColorfulLogo({ className, text = "HUGO TRADING" }: ColorfulLogoProps) {
+export function ColorfulLogo({ className, text = "Huy Doan" }: ColorfulLogoProps) {
   // Google-inspired color palette
   const colors = [
     "text-blue-500",   // T

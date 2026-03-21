@@ -28,7 +28,7 @@ export function SheetMenu() {
             asChild
           >
             <Link href="/cypto-journal" className="flex items-center gap-2">
-              <ColorfulLogo text="Hugo Trading" />
+              <ColorfulLogo text="Huy Doan" />
             </Link>
           </Button>
         </SheetHeader>
