@@ -3,8 +3,10 @@ import {
   AlignHorizontalDistributeCenter,
   PersonStandingIcon,
   Bird,
-  NotebookPen,
+  Image,
   LucideFileBarChart,
+  Heart,
+  Apple,
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 
@@ -49,11 +51,103 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
+          href: "/technical-analysis",
+          label: "Technical Analysis",
+          icon: AlignHorizontalDistributeCenter,
+          active: !isAdmin,
+          submenus: [
+          ]
+        }
+      ],
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
           href: "/performance-report",
           label: "Báo Cáo Kết Quả",
           icon: LucideFileBarChart,
           submenus: [],
           active: !isAdmin
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "",
+          label: "Bộ ảnh của Dâu Tây",
+          icon: Image,
+          submenus: [
+            {
+              href: "/dau-tay-0-den-1-tuoi",
+              label: "Dâu Tây từ 0 đến 1 tuổi"
+            },
+            {
+              href: "/dau-tay-1-den-2-tuoi",
+              label: "Dâu Tây từ 1 đến 2 tuổi"
+            },
+            {
+              href: "/dau-tay-2-den-3-tuoi",
+              label: "Dâu Tây từ 2 đến 3 tuổi"
+            },
+          ]
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/raising-children",
+          label: "Giáo dục con",
+          icon: Heart,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/javascript",
+          label: "JavaScript",
+          icon: Apple,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/reactjs",
+          label: "React.js",
+          icon: Apple,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/mentorship",
+          label: "Mentorship",
+          icon: Apple,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/story-telling",
+          label: "Storytelling",
+          icon: Apple,
+          submenus: []
         }
       ]
     },

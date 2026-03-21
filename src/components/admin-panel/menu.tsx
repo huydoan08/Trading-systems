@@ -66,18 +66,19 @@ export function Menu({ isOpen }: MenuProps) {
                                   ? "secondary"
                                   : "ghost"
                               }
-                              className="w-full justify-start h-10 mb-1"
+                              className="w-full justify-start h-10 mb-1 group"
                               asChild
                             >
                               {!active && (
                                 <Link href={href}>
-                                  <span
+                                    <span
                                     className={cn(
+                                      "transition-transform duration-300 group-hover:rotate-12",
                                       isOpen === false ? "" : "mr-4"
                                     )}
-                                  >
+                                    >
                                     <Icon size={18} />
-                                  </span>
+                                    </span>
                                   <p
                                     className={cn(
                                       "max-w-[200px] truncate",
