@@ -7,6 +7,12 @@ import {
   LucideFileBarChart,
   Heart,
   Apple,
+  Torus,
+  Umbrella,
+  Usb,
+  Ticket,
+  Timer,
+  HeartPulse,
 } from "lucide-react";
 import { getAuth } from "firebase/auth";
 
@@ -113,7 +119,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/javascript",
           label: "JavaScript",
-          icon: Apple,
+          icon: Usb,
           submenus: []
         }
       ]
@@ -124,7 +130,18 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/reactjs",
           label: "React.js",
-          icon: Apple,
+          icon: Umbrella,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/developer-mindset",
+          label: "Developer Mindset",
+          icon: Torus,
           submenus: []
         }
       ]
@@ -135,7 +152,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/mentorship",
           label: "Sưu tầm",
-          icon: Apple,
+          icon: Ticket,
           submenus: []
         }
       ]
@@ -157,7 +174,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/internal-force",
           label: "Nội lực bên trong",
-          icon: Apple,
+          icon: Timer,
           submenus: []
         }
       ]
@@ -179,7 +196,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/health",
           label: "Sức khỏe",
-          icon: Apple,
+          icon: HeartPulse,
           submenus: []
         }
       ]
