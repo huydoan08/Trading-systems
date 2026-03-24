@@ -66,7 +66,6 @@ export default function ConditionForEnteringATradePage() {
       imageModal: spotIncreaseH4,
       open: 'spotIncreasingH4'
     },
-
   ];
 
   return (

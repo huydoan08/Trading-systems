@@ -59,7 +59,7 @@ export function getMenuList(pathname: string): Group[] {
         {
           href: "/technical-analysis",
           label: "Technical Analysis",
-          icon: AlignHorizontalDistributeCenter,
+          icon: Bird,
           active: !isAdmin,
           submenus: [
           ]

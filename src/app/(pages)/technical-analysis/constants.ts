@@ -20,14 +20,5 @@ export const CARD_DATA: CardData[] = [
     title: "CHỈ BÁO RSI",
     imageSrc: "/support-resistance/rsi.png",
     modalType: "rsi"
-  },
-  {
-    title: "Swing Failure Pattern (SFP) - Mô Hình Thất Bại Dao Động",
-    imageSrc: "/support-resistance/trap-01.png",
-    modalType: "trap",
-    images: [
-      "/support-resistance/cam-bay-01.png",
-      "/support-resistance/cam-bay-02.png"
-    ]
-  },
+  }
 ];
