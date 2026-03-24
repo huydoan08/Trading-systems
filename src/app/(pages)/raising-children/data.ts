@@ -22,5 +22,21 @@ export const raisingchildren = [
       "Gieo 3 nhân dạy Có Hiếu: Làm thiện nguyện đúng chỗ và cho con đi cùng, có tủ sách hay để dạy con, dạy con tư duy nhân quả",
       "Gieo 2 nhân gì khiến con Bất Hiếu: Nuông chiều con => sinh ích kỉ, Quá nghiêm khắc => sinh hận thù, Kì vọng quá => sinh mệt mỏi, bất lực"
     ]
+  },
+  {
+    title: "Cho con nghe gì hằng ngày ?",
+    content: [
+      "Những câu chuyện về những người tốt, những tấm gương sáng, những điều hay lẽ phải, những bài học cuộc sống, những câu nói truyền cảm hứng, những giá trị đạo đức, những nguyên tắc sống tích cực.",
+      "Ngoại ngữ: Cho con nghe tiếng Anh mỗi ngày qua những bài hát, câu chuyện, phim hoạt hình, hoặc các chương trình giáo dục bằng tiếng Anh để giúp con phát triển kỹ năng ngôn ngữ và mở rộng kiến thức về thế giới.",
+      "Nghe về tư duy tích cực: Dạy con cách nhìn nhận mọi việc một cách lạc quan, tìm kiếm giải pháp thay vì chỉ tập trung vào vấn đề, và khuyến khích con tin vào khả năng của mình để vượt qua khó khăn."
+    ]
+  },
+  {
+    title: "Nguyên tắc dạy con của người Do Thái",
+    content: [
+      "Dạy con về đạo đức và giá trị sống: Người Do Thái coi trọng việc dạy con về đạo đức, lòng nhân ái, và các giá trị đạo đức khác.",
+      "Khuyến khích tinh thần học hỏi: Người Do Thái luôn khuyến khích con cái học hỏi và phát triển bản thân.",
+      "Dạy con về trách nhiệm: Người Do Thái dạy con về trách nhiệm với gia đình, cộng đồng, và xã hội."
+    ]
   }
 ];

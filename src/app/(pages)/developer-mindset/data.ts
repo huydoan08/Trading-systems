@@ -55,4 +55,23 @@ export const mindsetDeveloper = [
         "Kiểm tra và xác nhận rằng giải pháp đã triển khai đáp ứng đầy đủ yêu cầu và luồng nghiệp vụ đã xác định."
     ]
   },
+  {
+    title: "CRUD là gì?",
+    content: [
+      "CRUD là viết tắt của Create (Tạo), Read (Đọc), Update (Cập nhật) và Delete (Xóa). Đây là bốn thao tác cơ bản để quản lý dữ liệu trong một ứng dụng.",
+      "Create: Thao tác tạo mới một bản ghi hoặc đối tượng trong cơ sở dữ liệu.",
+      "Read: Thao tác đọc hoặc truy xuất dữ liệu từ cơ sở dữ liệu để hiển thị hoặc sử dụng trong ứng dụng.",
+      "Update: Thao tác cập nhật hoặc sửa đổi dữ liệu đã tồn tại trong cơ sở dữ liệu.",
+      "Delete: Thao tác xóa một bản ghi hoặc đối tượng khỏi cơ sở dữ liệu."
+    ]
+  },
+  {
+    title: "Testcase là gì?",
+    content: [
+      "Testcase là các trường hợp kiểm thử của dữ liệu được sử dụng để kiểm thử một phần mềm.",
+      "Mỗi test case thường bao gồm các bước thực hiện, dữ liệu đầu vào và kỳ vọng đầu ra.",
+      "Test case giúp đảm bảo rằng phần mềm hoạt động đúng như mong đợi trong các tình huống khác nhau.",
+      "Dev cần phải nghĩ đến các test case để đảm bảo rằng code của mình hoạt động đúng và không gây ra lỗi không mong muốn."
+    ]
+  }
 ];
