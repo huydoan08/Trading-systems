@@ -49,7 +49,7 @@ export const reactHooks = [
       "Trong đó, computeExpensiveValue là hàm thực hiện phép tính tốn kém, và [a, b] là mảng phụ thuộc. useMemo sẽ chỉ tính toán lại giá trị memoizedValue khi a hoặc b thay đổi.",
       "useMemo giúp cải thiện hiệu suất bằng cách tránh việc tính toán lại các giá trị phức tạp khi component re-render mà không cần thiết.",
       "Khi sử dụng useMemo, bạn có thể truyền memoizedValue vào các component con hoặc hook khác mà yêu cầu một giá trị, giúp tránh việc re-render không cần thiết của các component con."
-    ]
+    ] 
   },
   {
     title:
