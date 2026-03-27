@@ -62,4 +62,13 @@ export const reactHooks = [
       "Khi sử dụng useCallback, bạn có thể truyền memoizedCallback vào các component con hoặc hook khác mà yêu cầu một hàm, giúp tránh việc re-render không cần thiết của các component con."
     ]
   },
+  {
+    title: "Tư duy tạo component common trong React",
+    content: [
+      "Khi xây dựng ứng dụng React, việc tạo ra các component chung (common components) là một chiến lược quan trọng để tái sử dụng code và duy trì tính nhất quán trong giao diện người dùng.",
+      "Các component chung thường được sử dụng nhiều lần trong ứng dụng, ví dụ như button, input, card, v.v.",
+      "Khi tạo component chung, cần đảm bảo rằng chúng linh hoạt và có thể được tùy chỉnh theo nhu cầu sử dụng khác nhau.",
+      "Việc sử dụng component chung giúp giảm thiểu code trùng lặp, dễ bảo trì và nâng cao hiệu suất phát triển."
+    ]
+  }
 ];
