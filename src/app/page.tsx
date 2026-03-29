@@ -19,8 +19,6 @@ import {
 } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-// Import react-toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { ColorfulLogo } from "@/components/admin-panel/colorful-logo";
@@ -28,8 +26,6 @@ import { ColorfulLogo } from "@/components/admin-panel/colorful-logo";
 export default function HomePage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [emailRegister, setEmailRegister] = useState("");
-  const [passwordRegister, setPasswordRegister] = useState("");
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
@@ -52,24 +48,6 @@ export default function HomePage() {
     }
     setLoading(false);
   };
-  const handleSignUp = async () => {
-    setLoading(true);
-    try {
-      await register('','')
-    } catch (error) {
-      toast.error(`Đăng kí thất bại. ${error}`, {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        theme: "colored"
-      });
-    }
-    setLoading(false);
-  };
-
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
       handleLogin();

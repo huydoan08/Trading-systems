@@ -1,9 +1,7 @@
-import type { Metadata } from "next";
-
-import "./globals.css";
-
 import { ThemeProvider } from "@/components/providers/theme-provider";
-import { CursorWrapper } from "@/components/CursorWrapper";
+import { Cursor } from "@/components/Cursor";
+import type { Metadata } from "next";
+import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -15,7 +13,7 @@ export const metadata: Metadata = {
   ),
   title: "Huy Doan",
   description:
-    "A stunning and functional retractable sidebar for Next.js built on top of shadcn/ui complete with desktop and mobile responsiveness.",
+    "",
   alternates: {
     canonical: "/"
   },
@@ -23,14 +21,14 @@ export const metadata: Metadata = {
     url: "/",
     title: "Huy Doan",
     description:
-      "A stunning and functional retractable sidebar for Next.js built on top of shadcn/ui complete with desktop and mobile responsiveness.",
+      "",
     type: "website"
   },
   twitter: {
     card: "summary_large_image",
     title: "Huy Doan",
     description:
-      "A stunning and functional retractable sidebar for Next.js built on top of shadcn/ui complete with desktop and mobile responsiveness."
+      ""
   }
 };
 
@@ -43,7 +41,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          <CursorWrapper />
+          <Cursor />
           {children}
         </ThemeProvider>
       </body>
