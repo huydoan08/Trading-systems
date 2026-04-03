@@ -32,7 +32,7 @@ export function Menu({ isOpen }: MenuProps) {
           {menuList.map(({ groupLabel, menus }, index) => (
             <li className={cn("w-full", groupLabel ? "pt-5" : "")} key={index}>
               {(isOpen && groupLabel) || isOpen === undefined ? (
-                <p className="text-sm font-medium text-muted-foreground px-4 pb-2 max-w-[248px] truncate">
+                <p className="text-sm font-medium text-muted-foreground px-4 pb-2 max-w-[248px] truncate transition-colors duration-300 group-hover:text-[#f67373]">
                   {groupLabel}
                 </p>
               ) : !isOpen && isOpen !== undefined && groupLabel ? (
@@ -73,7 +73,7 @@ export function Menu({ isOpen }: MenuProps) {
                                 <Link href={href}>
                                     <span
                                     className={cn(
-                                      "transition-transform duration-300 group-hover:rotate-12",
+                                      "transition-transform duration-300 group-hover:rotate-12 group-hover:text-[#f67373]",
                                       isOpen === false ? "" : "mr-4"
                                     )}
                                     >
@@ -81,10 +81,10 @@ export function Menu({ isOpen }: MenuProps) {
                                     </span>
                                   <p
                                     className={cn(
-                                      "max-w-[200px] truncate",
+                                      "max-w-[200px] truncate transition-colors duration-300",
                                       isOpen === false
                                         ? "-translate-x-96 opacity-0"
-                                        : "translate-x-0 opacity-100"
+                                        : "translate-x-0 opacity-100 group-hover:text-[#f67373]"
                                     )}
                                   >
                                     {label}
