@@ -1,11 +1,9 @@
 "use client";
 import { Menu } from "@/components/admin-panel/menu";
 import { SidebarToggle } from "@/components/admin-panel/sidebar-toggle";
-import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { cn } from "@/lib/utils";
-import { Bitcoin } from "lucide-react";
 import { ColorfulLogo } from "@/components/admin-panel/colorful-logo";
 
 export function Sidebar() {
