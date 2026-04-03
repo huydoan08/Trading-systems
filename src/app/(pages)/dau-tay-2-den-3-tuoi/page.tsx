@@ -2,15 +2,15 @@
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
-import { ImageCarousel } from "@/app/component/image-carousel";
+import { ImageGrid } from "@/app/component/image-grid";
 
 const images = [
-  "/122.jpg",
-  "/123.jpg",
-  "/124.jpg",
-  "/125.jpg",
-  "/126.jpg",
-  "/127.jpg",
+  { src: "/122.jpg", title: "Đoàn Hải Anh", category: "2-3 tuổi" },
+  { src: "/123.jpg", title: "Đoàn Hải Anh", category: "2-3 tuổi" },
+  { src: "/124.jpg", title: "Đoàn Hải Anh", category: "2-3 tuổi" },
+  { src: "/125.jpg", title: "Đoàn Hải Anh", category: "2-3 tuổi" },
+  { src: "/126.jpg", title: "Đoàn Hải Anh", category: "2-3 tuổi" },
+  { src: "/127.jpg", title: "Đoàn Hải Anh", category: "2-3 tuổi" },
 ];
 
 export default function DauTayHaiTuoiPage() {
@@ -20,7 +20,7 @@ export default function DauTayHaiTuoiPage() {
 
   return (
     <ContentLayout title="Đoàn Hải Anh (Dâu Tây)">
-      <ImageCarousel images={images} />
+      <ImageGrid images={images} />
     </ContentLayout>
   );
 }

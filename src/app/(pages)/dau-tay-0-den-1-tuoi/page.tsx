@@ -2,9 +2,34 @@
 import { useStore } from "@/hooks/use-store"
 import { useSidebar } from "@/hooks/use-sidebar"
 import { ContentLayout } from "@/components/admin-panel/content-layout"
-import { ImageCarousel } from "@/app/component/image-carousel"
+import { ImageGrid } from "@/app/component/image-grid"
 
-const images = ["/01.jpg", "/02.jpg", "/03.jpg", "/04.jpg"]
+const images = [
+  {
+    src: "/01.jpg",
+    title: "",
+    category: "",
+    span: "half" as const
+  },
+  {
+    src: "/02.jpg",
+    title: "",
+    category: "",
+    span: "half" as const
+  },
+  {
+    src: "/03.jpg",
+    title: "",
+    category: "",
+    span: "half" as const
+  },
+  {
+    src: "/04.jpg",
+    title: "",
+    category: "",
+    span: "half" as const
+  }
+]
 
 export default function DauTayMotTuoiPage() {
   const sidebar = useStore(useSidebar, (x) => x)
@@ -13,7 +38,7 @@ export default function DauTayMotTuoiPage() {
 
   return (
     <ContentLayout title="Đoàn Hải Anh (Dâu Tây)">
-      <ImageCarousel images={images} />
+      <ImageGrid images={images} />
     </ContentLayout>
   )
 }

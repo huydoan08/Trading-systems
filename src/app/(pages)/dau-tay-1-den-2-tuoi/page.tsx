@@ -2,20 +2,19 @@
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
-import { ImageCarousel } from "@/app/component/image-carousel";
+import { ImageGrid } from "@/app/component/image-grid";
 
 const images = [
-  "/21.jpg",
-  "/22.jpg",
-  "/23.jpg",
-  "25.jpg",
-  "26.jpg",
-  "27.jpg",
-  "28.jpg",
-  "29.jpg",
-  "/dau-1t-den-2t/dau-13213.jpg",
-  "/dau-1t-den-2t/dau-31324.jpg",
-  
+  { src: "/21.jpg", title: "Đoàn Hải Anh", category: "1-2 tuổi" },
+  { src: "/22.jpg", title: "Đoàn Hải Anh", category: "1-2 tuổi" },
+  { src: "/23.jpg", title: "Đoàn Hải Anh", category: "1-2 tuổi" },
+  { src: "/25.jpg", title: "Đoàn Hải Anh", category: "1-2 tuổi" },
+  { src: "/26.jpg", title: "Đoàn Hải Anh", category: "1-2 tuổi" },
+  { src: "/27.jpg", title: "Đoàn Hải Anh", category: "1-2 tuổi" },
+  { src: "/28.jpg", title: "Đoàn Hải Anh", category: "1-2 tuổi" },
+  { src: "/29.jpg", title: "Đoàn Hải Anh", category: "1-2 tuổi" },
+  { src: "/dau-1t-den-2t/dau-13213.jpg", title: "Đoàn Hải Anh", category: "1-2 tuổi" },
+  { src: "/dau-1t-den-2t/dau-31324.jpg", title: "Đoàn Hải Anh", category: "1-2 tuổi" },
 ];
 
 export default function DauTayHaiTuoiPage() {
@@ -25,7 +24,7 @@ export default function DauTayHaiTuoiPage() {
 
   return (
     <ContentLayout title="Đoàn Hải Anh (Dâu Tây)">
-      <ImageCarousel images={images} />
+      <ImageGrid images={images} />
     </ContentLayout>
   );
 }
