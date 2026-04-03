@@ -90,18 +90,18 @@ export function CollapseMenuButton({
       >
         <Button
           variant={isSubmenuActive ? "secondary" : "ghost"}
-          className="w-full justify-start h-10"
+          className="w-full justify-start h-10 group"
         >
           <div className="w-full items-center flex justify-between">
             <div className="flex items-center">
-              <span className="mr-4">
+              <span className="mr-4 transition-colors duration-300 group-hover:text-[#f67373]">
                 <Icon size={18} />
               </span>
               <p
                 className={cn(
-                  "max-w-[150px] truncate",
+                  "max-w-[150px] truncate transition-colors duration-300",
                   isOpen
-                    ? "translate-x-0 opacity-100"
+                    ? "translate-x-0 opacity-100 group-hover:text-[#f67373]"
                     : "-translate-x-96 opacity-0"
                 )}
               >
@@ -133,18 +133,18 @@ export function CollapseMenuButton({
                 ? "secondary"
                 : "ghost"
             }
-            className="w-full justify-start h-10 mb-1"
+            className="w-full justify-start h-10 mb-1 group"
             asChild
           >
             {!active && <Link href={href}>
-              <span className="mr-4 ml-2">
+              <span className="mr-4 ml-2 transition-colors duration-300 group-hover:text-[#f67373]">
                 <Dot size={18} />
               </span>
               <p
                 className={cn(
-                  "max-w-[170px] truncate",
+                  "max-w-[170px] truncate transition-colors duration-300",
                   isOpen
-                    ? "translate-x-0 opacity-100"
+                    ? "translate-x-0 opacity-100 group-hover:text-[#f67373]"
                     : "-translate-x-96 opacity-0"
                 )}
               >
@@ -189,7 +189,7 @@ export function CollapseMenuButton({
         </Tooltip>
       </TooltipProvider>
       <DropdownMenuContent side="right" sideOffset={25} align="start">
-        <DropdownMenuLabel className="max-w-[190px] truncate">
+        <DropdownMenuLabel className="max-w-[190px] truncate transition-colors duration-300 group-hover:text-[#f67373]">
           {label}
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
@@ -201,7 +201,7 @@ export function CollapseMenuButton({
                 }`}
               href={href}
             >
-              <p className="max-w-[180px] truncate">{label}</p>
+              <p className="max-w-[180px] truncate transition-colors duration-300 hover:text-[#f67373]">{label}</p>
             </Link>
           </DropdownMenuItem>
         ))}
