@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef } from "react";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import { X, ChevronLeft, ChevronRight, Maximize2, Minimize2 } from "lucide-react";
 
 interface ImageGridProps {
   images: Array<{
@@ -23,7 +23,9 @@ interface ClickPosition {
 export function ImageGrid({ images }: ImageGridProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [clickPosition, setClickPosition] = useState<ClickPosition | null>(null);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const imageRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const modalRef = useRef<HTMLDivElement | null>(null);
 
   const handleImageClick = (idx: number, e: React.MouseEvent<HTMLDivElement>) => {
     const element = imageRefs.current[idx];
@@ -47,6 +49,26 @@ export function ImageGrid({ images }: ImageGridProps) {
   const handleNext = () => {
     if (selectedIndex === null) return;
     setSelectedIndex((prev) => (prev === images.length - 1 ? 0 : prev! + 1));
+  };
+
+  const toggleFullscreen = () => {
+    if (!modalRef.current) return;
+    
+    if (!isFullscreen) {
+      if (modalRef.current.requestFullscreen) {
+        modalRef.current.requestFullscreen().catch(() => {
+          setIsFullscreen(true);
+        });
+        setIsFullscreen(true);
+      } else {
+        setIsFullscreen(true);
+      }
+    } else {
+      if (document.fullscreenElement) {
+        document.exitFullscreen();
+      }
+      setIsFullscreen(false);
+    }
   };
 
   const getSpanClass = (span?: string) => {
@@ -136,7 +158,8 @@ export function ImageGrid({ images }: ImageGridProps) {
           >
             {/* Modal Content - Zoom from click position */}
             <motion.div
-              className="relative w-full max-w-5xl"
+              ref={modalRef}
+              className={`relative w-full ${isFullscreen ? "fixed inset-0" : "max-w-5xl"}`}
               initial={{
                 opacity: 0,
                 scale: 0.3,
@@ -162,12 +185,12 @@ export function ImageGrid({ images }: ImageGridProps) {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Image Container */}
-              <div className="relative w-full bg-white rounded-2xl shadow-2xl overflow-hidden" style={{ aspectRatio: '16 / 10' }}>
+              <div className={`relative w-full ${isFullscreen ? "h-screen bg-black" : "bg-white rounded-2xl shadow-2xl"} overflow-hidden`} style={!isFullscreen ? { aspectRatio: '16 / 10' } : {}}>
                 <motion.img
                   key={selectedIndex}
                   src={images[selectedIndex].src}
                   alt={images[selectedIndex].title || `Image ${selectedIndex + 1}`}
-                  className="w-full h-full object-cover"
+                  className={`w-full h-full ${isFullscreen ? "object-contain" : "object-cover"}`}
                   initial={{ opacity: 0, scale: 1.1, filter: "blur(10px)" }}
                   animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
                   exit={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
@@ -182,6 +205,16 @@ export function ImageGrid({ images }: ImageGridProps) {
                   whileTap={{ scale: 0.9 }}
                 >
                   <X size={24} />
+                </motion.button>
+
+                {/* Fullscreen Button */}
+                <motion.button
+                  onClick={toggleFullscreen}
+                  className="absolute top-4 right-4 bg-white/80 dark:bg-black/60 hover:bg-white dark:hover:bg-black text-gray-800 dark:text-gray-200 rounded-full p-3 shadow-lg backdrop-blur-md z-20 transition-all"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                >
+                  {isFullscreen ? <Minimize2 size={24} /> : <Maximize2 size={24} />}
                 </motion.button>
 
                 {/* Navigation Arrows */}
