@@ -73,8 +73,13 @@ export function ImageGrid({ images }: ImageGridProps) {
             }}
             className={`${getSpanClass(image.span)} relative group cursor-pointer overflow-hidden rounded-2xl shadow-lg h-72 md:h-80`}
             onClick={(e) => handleImageClick(idx, e)}
+            initial={{ opacity: 0, y: 28 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ amount: 0.3, once: true }}
+            transition={{ duration: 0.65, ease: "easeOut", delay: idx * 0.08 }}
+            exit={{ opacity: 0, y: -24 }}
             whileHover={{ scale: 1.02 }}
-            transition={{ duration: 0.3 }}
+            style={{ willChange: "transform, opacity" }}
           >
             {/* Image */}
             <motion.img
