@@ -1,19 +1,56 @@
 "use client";
-import { ContentLayout } from "@/components/admin-panel/content-layout";
-import { ImageGrid } from "@/app/component/image-grid";
-import { auth } from "@/firebaseConfig";
-import { useSidebar } from "@/hooks/use-sidebar";
-import { useStore } from "@/hooks/use-store";
-import { onAuthStateChanged } from "firebase/auth";
-import { useRouter } from "next/navigation";
-import { useEffect } from "react";
-import {
-  spotIncreaseH4,
-  spotcatch1D,
-  spotCatch1W
-} from "./data";
 
-export default function ConditionForEnteringATradePage() {
+import { useEffect } from "react";
+import { auth } from "@/firebaseConfig";
+import { useStore } from "@/hooks/use-store";
+import { useRouter } from "next/navigation";
+import { useSidebar } from "@/hooks/use-sidebar";
+import { onAuthStateChanged } from "firebase/auth";
+import { spotIncreaseH4, spotCatch1W } from "./data";
+import { ImageGrid } from "@/app/component/image-grid";
+import { ContentLayout } from "@/components/admin-panel/content-layout";
+interface ImageData {
+  src: string;
+  alt?: string;
+}
+interface TradeStrategy {
+  title: string;
+  images: (string | ImageData)[];
+  category: string;
+}
+interface GridImage {
+  src: string;
+  title: string;
+  category: string;
+}
+
+const TRADE_STRATEGIES: TradeStrategy[] = [
+  {
+    title: "BẮT ĐÁY KHI TẠO ĐÁY CAO DẦN KHUNG 1W",
+    images: spotCatch1W,
+    category: "1W Strategy"
+  },
+  {
+    title: "BẮT CON SÓNG HỒI CỦA MỘT SÓNG TĂNG TRƯỚC ĐÓ H4 H2",
+    images: spotIncreaseH4,
+    category: "H4 Strategy"
+  },
+];
+
+// Helpers
+const normalizeImage = (image: string | ImageData): ImageData =>
+  typeof image === "string" ? { src: image } : image;
+
+const transformStrategieToGrid = (strategies: TradeStrategy[]): GridImage[] =>
+  strategies.flatMap(({ title, category, images }) =>
+    images.map((image) => ({
+      src: normalizeImage(image).src,
+      title,
+      category,
+    }))
+  );
+
+export default function TradingSpotPage() {
   const sidebar = useStore(useSidebar, (x) => x);
   const router = useRouter();
 
@@ -21,36 +58,12 @@ export default function ConditionForEnteringATradePage() {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (!currentUser) router.push("/");
     });
-    return () => unsubscribe();
+    return unsubscribe;
   }, [router]);
 
   if (!sidebar) return null;
 
-  const tradeStrategies = [
-    {
-      title: "BẮT ĐÁY KHI TẠO ĐÁY CAO DẦN KHUNG 1W",
-      images: spotCatch1W,
-      category: "1W Strategy"
-    },
-    {
-      title: "BẮT ĐÁY KHI TẠO ĐÁY CAO DẦN KHUNG 1D",
-      images: spotcatch1D,
-      category: "1D Strategy"
-    },
-    {
-      title: "BẮT CON SÓNG HỒI CỦA MỘT SÓNG TĂNG TRƯỚC ĐÓ H4 H2",
-      images: spotIncreaseH4,
-      category: "H4 Strategy"
-    },
-  ];
-
-  const gridImages = tradeStrategies.flatMap(strategy =>
-    strategy.images.map((image: any) => ({
-      src: typeof image === 'string' ? image : image.src,
-      title: strategy.title,
-      category: strategy.category
-    }))
-  );
+  const gridImages = transformStrategieToGrid(TRADE_STRATEGIES);
 
   return (
     <ContentLayout title="Hệ Thống Giao Dịch">

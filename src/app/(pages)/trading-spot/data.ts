@@ -22,12 +22,3 @@ export const spotIncreaseH4 = [
   "/rsi-d-beautiful/rsi-d-09.png",
   "/rsi-d-beautiful/rsi-d-11.png",
 ];
-
-export const spotcatch1D = [
-  "/rsi-d-beautiful/1D-spot-01.jpg",
-  "/rsi-d-beautiful/1D-spot-02.jpg",
-  "/rsi-d-beautiful/1D-spot-03.jpg",
-  "/rsi-d-beautiful/1D-spot-04.jpg",
-  "/rsi-d-beautiful/1D-spot-05.jpg",
-  "/rsi-d-beautiful/1D-spot-06.jpg",
-];
