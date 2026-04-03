@@ -28,7 +28,7 @@ export const allData: YearlyData = {
   "2026": [
     { name: "01/2026", revenue: -11 },
     { name: "02/2026", revenue: -14 },
-    { name: "03/2026", revenue: 11 },
+    { name: "03/2026", revenue: -1 },
     { name: "04/2026", revenue: 0 },
     { name: "05/2026", revenue: 0 },
     { name: "06/2026", revenue: 0 },
