@@ -2,10 +2,9 @@
 
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-import { logout } from "@/AuthService";
 import { getMenuList } from "@/lib/menu-list";
 import { usePathname } from "next/navigation";
-import { Ellipsis, LogOut } from "lucide-react";
+import { Ellipsis } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { CollapseMenuButton } from "@/components/admin-panel/collapse-menu-button";
@@ -93,30 +92,6 @@ const MenuItem = ({ href, label, Icon, active, pathname, isOpen }: any) => {
   );
 };
 
-const SignOutButton = ({ isOpen }: { isOpen: boolean | undefined }) => (
-  <li className="w-full grow flex items-end">
-    <TooltipProvider disableHoverableContent>
-      <Tooltip delayDuration={100}>
-        <TooltipTrigger asChild>
-          <Button
-            onClick={logout}
-            variant="outline"
-            className="w-full justify-center h-10 mt-5"
-          >
-            <span className={cn("transition-colors", TRANSITION, HOVER_COLOR, isOpen === false ? "" : "mr-4")}>
-              <LogOut size={ICON_SIZE} />
-            </span>
-            <p className={cn("whitespace-nowrap", TRANSITION, HOVER_COLOR, isOpen === false ? "opacity-0 hidden" : "opacity-100")}>
-              Sign out
-            </p>
-          </Button>
-        </TooltipTrigger>
-        {isOpen === false && <TooltipContent side="right">Sign out</TooltipContent>}
-      </Tooltip>
-    </TooltipProvider>
-  </li>
-);
-
 export function Menu({ isOpen }: MenuProps) {
   const pathname = usePathname();
   const menuList = getMenuList(pathname);
@@ -154,7 +129,6 @@ export function Menu({ isOpen }: MenuProps) {
               )}
             </li>
           ))}
-          <SignOutButton isOpen={isOpen} />
         </ul>
       </nav>
     </ScrollArea>
