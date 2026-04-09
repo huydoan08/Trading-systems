@@ -73,5 +73,11 @@ export const mindsetDeveloper = [
       "Test case giúp đảm bảo rằng phần mềm hoạt động đúng như mong đợi trong các tình huống khác nhau.",
       "Dev cần phải nghĩ đến các test case để đảm bảo rằng code của mình hoạt động đúng và không gây ra lỗi không mong muốn."
     ]
+  },
+  {
+    title: "Flag là gì?",
+    content: [
+      "Flag là một biến boolean được sử dụng để chỉ định trạng thái hoặc điều kiện cụ thể trong một chương trình.",
+    ]
   }
 ];

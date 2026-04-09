@@ -139,7 +139,7 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/developer-mindset",
+          href: "/solution-mindset",
           label: "Solution & Mindset",
           icon: Torus,
           submenus: []
