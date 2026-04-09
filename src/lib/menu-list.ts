@@ -140,7 +140,29 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "/developer-mindset",
-          label: "Developer Mindset",
+          label: "Solution & Mindset",
+          icon: Torus,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/how-to-debug",
+          label: "How to Debug",
+          icon: Torus,
+          submenus: []
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/git",
+          label: "Git",
           icon: Torus,
           submenus: []
         }
