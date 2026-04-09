@@ -1,19 +1,18 @@
 "use client";
-import { ContentLayout } from "@/components/admin-panel/content-layout";
+
+import { useState } from "react";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
-import { useRouter } from "next/navigation";
 import { mindsetDeveloper } from "./data";
+import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { ExpandableCard } from "@/app/component/expandableCard";
-import { useState } from "react";
 
-export default function RaisingChildrenPage() {
+export default function HowToDebugPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const sidebar = useStore(useSidebar, (x) => x);
-  const router = useRouter();
   if (!sidebar) return null;
   return (
-    <ContentLayout title="JavaScript">
+    <ContentLayout title="How to debug">
       {mindsetDeveloper.map((item, index) => (
         <ExpandableCard
           key={index}
