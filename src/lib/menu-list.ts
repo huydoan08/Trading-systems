@@ -42,6 +42,10 @@ export function getMenuList(pathname: string): Group[] {
           icon: AlignHorizontalDistributeCenter,
           submenus: [
             {
+              href: "/strategy",
+              label: "Strategy",
+            },
+            {
               href: "/trading-spot",
               label: "Trading Spot Entry",
             },
@@ -52,10 +56,6 @@ export function getMenuList(pathname: string): Group[] {
             {
               href: "/pnl-report",
               label: "PNL Report",
-            },
-            {
-              href: "/strategy",
-              label: "Strategy",
             },
           ]
         }
