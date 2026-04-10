@@ -46,12 +46,16 @@ export function getMenuList(pathname: string): Group[] {
               label: "Trading Spot Entry",
             },
             {
-              href: "/technical-analysis",
+              href: "/rsi-indicator",
               label: "RSI Indicator"
             },
             {
-              href: "/performance-report",
+              href: "/pnl-report",
               label: "PNL Report",
+            },
+            {
+              href: "/strategy",
+              label: "Strategy",
             },
           ]
         }
