@@ -30,7 +30,7 @@ export default function RevenueChart() {
   const textColor = theme === "dark" ? "#fff" : "#000";
 
   return (
-    <ContentLayout title="Chiến lược giao dịch">
+    <ContentLayout title="PNL Report">
       <Card className="h-500 overflow-auto shadow-lg border border-black-200 dark:border-black-700">
         <CardContent className="p-6 space-y-4">
           <div className="flex justify-between items-center">

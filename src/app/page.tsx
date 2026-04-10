@@ -20,7 +20,6 @@ import {
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 import { ColorfulLogo } from "@/components/admin-panel/colorful-logo";
 
 export default function HomePage() {
@@ -57,7 +56,7 @@ export default function HomePage() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        router.push("/trading-spot");
+        router.push("/dau-tay-2-den-3-tuoi");
       } else {
         router.push("/");
       }

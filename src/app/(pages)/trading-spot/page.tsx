@@ -66,7 +66,7 @@ export default function TradingSpotPage() {
   const gridImages = transformStrategieToGrid(TRADE_STRATEGIES);
 
   return (
-    <ContentLayout title="Hệ Thống Giao Dịch">
+    <ContentLayout title="Trading Spot Entry">
       <ImageGrid images={gridImages} />
     </ContentLayout>
   );

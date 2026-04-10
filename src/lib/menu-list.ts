@@ -1,10 +1,7 @@
 import {
   LucideIcon,
   AlignHorizontalDistributeCenter,
-  PersonStandingIcon,
-  Bird,
   Image,
-  LucideFileBarChart,
   Heart,
   Apple,
   Torus,
@@ -14,7 +11,6 @@ import {
   Timer,
   HeartPulse,
 } from "lucide-react";
-import { getAuth } from "firebase/auth";
 
 type Submenu = {
   href: string;
@@ -36,45 +32,28 @@ type Group = {
 };
 
 export function getMenuList(pathname: string): Group[] {
-  const auth = getAuth();
-  const user = auth.currentUser;
-  const isAdmin = user?.email == "doanvanhuy268@gmail.com";
   return [
     {
       groupLabel: "",
       menus: [
         {
           href: "/trading-spot",
-          label: "Trading Spot BTC/USDT",
+          label: "Trading",
           icon: AlignHorizontalDistributeCenter,
-          active: !isAdmin,
           submenus: [
+            {
+              href: "/trading-spot",
+              label: "Trading Spot Entry",
+            },
+            {
+              href: "/technical-analysis",
+              label: "RSI Indicator"
+            },
+            {
+              href: "/performance-report",
+              label: "PNL Report",
+            },
           ]
-        }
-      ],
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/technical-analysis",
-          label: "Technical Analysis",
-          icon: Bird,
-          active: !isAdmin,
-          submenus: [
-          ]
-        }
-      ],
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/performance-report",
-          label: "Báo Cáo Kết Quả",
-          icon: LucideFileBarChart,
-          submenus: [],
-          active: !isAdmin
         }
       ]
     },
