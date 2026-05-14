@@ -9,7 +9,7 @@ import {
   Usb,
   Ticket,
   Timer,
-  HeartPulse,
+  HeartPulse
 } from "lucide-react";
 
 type Submenu = {
@@ -42,12 +42,16 @@ export function getMenuList(pathname: string): Group[] {
           icon: AlignHorizontalDistributeCenter,
           submenus: [
             {
+              href: "/principles",
+              label: "Principles"
+            },
+            {
               href: "/strategy",
-              label: "Strategy",
+              label: "Strategy"
             },
             {
               href: "/trading-spot",
-              label: "Trading Spot Entry",
+              label: "Trading Spot Entry"
             },
             {
               href: "/rsi-indicator",
@@ -55,8 +59,8 @@ export function getMenuList(pathname: string): Group[] {
             },
             {
               href: "/pnl-report",
-              label: "PNL Report",
-            },
+              label: "PNL Report"
+            }
           ]
         }
       ]
@@ -80,7 +84,7 @@ export function getMenuList(pathname: string): Group[] {
             {
               href: "/dau-tay-2-den-3-tuoi",
               label: "Dâu Tây từ 2 đến 3 tuổi"
-            },
+            }
           ]
         }
       ]
@@ -205,6 +209,6 @@ export function getMenuList(pathname: string): Group[] {
           submenus: []
         }
       ]
-    },
+    }
   ];
 }
