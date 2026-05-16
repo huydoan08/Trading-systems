@@ -38,5 +38,20 @@ export const raisingchildren = [
       "Khuyến khích tinh thần học hỏi: Người Do Thái luôn khuyến khích con cái học hỏi và phát triển bản thân.",
       "Dạy con về trách nhiệm: Người Do Thái dạy con về trách nhiệm với gia đình, cộng đồng, và xã hội."
     ]
-  }
+  },
+  {
+    title: "Dạy con về thói quen ăn uống",
+    content: [
+      "Phải ngồi vào bàn ăn, phải tự xúc ăn và nếu con không chịu ăn thì sẽ bỏ đói luôn bữa đó => trước khi bỏ đói thì cũng sẽ giải thích rất là kĩ là: con phải ý thức rất là rõ nha, nếu con không ăn uống nghiêm túc thì tối nay nếu con có đói bụng cũng không được ăn mà phải chờ tới sáng hôm sau mới được ăn",
+     ]
+  },
+  {
+    title: "Dạy con về thói quen không ăn vạ",
+    content: [
+      "1. Bố biết con muốn xem tivi, nhưng hôm nay mình đã xem đủ rồi / bây giờ là giờ đi ngủ nên không xem nữa",
+      "2. Con có thể khóc, nhưng quyết định không thay đổi",
+      "3. Nếu con tiếp tục như vậy, ngày mai con sẽ không được xem tivi nữa",
+      "4. Lần sau nếu con muốn xem tivi, con hãy nói bình tĩnh. Nếu con khóc hoặc ăn vạ, con sẽ mất quyền xem."
+    ]
+  } 
 ];
