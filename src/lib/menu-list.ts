@@ -37,6 +37,30 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
+          href: "",
+          label: "Con gái yêu",
+          icon: Image,
+          submenus: [
+            {
+              href: "/dau-tay-0-den-1-tuoi",
+              label: "Dâu Tây từ 0 đến 1 tuổi"
+            },
+            {
+              href: "/dau-tay-1-den-2-tuoi",
+              label: "Dâu Tây từ 1 đến 2 tuổi"
+            }, 
+            {
+              href: "/dau-tay-2-den-3-tuoi",
+              label: "Dâu Tây từ 2 đến 3 tuổi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      groupLabel: "",
+      menus: [
+        {
           href: "/trading-spot",
           label: "Trading",
           icon: AlignHorizontalDistributeCenter,
@@ -60,30 +84,6 @@ export function getMenuList(pathname: string): Group[] {
             {
               href: "/pnl-report",
               label: "PNL Report"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "",
-          label: "Bộ ảnh của Dâu Tây",
-          icon: Image,
-          submenus: [
-            {
-              href: "/dau-tay-0-den-1-tuoi",
-              label: "Dâu Tây từ 0 đến 1 tuổi"
-            },
-            {
-              href: "/dau-tay-1-den-2-tuoi",
-              label: "Dâu Tây từ 1 đến 2 tuổi"
-            },
-            {
-              href: "/dau-tay-2-den-3-tuoi",
-              label: "Dâu Tây từ 2 đến 3 tuổi"
             }
           ]
         }
