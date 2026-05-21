@@ -73,10 +73,10 @@ export function getMenuList(pathname: string): Group[] {
               href: "/strategy",
               label: "Strategy"
             },
-            {
-              href: "/trading-spot",
-              label: "Trading Spot Entry"
-            },
+            // {
+            //   href: "/trading-spot",
+            //   label: "Trading Spot Entry"
+            // },
             {
               href: "/rsi-indicator",
               label: "RSI Indicator"
