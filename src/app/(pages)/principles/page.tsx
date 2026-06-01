@@ -63,7 +63,7 @@ export default function TechnicalAnalysisPage() {
   };
 
   return (
-    <ContentLayout title="RSI Indicator">
+    <ContentLayout title="Bộ quy tắc ứng xử trước thị trường">
       <div className="grid grid-cols-2 gap-4 mb-4">
         {CARD_DATA.map((card, index) => (
           <InfoCard

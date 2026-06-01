@@ -5,7 +5,7 @@ import { ContentLayout } from "@/components/admin-panel/content-layout";
 export default function Strategy() {
 
   return (
-    <ContentLayout title="PNL Report">
+    <ContentLayout title="Chiến lược giao dịch năm 2026">
       <h3 className="text-xl font-medium text-black dark:text-white mb-3">
         Chiến lược giao dịch năm 2026
       </h3>

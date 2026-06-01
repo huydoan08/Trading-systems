@@ -8,8 +8,7 @@ import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { onAuthStateChanged, getAuth } from "firebase/auth";
-import { ExpandableCard } from "@/app/component/ExpandableCard/ExpandableCard";
-import { buddhism, imagesPersonal } from "./data";
+import { imagesPersonal } from "./data";
 
 export default function PersonalGrowthPage() {
   const sidebar = useStore(useSidebar, (x) => x);
@@ -47,15 +46,23 @@ export default function PersonalGrowthPage() {
   }, [scrollToImage]);
 
   const prevImage = useCallback(() => {
-    setCurrentIndex((prev) => (prev - 1 + imagesPersonal.length) % imagesPersonal.length);
+    setCurrentIndex(
+      (prev) => (prev - 1 + imagesPersonal.length) % imagesPersonal.length
+    );
     scrollToImage();
   }, [scrollToImage]);
 
-  const handleCardClick = useCallback((index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
-  }, [openIndex]);
+  const handleCardClick = useCallback(
+    (index: number) => {
+      setOpenIndex(openIndex === index ? null : index);
+    },
+    [openIndex]
+  );
 
-  const currentImage = useMemo(() => imagesPersonal[currentIndex], [currentIndex]);
+  const currentImage = useMemo(
+    () => imagesPersonal[currentIndex],
+    [currentIndex]
+  );
 
   if (!sidebar) return null;
 
@@ -86,7 +93,10 @@ export default function PersonalGrowthPage() {
               className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
               aria-label="Previous Image"
             >
-              <ChevronLeft size={32} className="text-black-800 dark:text-black-200" />
+              <ChevronLeft
+                size={32}
+                className="text-black-800 dark:text-black-200"
+              />
             </button>
 
             <button
@@ -94,7 +104,10 @@ export default function PersonalGrowthPage() {
               className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/80 dark:bg-black/60 rounded-full p-3 shadow-lg hover:bg-white hover:scale-110 transition-all"
               aria-label="Next Image"
             >
-              <ChevronRight size={32} className="text-black-800 dark:text-black-200" />
+              <ChevronRight
+                size={32}
+                className="text-black-800 dark:text-black-200"
+              />
             </button>
 
             <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-black/60 text-white text-sm px-3 py-1 rounded-full">
@@ -102,19 +115,6 @@ export default function PersonalGrowthPage() {
             </div>
           </div>
         </CardContent>
-      </Card>
-      <Card className="bg-card border border-[#e5e7eb] dark:border-[#222] rounded-xl mb-6">
-        {buddhism.map((bud, index) => (
-          <ExpandableCard
-            key={index}
-            title={bud.title}
-            content={bud.content as any}
-            isOpen={openIndex === index}
-            onClick={() => handleCardClick(index)}
-            isFirst={index === 0}
-            isLast={index === buddhism.length - 1}
-          />
-        ))}
       </Card>
     </ContentLayout>
   );
