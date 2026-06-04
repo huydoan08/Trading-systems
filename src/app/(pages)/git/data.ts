@@ -38,5 +38,15 @@ export const mindsetDeveloper = [
       "3. Sau đó nếu muốn lấy lại bằng git pull để đồng bộ với remote repository nếu như đã push.",
       "Lưu ý: Lệnh git reset --hard sẽ xóa tất cả các thay đổi sau commit đó, vì vậy hãy chắc chắn rằng bạn đã sao lưu các thay đổi quan trọng trước khi sử dụng lệnh này."
     ]
+  },
+  {
+    title: "Bài toán revert một commit bất kì đã được merge vào nhánh chính ?",
+    content: [
+      "Để revert một commit bất kì đã được merge vào nhánh chính, bạn có thể sử dụng lệnh git revert.",
+      "Cách sử dụng lệnh git revert như sau:",
+      "1. Xác định commit mà bạn muốn revert bằng cách sử dụng lệnh git log để xem lịch sử commit của nhánh chính.",
+      "2. Sử dụng lệnh git revert <commit-hash> để tạo một commit mới từ việc lấy lại các thay đổi của commit đó.",
+      "3. Sau đó bạn có thể push commit mới này lên nhánh chính để áp dụng các thay đổi."
+    ]
   }
 ];

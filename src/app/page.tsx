@@ -56,7 +56,7 @@ export default function HomePage() {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       if (currentUser) {
-        router.push("/dau-tay-1-den-2-tuoi");
+        router.push("/principles");
       } else {
         router.push("/");
       }

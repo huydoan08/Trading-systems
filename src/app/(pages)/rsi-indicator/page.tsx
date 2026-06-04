@@ -48,6 +48,7 @@ export default function TechnicalAnalysisPage() {
       );
     }
 
+
     if ('images' in card) {
       return (
         <ImageGallery

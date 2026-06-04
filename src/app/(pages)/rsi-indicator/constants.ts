@@ -20,5 +20,10 @@ export const CARD_DATA: CardData[] = [
     title: "CHỈ BÁO RSI",
     imageSrc: "/support-resistance/rsi.png",
     modalType: "rsi"
+  },
+  {
+    title: "Chiến lược mua",
+    imageSrc: "/support-resistance/rsi.png",
+    modalType: "rsi"
   }
 ];
