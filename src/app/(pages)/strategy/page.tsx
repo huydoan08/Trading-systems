@@ -5,12 +5,14 @@ import { ContentLayout } from "@/components/admin-panel/content-layout";
 export default function Strategy() {
 
   return (
-    <ContentLayout title="Chiến lược giao dịch năm 2026">
-      <h3 className="text-xl font-medium text-black dark:text-white mb-3">
-        Chiến lược giao dịch năm 2026
-      </h3>
+    <ContentLayout title="Chiến lược giao dịch">
       <img
-        src="/strategy.png"
+        src="/btc-buy.png"
+        alt="Strategy"
+        className="w-full h-auto rounded-lg object-cover"
+      />
+      <img
+        src="/sell-btc.png"
         alt="Strategy"
         className="w-full h-auto rounded-lg object-cover"
       />

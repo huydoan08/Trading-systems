@@ -5,12 +5,3 @@ export const quintessenceRsi = [
   'RSI khung 1D xuống dưới vùng 20 + Fear Index dưới 10 => Vùng cơ hội cực tốt để phân bổ',
   'Vùng tạo ra đỉnh của RSI "H4" => Vượt ra khỏi vùng 80 cho thấy lực mua rất mạnh áp đảo hoàn toàn lực bán'
 ];
-export const buyStrategy = [
-  "Lần 1: RSI 1D xuống dưới vùng 20 (mua 40%)",
-  "Lần 2: RSI 1D tạo đáy số 2 (mua 30%)",
-  "Lần 3: RSI 1D chuẩn bị cắt lên trên 2 ĐTB (mua 30%)",
-]
-export const sellStrategy = [
-  "Lần 1: Thủng đáy của cụm nến H4 (thoát 50%)",
-  "Lần 2: Thủng đáy của cụm nến 1D (thoát 50%",
-]

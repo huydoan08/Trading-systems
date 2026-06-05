@@ -18,5 +18,13 @@ export const mindsetDeveloper = [
       "1. Sử dụng breakpoint để tạm dừng chương trình tại các điểm quan trọng và kiểm tra trạng thái của biến, luồng thực thi, và các điều kiện xung quanh.",
       "2. Sử dụng console của trình duyệt để in ra giá trị của biến, giúp dễ dàng theo dõi và phân tích luồng dữ liệu.",
     ]
+  },
+  {
+    title: "Debug không hiển thị đúng dữ liệu trên giao diện ?",
+    content: [
+      "1. Kiểm tra xem dữ liệu có được nạp vào component đúng cách chưa",
+      "2. Kiểm tra xem đã có dữ liệu trước khi render giao diện chưa",
+      "3. Debug để xem nguyên nhân mà dữ liệu bị sai hoặc không được nạp vào component",
+    ]
   }
 ];

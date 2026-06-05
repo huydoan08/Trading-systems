@@ -69,10 +69,10 @@ export function getMenuList(pathname: string): Group[] {
               href: "/principles",
               label: "Principles"
             },
-            // {
-            //   href: "/strategy",
-            //   label: "Strategy"
-            // },
+            {
+              href: "/strategy",
+              label: "Strategy"
+            },
             {
               href: "/rsi-indicator",
               label: "RSI Indicator"

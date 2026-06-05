@@ -1,6 +1,6 @@
 export const quintessenceRsi = [
-  "Chỉ Trading BITCOIN",
-  "Đánh theo sóng khung 1D",
-  "Gom hàng và thoát hàng làm 3 lần",
-  "Tiền sử dụng trong ĐẦU TƯ phải là tiền nhàn rỗi"
+  "Chỉ giao dịch SPOT BTC",
+  "Đánh theo RSI khung 1D",
+  "Gom hàng và thoát hàng từng phần",
+  "Chỉ ngó chart 1 đến 2 lần mỗi ngày",
 ];

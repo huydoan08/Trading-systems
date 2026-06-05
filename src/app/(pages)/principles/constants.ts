@@ -17,7 +17,7 @@ type CardData = InfoCard | GalleryCard;
 
 export const CARD_DATA: CardData[] = [
   {
-    title: "Bộ quy tắc ứng xử trước thị trường",
+    title: "Bộ quy tắc giao dịch",
     imageSrc: "/growth-29.png",
     modalType: "rsi"
   }
