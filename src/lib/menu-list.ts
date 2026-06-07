@@ -110,6 +110,10 @@ export function getMenuList(pathname: string): Group[] {
               label: "How to Debug"
             },
             {
+              href: "/zoning-bug",
+              label: "Zoneing Bug"
+            },
+            {
               href: "/git",
               label: "Git"
             }
