@@ -1,15 +1,12 @@
 import {
   LucideIcon,
   AlignHorizontalDistributeCenter,
-  Image,
-  Heart,
   Apple,
-  Torus,
-  Umbrella,
-  Usb,
   Ticket,
-  Timer,
-  HeartPulse
+  CodeXml,
+  Heart,
+  HeartPulse,
+  BookOpenText
 } from "lucide-react";
 
 type Submenu = {
@@ -62,7 +59,7 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "",
-          label: "Trading",
+          label: "Giao dịch",
           icon: AlignHorizontalDistributeCenter,
           submenus: [
             {
@@ -90,8 +87,8 @@ export function getMenuList(pathname: string): Group[] {
       menus: [
         {
           href: "",
-          label: "Development",
-          icon: Usb,
+          label: "Lập trình",
+          icon: CodeXml,
           submenus: [
             {
               href: "/javascript",
@@ -125,20 +122,9 @@ export function getMenuList(pathname: string): Group[] {
       groupLabel: "",
       menus: [
         {
-          href: "/raising-children",
-          label: "Giáo dục con",
-          icon: Heart,
-          submenus: []
-        }
-      ]
-    },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/mentorship",
-          label: "Sưu tầm",
-          icon: Ticket,
+          href: "/story-telling",
+          label: "Câu chuyện & bài học",
+          icon: BookOpenText,
           submenus: []
         }
       ]
@@ -147,13 +133,25 @@ export function getMenuList(pathname: string): Group[] {
     //   groupLabel: "",
     //   menus: [
     //     {
-    //       href: "/story-telling",
-    //       label: "Chuyện kể",
-    //       icon: Apple,
+    //       href: "/raising-children",
+    //       label: "Giáo dục con",
+    //       icon: Heart,
     //       submenus: []
     //     }
     //   ]
     // },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/mentorship",
+    //       label: "Sưu tầm",
+    //       icon: Ticket,
+    //       submenus: []
+    //     }
+    //   ]
+    // },
+
     // {
     //   groupLabel: "",
     //   menus: [
@@ -176,16 +174,16 @@ export function getMenuList(pathname: string): Group[] {
     //     }
     //   ]
     // },
-    {
-      groupLabel: "",
-      menus: [
-        {
-          href: "/health",
-          label: "Sức khỏe",
-          icon: HeartPulse,
-          submenus: []
-        }
-      ]
-    }
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "/health",
+    //       label: "Sức khỏe",
+    //       icon: HeartPulse,
+    //       submenus: []
+    //     }
+    //   ]
+    // }
   ];
 }
