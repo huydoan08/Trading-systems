@@ -1,7 +1,7 @@
 export const quintessenceRsi = [
-  'Quãng đường di chuyển của RSI và TBN "1M" => Đi khoảng 50% hành trình là dấu hiệu sắp kết thúc của một chu kì tăng hoặc giảm.',
-  'Quãng đường di chuyển của RSI và TBN "1W" => Đi khoảng 70% hành trình là dấu hiệu bắt đầu của một con sóng.',
-  'Kết hợp hai đỉnh hoặc hai đáy của RSI "1D" => Tạo đỉnh sau thấp hơn đỉnh trước cho thấy tín hiệu lực mua suy yếu, tạo đáy sau cao hơn đáy trước cho thấy lực bán suy yếu.',
+  'Quãng đường di chuyển của RSI + TBN khung 1W hoặc khung 1M di chuyển khoảng 80% hành trình => Xác suất rất cao là sắp kết thúc một con sóng',
+  'RSI khung H4 hoặc khung 1D tạo 2 đáy cao dần (hội tụ) hoặc tạo 2 đỉnh thấp dần (phân kỳ) => Xác suất cao giá sẽ có sự đảo chiều',
   'RSI khung 1D xuống dưới vùng 20 + Fear Index dưới 10 => Vùng cơ hội cực tốt để phân bổ',
-  'Vùng tạo ra đỉnh của RSI "H4" => Vượt ra khỏi vùng 80 cho thấy lực mua rất mạnh áp đảo hoàn toàn lực bán'
+  'RSI khung H4 hoặc khung 1D vượt ra khỏi vùng 80 => Xác suất rất cao sẽ giá sẽ tiếp tục tăng',
+  'RSI khung H4 hoặc khung 1D vượt xuống dưới vùng 20 => Xác suất rất cao là sau 1 nhịp hồi giá sẽ quay lại retest',
 ];
