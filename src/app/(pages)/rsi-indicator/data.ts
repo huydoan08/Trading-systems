@@ -4,4 +4,5 @@ export const quintessenceRsi = [
   'RSI khung 1D xuống dưới vùng 20 + Fear Index dưới 10 => Vùng cơ hội cực tốt để phân bổ',
   'RSI khung H4 hoặc khung 1D vượt ra khỏi vùng 80 => Xác suất rất cao sẽ giá sẽ tiếp tục tăng',
   'RSI khung H4 hoặc khung 1D vượt xuống dưới vùng 20 => Xác suất rất cao là sau 1 nhịp hồi giá sẽ quay lại retest',
+  'Lưu ý: Ưu tiên khung 1D hơn khung H4'
 ];
