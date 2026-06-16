@@ -7,12 +7,7 @@ export default function Strategy() {
   return (
     <ContentLayout title="Chiến lược giao dịch">
       <img
-        src="/btc-buy.png"
-        alt="Strategy"
-        className="w-full h-auto rounded-lg object-cover"
-      />
-      <img
-        src="/sell-btc.png"
+        src="/buy-sell.png"
         alt="Strategy"
         className="w-full h-auto rounded-lg object-cover"
       />
