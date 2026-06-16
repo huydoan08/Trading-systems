@@ -9,10 +9,20 @@ import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { quintessenceRsi } from "./data";
+import { EntryStrategy, ExitStrategy, quintessenceRsi } from "./data";
 import { CARD_DATA } from "./constants";
 
-type ModalType = "rsi" | "support" | "trap" | "excess" | "break" | "rsi-h4" | "rsi-d" | "rsi-h1";
+type ModalType =
+  | "rsi"
+  | "support"
+  | "trap"
+  | "excess"
+  | "break"
+  | "rsi-h4"
+  | "rsi-d"
+  | "rsi-h1"
+  | "entry"
+  | "exit";
 
 export default function TechnicalAnalysisPage() {
   const [activeModal, setActiveModal] = useState<ModalType | null>(null);
@@ -47,8 +57,28 @@ export default function TechnicalAnalysisPage() {
         />
       );
     }
+    if (activeModal === "entry") {
+      return (
+        <InfoModal
+          isOpen={true}
+          onClose={handleCloseModal}
+          title={card.title}
+          items={EntryStrategy}
+        />
+      );
+    }
+    if (activeModal === "exit") {
+      return (
+        <InfoModal
+          isOpen={true}
+          onClose={handleCloseModal}
+          title={card.title}
+          items={ExitStrategy}
+        />
+      );
+    }
 
-    if ('images' in card) {
+    if ("images" in card) {
       return (
         <ImageGallery
           images={card.images}

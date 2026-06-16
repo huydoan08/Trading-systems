@@ -1,11 +1,7 @@
 import {
   LucideIcon,
   AlignHorizontalDistributeCenter,
-  Apple,
-  Ticket,
   CodeXml,
-  Heart,
-  HeartPulse,
   BookOpenText
 } from "lucide-react";
 
@@ -28,32 +24,8 @@ type Group = {
   menus: Menu[];
 };
 
-export function getMenuList(pathname: string): Group[] {
+export function getMenuList(): Group[] {
   return [
-    // {
-    //   groupLabel: "",
-    //   menus: [
-    //     {
-    //       href: "",
-    //       label: "Con gái yêu",
-    //       icon: Image,
-    //       submenus: [
-    //         {
-    //           href: "/dau-tay-0-den-1-tuoi",
-    //           label: "Dâu Tây từ 0 đến 1 tuổi"
-    //         },
-    //         {
-    //           href: "/dau-tay-1-den-2-tuoi",
-    //           label: "Dâu Tây từ 1 đến 2 tuổi"
-    //         },
-    //         {
-    //           href: "/dau-tay-2-den-3-tuoi",
-    //           label: "Dâu Tây từ 2 đến 3 tuổi"
-    //         }
-    //       ]
-    //     }
-    //   ]
-    // },
     {
       groupLabel: "",
       menus: [
@@ -184,6 +156,30 @@ export function getMenuList(pathname: string): Group[] {
     //       submenus: []
     //     }
     //   ]
-    // }
+    // },
+    // {
+    //   groupLabel: "",
+    //   menus: [
+    //     {
+    //       href: "",
+    //       label: "Con gái yêu",
+    //       icon: Image,
+    //       submenus: [
+    //         {
+    //           href: "/dau-tay-0-den-1-tuoi",
+    //           label: "Dâu Tây từ 0 đến 1 tuổi"
+    //         },
+    //         {
+    //           href: "/dau-tay-1-den-2-tuoi",
+    //           label: "Dâu Tây từ 1 đến 2 tuổi"
+    //         },
+    //         {
+    //           href: "/dau-tay-2-den-3-tuoi",
+    //           label: "Dâu Tây từ 2 đến 3 tuổi"
+    //         }
+    //       ]
+    //     }
+    //   ]
+    // },
   ];
 }
