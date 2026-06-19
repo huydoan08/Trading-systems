@@ -9,7 +9,7 @@ import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { EntryStrategy, ExitStrategy, quintessenceRsi } from "./data";
+import { EntryStrategy, ExitStrategy, ManageStrategy, quintessenceRsi } from "./data";
 import { CARD_DATA } from "./constants";
 
 type ModalType =
@@ -22,7 +22,8 @@ type ModalType =
   | "rsi-d"
   | "rsi-h1"
   | "entry"
-  | "exit";
+  | "exit"
+  | "manage";
 
 export default function TechnicalAnalysisPage() {
   const [activeModal, setActiveModal] = useState<ModalType | null>(null);
@@ -74,6 +75,16 @@ export default function TechnicalAnalysisPage() {
           onClose={handleCloseModal}
           title={card.title}
           items={ExitStrategy}
+        />
+      );
+    }
+    if (activeModal === "manage") {
+      return (
+        <InfoModal
+          isOpen={true}
+          onClose={handleCloseModal}
+          title={card.title}
+          items={ManageStrategy}
         />
       );
     }

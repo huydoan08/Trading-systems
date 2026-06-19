@@ -1,15 +1,15 @@
 type BaseCard = {
   title: string;
   imageSrc: string;
-  modalType: "rsi" | "support" | "trap" | "excess" | "break" | "rsi-h4" | "rsi-d" | "rsi-h1"  | "entry" | "exit";
+  modalType: "rsi" | "support" | "trap" | "excess" | "break" | "rsi-h4" | "rsi-d" | "rsi-h1"  | "entry" | "exit" | "manage";
 };
 
 type InfoCard = BaseCard & {
-  modalType: "rsi" | "support"  | "entry" | "exit";
+  modalType: "rsi" | "support"  | "entry" | "exit" | "manage";
 };
 
 type GalleryCard = BaseCard & {
-  modalType: "trap" | "excess" | "break" | "rsi-h4" | "rsi-d" | "rsi-h1"  | "entry" | "exit";
+  modalType: "trap" | "excess" | "break" | "rsi-h4" | "rsi-d" | "rsi-h1"  | "entry" | "exit" | "manage";
   images: string[];
 };
 
@@ -30,5 +30,10 @@ export const CARD_DATA: CardData[] = [
     title: "Chiến lược thoát lệnh",
     imageSrc: "/sell.png",
     modalType: "exit"
+  },
+  {
+    title: "Trong giao dịch, để có thể gồng được các lệnh thắng lớn, bạn cần có phương pháp rõ ràng và tách biệt với cảm xúc.",
+    imageSrc: "/manage.png",
+    modalType: "manage"
   }
 ];

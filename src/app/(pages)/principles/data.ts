@@ -20,3 +20,11 @@ export const ExitStrategy = [
   "RSI đã xác nhận là cắt xuống dưới 2 đường trung bình hay là chưa ?",
   "Đã fail cấu trúc sóng tăng hay là chưa ?"
 ];
+export const ManageStrategy = [
+  "Quản lý lệnh theo cấu trúc sóng, follow chiến lược giao dịch một cách tuyệt đối.",
+  "Không bị cảm xúc chi phối vào lệnh và chốt lời non, cứ follow theo cấu trúc sóng và dời SL về những vùng giá quan trọng.",
+  "Chỉ nhồi thêm lệnh khi giá đi khá xa và lệnh 1 có lợi nhuận, dời SL quản lý lệnh khi giá đã tạo đỉnh đáy.",
+  "Tiền kiếm được trong lúc chờ đợi, chứ không phải là LIÊN TỤC VÀO LỆNH.",
+  "Giao dịch theo xu hướng – Cắt vị thế lỗ nhanh chóng – Duy trì vị thế lời – Đừng đóng vị thế khi đang có khoản lợi nhuận lớn.",
+  "→ Thực hành nhiều, quan sát nhiều, tối ưu nhiều… bạn sẽ biết cách follow theo con sóng."
+];
