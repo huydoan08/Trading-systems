@@ -95,19 +95,13 @@ export default function HomePage() {
         </div>
       </header>
       <main className="min-h-[calc(100vh-57px-97px)] flex-1 relative z-10">
-        <div className="container relative pb-10">
+        <div style={{marginTop: "350px", marginLeft: "100px"}} >
           <section className="mx-auto flex max-w-[980px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-6">
             <Tabs defaultValue="account" className="w-[400px]">
               <TabsContent value="account">
                 <Card>
-                <CardHeader>
-                    <CardTitle>Login</CardTitle>
-                    <CardDescription>
-                      Type your email and password here to login
-                    </CardDescription>
-                  </CardHeader>
                   <CardContent className="space-y-2">
-                    <div className="space-y-1">
+                    <div className="space-y-1 pt-4">
                       <Label htmlFor="name">Email</Label>
                       <Input
                         type="email"
@@ -136,7 +130,7 @@ export default function HomePage() {
                       />
                     </div>
                   </CardContent>
-                  <CardFooter>
+                  <CardFooter style={{display: "flex", justifyContent: "center"}}>
                     <Button
                       variant="default"
                       onClick={handleLogin}
