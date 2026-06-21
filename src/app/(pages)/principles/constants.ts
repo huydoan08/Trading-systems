@@ -22,12 +22,12 @@ export const CARD_DATA: CardData[] = [
     modalType: "rsi"
   },
   {
-    title: "Chiến lược vào lệnh",
+    title: "Chiến lược vào lệnh Long",
     imageSrc: "/buy.png",
     modalType: "entry"
   },
   {
-    title: "Chiến lược thoát lệnh",
+    title: "Chiến lược vào lệnh Short",
     imageSrc: "/sell.png",
     modalType: "exit"
   },

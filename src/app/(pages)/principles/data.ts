@@ -1,11 +1,9 @@
 export const quintessenceRsi = [
-  "Tiền sử dụng để giao dịch bắt buộc phải là tiền nhàn rỗi",
-  "Chỉ giao dịch SPOT BTCUSDT",
-  "Giao dịch theo RSI khung H4 & 1D",
-  "Chỉ xem chart 1 lần/ngày vào sau 9h tối để tránh bị ảnh hưởng bởi cảm xúc",
-  "Bắt buộc phải có Stop Loss",
-  "Không được phép sử dụng đòn bẩy",
+  "Giao dịch theo khung H4. Và chỉ vào lệnh khi và chỉ khi RSI các khung H1, H4, 1D đều đồng pha.",
+  "Bắt buộc phải có Stop Loss và Stop Loss mỗi lệnh là 10$",
+  "Không mạo hiểm số tiền lớn với bất kỳ một lệnh giao dịch nào",
   "Không bao giờ đoán đỉnh hoặc đoán đáy",
+  "Khi vào lệnh, xác định rõ là có thể thua lỗ, không chắc chắn một điều gì cả."
 ];
 export const EntryStrategy = [
   "Đỉnh RSI trên khung H4 trước đó nằm ở đâu ?",
