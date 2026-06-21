@@ -1,8 +1,14 @@
 export const quintessenceRsi = [
-  "Giao dịch theo khung H4. Và chỉ vào lệnh khi và chỉ khi RSI các khung H1, H4, 1D đều đồng pha.",
-  "Bắt buộc phải có Stop Loss và Stop Loss mỗi lệnh là 10$",
-  "Không mạo hiểm số tiền lớn với bất kỳ một lệnh giao dịch nào",
-  "Không bao giờ đoán đỉnh hoặc đoán đáy",
+  "Giao dịch theo khung H4.",
+  "RSI các khung 1D, H4, H1 đều phải đồng pha với nhau.",
+  "Chờ xác nhận của sóng hồi để tối ưu điểm vào lệnh đẹp.",
+  "Có dấu hiệu xác nhận của Price Action là một điểm cộng.",
+  "Xác định trendline giá phá vỡ xu hướng trước đó.",
+  "Tối ưu điểm vào lệnh đẹp ở khung thời gian nhỏ.",
+  "Stoploss là bắt buộc, tối đa 10$ cho mỗi lệnh ( tương đương vol 500$).",
+  "Xác định mức thưởng nếu chiến thắng lệnh đó đáng để giao dịch hay là không.",
+  "Không mạo hiểm số tiền lớn với bất kỳ một lệnh giao dịch nào.",
+  "Không bao giờ đoán đỉnh hoặc đoán đáy.",
   "Khi vào lệnh, xác định rõ là có thể thua lỗ, không chắc chắn một điều gì cả."
 ];
 export const EntryStrategy = [
