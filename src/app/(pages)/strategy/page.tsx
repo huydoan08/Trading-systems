@@ -11,6 +11,11 @@ export default function Strategy() {
         alt="Strategy"
         className="w-full h-auto rounded-lg object-cover"
       />
+      <img
+        src="/entry.png"
+        alt="Strategy"
+        className="w-full h-auto rounded-lg object-cover"
+      />
     </ContentLayout>
   );
 }
