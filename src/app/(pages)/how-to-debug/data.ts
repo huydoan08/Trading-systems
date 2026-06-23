@@ -2,29 +2,29 @@
 export const mindsetDeveloper = [
   {
     title:
-      "Các bước chính để tiến hành debug ?",
+      "Nguyên tắc để debug hiệu quả nhanh chóng",
     content: [
-      "1. Hiểu rõ vấn đề: Trước khi bắt đầu debug, hãy chắc chắn rằng bạn hiểu rõ vấn đề mà bạn đang cố gắng giải quyết.",
-      "2. Tái hiện lỗi: Cố gắng tái hiện lỗi một cách nhất quán để có thể quan sát và phân tích nó.",
-      "3. Khoanh vùng lỗi: Sử dụng các công cụ debug để khoanh vùng lỗi, xác định vị trí chính xác của vấn đề trong mã nguồn.",
-      "4. Phân tích nguyên nhân: Khi đã xác định được vị trí lỗi, hãy phân tích nguyên nhân gây ra lỗi bằng cách xem xét logic, dữ liệu đầu vào, và các điều kiện liên quan.",
-      "5. Sửa lỗi: Sau khi đã hiểu rõ nguyên nhân, tiến hành sửa lỗi và kiểm tra lại để đảm bảo rằng vấn đề đã được giải quyết.",
-      "6. Kiểm tra toàn diện: Sau khi sửa lỗi, hãy kiểm tra toàn diện để đảm bảo rằng không có lỗi mới nào được tạo ra và rằng tất cả các chức năng vẫn hoạt động đúng."
+      "Phải hiểu rõ vấn đề đang gặp phải.",
+      "Phải tái hiện được chính xác bước xảy ra tại bước nào.",
+      "Không đoán mò nguyên nhân là gì, mà phải debug, khoanh vùng vị trí xảy ra lỗi, đọc hiểu code để tìm ra nguyên nhân gốc rễ.",
+      "Sửa code để fix bugs cần đảm bảo ít ảnh hưởng tới logic cũ, ít sửa vào code cũ.",
+      "Sau khi sửa code để fix bugs xong cần self test lại để đảm bảo bugs đã được fix và không hề ảnh hưởng tới những logic cũ."
     ]
   },
   {
-    title: "Mẹo giúp debug nhanh hơn ?",
+    title: "Thủ thuật sử dụng các tab trên browser",
     content: [
-      "1. Sử dụng breakpoint để tạm dừng chương trình tại các điểm quan trọng và kiểm tra trạng thái của biến, luồng thực thi, và các điều kiện xung quanh.",
-      "2. Sử dụng console của trình duyệt để in ra giá trị của biến, giúp dễ dàng theo dõi và phân tích luồng dữ liệu.",
+      "Sử dụng breakpoint, callStack trên tab source.",
+      "Sử dụng tab console để in ra giá trị của biến, các đoạn code xử lý logic có return giá trị để xem giá trị trả ra.",
+      "Sử dụng tab network để xem response trả ra từ api, xem file đang gọi tới api đó."
     ]
   },
   {
     title: "Debug không hiển thị đúng dữ liệu trên giao diện ?",
     content: [
-      "1. Kiểm tra xem dữ liệu có được nạp vào component đúng cách chưa",
-      "2. Kiểm tra xem đã có dữ liệu trước khi render giao diện chưa",
-      "3. Debug để xem nguyên nhân mà dữ liệu bị sai hoặc không được nạp vào component",
+      "Kiểm tra xem dữ liệu có được nạp vào component đúng cách chưa",
+      "Kiểm tra xem đã có dữ liệu trước khi render giao diện chưa",
+      "Debug để xem nguyên nhân mà dữ liệu bị sai hoặc không được nạp vào component",
     ]
   }
 ];
