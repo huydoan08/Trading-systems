@@ -5,11 +5,12 @@ export const quintessenceRsi = [
   "Có dấu hiệu xác nhận của Price Action là một điểm cộng.",
   "Xác định trendline giá phá vỡ xu hướng trước đó.",
   "Tối ưu điểm vào lệnh đẹp ở khung thời gian nhỏ.",
-  "Stoploss là bắt buộc, tối đa 10$ cho mỗi lệnh ( tương đương vol 500$).",
+  "Stoploss là bắt buộc, volumn vào lệnh là 1000$ cho mỗi lệnh (SL ~ 20 -> 25 ($) ).",
   "Xác định mức thưởng nếu chiến thắng lệnh đó đáng để giao dịch hay là không.",
   "Không mạo hiểm số tiền lớn với bất kỳ một lệnh giao dịch nào.",
   "Không bao giờ đoán đỉnh hoặc đoán đáy.",
-  "Khi vào lệnh, xác định rõ là có thể thua lỗ, không chắc chắn một điều gì cả."
+  "Khi vào lệnh, xác định rõ là có thể thua lỗ, không chắc chắn một điều gì cả.",
+  "Ghi chép nhật ký cho mỗi lệnh giao dịch để hoàn thiện hơn"
 ];
 export const EntryStrategy = [
   "Đỉnh RSI trên khung H4 trước đó nằm ở đâu ?",
