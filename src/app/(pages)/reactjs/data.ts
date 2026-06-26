@@ -2,73 +2,181 @@ import { title } from "process";
 
 export const reactHooks = [
   {
-    title:
-      "useState hook",
+    title: "useState hook",
     content: [
-      "useState là một hook trong React được sử dụng để quản lý trạng thái (state) trong các functional component.",
-      "Khi bạn gọi setter function (hàm cập nhật state) được trả về từ useState trong React, nó sẽ lên lịch (schedule) để cập nhật giá trị state của component.",
-      "Nếu state là một đối tượng và bạn chỉ cập nhật một phần của đối tượng đó, bạn cần spread operator (...) để giữ lại các phần khác của đối tượng, vì useState sẽ thay thế hoàn toàn giá trị state cũ bằng giá trị mới mà bạn cung cấp.",
-      "Sau đó, React sẽ đưa component vào hàng đợi để re-render với giá trị state mới.",
-      "Quá trình này thường là bất đồng bộ (asynchronous), và React sẽ gom nhiều lần cập nhật state lại (batching) để tối ưu hiệu năng.",
-      "Cách sử dụng useState: const [state, setState] = useState(initialState);",
-      "Trong đó, initialState là giá trị ban đầu của state, state là giá trị hiện tại của state, và setState là hàm được sử dụng để cập nhật giá trị của state.",
-      "useState giúp bạn quản lý trạng thái của component một cách dễ dàng và hiệu quả, cho phép bạn tạo ra các ứng dụng tương tác và động.",
+      "useState là một hook trong React dùng để quản lý state trong functional component.\n\n\
+Cú pháp:\n\
+const [state, setState] = useState(initialState);\n\n\
+Trong đó:\n\
+- state: giá trị hiện tại của state\n\
+- setState: hàm dùng để cập nhật state\n\
+- initialState: giá trị khởi tạo\n\n\
+Cách hoạt động:\n\
+- Khi gọi setState, React sẽ lên lịch cập nhật state và re-render component.\n\
+- Việc cập nhật state là bất đồng bộ và có thể được batching để tối ưu hiệu năng.\n\
+- Khi state thay đổi, component sẽ render lại với giá trị mới.\n\n\
+Lưu ý khi dùng state là object hoặc array:\n\
+- React sẽ thay thế toàn bộ state cũ bằng state mới.\n\
+- Cần dùng spread operator (...) để giữ lại dữ liệu cũ nếu chỉ muốn cập nhật một phần.\n\
+Ví dụ:\n\
+setState(prev => ({ ...prev, name: 'new name' }));\n\n\
+Functional update:\n\
+- Khi state phụ thuộc vào state trước đó, nên dùng callback:\n\
+setState(prev => prev + 1);\n\n\
+Ưu điểm:\n\
+- Giúp quản lý trạng thái đơn giản trong functional component.\n\
+- Dễ tách logic và tái sử dụng.\n\
+- Là nền tảng cho các hook và state management trong React.\n"
     ]
   },
   {
-    title:
-      "useEffect hook",
+    title: "useEffect hook",
     content: [
-      "Hook useEffect trong React được dùng để thực hiện các tác động phụ (side effects) trong các functional component.",
-      "Nó chạy sau khi component đã được render, và bạn có thể chỉ định khi nào nó nên chạy lại bằng cách cung cấp một mảng phụ thuộc (dependency array).",
-      "Cách sử dụng useEffect: useEffect(() => { // code thực hiện tác động phụ }, [dependencies]);",
-      "Trong đó, dependencies là mảng các phụ thuộc. useEffect sẽ chỉ chạy lại khi một trong các phụ thuộc thay đổi.",
-      "useEffect giúp bạn quản lý các tác động phụ một cách hiệu quả, tránh việc gây ra lỗi và tối ưu hiệu suất của ứng dụng bằng cách chỉ chạy lại khi cần thiết.",
-      "Khi sử dụng useEffect, bạn có thể thực hiện các tác động phụ như gọi API, đăng ký sự kiện, hoặc cập nhật DOM, kể cả gọi hàm, mà không cần phải lo lắng về việc gây ra lỗi hoặc re-render không cần thiết của component."
+     "Hook useEffect trong React dùng để xử lý side effects trong functional component (như gọi API, thao tác DOM, subscribe event,...).\n\n\
+Cú pháp:\n\
+useEffect(() => {\n\
+  // side effect code\n\
+  return () => {\n\
+    // cleanup (nếu có)\n\
+  };\n\
+}, [dependencies]);\n\n\
+Cách hoạt động:\n\
+- Chạy sau khi component render xong.\n\
+- Chạy lại khi một giá trị trong dependency array thay đổi.\n\
+- Nếu dependency array rỗng [] thì chỉ chạy 1 lần sau mount.\n\
+- Nếu không truyền dependency array thì chạy sau mọi lần render.\n\n\
+Cleanup function:\n\
+- Được trả về trong useEffect.\n\
+- Chạy trước khi component unmount hoặc trước khi effect chạy lại.\n\
+- Dùng để hủy subscription, clear timer, remove event listener.\n\n\
+Ví dụ:\n\
+useEffect(() => {\n\
+  const id = setInterval(() => {}, 1000);\n\
+  return () => clearInterval(id);\n\
+}, []);\n\n\
+Lưu ý:\n\
+- useEffect giúp tách logic side effect khỏi render.\n\
+- Tránh gọi API hoặc thao tác DOM trực tiếp trong render.\n\
+- Dependency array cần khai báo đầy đủ để tránh bug stale state.\n\n\
+Ưu điểm:\n\
+- Quản lý side effects rõ ràng.\n\
+- Kiểm soát vòng đời component trong functional component.\n\
+- Giúp tối ưu hiệu năng bằng cách hạn chế chạy lại không cần thiết.\n"
     ]
   },
   {
-    title:
-      "useRef hook",
+    title: "useRef hook",
     content: [
-      "Hook useRef trong React được dùng để tạo một tham chiếu (reference) có thể giữ giá trị qua các lần re-render của component. useRef thường được sử dụng để truy cập trực tiếp vào DOM hoặc để lưu trữ giá trị mà không gây ra re-render khi giá trị đó thay đổi.",
-      "Cách sử dụng useRef: const myRef = useRef(initialValue);",
-      "Trong đó, initialValue là giá trị ban đầu của tham chiếu. useRef sẽ trả về một đối tượng có thuộc tính current, mà bạn có thể gán giá trị mới cho nó mà không gây ra re-render.",
-      "useRef giúp bạn truy cập trực tiếp vào phần tử DOM hoặc lưu trữ giá trị mà không cần phải sử dụng state, từ đó tránh việc re-render không cần thiết của component.",
-      "Khi sử dụng useRef, bạn có thể gán giá trị mới cho myRef.current để lưu trữ thông tin hoặc truy cập vào phần tử DOM mà myRef đang tham chiếu đến.",
-      "useRef có thể lưu trữ bất kỳ giá trị nào, không chỉ là phần tử DOM, và nó sẽ giữ nguyên giá trị đó qua các lần re-render của component.",
-      "useRef có thể truyền qua props đến các component con hoặc hook khác mà yêu cầu một tham chiếu, giúp tránh việc re-render không cần thiết của các component con."
+     "Hook useRef trong React dùng để tạo một tham chiếu (reference) có thể giữ giá trị xuyên suốt các lần re-render mà không làm component re-render lại khi thay đổi.\n\n\
+Cú pháp:\n\
+const myRef = useRef(initialValue);\n\n\
+Trong đó:\n\
+- initialValue: giá trị khởi tạo\n\
+- myRef: object có thuộc tính .current để lưu giá trị\n\n\
+Cách hoạt động:\n\
+- useRef trả về một object { current: ... }\n\
+- Giá trị trong .current có thể thay đổi nhưng không gây re-render\n\
+- Giá trị được giữ nguyên giữa các lần render\n\n\
+Use cases:\n\
+1. Truy cập DOM trực tiếp:\n\
+const inputRef = useRef(null);\n\
+<input ref={inputRef} />;\n\n\
+2. Lưu giá trị không cần re-render:\n\
+myRef.current = value;\n\n\
+3. Giữ giá trị trước đó (previous value)\n\
+\n\
+Lưu ý:\n\
+- Thay đổi useRef không trigger re-render\n\
+- Không nên dùng useRef thay cho state nếu UI cần cập nhật\n\
+- Có thể dùng để lưu timer, interval, hoặc biến tạm\n\n\
+Ưu điểm:\n\
+- Truy cập DOM dễ dàng\n\
+- Lưu dữ liệu giữa renders\n\
+- Tránh re-render không cần thiết\n"
     ]
   },
   {
-    title:
-      "useMemo hook",
+    title: "useMemo hook",
     content: [
-      "Hook useMemo trong React được dùng để ghi nhớ (memoize) các phép tính tốn kém, giúp tối ưu hiệu suất của ứng dụng bằng cách tránh việc tính toán lại không cần thiết khi component re-render.",
-      "Cách sử dụng useMemo: const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);",
-      "Trong đó, computeExpensiveValue là hàm thực hiện phép tính tốn kém, và [a, b] là mảng phụ thuộc. useMemo sẽ chỉ tính toán lại giá trị memoizedValue khi a hoặc b thay đổi.",
-      "useMemo giúp cải thiện hiệu suất bằng cách tránh việc tính toán lại các giá trị phức tạp khi component re-render mà không cần thiết.",
-      "Khi sử dụng useMemo, bạn có thể truyền memoizedValue vào các component con hoặc hook khác mà yêu cầu một giá trị, giúp tránh việc re-render không cần thiết của các component con."
-    ] 
-  },
-  {
-    title:
-      "useCallback hook",
-    content: [
-      "Hook useCallback trong React được dùng để ghi nhớ (memoize) các hàm, giúp tránh việc tạo ra các hàm mới trong mỗi lần re-render, từ đó tối ưu hiệu suất của ứng dụng.",
-      "Cách sử dụng useCallback: const memoizedCallback = useCallback(() => doSomething(a, b), [a, b]);",
-      "Trong đó, dependencies là mảng các phụ thuộc. useCallback sẽ chỉ tạo lại hàm memoizedCallback khi một trong các phụ thuộc thay đổi.",
-      "useCallback giúp cải thiện hiệu suất bằng cách tránh việc tạo ra các hàm mới không cần thiết khi component re-render.",
-      "Khi sử dụng useCallback, bạn có thể truyền memoizedCallback vào các component con hoặc hook khác mà yêu cầu một hàm, giúp tránh việc re-render không cần thiết của các component con."
+     
     ]
   },
   {
-    title: "Tư duy tạo component common trong React",
+    title: "useCallback hook",
     content: [
-      "Khi xây dựng ứng dụng React, việc tạo ra các component chung (common components) là một chiến lược quan trọng để tái sử dụng code và duy trì tính nhất quán trong giao diện người dùng.",
-      "Các component chung thường được sử dụng nhiều lần trong ứng dụng, ví dụ như button, input, card, v.v.",
-      "Khi tạo component chung, cần đảm bảo rằng chúng linh hoạt và có thể được tùy chỉnh theo nhu cầu sử dụng khác nhau.",
-      "Việc sử dụng component chung giúp giảm thiểu code trùng lặp, dễ bảo trì và nâng cao hiệu suất phát triển."
+      "Hook useMemo trong React dùng để ghi nhớ (memoize) một giá trị được tính toán từ hàm, giúp tối ưu hiệu năng bằng cách tránh tính toán lại không cần thiết khi component re-render.\n\n\
+Cú pháp:\n\
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);\n\n\
+Trong đó:\n\
+- computeExpensiveValue: hàm tính toán giá trị\n\
+- [a, b]&#58; dependency array\n\
+- memoizedValue: giá trị đã được ghi nhớ\n\n\
+Cách hoạt động:\n\
+- useMemo chỉ tính lại giá trị khi một dependency thay đổi\n\
+- Nếu không thay đổi, React trả về giá trị đã cache\n\n\
+Use cases:\n\
+- Tối ưu các phép tính nặng (sorting, filtering, computation phức tạp)\n\
+- Tránh tính toán lại khi re-render không cần thiết\n\n\
+Lưu ý:\n\
+- useMemo chỉ tối ưu performance, không dùng để tạo side effects\n\
+- Không nên lạm dụng cho các tính toán đơn giản\n\
+- Không đảm bảo tuyệt đối tránh re-render, chỉ tối ưu giá trị\n\n\
+Ưu điểm:\n\
+- Giảm chi phí tính toán\n\
+- Tăng hiệu năng ứng dụng\n\
+- Hữu ích khi truyền giá trị phức tạp xuống component con\n"
+    ]
+  },
+  {
+    title: "Common Component",
+    content: [
+      "Tư duy tạo component common trong React là thiết kế các component có thể tái sử dụng, linh hoạt và tách biệt logic để dùng lại trong nhiều nơi của ứng dụng.\n\n\
+Nguyên tắc chính:\n\
+- Tái sử dụng: component dùng được ở nhiều màn hình khác nhau\n\
+- Linh hoạt: điều khiển bằng props thay vì hard-code\n\
+- Tách biệt trách nhiệm: mỗi component chỉ làm một nhiệm vụ rõ ràng\n\
+- Không phụ thuộc context cụ thể của một màn hình\n\n\
+Cách xây dựng:\n\
+- Thiết kế UI theo dạng base (Button, Input, Modal, Card...)\n\
+- Sử dụng props để tùy biến: text, style, behavior\n\
+- Hạn chế logic nghiệp vụ trong common component\n\
+- Ưu tiên composition thay vì viết nhiều biến thể riêng lẻ\n\n\
+Ví dụ tư duy:\n\
+- Thay vì tạo nhiều Button khác nhau → tạo 1 Button với props type, size, loading\n\
+- Thay vì Input riêng cho từng form → tạo Input dùng chung + validation bên ngoài\n\n\
+Lợi ích:\n\
+- Giảm duplication code\n\
+- Dễ bảo trì và mở rộng\n\
+- Đồng nhất UI/UX toàn hệ thống\n\
+- Tăng tốc độ phát triển sản phẩm\n"
+    ]
+  },
+  {
+    title: "Key",
+    content: [
+      "Sử dụng key trong React\n\n\
+Key là một thuộc tính đặc biệt dùng khi render danh sách (list) các phần tử trong React để giúp React xác định từng phần tử một cách duy nhất.\n\n\
+Cách dùng:\n\
+array.map(item => (\n\
+  <Component key={item.id} />\n\
+))\n\n\
+Vai trò của key:\n\
+- Giúp React nhận diện chính xác từng phần tử trong danh sách\n\
+- Tối ưu việc re-render (chỉ cập nhật phần tử thay đổi)\n\
+- Giữ đúng state của từng component trong list\n\n\
+Nguyên tắc sử dụng:\n\
+- Key phải là giá trị duy nhất (unique)\n\
+- Ưu tiên dùng id từ database\n\
+- Không nên dùng index làm key nếu list có thể thay đổi (thêm/xóa/sắp xếp)\n\n\
+Ví dụ tốt:\n\
+key={item.id}\n\n\
+Ví dụ nên tránh:\n\
+key={index}\n\
+(nếu danh sách có thể thay đổi thứ tự)\n\n\
+Lưu ý:\n\
+- Key chỉ có ý nghĩa trong phạm vi danh sách\n\
+- Không truyền key vào props của component (React tự xử lý)\n"
     ]
   }
+
 ];
