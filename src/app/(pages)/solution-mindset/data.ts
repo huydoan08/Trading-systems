@@ -2,7 +2,7 @@ export const mindsetDeveloper = [
   {
     title: "Sử dụng dict (object) để lưu trữ dữ liệu theo cặp key-value",
     content: [
-      "Dict (object trong JavaScript) là cấu trúc dữ liệu lưu trữ theo cặp key-value, giúp truy cập, cập nhật và tìm kiếm dữ liệu theo key nhanh hơn so với array."
+      "Dict (object) là cấu trúc dữ liệu lưu trữ theo cặp key-value, giúp truy cập, cập nhật và tìm kiếm dữ liệu theo key nhanh hơn so với array."
     ]
   },
   {
