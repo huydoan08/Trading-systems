@@ -16,9 +16,8 @@ export const mindsetDeveloper = [
     title:
       "Sử dụng useEffect để kích hoạt hàm onChange khi một giá trị thay đổi",
     content: [
-      "Khi muốn kích hoạt một hàm onChange khi một giá trị thay đổi, bạn có thể sử dụng useEffect để theo dõi sự thay đổi của giá trị đó.",
-      "Khi giá trị dependency thay đổi, useEffect sẽ chạy và gọi hàm onChange tương ứng.",
-      "Hàm này được truyền xuống component con thông qua props, và khi giá trị dependency thay đổi, component con sẽ gọi hàm onChange để thực hiện các tác động cần thiết."
+"Khi muốn kích hoạt một hàm onChange khi giá trị thay đổi, useEffect thường được sử dụng trong component con để theo dõi sự thay đổi của state hoặc props.",
+"Khi dependency thay đổi, useEffect trong component con sẽ chạy và gọi hàm onChange được truyền từ component cha thông qua props, giúp component cha nhận và xử lý dữ liệu thay đổi."
     ]
   },
 ];

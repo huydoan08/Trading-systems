@@ -72,15 +72,11 @@ export function getMenuList(): Group[] {
             },
             {
               href: "/solution-mindset",
-              label: "Solution & Mindset"
+              label: "Solution"
             },
             {
               href: "/how-to-debug",
               label: "How to Debug"
-            },
-            {
-              href: "/zoning-bug",
-              label: "Zoneing Bug"
             },
             {
               href: "/git",

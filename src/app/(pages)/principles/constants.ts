@@ -22,16 +22,6 @@ export const CARD_DATA: CardData[] = [
     modalType: "rsi"
   },
   {
-    title: "Chiến lược vào lệnh Long",
-    imageSrc: "/buy.png",
-    modalType: "entry"
-  },
-  {
-    title: "Chiến lược vào lệnh Short",
-    imageSrc: "/sell.png",
-    modalType: "exit"
-  },
-  {
     title: "Trong giao dịch, để có thể gồng được các lệnh thắng lớn, bạn cần có phương pháp rõ ràng và tách biệt với cảm xúc.",
     imageSrc: "/manage.png",
     modalType: "manage"
