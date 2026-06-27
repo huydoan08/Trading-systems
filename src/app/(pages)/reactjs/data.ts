@@ -98,12 +98,6 @@ Lưu ý:\n\
   {
     title: "useMemo hook",
     content: [
-     
-    ]
-  },
-  {
-    title: "useCallback hook",
-    content: [
       "Hook useMemo trong React dùng để ghi nhớ (memoize) một giá trị được tính toán từ hàm, giúp tối ưu hiệu năng bằng cách tránh tính toán lại không cần thiết khi component re-render.\n\n\
 Cú pháp:\n\
 const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);\n\n\
@@ -125,6 +119,35 @@ Lưu ý:\n\
 - Giảm chi phí tính toán\n\
 - Tăng hiệu năng ứng dụng\n\
 - Hữu ích khi truyền giá trị phức tạp xuống component con\n"
+    ]
+  },
+  {
+    title: "useCallback hook",
+    content: [
+
+"Hook useCallback trong React dùng để ghi nhớ (memoize) một hàm, giúp tối ưu hiệu năng bằng cách giữ nguyên tham chiếu của hàm giữa các lần component re-render và tránh tạo lại hàm không cần thiết.\n\n\
+Cú pháp:\n\
+const memoizedCallback = useCallback(() => doSomething(a, b), [a, b]);\n\n\
+Trong đó:\n\
+- () => doSomething(a, b): hàm callback cần ghi nhớ\n\
+- [a, b]&#58; dependency array\n\
+- memoizedCallback: hàm đã được ghi nhớ\n\n\
+Cách hoạt động:\n\
+- useCallback chỉ tạo lại hàm khi một dependency thay đổi\n\
+- Nếu dependencies không thay đổi, React trả về cùng một hàm đã được cache\n\n\
+Use cases:\n\
+- Truyền callback xuống component con kết hợp với React.memo\n\
+- Tránh tạo lại hàm khi component re-render\n\
+- Làm dependency cho các Hook như useEffect hoặc useMemo\n\n\
+Lưu ý:\n\
+- useCallback chỉ tối ưu performance, không thay đổi logic của hàm\n\
+- Không nên lạm dụng cho các hàm đơn giản hoặc component ít re-render\n\
+- Chỉ mang lại hiệu quả khi việc giữ nguyên tham chiếu của hàm thực sự cần thiết\n\n\
+Ưu điểm:\n\
+- Giảm số lần tạo hàm mới\n\
+- Hạn chế re-render không cần thiết của component con\n\
+- Cải thiện hiệu năng trong các component có nhiều lần render\n"
+
     ]
   },
   {
