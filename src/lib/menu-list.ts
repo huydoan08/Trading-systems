@@ -47,6 +47,10 @@ export function getMenuList(): Group[] {
               label: "RSI Indicator"
             },
             {
+              href: "/self-mastery",
+              label: "Self Mastery"
+            },
+            {
               href: "/pnl-report",
               label: "PNL Report"
             }
