@@ -1,14 +1,11 @@
 export const quintessenceRsi = [
-  "Chỉ tập trung vào BTC và ETH.",
-  "Chỉ giao dịch chiều lên, không có suy nghĩ Short trong đầu",
-  "Giao dịch theo RSI khung H4 hoặc khung 1D",
+  "Chỉ giao dịch BTC.",
+  "Chỉ giao dịch SPOT.",
+  "Giao dịch theo RSI khung 1D hoặc khung H4.",
   "Phải chờ xác nhận của sóng hồi để tối ưu điểm vào lệnh đẹp.",
-  "Có dấu hiệu xác nhận của Price Action là một điểm cộng.",
-  "Xác định trendline giá phá vỡ xu hướng trước đó.",
   "Tối ưu điểm vào lệnh đẹp ở khung thời gian nhỏ hơn.",
-  "Stoploss là bắt buộc đối với khung H4, volumn vào lệnh là 1000$ cho mỗi lệnh (SL ~ 25$).",
+  "Stoploss là bắt buộc đối với khung H4, Khung 1D thì SL trong việc đặt SL.",
   "Xác định mức thưởng nếu chiến thắng lệnh đó đáng để giao dịch hay là không.",
-  "Không mạo hiểm số tiền lớn với bất kỳ một lệnh giao dịch nào.",
   "Không bao giờ đoán đỉnh hoặc đoán đáy mà phải chờ giá quay lại retest.",
   "Khi vào lệnh, xác định rõ là có thể thua lỗ, không chắc chắn một điều gì cả.",
   "Ghi chép nhật ký cho mỗi lệnh giao dịch để hoàn thiện hơn."
