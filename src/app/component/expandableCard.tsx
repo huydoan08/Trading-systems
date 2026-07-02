@@ -2,9 +2,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
+interface ContentItem {
+  text: string;
+  isRed?: boolean;
+}
+
 interface ExpandableCardProps {
   title: string;
-  content: string[];
+  content: Array<string | ContentItem>;
   isOpen: boolean;
   onClick: () => void;
 }
@@ -26,16 +31,25 @@ export function ExpandableCard({ title, content, isOpen, onClick }: ExpandableCa
         className="overflow-hidden"
       >
         <CardContent className="p-6 space-y-2 border-t text-black-700 dark:text-white max-h-[40vh] overflow-auto sm:max-h-[60vh]">
-          {content.map((item, idx) => (
-            <div key={idx} className="text-black-700 dark:text-white">
-              {item.split("\n").map((line, lineIdx) => (
-                <span key={lineIdx}>
-                  {line}
-                  <br />
-                </span>
-              ))}
-            </div>
-          ))}
+          {content.map((item, idx) => {
+            const text = typeof item === "string" ? item : item.text;
+            const isRed = typeof item !== "string" && item.isRed;
+            const lines = text.split("\n");
+
+            return (
+              <div
+                key={idx}
+                className={isRed ? "text-red-600 font-semibold" : "text-black-700 dark:text-white"}
+              >
+                {lines.map((line, lineIdx) => (
+                  <span key={`${idx}-${lineIdx}`}>
+                    {line}
+                    {lineIdx < lines.length - 1 && <br />}
+                  </span>
+                ))}
+              </div>
+            );
+          })}
         </CardContent>
       </motion.div>
     </Card>
