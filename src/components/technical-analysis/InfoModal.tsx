@@ -26,28 +26,18 @@ export const InfoModal = ({
 }: InfoModalProps) => {
   const defaultCheckedState = useMemo(() => items.map(() => false), [items]);
   const [checkedState, setCheckedState] = useState<boolean[]>(defaultCheckedState);
-  const [isLoaded, setIsLoaded] = useState(!useCheckbox);
-
-  useEffect(() => {
-    if (!useCheckbox) return;
-    setCheckedState(defaultCheckedState);
-    setIsLoaded(false);
-  }, [defaultCheckedState, useCheckbox]);
 
   useEffect(() => {
     if (!useCheckbox || !isOpen) return;
 
-    let isCancelled = false;
-    const fetchState = async () => {
-      try {
-        const res = await fetch(
-          `/api/info-modal?title=${encodeURIComponent(title)}`
-        );
-        if (!res.ok) return;
+    const localKey = `infoModal:${title}`;
+    const savedState = localStorage.getItem(localKey);
 
-        const data = await res.json();
-        if (Array.isArray(data.checkedState)) {
-          const normalized = data.checkedState
+    if (savedState) {
+      try {
+        const parsed = JSON.parse(savedState);
+        if (Array.isArray(parsed)) {
+          const normalized = parsed
             .slice(0, items.length)
             .map(Boolean);
 
@@ -56,44 +46,22 @@ export const InfoModal = ({
               ? [...normalized, ...defaultCheckedState.slice(normalized.length)]
               : normalized
           );
-          setIsLoaded(true);
           return;
         }
       } catch {
-        // ignore fetch errors
+        // ignore invalid saved state
       }
+    }
 
-      if (!isCancelled) {
-        setCheckedState(defaultCheckedState);
-        setIsLoaded(true);
-      }
-    };
-
-    fetchState();
-    return () => {
-      isCancelled = true;
-    };
+    setCheckedState(defaultCheckedState);
   }, [defaultCheckedState, isOpen, items.length, title, useCheckbox]);
 
   useEffect(() => {
-    if (!useCheckbox || !isLoaded) return;
+    if (!useCheckbox) return;
 
-    const saveState = async () => {
-      try {
-        await fetch("/api/info-modal", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ title, checkedState }),
-        });
-      } catch {
-        // ignore save errors
-      }
-    };
-
-    saveState();
-  }, [checkedState, isLoaded, title, useCheckbox]);
+    const localKey = `infoModal:${title}`;
+    localStorage.setItem(localKey, JSON.stringify(checkedState));
+  }, [checkedState, title, useCheckbox]);
 
   const getItemScore = (item: InfoModalItem) =>
     typeof item === "string" ? 10 : item.score ?? 10;
@@ -148,20 +116,7 @@ export const InfoModal = ({
         {useCheckbox ? (
           <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_160px] items-center border-b border-black-200 pb-4 mb-4 dark:border-black-700">
             <div className="space-y-2">
-              <motion.div
-                key={totalScore}
-                animate={{ scale: [1, 1.04, 1] }}
-                transition={{ duration: 0.25 }}
-                className="flex items-end gap-3"
-              >
-                <div className="text-4xl font-semibold text-black-800 dark:text-white">
-                  {totalScore}
-                </div>
-                <div className="text-sm text-slate-600 dark:text-slate-300">
-                  / {maxScore}
-                </div>
-              </motion.div>
-              <div className={`text-sm font-medium ${decisionClass}`}>
+              <div className={`text-xl font-medium ${decisionClass}`}>
                 {decisionText}
               </div>
             </div>
