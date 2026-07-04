@@ -22,6 +22,11 @@ export const CARD_DATA: CardData[] = [
     modalType: "rsi"
   },
   {
+    title: "Hệ thống điểm vào lệnh - kiểm tra các điều kiện trước khi vào lệnh.",
+    imageSrc: "/entry.png",
+    modalType: "entry"
+  },
+  {
     title: "Trong giao dịch, để có thể gồng được các lệnh thắng lớn, bạn cần có phương pháp rõ ràng và tách biệt với cảm xúc.",
     imageSrc: "/manage.png",
     modalType: "manage"

@@ -65,6 +65,7 @@ export default function TechnicalAnalysisPage() {
           onClose={handleCloseModal}
           title={card.title}
           items={EntryStrategy}
+          useCheckbox={true}
         />
       );
     }

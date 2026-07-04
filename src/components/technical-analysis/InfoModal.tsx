@@ -1,16 +1,19 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { motion } from "framer-motion";
 import { Modal } from "@/components/ui/modal";
 import { Label } from "@/components/ui/label";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Dot } from "lucide-react";
 
+type InfoModalItem = string | { label: string; score?: number };
+
 interface InfoModalProps {
   isOpen: boolean;
   onClose: () => void;
   title: string;
-  items: string[];
+  items: InfoModalItem[];
   useCheckbox?: boolean;
 }
 
@@ -92,39 +95,146 @@ export const InfoModal = ({
     saveState();
   }, [checkedState, isLoaded, title, useCheckbox]);
 
+  const getItemScore = (item: InfoModalItem) =>
+    typeof item === "string" ? 10 : item.score ?? 10;
+
+  const getItemLabel = (item: InfoModalItem) =>
+    typeof item === "string" ? item : item.label;
+
   const handleCheckedChange = (idx: number) => {
     setCheckedState((prev) =>
       prev.map((value, index) => (index === idx ? !value : value))
     );
   };
 
+  const totalScore = useMemo(
+    () =>
+      checkedState.reduce((sum, checked, idx) => {
+        if (!checked) return sum;
+        return sum + getItemScore(items[idx]);
+      }, 0),
+    [checkedState, items]
+  );
+
+  const maxScore = useMemo(
+    () => items.reduce((sum, item) => sum + getItemScore(item), 0),
+    [items]
+  );
+
+  const progressPercent = maxScore ? Math.round((totalScore / maxScore) * 100) : 0;
+
+  const decisionText = useMemo(() => {
+    if (progressPercent >= 60) return "Có thể vào lệnh";
+    if (progressPercent >= 30) return "Cân nhắc kỹ trước khi vào lệnh";
+    return "Không nên vào lệnh";
+  }, [progressPercent]);
+
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={title}>
       <div className="space-y-4 max-h-[600px] overflow-y-auto">
+        {useCheckbox ? (
+          <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_160px] items-center border-b border-black-200 pb-4 mb-4 dark:border-black-700">
+            <div className="space-y-2">
+              <div className="text-xs uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
+                Hệ thống tính điểm
+              </div>
+              <motion.div
+                key={totalScore}
+                animate={{ scale: [1, 1.04, 1] }}
+                transition={{ duration: 0.25 }}
+                className="flex items-end gap-3"
+              >
+                <div className="text-4xl font-semibold text-black-800 dark:text-white">
+                  {totalScore}
+                </div>
+                <div className="text-sm text-slate-600 dark:text-slate-300">
+                  / {maxScore}
+                </div>
+              </motion.div>
+              <div className="text-sm font-medium text-slate-700 dark:text-slate-200">
+                {decisionText}
+              </div>
+              <div className="text-xs text-slate-500 dark:text-slate-400">
+                Mỗi dòng checkbox có điểm riêng, dựa theo giá trị bạn đặt.
+              </div>
+            </div>
+            <div className="flex items-center justify-center">
+              <div className="relative">
+                <motion.svg
+                  width="132"
+                  height="132"
+                  viewBox="0 0 132 132"
+                  className="-rotate-90"
+                >
+                  <circle
+                    cx="66"
+                    cy="66"
+                    r="56"
+                    className="fill-none stroke-slate-200 dark:stroke-slate-700"
+                    strokeWidth="12"
+                  />
+                  <motion.circle
+                    cx="66"
+                    cy="66"
+                    r="56"
+                    fill="none"
+                    strokeWidth="12"
+                    strokeLinecap="round"
+                    className="stroke-sky-500 dark:stroke-cyan-400"
+                    strokeDasharray="351.86"
+                    animate={{ strokeDashoffset: 351.86 * (1 - progressPercent / 100) }}
+                    transition={{ type: "spring", stiffness: 110, damping: 18 }}
+                  />
+                </motion.svg>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <div className="text-sm font-medium text-slate-600 dark:text-slate-300">
+                    Tiến độ
+                  </div>
+                  <motion.div
+                    animate={{ opacity: [0.4, 1] }}
+                    transition={{ duration: 0.35 }}
+                    className="text-2xl font-semibold text-black-800 dark:text-white"
+                  >
+                    {progressPercent}%
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </div>
+        ) : null}
         {items.map((item, idx) => {
           const checked = useCheckbox ? checkedState[idx] ?? false : false;
+          const score = getItemScore(item);
+          const label = getItemLabel(item);
 
           return (
-            <div key={idx} className="flex items-start">
+            <div key={idx} className="flex items-start justify-between gap-4">
+              <div className="flex items-start gap-3">
+                {useCheckbox ? (
+                  <Checkbox
+                    checked={checked}
+                    onCheckedChange={() => handleCheckedChange(idx)}
+                    className="mt-1"
+                  />
+                ) : (
+                  <Dot className="h-6 w-6 text-black-600 dark:text-black-300 mt-1 flex-shrink-0" />
+                )}
+                <Label
+                  className={
+                    "text-lg font-semibold " +
+                    (useCheckbox && checked
+                      ? "text-red-600 dark:text-red-400"
+                      : "text-black-700 dark:text-white")
+                  }
+                >
+                  {label}
+                </Label>
+              </div>
               {useCheckbox ? (
-                <Checkbox
-                  checked={checked}
-                  onCheckedChange={() => handleCheckedChange(idx)}
-                  className="mt-1"
-                />
-              ) : (
-                <Dot className="h-6 w-6 text-black-600 dark:text-black-300 mt-1 flex-shrink-0" />
-              )}
-              <Label
-                className={
-                  "text-lg font-semibold ml-3 " +
-                  (useCheckbox && checked
-                    ? "text-red-600 dark:text-red-400"
-                    : "text-black-700 dark:text-white")
-                }
-              >
-                {item}
-              </Label>
+                <span className="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                  +{score} điểm
+                </span>
+              ) : null}
             </div>
           );
         })}
