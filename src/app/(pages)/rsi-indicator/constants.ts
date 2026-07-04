@@ -18,7 +18,7 @@ type CardData = InfoCard | GalleryCard;
 export const CARD_DATA: CardData[] = [
   {
     title: "CHỈ BÁO RSI",
-    imageSrc: "/support-resistance/rsi.png",
+    imageSrc: "/16.png",
     modalType: "rsi"
   },
 ];
