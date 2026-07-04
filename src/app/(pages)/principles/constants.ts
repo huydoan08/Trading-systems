@@ -28,7 +28,7 @@ export const CARD_DATA: CardData[] = [
   },
   {
     title: "Trong giao dịch, để có thể gồng được các lệnh thắng lớn, bạn cần có phương pháp rõ ràng và tách biệt với cảm xúc.",
-    imageSrc: "/manage.png",
+    imageSrc: "/personal-growth/growth-42.png",
     modalType: "manage"
   }
 ];

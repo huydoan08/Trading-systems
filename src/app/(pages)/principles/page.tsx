@@ -1,7 +1,6 @@
 "use client";
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { InfoCard } from "@/components/technical-analysis/InfoCard";
-import { ImageGallery } from "@/components/technical-analysis/ImageGallery";
 import { InfoModal } from "@/components/technical-analysis/InfoModal";
 import { auth } from "@/firebaseConfig";
 import { useSidebar } from "@/hooks/use-sidebar";
@@ -9,21 +8,10 @@ import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { EntryStrategy, ExitStrategy, ManageStrategy, quintessenceRsi } from "./data";
+import { EntryStrategy, ManageStrategy, rules } from "./data";
 import { CARD_DATA } from "./constants";
 
-type ModalType =
-  | "rsi"
-  | "support"
-  | "trap"
-  | "excess"
-  | "break"
-  | "rsi-h4"
-  | "rsi-d"
-  | "rsi-h1"
-  | "entry"
-  | "exit"
-  | "manage";
+type ModalType = (typeof CARD_DATA)[number]["modalType"];
 
 export default function TechnicalAnalysisPage() {
   const [activeModal, setActiveModal] = useState<ModalType | null>(null);
@@ -54,7 +42,7 @@ export default function TechnicalAnalysisPage() {
           isOpen={true}
           onClose={handleCloseModal}
           title={card.title}
-          items={quintessenceRsi}
+          items={rules}
         />
       );
     }
@@ -69,16 +57,6 @@ export default function TechnicalAnalysisPage() {
         />
       );
     }
-    if (activeModal === "exit") {
-      return (
-        <InfoModal
-          isOpen={true}
-          onClose={handleCloseModal}
-          title={card.title}
-          items={ExitStrategy}
-        />
-      );
-    }
     if (activeModal === "manage") {
       return (
         <InfoModal
@@ -86,17 +64,6 @@ export default function TechnicalAnalysisPage() {
           onClose={handleCloseModal}
           title={card.title}
           items={ManageStrategy}
-        />
-      );
-    }
-
-    if ("images" in card) {
-      return (
-        <ImageGallery
-          images={card.images}
-          title={card.title}
-          isOpen={true}
-          onClose={handleCloseModal}
         />
       );
     }
