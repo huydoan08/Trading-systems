@@ -126,7 +126,20 @@ export const InfoModal = ({
   const decisionText = useMemo(() => {
     if (progressPercent >= 60) return "Có thể vào lệnh";
     if (progressPercent >= 30) return "Cân nhắc kỹ trước khi vào lệnh";
-    return "Không nên vào lệnh";
+    if (progressPercent >= 1) return "Không nên vào lệnh";
+    return "";
+  }, [progressPercent]);
+
+  const decisionClass = useMemo(() => {
+    if (progressPercent >= 60) return "text-emerald-600 dark:text-emerald-400";
+    if (progressPercent >= 30) return "text-amber-600 dark:text-amber-400";
+    return "text-red-600 dark:text-red-400";
+  }, [progressPercent]);
+
+  const progressStrokeClass = useMemo(() => {
+    if (progressPercent >= 60) return "stroke-emerald-500 dark:stroke-emerald-400";
+    if (progressPercent >= 30) return "stroke-amber-500 dark:stroke-amber-400";
+    return "stroke-red-500 dark:stroke-red-400";
   }, [progressPercent]);
 
   return (
@@ -135,9 +148,6 @@ export const InfoModal = ({
         {useCheckbox ? (
           <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_160px] items-center border-b border-black-200 pb-4 mb-4 dark:border-black-700">
             <div className="space-y-2">
-              <div className="text-xs uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">
-                Hệ thống tính điểm
-              </div>
               <motion.div
                 key={totalScore}
                 animate={{ scale: [1, 1.04, 1] }}
@@ -151,11 +161,8 @@ export const InfoModal = ({
                   / {maxScore}
                 </div>
               </motion.div>
-              <div className="text-sm font-medium text-slate-700 dark:text-slate-200">
+              <div className={`text-sm font-medium ${decisionClass}`}>
                 {decisionText}
-              </div>
-              <div className="text-xs text-slate-500 dark:text-slate-400">
-                Mỗi dòng checkbox có điểm riêng, dựa theo giá trị bạn đặt.
               </div>
             </div>
             <div className="flex items-center justify-center">
@@ -180,7 +187,7 @@ export const InfoModal = ({
                     fill="none"
                     strokeWidth="12"
                     strokeLinecap="round"
-                    className="stroke-sky-500 dark:stroke-cyan-400"
+                    className={progressStrokeClass}
                     strokeDasharray="351.86"
                     animate={{ strokeDashoffset: 351.86 * (1 - progressPercent / 100) }}
                     transition={{ type: "spring", stiffness: 110, damping: 18 }}
@@ -188,14 +195,14 @@ export const InfoModal = ({
                 </motion.svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="text-sm font-medium text-slate-600 dark:text-slate-300">
-                    Tiến độ
+                    Điểm
                   </div>
                   <motion.div
                     animate={{ opacity: [0.4, 1] }}
                     transition={{ duration: 0.35 }}
                     className="text-2xl font-semibold text-black-800 dark:text-white"
                   >
-                    {progressPercent}%
+                    {progressPercent}
                   </motion.div>
                 </div>
               </div>

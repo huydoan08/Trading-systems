@@ -22,7 +22,7 @@ export const CARD_DATA: CardData[] = [
     modalType: "rsi"
   },
   {
-    title: "Hệ thống điểm vào lệnh - kiểm tra các điều kiện trước khi vào lệnh.",
+    title: "Hệ thống chấm điểm một entry vào lệnh.",
     imageSrc: "/entry.png",
     modalType: "entry"
   },
