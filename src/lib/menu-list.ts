@@ -90,17 +90,27 @@ export function getMenuList(): Group[] {
         }
       ]
     },
+
     {
       groupLabel: "",
       menus: [
         {
-          href: "/story-telling",
-          label: "Câu chuyện & bài học",
+          href: "",
+          label: "Tu tập",
           icon: BookOpenText,
-          submenus: []
+          submenus: [
+            {
+              href: "/ancient-teaching",
+              label: "Lời dạy của cổ nhân"
+            },
+            {
+              href: "/story-telling",
+              label: "Câu chuyện & bài học"
+            }
+          ]
         }
       ]
-    },
+    }
     // {
     //   groupLabel: "",
     //   menus: [
