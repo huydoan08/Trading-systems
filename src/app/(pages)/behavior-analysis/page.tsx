@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { mindsetDeveloper } from "./data";
+import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { SideContent } from "@/components/ui/SideContent";
 
 export default function BehaviorAnalysis() {

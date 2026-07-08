@@ -1,21 +1,28 @@
 "use client";
-
-import { useState } from "react";
+import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
+import { useRouter } from "next/navigation";
 import { mindsetDeveloper } from "./data";
-import { SideContent } from "@/components/ui/SideContent";
+import { ExpandableCard } from "@/app/component/expandableCard";
+import { useState } from "react";
 
-export default function BehaviorAnalysis() {
-  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+export default function RaisingChildrenPage() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
   const sidebar = useStore(useSidebar, (x) => x);
+  const router = useRouter();
   if (!sidebar) return null;
-
   return (
-    <SideContent
-      items={mindsetDeveloper}
-      initialIndex={selectedIndex}
-      onSelect={(i) => setSelectedIndex(i)}
-    />
+    <ContentLayout title="JavaScript">
+      {mindsetDeveloper.map((item, index) => (
+        <ExpandableCard
+          key={index}
+          title={item.title}
+          content={item.content}
+          isOpen={openIndex === index}
+          onClick={() => setOpenIndex(openIndex === index ? null : index)}
+        />
+      ))}
+    </ContentLayout>
   );
 }
