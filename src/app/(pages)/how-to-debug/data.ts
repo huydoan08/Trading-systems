@@ -1,11 +1,11 @@
 export const mindsetDeveloper = [
   {
-    title: "Nguyên tắc debug",
+    title: "Quy tắc debug",
     content: [
-      "Hiểu rõ vấn đề và triệu chứng của lỗi.",
-      "Tái hiện chính xác các bước gây ra lỗi.",
-      "Không đoán nguyên nhân, hãy debug để khoanh vùng và tìm root cause.",
-      "Fix bug với phạm vi thay đổi nhỏ nhất, hạn chế ảnh hưởng logic cũ.",
+      "Đầu tiên phải đặt câu hỏi là bugs xảy ra khi nào ?.",
+      "Từ hành vi của user thì dev phải nhìn dưới góc độ kĩ thuật.",
+      "Khoanh vùng thật nhanh các trường hợp có thể xảy ra, đặt debug để kiểm tra.",
+      "Sau khi tìm ra nguyên nhân thì cố gắng fix bugs mà thay đổi code ít nhất, phạm vi hẹp nhất có thể.",
       "Self-test sau khi fix để xác nhận lỗi đã hết và không phát sinh lỗi mới."
     ]
   },
@@ -13,15 +13,9 @@ export const mindsetDeveloper = [
     title: "Thủ thuật Devtools",
     content: [
       "Dùng Breakpoint và Call Stack trong tab Sources để theo dõi luồng thực thi.",
-      "Dùng Console để kiểm tra giá trị biến và kết quả xử lý.",
-      "Dùng Network để xem request/response API và xác định file gọi API."
-    ]
-  },
-  {
-    title: "Debug dữ liệu hiển thị",
-    content: [
-      "Kiểm tra dữ liệu trước khi render",
-      "Debug để tìm nguyên nhân dữ liệu hiển thị sai hoặc không hiển thị"
+      "Dùng Console để log ra bất kì thông tin nào.",
+      "Dùng Network để xem request/response API và xác định file gọi API.",
+      "Dùng Elements để xem DOM và CSS, xác định class, id. attribute của element.",
     ]
   }
 ];

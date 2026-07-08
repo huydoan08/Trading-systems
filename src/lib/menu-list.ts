@@ -83,7 +83,7 @@ export function getMenuList(): Group[] {
               label: "How to Debug"
             },
             {
-              href: "/how-to-debug",
+              href: "/behavior-analysis",
               label: "Đuổi hình bắt bugs"
             },
             {
