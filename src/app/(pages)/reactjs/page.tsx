@@ -13,7 +13,7 @@ export default function RaisingChildrenPage() {
   const router = useRouter();
   if (!sidebar) return null;
   return (
-    <ContentLayout title="JavaScript">
+    <ContentLayout title="ReactJS">
       {reactHooks.map((item, index) => (
         <ExpandableCard
           key={index}

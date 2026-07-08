@@ -84,7 +84,7 @@ export function getMenuList(): Group[] {
             },
             {
               href: "/behavior-analysis",
-              label: "Đuổi hình bắt bugs"
+              label: "Behavior Analysis"
             },
             {
               href: "/git",
