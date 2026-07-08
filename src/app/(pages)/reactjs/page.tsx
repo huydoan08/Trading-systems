@@ -1,28 +1,21 @@
 "use client";
-import { ContentLayout } from "@/components/admin-panel/content-layout";
+
+import { useState } from "react";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
-import { useRouter } from "next/navigation";
 import { reactHooks } from "./data";
-import { ExpandableCard } from "@/app/component/expandableCard";
-import { useState } from "react";
+import { SideContent } from "@/components/ui/SideContent";
 
-export default function RaisingChildrenPage() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+export default function BehaviorAnalysis() {
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const sidebar = useStore(useSidebar, (x) => x);
-  const router = useRouter();
   if (!sidebar) return null;
+
   return (
-    <ContentLayout title="ReactJS">
-      {reactHooks.map((item, index) => (
-        <ExpandableCard
-          key={index}
-          title={item.title}
-          content={item.content}
-          isOpen={openIndex === index}
-          onClick={() => setOpenIndex(openIndex === index ? null : index)}
-        />
-      ))}
-    </ContentLayout>
+    <SideContent
+      items={reactHooks}
+      initialIndex={selectedIndex}
+      onSelect={(i) => setSelectedIndex(i)}
+    />
   );
 }

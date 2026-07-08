@@ -1,6 +1,6 @@
-import { title } from "process";
 
-export const raisingchildren = [
+
+export const javascript = [
   {
     title:
       "Chuyển mảng thành object với key là một thuộc tính của phần tử và value là chính phần tử đó.",
