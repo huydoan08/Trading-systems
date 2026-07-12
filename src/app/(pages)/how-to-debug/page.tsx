@@ -6,22 +6,20 @@ import { useStore } from "@/hooks/use-store";
 import { mindsetDeveloper } from "./data";
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { ExpandableCard } from "@/app/component/expandableCard";
+import { SideContent } from "@/components/ui/SideContent";
 
 export default function HowToDebugPage() {
+  const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const sidebar = useStore(useSidebar, (x) => x);
   if (!sidebar) return null;
   return (
-    <ContentLayout title="How to debug">
-      {mindsetDeveloper.map((item, index) => (
-        <ExpandableCard
-          key={index}
-          title={item.title}
-          content={item.content}
-          isOpen={openIndex === index}
-          onClick={() => setOpenIndex(openIndex === index ? null : index)}
-        />
-      ))}
+    <ContentLayout title="How to debug" disableHorizontalPadding>
+      <SideContent
+        items={mindsetDeveloper}
+        initialIndex={selectedIndex}
+        onSelect={(i) => setSelectedIndex(i)}
+      />
     </ContentLayout>
   );
 }

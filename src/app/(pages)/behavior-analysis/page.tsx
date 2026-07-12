@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
-import { mindsetDeveloper } from "./data";
+import { behaviorAnalysis } from "./data";
 import { ContentLayout } from "@/components/admin-panel/content-layout";
 import { SideContent } from "@/components/ui/SideContent";
 
@@ -13,10 +13,12 @@ export default function BehaviorAnalysis() {
   if (!sidebar) return null;
 
   return (
-    <SideContent
-      items={mindsetDeveloper}
-      initialIndex={selectedIndex}
-      onSelect={(i) => setSelectedIndex(i)}
-    />
+    <ContentLayout title="Behavior Analysis" disableHorizontalPadding={true}>
+      <SideContent
+        items={behaviorAnalysis}
+        initialIndex={selectedIndex}
+        onSelect={(i) => setSelectedIndex(i)}
+      />
+    </ContentLayout>
   );
 }

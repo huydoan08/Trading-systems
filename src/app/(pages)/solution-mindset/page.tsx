@@ -6,23 +6,20 @@ import { useRouter } from "next/navigation";
 import { mindsetDeveloper } from "./data";
 import { ExpandableCard } from "@/app/component/expandableCard";
 import { useState } from "react";
+import { SideContent } from "@/components/ui/SideContent";
 
 export default function RaisingChildrenPage() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const sidebar = useStore(useSidebar, (x) => x);
   const router = useRouter();
   if (!sidebar) return null;
   return (
-    <ContentLayout title="JavaScript">
-      {mindsetDeveloper.map((item, index) => (
-        <ExpandableCard
-          key={index}
-          title={item.title}
-          content={item.content}
-          isOpen={openIndex === index}
-          onClick={() => setOpenIndex(openIndex === index ? null : index)}
+    <ContentLayout title="JavaScript" disableHorizontalPadding>
+    <SideContent
+          items={mindsetDeveloper}
+          initialIndex={selectedIndex}
+          onSelect={(i) => setSelectedIndex(i)}
         />
-      ))}
     </ContentLayout>
   );
 }

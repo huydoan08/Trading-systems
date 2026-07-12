@@ -1,7 +1,6 @@
 export const mindsetDeveloper = [
   {
-    title:
-      "Lấy một hoặc nhiều commit bất kỳ của một nhánh bằng git cherry-pick",
+    title: "Lấy một hoặc nhiều commit bất kỳ của một nhánh bằng git cherry-pick",
     content: ["git cherry-pick <commit-hash 1> <commit-hash 2>"]
   },
   {
@@ -10,6 +9,6 @@ export const mindsetDeveloper = [
   },
   {
     title: "Đưa nhánh về một commit trước đó, sử dụng git reset --hard",
-    content: ["git reset --hard <commit-hash>", "Lưu ý: Nếu cần đồng bộ lại với remote sau khi đã push, có thể git pull"]
-  },
+    content: ["git reset --hard <commit-hash>\nLưu ý: Nếu cần đồng bộ lại với remote sau khi đã push, có thể git pull."]
+  }
 ];
