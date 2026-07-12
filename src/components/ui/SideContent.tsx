@@ -26,13 +26,13 @@ export function SideContent({ items, initialIndex = 0, onSelect }: SideContentPr
   return (
     <div className="w-full flex flex-col md:flex-row gap-6">
       <aside className="md:w-72 w-full flex-shrink-0">
-        <div className="bg-surface rounded-md border border-border p-2 max-h-[99vh] overflow-y-auto hide-scrollbar">
+        <div className="bg-card rounded-md border border-border p-2 max-h-[99vh] overflow-y-auto hide-scrollbar">
           {items.map((item, i) => (
             <label
               key={i}
               htmlFor={`${groupNameRef.current}-${i}`}
-              className={`cursor-pointer w-full text-left flex items-start gap-3 p-3 rounded-md hover:bg-accent/5 focus-within:outline-none transition-colors ${
-                  i === selected ? "bg-gray-100 border border-border" : ""
+              className={`cursor-pointer w-full text-left flex items-start gap-3 p-3 rounded-md hover:bg-accent/10 dark:hover:bg-accent/20 focus-within:outline-none transition-colors ${
+                  i === selected ? "bg-gray-100 dark:bg-slate-800 border border-border" : ""
                 }`}
             >
               <input
