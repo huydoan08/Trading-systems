@@ -15,7 +15,7 @@ export default function RaisingChildrenPage() {
   const router = useRouter();
   if (!sidebar) return null;
   return (
-    <ContentLayout title="ReactJS">
+    <ContentLayout title="ReactJS" disableHorizontalPadding>
       <SideContent
         items={reactHooks}
         initialIndex={selectedIndex}

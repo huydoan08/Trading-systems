@@ -23,7 +23,7 @@ export default function RSIPage() {
   }, [router]);
   if (sidebar === undefined) return null;
   return (
-    <ContentLayout title="Những mẩu chuyện hay sưu tầm">
+    <ContentLayout title="Những mẩu chuyện hay sưu tầm" disableHorizontalPadding>
         <SideContent
               items={storyTelling}
               initialIndex={selectedIndex}

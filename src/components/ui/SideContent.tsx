@@ -98,11 +98,11 @@ export function SideContent({ items, initialIndex = 0, onSelect }: SideContentPr
 
       <main className="flex-1 min-w-0 mt-10">
         <article className="prose prose-slate dark:prose-invert max-w-none overflow-auto">
-          <h2 className="text-2xl font-semibold mb-4">{current?.title}</h2>
+          <h2 className="text-3xl font-semibold mb-4">{current?.title}</h2>
           {current?.content?.map((line, idx) => (
             <section
               key={idx}
-              className="mb-6 rounded-xl border border-slate-200/80 bg-slate-50/80 p-4 text-sm leading-7 text-slate-700 dark:border-slate-800/90 dark:bg-slate-950/80 dark:text-slate-200"
+              className="mb-6 text-xl rounded-xl border border-slate-200/80 bg-slate-50/80 p-4 text-sm text-slate-700 dark:border-slate-800/90 dark:bg-slate-950/80 dark:text-slate-200"
             >
               {renderContentBlock(line)}
             </section>

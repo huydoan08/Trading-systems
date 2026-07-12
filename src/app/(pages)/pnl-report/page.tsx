@@ -15,18 +15,17 @@ export type YearlyData = {
   [key: string]: DataPoint[];
 };
 
-// compute list of years from the data object so we don't forget to add new ones later
 const years = Object.keys(allData).sort();
-
-// flatten all year arrays for the "All time" selection
 const allTimeData: DataPoint[] = years.flatMap((y) => allData[y] || []);
 
 export default function RevenueChart() {
   const { theme } = useTheme();
-  const [selectedYear, setSelectedYear] = useState<string>("All time");
+  const currentYear = new Date().getFullYear().toString();
+  const initialYear = years.includes(currentYear) ? currentYear : "All time";
+  const [selectedYear, setSelectedYear] = useState<string>(initialYear);
 
-  const data: DataPoint[] =
-    selectedYear === "All time" ? allTimeData : allData[selectedYear] || [];  const totalRevenue: number = data.reduce((acc, item) => acc + item?.revenue, 0);
+  const data: DataPoint[] = selectedYear === "All time" ? allTimeData : allData[selectedYear] || [];
+  const totalRevenue: number = data.reduce((acc, item) => acc + item?.revenue, 0);
   const textColor = theme === "dark" ? "#fff" : "#000";
 
   return (
@@ -51,7 +50,9 @@ export default function RevenueChart() {
               </SelectContent>
             </Select>
           </div>
-          <h2 className={`text-2xl font-bold ${totalRevenue >= 0? "text-green-500 dark:text-green-400" : "text-red-500 dark:text-red-400"}`}>
+          <h2
+            className={`text-2xl font-bold ${totalRevenue >= 0 ? "text-green-500 dark:text-green-400" : "text-red-500 dark:text-red-400"}`}
+          >
             {totalRevenue}$
           </h2>
           <div className="w-full h-72">
@@ -70,7 +71,7 @@ export default function RevenueChart() {
                 <Tooltip
                   formatter={(value) => `$${value}`}
                   contentStyle={{
-                    backgroundColor:"#fff",
+                    backgroundColor: "#fff",
                     color: "#000",
                     border: "none",
                     borderRadius: "8px",
