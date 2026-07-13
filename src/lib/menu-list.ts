@@ -81,7 +81,7 @@ export function getMenuList(): Group[] {
             },
             {
               href: "/how-to-debug",
-              label: "How to Debug"
+              label: "Debugging Skills"
             },
             {
               href: "/behavior-analysis",
@@ -142,58 +142,10 @@ export function getMenuList(): Group[] {
     //   groupLabel: "",
     //   menus: [
     //     {
-    //       href: "/mentorship",
-    //       label: "Sưu tầm",
-    //       icon: Ticket,
-    //       submenus: []
-    //     }
-    //   ]
-    // },
-
-    // {
-    //   groupLabel: "",
-    //   menus: [
-    //     {
-    //       href: "/internal-force",
-    //       label: "Nội lực bên trong",
-    //       icon: Timer,
-    //       submenus: []
-    //     }
-    //   ]
-    // },
-    // {
-    //   groupLabel: "",
-    //   menus: [
-    //     {
     //       href: "/passion",
     //       label: "Đam mê",
     //       icon: Apple,
     //       submenus: []
-    //     }
-    //   ]
-    // },
- 
-    // {
-    //   groupLabel: "",
-    //   menus: [
-    //     {
-    //       href: "",
-    //       label: "Con gái yêu",
-    //       icon: Image,
-    //       submenus: [
-    //         {
-    //           href: "/dau-tay-0-den-1-tuoi",
-    //           label: "Dâu Tây từ 0 đến 1 tuổi"
-    //         },
-    //         {
-    //           href: "/dau-tay-1-den-2-tuoi",
-    //           label: "Dâu Tây từ 1 đến 2 tuổi"
-    //         },
-    //         {
-    //           href: "/dau-tay-2-den-3-tuoi",
-    //           label: "Dâu Tây từ 2 đến 3 tuổi"
-    //         }
-    //       ]
     //     }
     //   ]
     // },

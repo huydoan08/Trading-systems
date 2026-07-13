@@ -33,8 +33,8 @@ export default function HealthPage() {
 
   return (
     <ContentLayout title="Sức khỏe" disableHorizontalPadding>
-      <div className="container mx-auto px-4 sm:px-8 py-8">
-        <div className="mt-8 space-y-10">
+      <div className="container mx-auto px-4 sm:px-8">
+        <div>
           <section className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-5 shadow-2xl shadow-slate-950/40">
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-[1.3fr_0.7fr]">
               <a
