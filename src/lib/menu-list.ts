@@ -2,7 +2,8 @@ import {
   LucideIcon,
   AlignHorizontalDistributeCenter,
   CodeXml,
-  BookOpenText
+  BookOpenText,
+  HeartPulse
 } from "lucide-react";
 
 type Submenu = {
@@ -114,7 +115,18 @@ export function getMenuList(): Group[] {
           ]
         }
       ]
-    }
+    },
+       {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/health",
+          label: "Sức khỏe",
+          icon: HeartPulse,
+          submenus: []
+        }
+      ]
+    },
     // {
     //   groupLabel: "",
     //   menus: [
@@ -160,17 +172,7 @@ export function getMenuList(): Group[] {
     //     }
     //   ]
     // },
-    // {
-    //   groupLabel: "",
-    //   menus: [
-    //     {
-    //       href: "/health",
-    //       label: "Sức khỏe",
-    //       icon: HeartPulse,
-    //       submenus: []
-    //     }
-    //   ]
-    // },
+ 
     // {
     //   groupLabel: "",
     //   menus: [
