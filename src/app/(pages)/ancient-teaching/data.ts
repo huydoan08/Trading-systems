@@ -108,6 +108,69 @@ export const ancientTeaching = [
     title: "",
     content: {
       type: "image" as const,
+      value: "/personal-growth/114.jpg"
+    }
+  },
+  {
+    title: "",
+    content: {
+      type: "image" as const,
+      value: "/personal-growth/118.jpg"
+    }
+  },
+  {
+    title: "",
+    content: {
+      type: "image" as const,
+      value: "/personal-growth/120.jpg"
+    }
+  },
+  {
+    title: "",
+    content: {
+      type: "image" as const,
+      value: "/personal-growth/121.jpg"
+    }
+  },
+  {
+    title: "",
+    content: {
+      type: "image" as const,
+      value: "/personal-growth/122.jpg"
+    }
+  },
+  {
+    title: "",
+    content: {
+      type: "image" as const,
+      value: "/personal-growth/123.jpg"
+    }
+  },
+  {
+    title: "",
+    content: {
+      type: "image" as const,
+      value: "/personal-growth/125.jpg"
+    }
+  },
+  {
+    title: "",
+    content: {
+      type: "image" as const,
+      value: "/personal-growth/141.jpg"
+    }
+  },
+  {
+    title: "",
+    content: {
+      type: "image" as const,
+      value: "/personal-growth/136.jpg"
+    }
+  },
+  {
+    title: "",
+    content: {
+      type: "image" as const,
       value: "/personal-growth/growth-04.webp"
     }
   },
