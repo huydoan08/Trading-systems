@@ -1,23 +1,23 @@
 export const rules = [
   "Chỉ giao dịch SPOT.",
   "Chỉ giao dịch BTC.",
-  "Giao dịch theo RSI bộ khung thời gian là H4, 1D, 1W.",
+  "Giao dịch theo RSI bộ khung thời gian là WDH.",
   "Không bao giờ đoán đỉnh hoặc đoán đáy mà phải chờ giá quay lại retest.",
   "Phải có chiến lược phân bổ vốn phù hợp với từng cơ hội giao dịch.",
   "Phải chia vốn ra làm nhiều lần mua cho mỗi cơ hội giao dịch.",
-  "Ghi chép nhật ký cho mỗi lệnh giao dịch để hoàn thiện hơn.",
   "Kiên nhẫn chờ đợi cơ hội tốt rồi đập cho một phát ra ngô ra khoai.",
-  "Không nhảy ra nhảy vào lệnh liên tục, không quan sát giá mà quan sát RSI."
+  "Không nhảy ra nhảy vào lệnh liên tục, không quan sát giá mà quan sát RSI.",
+  "Ghi chép nhật ký cho mỗi lệnh giao dịch để hoàn thiện hơn.",
 ];
 export const EntryStrategy = [
-  { label: "RSI khung H4, 1D cùng pha.", score: 20 },
-  { label: "Giá đã quay lại retest và RSI cho thấy hội tụ.", score: 20 },
+  { label: "RSI các khung H4 - 1D - 1W đồng pha với nhau.", score: 30 },
+  { label: "Giá đã xác nhận retest ở khung giao dịch 1D.", score: 10 },
+  { label: "Tối ưu điểm vào lệnh đẹp ở khung H4.", score: 10 },
   { label: "Chỉ số tham lam sợ hãi đã chạm mốc 10.", score: 10 },
   { label: "Có tín hiệu price action.", score: 10 },
   { label: "Mức thưởng đáng để vào lệnh.", score: 10 },
-  { label: "Tối ưu điểm vào lệnh đẹp ở khung H4.", score: 10 },
   { label: "Giá đã phá qua trendline giảm.", score: 10 },
-  { label: "Mẫu hình đúng tiêu chuẩn, mẫu hình đẹp.", score: 10 }
+  { label: "Thuộc mẫu hình có xác suất thắng cao.", score: 10 }
 ];
 
 export const ManageStrategy = [
