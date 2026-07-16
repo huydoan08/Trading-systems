@@ -1,12 +1,13 @@
 export const rules = [
-  "Chỉ giao dịch BTC.",
   "Chỉ giao dịch SPOT.",
-  "Giao dịch theo RSI bộ khung thời gian là 1D và H4.",
-  "Stoploss là bắt buộc.",
+  "Chỉ giao dịch BTC.",
+  "Giao dịch theo RSI bộ khung thời gian là H4, 1D, 1W.",
   "Không bao giờ đoán đỉnh hoặc đoán đáy mà phải chờ giá quay lại retest.",
+  "Phải có chiến lược phân bổ vốn phù hợp với từng cơ hội giao dịch.",
+  "Phải chia vốn ra làm nhiều lần mua cho mỗi cơ hội giao dịch.",
   "Ghi chép nhật ký cho mỗi lệnh giao dịch để hoàn thiện hơn.",
-  "Phải chia vốn ra làm nhiều lần mua.",
-  "Phải có chiến lược giao dịch rõ ràng, bao gồm chiến lược phân bổ vốn và chiến lược quản trị rủi ro."
+  "Kiên nhẫn chờ đợi cơ hội tốt rồi đập cho một phát ra ngô ra khoai.",
+  "Không nhảy ra nhảy vào lệnh liên tục, không quan sát giá mà quan sát RSI."
 ];
 export const EntryStrategy = [
   { label: "RSI khung H4, 1D cùng pha.", score: 20 },
