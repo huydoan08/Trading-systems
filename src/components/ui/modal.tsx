@@ -12,7 +12,7 @@ interface ModalProps {
 export function Modal({ isOpen, onClose, children, title }: ModalProps) {
   return (
     <Transition appear show={isOpen} as={Fragment}>
-      <Dialog as="div" className="relative z-50" onClose={() => {}}>
+      <Dialog as="div" className="relative z-50" onClose={onClose}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -46,12 +46,6 @@ export function Modal({ isOpen, onClose, children, title }: ModalProps) {
                       {title}
                     </Dialog.Title>
                   )}
-                  <button
-                    onClick={onClose}
-                    className="rounded-full p-2 hover:bg-black-100 dark:hover:bg-gray-700 transition-colors"
-                  >
-                    <X className="h-6 w-6 text-gray-600 dark:text-gray-300" />
-                  </button>
                 </div>
                 <div className="mt-2">
                   {children}
