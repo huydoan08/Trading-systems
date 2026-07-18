@@ -1,8 +1,7 @@
 "use client";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
-import { login, logout, register } from "@/AuthService";
+import { login } from "@/AuthService";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "@/firebaseConfig";
 import { useEffect, useState } from "react";
@@ -12,15 +11,10 @@ import { Loader2 } from "lucide-react";
 import {
   Card,
   CardContent,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-  CardDescription
+  CardFooter
 } from "@/components/ui/card";
-import { Label } from "@/components/ui/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { ToastContainer, toast } from "react-toastify";
-import { ColorfulLogo } from "@/components/admin-panel/colorful-logo";
 
 export default function HomePage() {
   const [email, setEmail] = useState("");
@@ -34,7 +28,6 @@ export default function HomePage() {
     try {
       await login(email, password);
     } catch (error) {
-      console.error("Login failed", error);
       toast.error(`Đăng nhập thất bại. ${error}`, {
         position: "top-right",
         autoClose: 3000,
@@ -82,30 +75,22 @@ export default function HomePage() {
       
       <header className="z-[50] sticky top-0 w-full bg-background/95 border-b backdrop-blur-sm dark:bg-black/[0.6] border-border/40 relative">
         <div className="container h-14 flex items-center">
-          <Link
-            href="/"
-            className="flex justify-start items-center hover:opacity-85 transition-opacity duration-300"
-          >
-            <ColorfulLogo text="Huy Doan" />
-            <span className="sr-only">Huy Doan</span>
-          </Link>
           <nav className="ml-auto flex items-center gap-2">
             <ModeToggle />
           </nav>
         </div>
       </header>
       <main className="min-h-[calc(100vh-57px-97px)] flex-1 relative z-10">
-        <div style={{marginTop: "350px", marginLeft: "100px"}} >
+        <div style={{marginTop: "70px"}} >
           <section className="mx-auto flex max-w-[980px] flex-col items-center gap-2 py-8 md:py-12 md:pb-8 lg:py-24 lg:pb-6">
             <Tabs defaultValue="account" className="w-[400px]">
               <TabsContent value="account">
                 <Card>
                   <CardContent className="space-y-2">
-                    <div className="space-y-1 pt-4">
-                      <Label htmlFor="name">Email</Label>
+                    <div className="space-y-1 pt-8">
                       <Input
                         type="email"
-                        placeholder="Email"
+                        placeholder="Nhập email"
                         className="w-full h-10"
                         value={email}
                         onChange={(e) => {
@@ -116,10 +101,9 @@ export default function HomePage() {
                       />
                     </div>
                     <div className="space-y-1">
-                      <Label htmlFor="username">Password</Label>
                       <Input
                         type="password"
-                        placeholder="Mật khẩu"
+                        placeholder="Nhập mật khẩu"
                         className="w-full h-10"
                         value={password}
                         onChange={(e) => {
@@ -139,7 +123,7 @@ export default function HomePage() {
                       {loading ? (
                         <Loader2 className="animate-spin w-5 h-5" />
                       ) : (
-                        <div>Login</div>
+                        <div>Đăng nhập</div>
                       )}
                     </Button>
                   </CardFooter>
@@ -149,13 +133,6 @@ export default function HomePage() {
           </section>
         </div>
       </main>
-      <footer className="py-6 md:py-0 border-t border-border/40 relative z-10">
-        <div className="container flex flex-col items-center justify-center gap-4 md:h-24 md:flex-row">
-          <p className="text-balance text-center text-sm leading-loose text-muted-foreground">
-            Tâm thức tôi trưởng thành từ nghề trading.
-          </p>
-        </div>
-      </footer>
       <ToastContainer />
     </div>
   );

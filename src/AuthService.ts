@@ -7,20 +7,6 @@ import { auth } from "./firebaseConfig";
 
 export const ALLOWED_UID = "w1ulDrt8O0OXIr0TVdPTMi58oAn2";
 
-export const register = async (email: string, password: string) => {
-  try {
-    const userCredential = await createUserWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
-    return userCredential.user;
-  } catch (error) {
-    console.error("Đăng ký thất bại", error);
-    throw error;
-  }
-};
-
 export const login = async (email: string, password: string) => {
   try {
     const userCredential = await signInWithEmailAndPassword(
