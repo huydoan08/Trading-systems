@@ -30,9 +30,9 @@ export function Sidebar() {
             !getOpenState() ? "translate-x-1" : "translate-x-0"
           )}
         >
-          <div className="flex items-center justify-start ml-5">
+          {/* <div className="flex items-center justify-start ml-5">
             <ColorfulLogo />
-          </div>
+          </div> */}
         </span>
         <Menu isOpen={getOpenState()} />
       </div>
