@@ -68,6 +68,10 @@ export function getMenuList(): Group[] {
           icon: CodeXml,
           submenus: [
             {
+              href: "/HtmlCss",
+              label: "HTML & CSS"
+            },
+            {
               href: "/javascript",
               label: "JavaScript"
             },
