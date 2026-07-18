@@ -54,9 +54,8 @@ export default function HomePage() {
         router.push("/");
       }
     });
-
     return () => unsubscribe();
-  }, [router]);
+  }, []);
 
   useEffect(() => {
     const savedPassword = localStorage.getItem("password");
