@@ -3,7 +3,8 @@ import {
   AlignHorizontalDistributeCenter,
   CodeXml,
   BookOpenText,
-  HeartPulse
+  Shield,
+  TreePalm
 } from "lucide-react";
 
 type Submenu = {
@@ -120,17 +121,28 @@ export function getMenuList(): Group[] {
         }
       ]
     },
-       {
+    {
       groupLabel: "",
       menus: [
         {
           href: "/health",
           label: "Sức khỏe",
-          icon: HeartPulse,
+          icon: Shield,
           submenus: []
         }
       ]
     },
+    {
+      groupLabel: "",
+      menus: [
+        {
+          href: "/peacefully",
+          label: "Bình an",
+          icon: TreePalm,
+          submenus: []
+        }
+      ]
+    }
     // {
     //   groupLabel: "",
     //   menus: [
