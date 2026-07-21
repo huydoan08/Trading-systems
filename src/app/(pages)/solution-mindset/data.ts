@@ -1,5 +1,11 @@
 export const mindsetDeveloper = [
   {
+    title: "Các bước thực hiện một task Frontend",
+    content: [
+      "1. Làm giao diện theo thiết kế \n\n 2. Tạo mockup data để hiển thị giao diện, đảm bảo mockup chính là đầu vào mong muốn \n\n 3. Call API để lấy dữ liệu thật, lưu data vào state được gọi là dữ liệu nguyên thủy, convert dữ liệu nguyên thủy thành dữ liệu hiển thị, dữ liệu hiển thị là dữ liệu được render ra giao diện "
+    ]
+  },
+  {
     title: "Sử dụng dict (object) để lưu trữ dữ liệu theo cặp key-value",
     content: [
       "Dict (object) là cấu trúc dữ liệu lưu trữ theo cặp key-value.\nGiúp truy cập, cập nhật và tìm kiếm dữ liệu theo key nhanh hơn so với array."
