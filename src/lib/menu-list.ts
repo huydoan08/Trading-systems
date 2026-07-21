@@ -116,6 +116,10 @@ export function getMenuList(): Group[] {
             {
               href: "/story-telling",
               label: "Câu chuyện & bài học"
+            },
+             {
+              href: "https://loiphatday.org/kinh-phat",
+              label: "Lời dạy của Đức Phật"
             }
           ]
         }
