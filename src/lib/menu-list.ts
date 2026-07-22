@@ -171,3 +171,23 @@ export function getMenuList(): Group[] {
     // },
   ];
 }
+
+[
+ {
+  BaseEntity:  {
+    name: 'FirstIsolated',
+    type: '88',
+    value: '12:12'
+  },
+  Entity: 1
+ },
+ {
+  BaseEntity:  {
+    name: 'SecondIsolated',
+    type: '88',
+    value: '12:12'
+  },
+  Entity: 3
+ },
+]
+
