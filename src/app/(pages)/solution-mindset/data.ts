@@ -28,7 +28,7 @@ export const mindsetDeveloper = [
   {
     title: "Bài toán update một state trong React",
     content: [
-      "1. Đối tượng cần update state là gì? Mảng hay Object?\n\n 2. Khóa (key) để xác định phần tử cần update là gì?\n\n 3. Cần update state theo cách nào? Thêm, sửa hay xóa? \n\n 4. Có bao nhiêu luật khác nhau để update state? \n\n 5. Áp dụng luật update state phù hợp với từng trường hợp cụ thể. \n\n 6. Sau khi áp dụng cho tất cả các luật state mới trông như thế nào?"
+      "1. Xác định Input và Outputcó dạng gì (Mảng hay Object)?\n\n 2. Khóa (key) để xác định phần tử cần update là gì?\n\n 3. Cần update state theo cách nào? Thêm, sửa hay xóa? \n\n 4. Có bao nhiêu luật khác nhau để update state? \n\n 5. Áp dụng luật update state phù hợp với từng trường hợp cụ thể."
     ]
   }
 ];
