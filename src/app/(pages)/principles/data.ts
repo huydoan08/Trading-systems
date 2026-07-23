@@ -1,11 +1,10 @@
 export const rules = [
   "Chỉ giao dịch SPOT.",
   "Ưu tiên số 1: BTC, số 2: FPT",
-  "Max Volume = 2000$.",
+  "Mỗi lệnh có Volume = 1000$, tối đa 2 lệnh cho mỗi cơ hội.",
   "Giao dịch theo RSI bộ khung thời gian là WDH.",
   "Không bao giờ đoán đỉnh hoặc đoán đáy mà phải chờ giá quay lại retest.",
   "Phải có chiến lược phân bổ vốn phù hợp với từng cơ hội giao dịch.",
-  "Phải chia vốn ra làm nhiều lần mua cho mỗi cơ hội giao dịch.",
   "Kiên nhẫn chờ đợi cơ hội tốt rồi đập cho một phát ra ngô ra khoai.",
   "Không nhảy ra nhảy vào lệnh liên tục, không quan sát giá mà quan sát RSI.",
   "Ghi chép nhật ký cho mỗi lệnh giao dịch để hoàn thiện hơn.",
