@@ -89,10 +89,6 @@ export function getMenuList(): Group[] {
               label: "Debugging Skills"
             },
             {
-              href: "/behavior-analysis",
-              label: "Behavior Analysis"
-            },
-            {
               href: "/git",
               label: "Git"
             }

@@ -1,14 +1,14 @@
 export const mindsetDeveloper = [
   {
-    title: "Quy tắc debug",
+    title: "Quy trình fix bugs",
     content: [
-      "Đầu tiên phải đặt câu hỏi là bugs xảy ra khi nào ?.\nTừ hành vi của user thì dev phải nhìn dưới góc độ kĩ thuật.\nKhoanh vùng thật nhanh các trường hợp có thể xảy ra, đặt debug để kiểm tra.\nSau khi tìm ra nguyên nhân thì cố gắng fix bugs mà thay đổi code ít nhất, phạm vi hẹp nhất có thể.\nSelf-test sau khi fix để xác nhận lỗi đã hết và không phát sinh lỗi mới."
+      "1. Bugs xảy ra khi nào ? ( Xác định thời điểm )\n\n 2. Lý do xảy ra bugs là gì ? ( Xác định nguyên nhân )\n\n 3. Cách fix bugs là gì ? ( Xác định giải pháp )\n\n 4. Sửa code như thế nào để fix được bugs mà ít impact nhất có thể? ( Áp dụng giải pháp )\n\n 5. Test lại bugs đã fix chưa? ( Xác nhận bugs đã được fix )"
     ]
   },
   {
     title: "Thủ thuật Devtools",
     content: [
-      "Dùng Breakpoint và Call Stack trong tab Sources để theo dõi luồng thực thi.\nDùng Console để log ra bất kì thông tin nào.\nDùng Network để xem request/response API và xác định file gọi API.\nDùng Elements để xem DOM và CSS, xác định class, id, attribute của element."
+      "1. Tab Elements dùng để kiểm tra DOM và CSS, xác định class, id, attribute của element.\n\n2. Tab Console để xem dữ liệu của các biến, lỗi của ứng dụng.\n\n3. Tab Network để xem request/response API và xác định file gọi API.\n\n 4. Tab Sources để debug code, đặt breakpoint, xem call stack và giá trị của biến.\n\n5. Tab Application để kiểm tra localStorage, sessionStorage, cookies và các dữ liệu khác."
     ]
   }
 ];
