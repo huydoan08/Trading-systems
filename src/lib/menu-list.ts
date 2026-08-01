@@ -53,6 +53,10 @@ export function getMenuList(): Group[] {
               label: "Self Mastery"
             },
             {
+              href: "https://alternative.me/crypto/fear-and-greed-index/",
+              label: "Psychology of Market"
+            },
+            {
               href: "/pnl-report",
               label: "PNL Report"
             }

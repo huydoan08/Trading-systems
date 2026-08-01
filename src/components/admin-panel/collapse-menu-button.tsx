@@ -52,6 +52,7 @@ export function CollapseMenuButton({
   isOpen
 }: CollapseMenuButtonProps) {
   const pathname = usePathname();
+  const isExternalLink = (href: string) => href.startsWith("http://") || href.startsWith("https://");
   const isSubmenuActive = submenus.some((submenu) =>
     submenu.active === undefined ? submenu.href === pathname : submenu.active
   );
@@ -136,7 +137,11 @@ export function CollapseMenuButton({
             className="w-full justify-start h-10 mb-1 group"
             asChild
           >
-            {!active && <Link href={href}>
+            {!active && <Link
+              href={href}
+              target={isExternalLink(href) ? "_blank" : undefined}
+              rel={isExternalLink(href) ? "noopener noreferrer" : undefined}
+            >
               <span className="mr-4 ml-2 transition-colors duration-300 group-hover:text-[#f67373]">
                 <Dot size={18} />
               </span>
@@ -200,6 +205,8 @@ export function CollapseMenuButton({
                 "bg-secondary"
                 }`}
               href={href}
+              target={isExternalLink(href) ? "_blank" : undefined}
+              rel={isExternalLink(href) ? "noopener noreferrer" : undefined}
             >
               <p className="max-w-[180px] truncate transition-colors duration-300 hover:text-[#f67373]">{label}</p>
             </Link>
