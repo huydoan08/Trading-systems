@@ -292,5 +292,12 @@ export const ancientTeaching = [
       type: "image" as const,
       value: "/personal-growth/growth-14.png"
     }
+  },
+  {
+    title: "",
+    content: {
+      type: "image" as const,
+      value: "/personal-growth/1212.webp"
+    }
   }
 ];
