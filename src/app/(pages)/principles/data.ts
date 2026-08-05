@@ -1,12 +1,8 @@
 export const rules = [
-  "Chỉ giao dịch SPOT.",
-  "Ưu tiên số 1: BTC, số 2: FPT",
-  "Mỗi lệnh có Volume = 1000$, tối đa 2 lệnh cho mỗi cơ hội.",
-  "Giao dịch theo RSI bộ khung thời gian là WDH.",
-  "Không bao giờ đoán đỉnh hoặc đoán đáy mà phải chờ giá quay lại retest.",
-  "Phải có chiến lược phân bổ vốn phù hợp với từng cơ hội giao dịch.",
-  "Kiên nhẫn chờ đợi cơ hội tốt rồi đập cho một phát ra ngô ra khoai.",
-  "Không nhảy ra nhảy vào lệnh liên tục, không quan sát giá mà quan sát RSI.",
+  "Chỉ giao dịch SPOT cặp tiền BTC/USDT.",
+  "Không bao giờ đi dò đáy mà phải chờ giá quay lại retest.",
+  "Phải có chiến lược rõ ràng đối với từng khung thời gian giao dịch.",
+  "Phải có kế hoạch rõ ràng trước khi vào lệnh và phải tuân thủ theo hệ thống một cách nhất quán.",
   "Ghi chép nhật ký cho mỗi lệnh giao dịch để hoàn thiện hơn.",
 ];
 export const EntryStrategy = [
