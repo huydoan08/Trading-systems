@@ -100,26 +100,17 @@ export function getMenuList(): Group[] {
         }
       ]
     },
-
     {
       groupLabel: "",
       menus: [
         {
           href: "",
-          label: "Tu tập",
+          label: "Tiếng Anh",
           icon: BookOpenText,
           submenus: [
-            {
-              href: "/ancient-teaching",
-              label: "Lời dạy của cổ nhân"
-            },
-            {
-              href: "/story-telling",
-              label: "Câu chuyện & bài học"
-            },
              {
-              href: "https://loiphatday.org/kinh-phat",
-              label: "Lời dạy của Đức Phật"
+              href: "https://www.youtube.com/watch?v=owyMnEB4w9Q&t=16s",
+              label: "Toeic Speaking"
             }
           ]
         }
