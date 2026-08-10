@@ -6,14 +6,10 @@ export const rules = [
   "Ghi chép nhật ký cho mỗi lệnh giao dịch để hoàn thiện hơn.",
 ];
 export const EntryStrategy = [
-  { label: "RSI các khung H4 - 1D - 1W đồng pha với nhau.", score: 30 },
-  { label: "Giá đã xác nhận retest ở khung giao dịch 1D.", score: 10 },
-  { label: "Tối ưu điểm vào lệnh đẹp ở khung H4.", score: 10 },
-  { label: "Chỉ số tham lam sợ hãi đã chạm mốc 10.", score: 10 },
-  { label: "Có tín hiệu price action.", score: 10 },
-  { label: "Mức thưởng đáng để vào lệnh.", score: 10 },
-  { label: "Giá đã phá qua trendline giảm.", score: 10 },
-  { label: "Thuộc mẫu hình có xác suất thắng cao.", score: 10 }
+  { label: "RSI của khung giao dịch đồng pha với khung lớn hơn", score: 30 },
+  { label: "RSI của khung giao dịch đã giảm hết hành trình", score: 30 },
+  { label: "Giá đã quay lại retest xong.", score: 20 },
+  { label: "Có sự xác nhận của price action.", score: 20 },
 ];
 
 export const ManageStrategy = [
