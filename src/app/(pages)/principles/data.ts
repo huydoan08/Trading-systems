@@ -1,9 +1,9 @@
 export const rules = [
-  "Chỉ giao dịch SPOT cặp tiền BTC/USDT.",
-  "Không bao giờ đi dò đáy mà phải chờ giá quay lại retest.",
-  "Phải có chiến lược rõ ràng đối với từng khung thời gian giao dịch.",
-  "Phải có kế hoạch rõ ràng trước khi vào lệnh và phải tuân thủ theo hệ thống một cách nhất quán.",
-  "Ghi chép nhật ký cho mỗi lệnh giao dịch để hoàn thiện hơn.",
+  "Chỉ giao dịch SPOT Bitcoin.",
+  "Phải tuân thủ Stoploss một cách tuyệt đối.",
+  "Tuyệt đối không được đi đoán đáy.",
+  "Phải có kế hoạch chuẩn bị kĩ càng trước mỗi một lệnh giao dịch.",
+  "Ghi chép nhật ký, rút ra bài học sau mỗi một lệnh để ngày một hoàn thiện hơn.",
 ];
 export const EntryStrategy = [
   { label: "RSI của khung giao dịch đồng pha với khung lớn hơn", score: 30 },
