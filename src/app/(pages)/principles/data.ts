@@ -7,7 +7,7 @@ export const rules = [
 ];
 export const EntryStrategy = [
   { label: "RSI của khung giao dịch đồng pha với khung lớn hơn", score: 30 },
-  { label: "RSI của khung giao dịch đã giảm hết hành trình", score: 30 },
+  { label: "RSI của khung giao dịch nhỏ hơn đã giảm hết hành trình", score: 30 },
   { label: "Giá đã quay lại retest xong.", score: 20 },
   { label: "Có sự xác nhận của price action.", score: 20 },
 ];
