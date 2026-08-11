@@ -26,6 +26,12 @@ const featuredVideos = [
     url: 'https://www.youtube.com/watch?v=ojtC2ZG0TPs&list=RDuv2VNtvT08g&index=2',
     thumbnail: "https://img.youtube.com/vi/ojtC2ZG0TPs/hqdefault.jpg",
   },
+  {
+    title: " Nguyện kiếp sau thân ta là sen",
+    description: "",
+    url: 'https://www.youtube.com/watch?v=ktY4UP25AOE&list=RDuv2VNtvT08g&index=4',
+    thumbnail: "https://img.youtube.com/vi/ktY4UP25AOE/hqdefault.jpg",
+  },
 ];
 
 export default function Peacefully() {
