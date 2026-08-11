@@ -17,17 +17,17 @@ type CardData = InfoCard | GalleryCard;
 
 export const CARD_DATA: CardData[] = [
   {
-    title: "Bộ quy tắc giao dịch của một nhà đầu tư chuyên nghiệp.",
+    title: "Bộ quy tắc giao dịch của một trader chuyên nghiệp.",
     imageSrc: "/growth-29.png",
     modalType: "rsi"
   },
   {
-    title: "Chấm điểm một Entry vào lệnh đẹp.",
+    title: "Các tiêu chí vào lệnh đẹp.",
     imageSrc: "/entry.png",
     modalType: "entry"
   },
   {
-    title: "Trong giao dịch, để có thể gồng được các lệnh thắng lớn, bạn cần có phương pháp rõ ràng và tách biệt với cảm xúc.",
+    title: "Phương pháp quản lý lệnh.",
     imageSrc: "/personal-growth/growth-42.png",
     modalType: "manage"
   }
