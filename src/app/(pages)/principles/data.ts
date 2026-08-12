@@ -13,8 +13,7 @@ export const EntryStrategy = [
   { label: "RSI của khung H4 đã bắt đầu cắt lên", score: 20 },
 ];
 export const ManageStrategy = [
-  "Quản lý lệnh theo cấu trúc sóng, follow chiến lược giao dịch một cách tuyệt đối.",
-  "Không bị cảm xúc chi phối vào lệnh và chốt lời non, cứ follow theo cấu trúc sóng và dời SL về những vùng giá quan trọng.",
-  "Tiền kiếm được trong lúc chờ đợi, chứ không phải là LIÊN TỤC VÀO LỆNH.",
-  "Giao dịch theo xu hướng – Cắt vị thế lỗ nhanh chóng – Duy trì vị thế lời – Đừng đóng vị thế khi đang có khoản lợi nhuận lớn."
+  "Quản lý lệnh bằng cách dời SL theo cấu trúc sóng.",
+  "Tiền kiếm được trong lúc chờ đợi, không để cảm xúc xen vào và chốt lời non.",
+  "Thị trường cho ta ăn bao nhiêu thì ta ăn bấy nhiêu, biết đủ thường sẽ vui."
 ];
