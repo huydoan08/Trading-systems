@@ -6,10 +6,10 @@ export const rules = [
   "Ghi chép nhật ký, rút ra bài học sau mỗi một lệnh để ngày một hoàn thiện hơn.",
 ];
 export const EntryStrategy = [
-  { label: "RSI của khung giao dịch đồng pha với khung lớn hơn", score: 25 },
-  { label: "RSI của khung giao dịch nhỏ hơn đã giảm hết hành trình", score: 25 },
-  { label: "Giá của khung giao dịch nhỏ hơn đã quay lại retest xong và không phá qua đáy cũ.", score: 25 },
-  { label: "Có sự xác nhận của price action.", score: 25 },
+  { label: "RSI của khung giao dịch đồng pha với khung lớn hơn", score: 30 },
+  { label: "RSI của khung giao dịch được chọn đã giảm hết hành trình", score: 25 },
+  { label: "Giá của khung giao dịch đã quay lại retest xong và không phá qua đáy cũ.", score: 25 },
+  { label: "Có sự xác nhận của price action.", score: 20 },
 ];
 
 export const ManageStrategy = [
