@@ -8,7 +8,7 @@ import { useStore } from "@/hooks/use-store";
 import { onAuthStateChanged } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { EntryStrategy, ManageStrategy, rules } from "./data";
+import {  EntryStrategy_1D, EntryStrategy_H4, ManageStrategy, rules } from "./data";
 import { CARD_DATA } from "./constants";
 
 type ModalType = (typeof CARD_DATA)[number]["modalType"];
@@ -46,13 +46,24 @@ export default function TechnicalAnalysisPage() {
         />
       );
     }
-    if (activeModal === "entry") {
+    if (activeModal === "entry-1d") {
       return (
         <InfoModal
           isOpen={true}
           onClose={handleCloseModal}
           title={card.title}
-          items={EntryStrategy}
+          items={EntryStrategy_1D}
+          useCheckbox={true}
+        />
+      );
+    }
+    if (activeModal === "entry-h4") {
+      return (
+        <InfoModal
+          isOpen={true}
+          onClose={handleCloseModal}
+          title={card.title}
+          items={EntryStrategy_H4}
           useCheckbox={true}
         />
       );
