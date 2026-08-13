@@ -25,5 +25,11 @@ export const raisingchildren = [
     content: [
       "Đáp án:\n\n`==` là toán tử so sánh bằng không nghiêm ngặt (abstract equality), trong khi `===` là toán tử so sánh bằng nghiêm ngặt (strict equality).\n\n`==` thực hiện ép kiểu (type coercion) trước khi so sánh, tuân theo thuật toán **Abstract Equality Comparison** được định nghĩa trong đặc tả ECMAScript.\n\n`===` không thực hiện ép kiểu và sẽ trả về `false` bất cứ khi nào kiểu dữ liệu của hai toán hạng khác nhau.\n\nTrong hầu hết các trường hợp, `===` được ưu tiên sử dụng trong mã ứng dụng vì nó giúp tránh một nhóm lỗi do việc ép kiểu ngoài ý muốn gây ra.\n\nNgoại lệ phổ biến nhất là `x == null`, vì biểu thức này sẽ kiểm tra đồng thời cả `null` và `undefined` chỉ với một phép so sánh."
     ]
+  },
+  {
+    title: "Sử dụng callback function để xử lý bất đồng bộ trong JavaScript.",
+    content: [
+      "Đáp án:\n\n  function fetchData(callback) {\n    setTimeout(() => {\n      const data = { id: 1, name: 'John' };\n      callback(data);\n    }, 1000);\n  }\n\n  fetchData((data) => {\n    console.log('Received data:', data);\n  });\n\nGiải thích:\n- Hàm fetchData nhận một callback function làm tham số.\n- Sử dụng setTimeout để mô phỏng một thao tác bất đồng bộ (ví dụ: gọi API).\n- Khi dữ liệu được lấy xong, callback được gọi với dữ liệu đó."
+    ]
   }
 ];
