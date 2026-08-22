@@ -22,5 +22,6 @@ export const EntryStrategy_H4 = [
 export const ManageStrategy = [
   "Quản lý lệnh bằng cách dời SL theo cấu trúc sóng.",
   "Tiền kiếm được trong lúc chờ đợi, không để cảm xúc xen vào và chốt lời non.",
-  "Thị trường cho ta ăn bao nhiêu thì ta ăn bấy nhiêu, biết đủ thường sẽ vui."
+  "Thị trường cho ta ăn bao nhiêu thì ta ăn bấy nhiêu, biết đủ thường sẽ vui.",
+  "Giao dịch theo hệ thống, không để cảm xúc chi phối."
 ];
