@@ -4,6 +4,7 @@ export const rules = [
   "Tuyệt đối không cố tình đoán đỉnh hoặc đoán đáy.",
   "Không mua toàn bộ vốn vào một lệnh.",
   "Phải có kế hoạch chuẩn bị kĩ càng trước mỗi một lệnh giao dịch.",
+  "Chỉ vào Altcoin khi Bitcoin đã xác nhận vào xu hướng tăng mạnh.",
   "Ghi chép nhật ký, rút ra bài học sau mỗi một lệnh để ngày một hoàn thiện hơn.",
 ];
 export const EntryStrategy_1D = [
