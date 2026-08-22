@@ -4,7 +4,6 @@ import { SidebarToggle } from "@/components/admin-panel/sidebar-toggle";
 import { useSidebar } from "@/hooks/use-sidebar";
 import { useStore } from "@/hooks/use-store";
 import { cn } from "@/lib/utils";
-import { ColorfulLogo } from "@/components/admin-panel/colorful-logo";
 
 export function Sidebar() {
   const sidebar = useStore(useSidebar, (x) => x);
