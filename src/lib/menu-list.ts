@@ -93,6 +93,10 @@ export function getMenuList(): Group[] {
               label: "Debugging Skills"
             },
             {
+              href: "/interview",
+              label: "Interview Questions"
+            },
+            {
               href: "/git",
               label: "Git"
             }
