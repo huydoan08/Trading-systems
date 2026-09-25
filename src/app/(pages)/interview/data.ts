@@ -2,13 +2,15 @@ export const mindsetDeveloper = [
   {
     title: "Introduce yourself",
     content: [
-      "Hi, I’m Huy currently I’m working at Equix technology company.  I have over six years of experience as a Frontend Developer, mainly working with React.js. My recent experience includes developing enterprise banking applications for Techcombank, where I worked on modules such as Spot Trading, new placed order, transaction detail, lock unlock transaction, transaction history. I focus on building reusable components, integrating REST APIs, optimizing performance, and collaborating closely with Backend, QA, and Product teams throughout the SDLC. I'm interested in joining Finative because I'd like to continue working on large-scale digital banking projects while expanding my  knowleage in banking domain and front end resovle problem skills."
+      "Who → Experience → Recent Project → Skills → Motivation",
+      "Hi, I’m Huy currently I’m working at Equix technology company.\n\n  I have over six years of experience as a Frontend Developer, mainly working with React.js.\n\n In my recent project, I was developing enterprise banking applications for Techcombank\n\n I focus on building reusable components, integrating REST APIs, optimizing performance.\n\n I'm interested in joining Finative team because I'd like to continue working on digital banking projects continuing to expand my knowleage and resovle problem skills."
     ]
   },
   {
     title: "When a user reports that the application is slow, how would you investigate and handle the issue ?",
     content: [
-     "I first identify whether the issue is related to rendering, network, or JavaScript execution.\n\nThen I use Chrome DevTools to analyze:\n- Network waterfall\n- Performance timeline\n- Lighthouse report\n\nFinally, I optimize the appropriate layer instead of guessing."
+      "1. Identify → 2. Analyze → 3. Optimize",
+     "I first identify whether the issue is related to rendering, network, or JavaScript execution.\n\nThen I use Chrome DevTools to analyze\n\nFinally, I optimize the appropriate layer instead of guessing."
     ]
   },
   {
@@ -80,19 +82,22 @@ export const mindsetDeveloper = [
   {
     title: "You encounter a bug but don't know the root cause. What would you do ?",
     content: [
+      "Reproduce → Collect → Narrow → Solve.",
       "I don't want to guess the root cause. First, I reproduce the issue, collect evidence, narrow down the scope, and then evaluate possible solutions."
     ]
   },
   {
     title: "What would you do if another Senior Developer disagreed with your solution ?",
     content: [
+      "Listen → Compare → Validate.",
       "I focus on the trade-offs rather than defending my solution. I would understand the concern, compare alternatives, and use data or a prototype to validate the decision."
     ]
   },
   {
     title: "Tell me about the most challenging technical problem you have ever solved ?",
     content: [
-      "One of the most challenging problems I solved was a real-time state synchronization issue in a trading system.\n\nWe received multiple SSE events that could update the same entity, which sometimes caused inconsistent frontend state.\n\nI analyzed the event flow and state update logic, then fixed it by using stable entity keys, immutable updates, and functional state updates. For out-of-order events, I also used timestamps or sequence numbers to prevent older data from overwriting newer data.\n\nAfter that, the frontend remained much more consistent with the backend real-time data."
+      "Situation → Action → Result",
+      "One of the most challenging projects I worked on was optimizing a financial dashboard that had performance issues due to inefficient state management and excessive re-renders.\n\nI used React DevTools to find the bottlenecks, improved state management with Redux Toolkit, applied React.memo, useMemo, and useCallback, and worked with the backend team to reduce unnecessary API calls.\n\nAs a result, page load time improved by around 60%, the UI became much smoother, and the solution became a pattern we reused in later features."
     ]
   },
 ];
