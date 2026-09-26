@@ -32,12 +32,6 @@ export const mindsetDeveloper = [
     ]
   },
   {
-    title: "How do you reduce unnecessary re-renders?",
-    content: [
-      "I reduce unnecessary re-renders by only updating components when their data actually changes.."
-    ]
-  },
-  {
     title: "How do you prevent incorrect data updates when receiving multiple WebSocket events ?",
     content: [
       "I use a stable unique key and immutable updates."
