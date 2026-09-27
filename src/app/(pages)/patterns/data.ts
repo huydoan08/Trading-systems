@@ -20,7 +20,7 @@ export const mindsetDeveloper = [
   {
     title: "Experience / Skills: Nhóm kinh nghiệm / kỹ năng",
     content: [
-   "I use... → Tôi sử dụng...\n\nI have... → Tôi có...\n\nI work with... → Tôi làm việc với...\n\nI’m familiar with... → Tôi quen thuộc với...\n\nI’m able to... → Tôi có khả năng...\n\nI have experience with... → Tôi có kinh nghiệm với...\n\nI’ve worked on... → Tôi đã làm việc trên...\n\nI’ve worked with... → Tôi đã làm việc với...\n\nI’ve dealt with... → Tôi đã xử lý...\n\nI’ve handled... → Tôi đã xử lý...\n\nI’ve developed... → Tôi đã phát triển...\n\nI’ve implemented... → Tôi đã triển khai...\n\nI’ve learned... → Tôi đã học được...\n\nI understand... → Tôi hiểu...\n\nI know how to... → Tôi biết cách..."
+   "I use... → Tôi sử dụng...\n\nI have... → Tôi có...\n\nI work with... → Tôi làm việc với...\n\nI’m familiar with... → Tôi quen thuộc với...\n\nI’m able to... → Tôi có khả năng...\n\nI have experience with... → Tôi có kinh nghiệm với...\n\nI’ve worked on... → Tôi đã làm việc trên...\n\nI’ve worked with... → Tôi đã làm việc với...\n\nI’ve deal with... → Tôi đã xử lý...\n\nI’ve handled... → Tôi đã xử lý...\n\nI’ve developed... → Tôi đã phát triển...\n\nI’ve implemented... → Tôi đã triển khai...\n\nI’ve learned... → Tôi đã học được...\n\nI understand... → Tôi hiểu...\n\nI know how to... → Tôi biết cách..."
     ]
   },
   {
