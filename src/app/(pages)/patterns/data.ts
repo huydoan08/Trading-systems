@@ -26,7 +26,7 @@ export const mindsetDeveloper = [
   {
     title: "Problem Solving: Nhóm tư duy / ra quyết định",
     content: [
-     "I think about... → Tôi suy nghĩ về...\n\nI look at... → Tôi xem xét...\n\nI look for... → Tôi tìm kiếm...\n\nI look into... → Tôi tìm hiểu sâu về...\n\nI reason about... → Tôi suy luận về...\n\nI evaluate... → Tôi đánh giá...\n\nI assess... → Tôi đánh giá / xem xét...\n\nI determine... → Tôi xác định...\n\nI prioritize... → Tôi xác định ưu tiên...\n\nI weigh... → Tôi cân nhắc...\n\nI choose to... → Tôi lựa chọn...\n\nI expect... → Tôi kỳ vọng...\n\nI assume... → Tôi giả định...\n\nI confirm... → Tôi xác nhận..."
+     "I think about... → Tôi suy nghĩ về...\n\nI look at... → Tôi xem xét...\n\nI look for... → Tôi tìm kiếm...\n\nI look into... → Tôi tìm hiểu sâu về...\n\nI reason about... → Tôi suy luận về...\n\nI evaluate... → Tôi đánh giá...\n\nI assess... → Tôi đánh giá / xem xét...\n\nI determine... → Tôi xác định...\n\nI prioritize... → Tôi xác định ưu tiên...\n\nI consider... → Tôi cân nhắc...\n\nI choose to... → Tôi lựa chọn...\n\nI expect... → Tôi kỳ vọng...\n\nI assume... → Tôi giả định...\n\nI confirm... → Tôi xác nhận..."
     ]
   },
 ];
