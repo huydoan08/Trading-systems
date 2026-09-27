@@ -20,6 +20,27 @@ export const mindsetDeveloper = [
     ]
   },
   {
+    title: "You encounter a bug but don't know the root cause. What would you do ?",
+    content: [
+      "Reproduce → Collect → Narrow → Solve.",
+      "I don't want to guess the root cause. First, I reproduce the issue, collect evidence, narrow down the scope, and then evaluate possible solutions."
+    ]
+  },
+  {
+    title: "What would you do if another Senior Developer disagreed with your solution ?",
+    content: [
+      "Listen → Compare → Validate.",
+      "I focus on the trade-offs rather than defending my solution. I would understand the concern, compare alternatives, and use data or a prototype to validate the decision."
+    ]
+  },
+  {
+    title: "Tell me about the most challenging technical problem you have ever solved ?",
+    content: [
+      "Situation → Action → Result",
+      "One of the most challenging projects I worked on was optimizing a financial dashboard that had performance issues due to inefficient state management and excessive re-renders.\n\nI used React DevTools to find the bottlenecks, improved state management with Redux Toolkit, applied React.memo, useMemo, and useCallback, and worked with the backend team to reduce unnecessary API calls.\n\nAs a result, page load time improved by around 60%, the UI became much smoother, and the solution became a pattern we reused in later features."
+    ]
+  },
+  {
     title: "What happens when you call setState in React?",
     content: [
       "When setState is called, React does not update the state immediately. Instead, it schedules an update, re-renders the component with the new state, compares the new Virtual DOM with the previous one, updates the real DOM if needed."
@@ -71,27 +92,6 @@ export const mindsetDeveloper = [
     title: "Would you choose solution A, which is faster but harder to maintain, or solution B, which is slower but has a cleaner architecture ?",
     content: [
       "I would evaluate business impact, performance, complexity, maintenance cost, team capability, deadline, and scalability. Then I would clearly communicate the trade-offs before making the decision."
-    ]
-  },
-  {
-    title: "You encounter a bug but don't know the root cause. What would you do ?",
-    content: [
-      "Reproduce → Collect → Narrow → Solve.",
-      "I don't want to guess the root cause. First, I reproduce the issue, collect evidence, narrow down the scope, and then evaluate possible solutions."
-    ]
-  },
-  {
-    title: "What would you do if another Senior Developer disagreed with your solution ?",
-    content: [
-      "Listen → Compare → Validate.",
-      "I focus on the trade-offs rather than defending my solution. I would understand the concern, compare alternatives, and use data or a prototype to validate the decision."
-    ]
-  },
-  {
-    title: "Tell me about the most challenging technical problem you have ever solved ?",
-    content: [
-      "Situation → Action → Result",
-      "One of the most challenging projects I worked on was optimizing a financial dashboard that had performance issues due to inefficient state management and excessive re-renders.\n\nI used React DevTools to find the bottlenecks, improved state management with Redux Toolkit, applied React.memo, useMemo, and useCallback, and worked with the backend team to reduce unnecessary API calls.\n\nAs a result, page load time improved by around 60%, the UI became much smoother, and the solution became a pattern we reused in later features."
     ]
   },
 ];
