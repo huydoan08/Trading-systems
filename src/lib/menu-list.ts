@@ -112,9 +112,13 @@ export function getMenuList(): Group[] {
           label: "Tiếng Anh",
           icon: BookOpenText,
           submenus: [
-             {
+            {
               href: "https://www.youtube.com/watch?v=jlV8JIXVsHs",
               label: "Speaking"
+            },
+            {
+              href: "patterns",
+              label: "Patterns Speaking"
             }
           ]
         }
@@ -166,23 +170,3 @@ export function getMenuList(): Group[] {
     // },
   ];
 }
-
-[
- {
-  BaseEntity:  {
-    name: 'FirstIsolated',
-    type: '88',
-    value: '12:12'
-  },
-  Entity: 1
- },
- {
-  BaseEntity:  {
-    name: 'SecondIsolated',
-    type: '88',
-    value: '12:12'
-  },
-  Entity: 3
- },
-]
-
