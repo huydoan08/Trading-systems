@@ -83,6 +83,12 @@ export const mindsetDeveloper = [
     ]
   },
   {
+    title: "What are your strengths ?",
+    content: [
+      "One of my strengths is having a user-first mindset. I focus on understanding user needs to build practical solutions, communicate clearly with cross-functional teams, and adapt quickly when priorities change."
+    ]
+  },
+  {
     title: "The designer provides a prototype, but the UX is not suitable for the application's performance. What would you do ?",
     content: [
       "I would not change the design silently. I would discuss the UX requirement and technical constraints with Design and Product, explain the trade-offs, and propose alternatives when necessary."
