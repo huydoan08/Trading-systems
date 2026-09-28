@@ -113,7 +113,7 @@ export function getMenuList(): Group[] {
           icon: BookOpenText,
           submenus: [
             {
-              href: "https://www.youtube.com/watch?v=jlV8JIXVsHs",
+              href: "https://www.youtube.com/watch?v=-SrvDwpVx0g",
               label: "Speaking"
             },
             {
