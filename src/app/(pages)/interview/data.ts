@@ -7,6 +7,12 @@ export const mindsetDeveloper = [
     ]
   },
   {
+    title: "Tell me about your recent project",
+    content: [
+     "Night Vision is Techcombank's FX Trading Platform. The frontend is a hybrid codebase — a large AngularJS app being migrated screen-by-screen to React 18 + TypeScript, with AG Grid Enterprise for heavy trading tables, REST + SSE real-time updates, and T24 core banking sync. I worked on both sides: building new React screens and reusable UI components, porting legacy screens, fixing filter/UX issues, and writing tests "
+    ]
+  },
+  {
     title: "When a user reports that the application is slow, how would you investigate and handle the issue ?",
     content: [
       "1. Identify → 2. Analyze → 3. Optimize",
